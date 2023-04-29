@@ -20,3 +20,4 @@ jobs:
         protocol: ftps
         port: ${{ secrets.PORT }}
         server-dir: ${{ secrets.SERVER_DIR }}
+        dangerous-clean-slate: true
