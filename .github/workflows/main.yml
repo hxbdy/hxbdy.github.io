@@ -16,4 +16,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         protocol: ftps
         port: ${{ secrets.PORT }}
-        
+        server-dir: ${{ secrets.SERVER_DIR }}
