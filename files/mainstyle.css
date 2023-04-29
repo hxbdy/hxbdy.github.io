@@ -1,0 +1,355 @@
+A:link{
+ color:#0000FF;
+ text-decoration:none;
+}
+A:visited{
+ color:#0000FF;
+ text-decoration:none;
+}
+A:hover{
+ color:FF6633;
+}
+A:link.sns{
+ color:#FFFFFF;
+ text-decoration:none;
+}
+A:visited.sns{
+ color:#FFFFFF;
+ text-decoration:none;
+}
+A:hover.sns{
+ color:BBBBBB;
+}
+TD{
+ font-size:12px;
+ line-height:160%;
+}
+TH{
+ font-size:12px;
+ line-height:160%;
+}
+HTML {
+  overflow-y:scroll;
+}
+BODY{
+    font-size:12px;
+    background-color:#EEEEEE;
+    line-height:160%;
+    padding:0;
+    letter-spacing: .7px;
+    text-align:center;
+}
+ul.example li ul {
+margin: 0 0 0 2em;
+padding: 0;
+}
+ul.book_info{
+    margin: 0 0 0 20px;
+    padding-left:20px;
+}
+ul.book{
+    padding:0;
+    margin:20px;
+    border-style:none;
+}
+ul.book li{
+    margin:0;
+    text-align:left;
+}
+ul.list_1{
+    list-style:none;
+    width:155px;
+    font-size:12px;
+    padding:0;
+    margin:0;
+}
+ul.list_1 li{
+    margin:0;
+    padding:0;
+}
+ul.list_1 a{
+    height:20px;
+    text-align:center;
+    margin:8px;
+    border-left-style:solid;
+    border-left-width:thick;
+    border-left-color:#006699;
+    border-bottom-color:#006699;
+    border-bottom-style:solid;
+    border-bottom-width:thin;
+    padding:5px 2px 4px;
+    display:block;
+}
+ul.list_1 a:hover{
+    background-color:#006699;
+    color:#DDDDDD;
+}
+ul.p_index{
+    width:540px;
+    list-style:none;
+    font-size:12px;
+    overflow: hidden;
+    margin: auto;
+}
+ul.p_index li{
+    width:250px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+ul.p_index a{
+    text-align:center;
+    margin:5px;
+    border-style:solid;
+    border-color:#006699;
+    padding:15px 0;
+    border-width:thin;
+    display:block;
+    background-color:#eeffff;
+}
+ul.p_index a:hover{
+    background-color:#006699;
+    color:#DDDDDD;
+}
+.wrap {
+    width:860;
+    margin: 0 auto;
+    padding-top:0;
+    height:auto;
+    background-color:#FFFFFF;
+    border:solid thin #EEEEEE;
+}
+.main {
+    margin: 0 auto;
+    width:98%;
+    height:auto;
+    border-top:solid 1px #AAAAAA;
+    padding-top:15px;
+}
+.contents{
+    float:left;
+    width:645px;
+    height:auto;
+    text-align:center;
+    margin-left:15px;
+    display:inline;
+}
+.header {
+    height:70px;
+    padding-bottom:15px;
+}
+.menu {
+    float:right;
+    width:160px;
+    margin-right:5px;
+}
+.counter {
+    width:120px;
+    margin-top:40px;
+    margin: 30px auto 20px;
+}
+.pcounter {
+    width:120px;
+    margin: 10px auto 10px;
+}
+.logo {
+    float:left;
+    width:180px;
+    margin-left:15px;
+    margin-top:8px;
+}
+.info {
+    float:right;
+    width:280px;
+    /* border-style:solid;
+    border-width:2px 0;
+    border-color:#3366CC;
+     */
+	margin:10px 10px;
+    padding-left:10px;
+}
+.title_s{
+    width:580px;
+    height:25px;
+    text-align:left;
+    color:#000000;
+    font-size:14px;
+    font-weight:bold;
+    padding-top:7px;
+    border-left-style:solid;
+    border-left-width:10px;
+    border-left-color:#006699;
+    text-indent:.5em;
+    margin-left:10px;
+}
+.title_m{
+    margin: 0 auto 20px;
+    width:625px;
+    text-align:left;
+    color:#000000;
+    font-size:16px;
+    font-weight:bold;
+    border-left-style:solid;
+    border-left-width:thick;
+    border-left-color:#006699;
+    border-bottom-color:#006699;
+    border-bottom-style:solid;
+    border-bottom-width:thin;
+    padding:7px 0px 7px 1em;
+}
+.book{
+    margin: 0 auto 20px;
+    width:570px;
+    text-align:center;
+    color:#000000;
+    font-size:12px;
+    border-color:#006699;
+    padding:7px;
+    border-style:solid;
+    border-width:thin;
+}
+.book_i{
+    margin: 0 auto 20px;
+    width:570px;
+    padding:7px;
+    background-color:#dcffff;
+    height:180px;
+    text-align:left;
+}
+.book_w{
+    text-align:left;
+    background-color:#ef0000;
+}
+.ad{
+    margin: 0 auto 20px;
+    width:625px;
+    text-align:left;
+    color:#000000;
+    font-size:12px;
+    border-color:#006699;
+    padding:7px 0px 7px 1em;
+    border-style:solid;
+    border-width:thin;
+}
+.top_ad{
+    margin: 0 auto 20px;
+    width:556px;
+    text-align:left;
+    color:#000000;
+    font-size:12px;
+    border-color:#006699;
+    padding:7px 0px 7px 1em;
+    border-style:solid;
+    border-width:thin;
+}
+.title_l{
+    margin: 0 auto 20px;
+    width:640px;
+    text-align:center;
+    background-color:#006699;
+    color:#FFFFFF;
+    font-size:16px;
+    font-weight:bold;
+    padding:10px 0;
+}
+.text{
+    width:97%;
+    text-align:left;
+    padding:0px 10px;
+}
+.text_s{
+    width:95%;
+    text-align:left;
+    margin-left:20px;
+}
+.text_list{
+    width:95%;
+    text-align:left;
+    padding:0px 10px;
+    text-indent:0;
+}
+.r_word {
+    float:right;
+    margin-right:20px;
+}
+.img_right {
+    float:right;
+    width:300px;
+    margin-left:10px;
+}
+.img_left {
+    float:left;
+    width:100px;
+    padding-right:50px;
+}
+.table8{
+    width:8em;
+    float:left;
+}
+.table6{
+    width:6em;
+    float:left;
+}
+.lettersize16{
+    font-size:16px;
+    font-weight:bold;
+}
+img.pdf{
+ vertical-align: baseline;
+}
+.sns_f{
+    width:100px;
+    height:23px;
+    background-image:url(img/FB-f-Logo__blue_29.png);
+    text-indent:30px;
+    text-align:center;
+    padding-top:6px;
+    margin-left:50px;
+    float:left;
+    background-repeat:no-repeat;
+}
+.sns_t{
+    width:100px;
+    height:23px;
+    background-image:url(img/teitter-Logo.png);
+    text-indent:30px;
+    text-align:center;
+    padding-top:6px;
+    margin-left:20px;
+    float:left;
+    background-repeat:no-repeat;
+}
+.clear {
+    clear:both;
+}
+#page-top{
+	width:50px;
+	height:50px;
+	display:none;
+	position:fixed;
+	right:16px;
+	bottom:16px;
+}
+ 
+#page-top p{
+    margin:0;
+    padding:0;
+    text-align:center;
+    background:#0066cc;
+    -webkit-transition:all 0.3s;
+    -moz-transition:all 0.3s;
+    transition:all 0.3s;
+}
+ 
+#page-top p:hover{
+    background:#6fa0ff;
+}
+ 
+#move-page-top{
+	color:#fff;
+	line-height:50px;
+	text-decoration:none;
+	display:block;
+	cursor:pointer;
+}
+
