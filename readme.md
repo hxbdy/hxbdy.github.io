@@ -5,7 +5,7 @@
 
 
 # Link
-- [github-pages](https://hxbdy.github.io/Roar/files/nct.htm)  
+- [github-pages](https://hxbdy.github.io)  
 - [biglobe](http://www7b.biglobe.ne.jp/~hxbdy/files/nct.htm)
 - [discord](https://discord.gg/dCeU9BKnT7)
 
