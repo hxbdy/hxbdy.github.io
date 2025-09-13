@@ -511,7 +511,7 @@ input[type=checkbox] {
   padding-left: 1rem;
 }
 .content-center{
-  display: block;
+  display: flex;
   justify-content: center;
 }
 .discord-icon{
@@ -555,7 +555,7 @@ tr a{
   text-align: center;
 }
 .table-container, .intro-container{
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -568,6 +568,9 @@ tr{
 
 /*スマートフォン向け*/
 @media only screen and (max-width: 480px){
+  .is_pc {
+    display:none;
+  }
   .font-down{
     font-size: 9px;
   }
