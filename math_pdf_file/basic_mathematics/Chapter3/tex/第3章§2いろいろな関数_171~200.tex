@@ -1,0 +1,639 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+\raggedbottom%改ページで行間が間延びしないようにする．
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{3章 関数とグラフ}\\
+  \textbf{2　いろいろな関数}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{171 (1)}
+\begin{align*}
+  f(-x) &= 3(-x)^2 \nr
+  &= 3x^2 = f(x) \nr
+  &\therefore \text{偶関数}
+\end{align*}
+
+\paragraph{171 (2)}
+\begin{align*}
+  f(-x) &= -x-1 \nr
+  &\therefore \text{いずれでもない}
+\end{align*}
+
+\paragraph{171 (3)}
+\begin{align*}
+  f(-x) &= -2 \cdot (-x) \nr
+  &= 2x = -f(x) \nr
+  &\therefore \text{奇関数}
+\end{align*}
+
+\paragraph{171 (4)}
+\begin{align*}
+  f(-x) &= (-x)^2+(-x) \nr
+  &= x^2-x \nr
+  &\therefore \text{いずれでもない}
+\end{align*}
+
+\paragraph{171 (5)}
+\begin{align*}
+  f(-x) &= (-x)^4+5(-x)^2-3 \nr
+  &= x^4+5x^2-3 = f(x) \nr
+  &\therefore \text{偶関数}
+\end{align*}
+
+\paragraph{171 (6)}
+\begin{align*}
+  f(-x) &= (-x-1)^5 \nr
+  &= -(x+1)^5 \nr
+  &\therefore \text{いずれでもない}
+\end{align*}
+
+\paragraph{171 (7)}
+\begin{align*}
+  f(-x) &= \frac{1}{4}(-x)^3 \nr
+  &= -\frac{1}{4}x^3 = -f(x) \nr
+  &\therefore \text{奇関数}
+\end{align*}
+
+\paragraph{171 (8)}
+\begin{align*}
+  f(-x) &= \frac{1}{(-x)^2} \nr
+  &= \frac{1}{x^2} = f(x) \nr
+  &\therefore \text{偶関数}
+\end{align*}
+
+\paragraph{171 (9)}
+\begin{align*}
+  f(-x) &= \frac{\{(-x)+3\}^2}{-x} \nr
+  &= -\frac{(x+3)^2}{x} = -f(x) \nr
+  &\therefore \text{奇関数}
+\end{align*}
+
+\paragraph{172 (1)}
+\begin{align*}
+  y &= (x-1)^3+2 \nr
+  &y=x^3 \text{ のグラフを } x \text{ 軸方向に } 1 \text{、} \ret y \text{ 軸方向に } 2 \text{ 平行移動したもの}
+\end{align*}
+
+\paragraph{172 (2)}
+\begin{align*}
+  y &= -(x+1)^3+2
+\end{align*}
+
+\paragraph{172 (3)}
+\begin{align*}
+  y &= (x+1)^4-2
+\end{align*}
+
+\paragraph{172 (4)}
+\begin{align*}
+  y &= -(x-2)^4+1
+\end{align*}
+
+\paragraph{173 (1)}
+\begin{align*}
+  y &= \frac{1}{x-2}+1 \quad (x \neq 2) \nr
+  &\text{漸近線 } x=2,\ y=1
+\end{align*}
+
+\paragraph{173 (2)}
+\begin{align*}
+  y &= \frac{2}{x+1}-2 \quad (x \neq -1) \nr
+  &\text{漸近線 } x=-1,\ y=-2
+\end{align*}
+
+\paragraph{173 (3)}
+\begin{align*}
+  y &= -\frac{1}{x-3}+1 \quad (x \neq 3) \nr
+  &\text{漸近線 } x=3,\ y=1
+\end{align*}
+
+\paragraph{174 (1)}
+\begin{align*}
+  y &= \frac{x+3}{x+1} \nr
+  &= 1+\frac{2}{x+1} \quad (x \neq -1) \nr
+  &\text{漸近線 } x=-1,\ y=1
+\end{align*}
+
+\paragraph{174 (2)}
+\begin{align*}
+  y &= \frac{2x-5}{x-2} \nr
+  &= 2-\frac{1}{x-2} \quad (x \neq 2) \nr
+  &\text{漸近線 } x=2,\ y=2
+\end{align*}
+
+\paragraph{175 (1)}
+\begin{align*}
+  y &= \sqrt{x-2} \nr
+  x &\geqq 2
+\end{align*}
+
+\paragraph{175 (2)}
+\begin{align*}
+  y &= \frac{-3}{\sqrt{x+1}} \nr
+  x &> -1
+\end{align*}
+
+\paragraph{175 (3)}
+\begin{align*}
+  y &= \sqrt{-x^2+x+6} \nr
+  &= \sqrt{-(x^2-x-6)} \nr
+  &= \sqrt{-(x-3)(x+2)} \nr
+  &-(x-3)(x+2) \geqq 0 \nr
+  &\therefore -2 \leqq x \leqq 3
+\end{align*}
+
+\paragraph{176 (1)}
+\begin{align*}
+  y &= \sqrt{x-2} \quad (x \geqq 2) \nr
+  \text{値域：} & y \geqq 0
+\end{align*}
+
+\paragraph{176 (2)}
+\begin{align*}
+  y &= \sqrt{x}-2 \quad (x \geqq 0) \nr
+  \text{値域：} & y \geqq -2
+\end{align*}
+
+\paragraph{176 (3)}
+\begin{align*}
+  y &= \sqrt{x-2}-2 \quad (x \geqq 2) \nr
+  \text{値域：} & y \geqq -2
+\end{align*}
+
+\paragraph{176 (4)}
+\begin{align*}
+  y &= \sqrt{x+1}+2 \quad (x \geqq -1) \nr
+  \text{値域：} & y \geqq 2
+\end{align*}
+
+\paragraph{177 (1)}
+\begin{align*}
+  -y &= x^3+3x^2 \nr
+  y &= -x^3-3x^2
+\end{align*}
+
+\paragraph{177 (2)}
+\begin{align*}
+  y &= (-x)^3+3(-x)^2 \nr
+  &= -x^3+3x^2
+\end{align*}
+
+\paragraph{177 (3)}
+\begin{align*}
+  -y &= (-x)^3+3(-x)^2 \nr
+  y &= x^3-3x^2
+\end{align*}
+
+\paragraph{178}
+\begin{align*}
+  y &= \sqrt{x-1}+2 \nr
+  \intertext{(1)　$x$ 軸対称}
+  y &= -\sqrt{x-1}-2 \nr
+  \intertext{(2)　$y$ 軸対称}
+  y &= \sqrt{-x-1}+2 \nr
+  \intertext{(3)　原点対称}
+  y &= -\sqrt{-x-1}-2
+\end{align*}
+
+\paragraph{179 (1)}
+\begin{align*}
+  y &= \frac{1}{x-2} \quad (x \neq 2,\ y \neq 0) \nr
+  x-2 &= \frac{1}{y} \nr
+  x &= \frac{1}{y}+2 \nr
+  &\text{逆関数は } y = \frac{1}{x}+2 \ret (x \neq 0,\ y \neq 2)
+\end{align*}
+
+\paragraph{179 (2)}
+\begin{align*}
+  y &= x^2-3 \quad (x \geqq 0,\ y \geqq -3) \nr
+  x^2 &= y+3 \nr
+  x &= \sqrt{y+3} \quad (\because x \geqq 0) \nr
+  &\text{逆関数は } y = \sqrt{x+3} \ret (x \geqq -3,\ y \geqq 0)
+\end{align*}
+
+\paragraph{179 (3)}
+\begin{align*}
+  y &= -\sqrt{x} \quad (x \geqq 0,\ y \leqq 0) \nr
+  y^2 &= x \nr
+  x &= y^2 \nr
+  &\text{逆関数は } y = x^2 \ret (x \leqq 0,\ y \geqq 0)
+\end{align*}
+
+\paragraph{179 (4)}
+\begin{align*}
+  y &= \sqrt{2-x}-1 \quad (x \leqq 2,\ y \geqq -1) \nr
+  2-x &= (y+1)^2 \nr
+  x &= -(y+1)^2+2 \nr
+  &\text{逆関数は } y = -(x+1)^2+2 \ret (x \geqq -1,\ y \leqq 2)
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{180 (1)}
+\begin{align*}
+  f(-x) &= -2x \nr
+  &= -f(x) \nr
+  &\therefore \text{奇関数}
+\end{align*}
+
+\paragraph{180 (2)}
+\begin{align*}
+  f(-x) &= 3(-x)^2-1 \nr
+  &= 3x^2-1 = f(x) \nr
+  &\therefore \text{偶関数}
+\end{align*}
+
+\paragraph{180 (3)}
+\begin{align*}
+  f(-x) &= -x\{(-x)^2-1\} \nr
+  &= -x(x^2-1) = -f(x) \nr
+  &\therefore \text{奇関数}
+\end{align*}
+
+\paragraph{180 (4)}
+\begin{align*}
+  f(-x) &= \frac{(-x)^4-1}{(-x)^2} \nr
+  &= \frac{x^4-1}{x^2} = f(x) \nr
+  &\therefore \text{偶関数}
+\end{align*}
+
+\paragraph{180 (5)}
+\begin{align*}
+  f(-x) &= 3 \nr
+  &= f(x) \nr
+  &\therefore \text{偶関数}
+\end{align*}
+
+\paragraph{180 (6)}
+\begin{align*}
+  f(-x) &= 3+(-x)^3 \nr
+  &= 3-x^3 \nr
+  &\therefore \text{いずれでもない}
+\end{align*}
+
+\paragraph{181 (1)}
+\begin{align*}
+  y &= \frac{3x-5}{x-2} \nr
+  &= 3+\frac{1}{x-2} \quad (x \neq 2) \nr
+  &\text{漸近線 } x=2,\ y=3
+\end{align*}
+
+\paragraph{181 (2)}
+\begin{align*}
+  y &= -\sqrt{x+3}+4 \quad (x \geqq -3) \nr
+  \text{値域：} & y \leqq 4
+\end{align*}
+
+\paragraph{182}
+\begin{align*}
+  y+3 &= \frac{2}{x-1} \nr
+  y &= \frac{2}{x-1}-3
+\end{align*}
+
+\paragraph{183}
+\begin{align*}
+  y-2 &= \sqrt{-(x+3)} \nr
+  y &= \sqrt{-x-3}+2
+\end{align*}
+
+\paragraph{184 (1)}
+\begin{align*}
+  y &= (x-1)^3-2
+\end{align*}
+
+\paragraph{184 (2)}
+\begin{align*}
+  y &= -(x+1)^4+1
+\end{align*}
+
+\paragraph{184 (3)}
+\begin{align*}
+  y &= \frac{1}{x+1}-2 \nr
+  &\text{漸近線 } x=-1,\ y=-2
+\end{align*}
+
+\paragraph{184 (4)}
+\begin{align*}
+  y &= \frac{2x+3}{x+2} \nr
+  &= 2-\frac{1}{x+2} \nr
+  &\text{漸近線 } x=-2,\ y=2
+\end{align*}
+
+\paragraph{184 (5)}
+\begin{align*}
+  y &= \sqrt{x+1}-2 \quad (x \geqq -1)
+\end{align*}
+
+\paragraph{184 (6)}
+\begin{align*}
+  y &= \sqrt{-x+1}+1 \nr
+  &= \sqrt{-(x-1)}+1 \quad (x \leqq 1)
+\end{align*}
+
+\paragraph{185}
+\begin{align*}
+  y &= 3x^4-2x \nr
+  &\to y = 3(-x)^4-2(-x) \nr
+  y &= 3x^4+2x
+\end{align*}
+
+\paragraph{186}
+\begin{align*}
+  y &= \sqrt{x+1}-1 \nr
+  &\to -y = \sqrt{-x+1}-1 \nr
+  y &= -\sqrt{-x+1}+1
+\end{align*}
+
+\paragraph{187}
+\begin{align*}
+  y &= \frac{3}{x+2} \quad (x \neq -2,\ y \neq 0) \nr
+  x+2 &= \frac{3}{y} \nr
+  x &= \frac{3}{y}-2 \nr
+  &\text{逆関数は } y = \frac{3}{x}-2 \ret (x \neq 0,\ y \neq -2)
+\end{align*}
+
+\paragraph{188 (1)}
+\begin{align*}
+  f(x) &= (x-2)^2 \quad (x \leqq 2,\ f(x) \geqq 0) \nr
+  \pm\sqrt{f(x)} &= x-2 \nr
+  x &= 2-\sqrt{f(x)} \quad (\because x \leqq 2) \nr
+  &\text{よって } g(x) = 2-\sqrt{x} \quad (x \geqq 0)
+\end{align*}
+
+\paragraph{188 (2)}
+\begin{align*}
+  &\text{交点の } x \text{ 座標は} \nr
+  &(x-2)^2 = 2-\sqrt{x} \text{ の解} \nr
+  &\sqrt{x} = 2-(x-2)^2 \nr
+  &\LHS \geqq 0 \text{ なので } \RHS \geqq 0 \nr
+  &\therefore (x-2)^2 \leqq 2 \nr
+  &\text{すなわち } -\sqrt{2} \leqq x-2 \leqq \sqrt{2} \quad \cdots \text{①} \nr
+  &\text{また } f(x),\ g(x) \text{ の定義域より} \ret 0 \leqq x \leqq 2 \quad \cdots \text{②} \nr
+  &\text{このとき両辺 } 0 \text{ 以上なので2乗して} \nr
+  x &= \{2-(x-2)^2\}^2 \nr
+  x &= 4-4(x-2)^2+(x-2)^4 \nr
+  &(x-2)^4-4(x-2)^2-(x-2)+2 = 0 \nr
+  &t = x-2 \text{ とすると} \nr
+  &t^4-4t^2-t+2 = 0 \ret (\text{①、② より } -\sqrt{2} \leqq t \leqq 0) \nr
+  &(t-2)(t^3+2t^2-1) = 0 \nr
+  &(t-2)(t+1)(t^2+t-1) = 0 \nr
+  &t = 2,\ -1,\ \frac{-1 \pm \sqrt{5}}{2} \nr
+  &-\sqrt{2} \leqq t \leqq 0 \text{ をみたすのは } t=-1 \nr
+  &\text{このとき } x = 1 \nr
+  &f(1) = (1-2)^2 = 1 \nr
+  &\therefore \text{交点 } (1,\ 1)
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{189 (1)}
+\begin{align*}
+  y &= \frac{3x-1}{2x-2} \nr
+  &= \frac{3}{2}+\frac{2}{2x-2} \nr
+  &= \frac{1}{x-1}+\frac{3}{2} \nr
+  &\text{漸近線 } x=1,\ y=\frac{3}{2}
+\end{align*}
+
+\paragraph{189 (2)}
+\begin{align*}
+  y &= \frac{2x}{2x+3} \nr
+  &= 1-\frac{3}{2x+3} \nr
+  &= -\frac{3}{2\left(x+\frac{3}{2}\right)}+1 \nr
+  &\text{漸近線 } x=-\frac{3}{2},\ y=1
+\end{align*}
+
+\paragraph{190 (1)}
+\begin{align*}
+  y &= \sqrt{-3x} \quad (x \leqq 0)
+\end{align*}
+
+\paragraph{190 (2)}
+\begin{align*}
+  y &= \sqrt{-3x+6} \nr
+  &= \sqrt{-3(x-2)} \quad (x \leqq 2)
+\end{align*}
+
+\paragraph{191}
+\begin{align*}
+  y &= \frac{4x-9}{2x-3} \nr
+  &= 2-\frac{3}{2x-3} \ret \left(-1 \leqq x \leqq 3,\ x \neq \frac{3}{2}\right) \nr
+  \text{値域：} & y \leqq 1,\ \frac{13}{5} \leqq y
+\end{align*}
+
+\paragraph{192}
+\begin{align*}
+  &y = \sqrt{-3x+a} \quad (-7 \leqq x \leqq b) \nr
+  &-b \leqq -x \leqq 7 \nr
+  &-3b \leqq -3x \leqq 21 \nr
+  &-3b+a \leqq -3x+a \leqq 21+a \nr
+  &-3b+a \leqq y^2 \leqq 21+a \nr
+  &1 \leqq y^2 \leqq 25 \text{ なので} \nr
+  &\begin{cases} -3b+a = 1 \\ 21+a = 25 \end{cases}
+  \text{より}
+  \begin{cases} a = 4 \\ b = 1 \end{cases} \nr
+  &\text{このとき } -3x+a \geqq 0 \text{ をみたす}
+\end{align*}
+
+\paragraph{193}
+\begin{align*}
+  &x=\frac{2}{3},\ y=2 \text{ を漸近線とする分数関数は} \nr
+  y &= \frac{k}{x-\frac{2}{3}}+2 \quad (k: \text{定数}) \nr
+  &(1,\ 1) \text{ を通るので} \nr
+  1 &= \frac{k}{\frac{1}{3}}+2 \nr
+  k &= -\frac{1}{3} \nr
+  y &= -\frac{1}{3x-2}+2 \nr
+  &= \frac{6x-5}{3x-2} \nr
+  &\text{これが } y=\frac{ax+b}{3x+c} \text{ に一致するので} \nr
+  &a=6,\ b=-5,\ c=-2
+\end{align*}
+
+\paragraph{194 (1)}
+\begin{align*}
+  &y = \frac{a}{x+2}+b \text{ とおける } (a,\ b: \text{定数}) \nr
+  &(2,\ 4),\ (-1,\ 7) \text{ を通るので} \nr
+  &\begin{cases} 4 = \dfrac{1}{4}a+b \\ 7 = a+b \end{cases}
+  \text{より}
+  \begin{cases} a = 4 \\ b = 3 \end{cases} \nr
+  y &= \frac{4}{x+2}+3
+\end{align*}
+
+\paragraph{194 (2)}
+\begin{align*}
+  &y = \frac{b}{x-a}+2 \text{ とおける } (a,\ b: \text{定数}) \nr
+  &(4,\ 6),\ (2,\ -2) \text{ を通る} \nr
+  &\begin{cases} 6 = \dfrac{b}{4-a}+2 \\ -2 = \dfrac{b}{2-a}+2 \end{cases} \nr
+  &\begin{cases} 4(4-a) = b \\ -4(2-a) = b \end{cases} \nr
+  &16-4a = -8+4a \nr
+  a &= 3 \nr
+  b &= 4 \nr
+  y &= \frac{4}{x-3}+2
+\end{align*}
+
+\paragraph{194 (3)}
+\begin{align*}
+  &y-a = \frac{3}{x-b} \text{ とおける } (a,\ b: \text{定数}) \nr
+  &(-2,\ 8),\ (-4,\ 10) \text{ を通るので} \nr
+  &\begin{cases} 8-a = \dfrac{3}{-2-b} \\ 10-a = \dfrac{3}{-4-b} \end{cases} \nr
+  2 &= -\frac{3}{4+b}+\frac{3}{2+b} \nr
+  &2(b+2)(b+4) = -3(b+2)+3(b+4) \nr
+  &2(b^2+6b+8) = 6 \nr
+  &b^2+6b+5 = 0 \nr
+  &(b+1)(b+5) = 0 \nr
+  b &= -1,\ -5 \nr
+  &a = 8+\frac{3}{b+2} \text{ なので} \ret (a,\ b) = (11,\ -1),\ (7,\ -5) \nr
+  &y = \frac{3}{x+1}+11,\quad y = \frac{3}{x+5}+7
+\end{align*}
+
+\paragraph{195}
+\begin{align*}
+  y &= \frac{3}{3x+k}+2(k+1) \quad \cdots \text{①} \nr
+  &\left(= \frac{1}{x+\frac{k}{3}}+2(k+1)\right) \nr
+  &y-2(k+1) = \frac{3}{3x+k} \nr
+  &y \neq 2(k+1) \text{ なので逆数をとって} \nr
+  &\frac{1}{y-2(k+1)} = \frac{3x+k}{3} \nr
+  &x = \frac{1}{y-2(k+1)}-\frac{k}{3} \nr
+  &\therefore \text{逆関数は} \ret y = \frac{1}{x-2(k+1)}-\frac{k}{3} \nr
+  &\text{これが ① に一致するので} \nr
+  &\begin{cases} \frac{k}{3} = -2(k+1) \\ 2(k+1) = -\frac{k}{3} \end{cases} \nr
+  k &= -6k-6 \nr
+  k &= -\frac{6}{7}
+\end{align*}
+
+\paragraph{196}
+\begin{align*}
+  &g(5)=1 \Leftrightarrow f(1)=5 \nr
+  &g(2)=4 \Leftrightarrow f(4)=2 \nr
+  &\therefore \begin{cases} 5 = \dfrac{a+2}{2-b} \\ 2 = \dfrac{4a+2}{8-b} \end{cases} \nr
+  &\begin{cases} 10-5b = a+2 \\ 8-b = 2a+1 \end{cases}
+  \text{より}
+  \begin{cases} a = 3 \\ b = 1 \end{cases}
+\end{align*}
+
+\paragraph{197}
+\begin{align*}
+  &y = 2\sqrt{x+1} \text{ と } y = \frac{1}{3}x+k \ret \text{が接するときを考える} \nr
+  &2\sqrt{x+1} = \frac{1}{3}x+k \nr
+  &\text{両辺2乗して} \nr
+  &36(x+1) = (x+3k)^2 \nr
+  &x^2+6(k-6)x+9(k^2-4) = 0 \nr
+  &\text{判別式を } D \text{ とすると} \nr
+  \frac{D}{4} &= 9(k-6)^2-9(k^2-4) \nr
+  &= 9(k^2-12k+36)-9(k^2-4) \nr
+  &= 9(-12k+40) \nr
+  &\text{重解をもつとき } -12k+40 = 0 \nr
+  k &= \frac{10}{3} \nr
+  &\text{このとき交点の } x \text{ 座標は} \nr
+  &x^2-16x+64 = 0 \nr
+  &(x-8)^2 = 0 \nr
+  &x = 8,\ y = 6 \nr
+  &\text{また } (-1,\ 0) \text{ を } y=\frac{1}{3}x+k \text{ が通るとき} \nr
+  &0 = -\frac{1}{3}+k \nr
+  &k = \frac{1}{3} \nr
+  &\therefore \text{グラフより} \nr
+  &k < \frac{1}{3} \text{ のとき } 1 \text{ 個} \nr
+  &\frac{1}{3} \leqq k < \frac{10}{3} \text{ のとき } 2 \text{ 個} \nr
+  &k = \frac{10}{3} \text{ のとき } 1 \text{ 個} \nr
+  &\frac{10}{3} < k \text{ のとき } 0 \text{ 個}
+\end{align*}
+
+\paragraph{198}
+\begin{align*}
+  &\text{交点の } x \text{ 座標は} \nr
+  &\frac{1}{x} = -\frac{1}{4}x+k \text{ の解 } (x \neq 0) \nr
+  &4 = -x^2+4kx \nr
+  &x^2-4kx+4 = 0 \quad \cdots \text{①} \nr
+  &\text{判別式を } D \text{ とすると} \nr
+  \frac{D}{4} &= 4k^2-4 \nr
+  &= 4(k+1)(k-1) < 0 \nr
+  &-1 < k < 1 \nr
+  &\text{また } x=0 \text{ は ① の解でない} \nr
+  &\therefore \text{共有点をもたないとき } -1 < k < 1
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{PLUS}\\
+\end{center}
+
+\paragraph{199 (1)}
+\begin{align*}
+  y &= \abs{x^2-1} \nr
+  &= \begin{cases}
+    x^2-1 & (x \leqq -1,\ 1 \leqq x) \\
+    -x^2+1 & (-1 < x < 1)
+  \end{cases}
+\end{align*}
+
+\paragraph{199 (2)}
+\begin{align*}
+  y &= x^2-2\abs{x}+1 \nr
+  &= \begin{cases}
+    x^2+2x+1 & (x < 0) \\
+    x^2-2x+1 & (x \geqq 0)
+  \end{cases} \nr
+  &= \begin{cases}
+    (x+1)^2 & (x < 0) \\
+    (x-1)^2 & (x \geqq 0)
+  \end{cases}
+\end{align*}
+
+\paragraph{200 (1)}
+\begin{align*}
+  &y=x \text{ と } y=-\frac{1}{x} \text{ のグラフをたしたもの} \nr
+  &\text{漸近線 } x=0,\ y=x
+\end{align*}
+
+\paragraph{200 (2)}
+\begin{align*}
+  &y=x \text{ と } y=\frac{1}{x} \text{ のグラフをたしたもの} \nr
+  &\text{漸近線 } x=0,\ y=x
+\end{align*}
+
+\end{document}

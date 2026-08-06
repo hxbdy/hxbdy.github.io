@@ -1,0 +1,535 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+\raggedbottom%改ページで行間が間延びしないようにする．
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{4章 指数関数と対数関数}\\
+  \textbf{1　指数関数}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{201 (1)}
+\begin{align*}
+  \sqrt[3]{6}
+\end{align*}
+
+\paragraph{201 (2)}
+\begin{align*}
+  \pm\sqrt[4]{10}
+\end{align*}
+
+\paragraph{201 (3)}
+\begin{align*}
+  \sqrt[5]{-12}
+\end{align*}
+
+\paragraph{202 (1)}
+\begin{align*}
+  &\sqrt{2} \times \sqrt{32} \nr
+  &= \sqrt{2} \times 4\sqrt{2} \nr
+  &= 8
+\end{align*}
+
+\paragraph{202 (2)}
+\begin{align*}
+  &\left(\sqrt[5]{5}\right)^3\left(\sqrt[5]{25}\right) \nr
+  &= 5^{\frac{3}{5}} \times 5^{\frac{2}{5}} \nr
+  &= 5^1 \nr
+  &= 5
+\end{align*}
+
+\paragraph{202 (3)}
+\begin{align*}
+  &\sqrt[4]{27} \times \sqrt[4]{3} \nr
+  &= 3^{\frac{3}{4}} \times 3^{\frac{1}{4}} \nr
+  &= 3^1 \nr
+  &= 3
+\end{align*}
+
+\paragraph{202 (4)}
+\begin{align*}
+  &\frac{\sqrt[3]{48}}{\sqrt[3]{6}} \nr
+  &= 8^{\frac{1}{3}} \nr
+  &= 2
+\end{align*}
+
+\paragraph{203 (1)}
+\begin{align*}
+  &3^8 \times \left(\frac{1}{9}\right)^3 \nr
+  &= 3^8 \times 3^{-6} \nr
+  &= 3^2 \nr
+  &= 9
+\end{align*}
+
+\paragraph{203 (2)}
+\begin{align*}
+  &10^2 \times 5^{-3} \times \left(\frac{1}{4}\right)^{-1} \nr
+  &= 2^2 \times 5^2 \times 5^{-3} \times 2^2 \nr
+  &= 2^4 \times 5^{-1} \nr
+  &= \frac{16}{5}
+\end{align*}
+
+\paragraph{203 (3)}
+\begin{align*}
+  &\left(ab^3\right)^2 \times \left(a^{-1}b^2\right)^{-1} \nr
+  &= a^2b^6 \times a^1b^{-2} \nr
+  &= a^3b^4
+\end{align*}
+
+\paragraph{203 (4)}
+\begin{align*}
+  &\frac{\left(9ab^{-2}\right)^2}{\left(3a^{-2}b^2\right)^3} \nr
+  &= 3^4a^2b^{-4} \times 3^{-3}a^6b^{-6} \nr
+  &= 3a^8b^{-10} \nr
+  &= \frac{3a^8}{b^{10}}
+\end{align*}
+
+\paragraph{204 (1)}
+\begin{align*}
+  \sqrt{a^5} &= a^{\frac{5}{2}}
+\end{align*}
+
+\paragraph{204 (2)}
+\begin{align*}
+  \frac{1}{\sqrt[7]{a^3}} &= a^{-\frac{3}{7}}
+\end{align*}
+
+\paragraph{204 (3)}
+\begin{align*}
+  a^{\frac{2}{5}} &= \sqrt[5]{a^2}
+\end{align*}
+
+\paragraph{204 (4)}
+\begin{align*}
+  a^{-\frac{1}{2}} &= \frac{1}{\sqrt{a}}
+\end{align*}
+
+\paragraph{205 (1)}
+\begin{align*}
+  \left(a^{-\frac{1}{2}}\right)^{\frac{4}{3}} &= a^{-\frac{2}{3}}
+\end{align*}
+
+\paragraph{205 (2)}
+\begin{align*}
+  \frac{a^{\frac{1}{2}}}{a^{-\frac{1}{4}}} &= a^{\frac{1}{2}} \times a^{\frac{1}{4}} \nr
+  &= a^{\frac{3}{4}}
+\end{align*}
+
+\paragraph{205 (3)}
+\begin{align*}
+  a^{1.2} \times a^{0.4} &= a^{1.6} \nr
+  &= a^{\frac{8}{5}}
+\end{align*}
+
+\paragraph{206 (1)}
+\begin{align*}
+  &\sqrt[4]{a^2} \times \sqrt[5]{a^3} \nr
+  &= a^{\frac{2}{4}} \times a^{\frac{3}{5}} \nr
+  &= a^{\frac{5}{10}} \times a^{\frac{6}{10}} \nr
+  &= a^{\frac{11}{10}}
+\end{align*}
+
+\paragraph{206 (2)}
+\begin{align*}
+  \frac{a\sqrt[4]{a}}{\sqrt{a}} &= a^1 \times a^{\frac{1}{4}} \times a^{-\frac{1}{2}} \nr
+  &= a^{\frac{3}{4}}
+\end{align*}
+
+\paragraph{206 (3)}
+\begin{align*}
+  \sqrt[3]{\sqrt[4]{a}} &= \left(a^{\frac{1}{4}}\right)^{\frac{1}{3}} \nr
+  &= a^{\frac{1}{12}}
+\end{align*}
+
+\paragraph{207 (1)}
+\begin{align*}
+  y &= 4^x \nr
+  &(0,\ 1),\ (1,\ 4) \text{ を通る増加関数} \nr
+  &\text{漸近線 } y=0
+\end{align*}
+
+\paragraph{207 (2)}
+\begin{align*}
+  y &= 4^{x-1} \nr
+  &y=4^x \text{ のグラフを } x \text{ 軸方向に } 1 \ret \text{平行移動したもの}
+\end{align*}
+
+\paragraph{207 (3)}
+\begin{align*}
+  y &= \left(\frac{1}{4}\right)^x \nr
+  &= 4^{-x} \nr
+  &y=4^x \text{ のグラフと } y \text{ 軸対称}
+\end{align*}
+
+\paragraph{208 (1)}
+\begin{align*}
+  y &= -4^x \nr
+  &y=4^x \text{ のグラフと } x \text{ 軸対称}
+\end{align*}
+
+\paragraph{208 (2)}
+\begin{align*}
+  y &= -4^{-x} \nr
+  &y=4^x \text{ のグラフと原点対称}
+\end{align*}
+
+\paragraph{209 (1)}
+\begin{align*}
+  2^{2x} &= 2\sqrt[3]{2} \nr
+  2^{2x} &= 2^{1+\frac{1}{3}} \nr
+  2x &= \frac{4}{3} \nr
+  x &= \frac{2}{3}
+\end{align*}
+
+\paragraph{209 (2)}
+\begin{align*}
+  3^{-x+1} &= \sqrt{243} \nr
+  3^{-x+1} &= 3^{\frac{5}{2}} \nr
+  -x+1 &= \frac{5}{2} \nr
+  x &= -\frac{3}{2}
+\end{align*}
+
+\paragraph{209 (3)}
+\begin{align*}
+  9^x-7 \cdot 3^x-18 &= 0 \nr
+  \left(3^x\right)^2-7 \cdot 3^x-18 &= 0 \nr
+  \left(3^x-9\right)\left(3^x+2\right) &= 0 \nr
+  3^x &= 9,\ -2 \nr
+  &3^x = -2 \text{ は解なし} \nr
+  x &= 2
+\end{align*}
+
+\paragraph{210 (1)}
+\begin{align*}
+  8^x &> 16 \nr
+  2^{3x} &> 2^4 \nr
+  &\text{底 } 2>1 \text{ なので } 3x > 4 \nr
+  x &> \frac{4}{3}
+\end{align*}
+
+\paragraph{210 (2)}
+\begin{align*}
+  \left(\frac{1}{5}\right)^{x+3} &< \frac{1}{25} \nr
+  \left(\frac{1}{5}\right)^{x+3} &< \left(\frac{1}{5}\right)^2 \nr
+  &\text{底 } \frac{1}{5}<1 \text{ なので } x+3 > 2 \nr
+  x &> -1
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{211 (1)}
+\begin{align*}
+  &\sqrt[3]{-8} \times \sqrt[5]{-243} \nr
+  &= (-2) \times (-3) \nr
+  &= 6
+\end{align*}
+
+\paragraph{211 (2)}
+\begin{align*}
+  &\sqrt[4]{(-2)^4} \times \sqrt[3]{125} \nr
+  &= 2 \times 5 \nr
+  &= 10
+\end{align*}
+
+\paragraph{211 (3)}
+\begin{align*}
+  &\left(\sqrt[3]{2}\right)^5 \times \sqrt[3]{54} \quad (54 = 2 \times 3^3) \nr
+  &= 2^{\frac{5}{3}} \times 2^{\frac{1}{3}} \times 3^{\frac{3}{3}} \nr
+  &= 2^2 \times 3 \nr
+  &= 12
+\end{align*}
+
+\paragraph{211 (4)}
+\begin{align*}
+  &\frac{\sqrt[5]{24}}{\left(\sqrt[5]{18}\right)^3} \nr
+  &= \left(\frac{24}{18^3}\right)^{\frac{1}{5}} \nr
+  &= \left(\frac{2^3 \times 3}{2^3 \times 3^6}\right)^{\frac{1}{5}} \nr
+  &= \frac{1}{3}
+\end{align*}
+
+\paragraph{212 (1)}
+\begin{align*}
+  a^2\sqrt{a} &= a^2 \times a^{\frac{1}{2}} = a^{\frac{5}{2}}
+\end{align*}
+
+\paragraph{212 (2)}
+\begin{align*}
+  \sqrt{\sqrt[3]{a^2}} &= \left(a^{\frac{2}{3}}\right)^{\frac{1}{2}} = a^{\frac{1}{3}}
+\end{align*}
+
+\paragraph{212 (3)}
+\begin{align*}
+  \frac{1}{a^2\sqrt[4]{a^3}} &= a^{-2} \times a^{-\frac{3}{4}} = a^{-\frac{11}{4}}
+\end{align*}
+
+\paragraph{212 (4)}
+\begin{align*}
+  \frac{a^2}{\sqrt[10]{\sqrt[5]{a}}} &= a^2 \times \left(a^{\frac{1}{5}}\right)^{-\frac{1}{10}} \nr
+  &= a^2 \times a^{-\frac{1}{50}} = a^{\frac{99}{50}}
+\end{align*}
+
+\paragraph{213 (1)}
+\begin{align*}
+  a^{\frac{1}{2}} \times a^{\frac{1}{3}} &= a^{\frac{5}{6}} = \sqrt[6]{a^5}
+\end{align*}
+
+\paragraph{213 (2)}
+\begin{align*}
+  \frac{a^{\frac{5}{4}}}{a^{\frac{3}{2}}} &= a^{\frac{5}{4}} \times a^{-\frac{3}{2}} \nr
+  &= a^{-\frac{1}{4}} = \frac{1}{\sqrt[4]{a}}
+\end{align*}
+
+\paragraph{214 (1)}
+\begin{align*}
+  &\left(2a^2\right)^{\frac{2}{3}} \times \left(2a^{-1}\right)^{\frac{1}{3}} \nr
+  &= 2^{\frac{2}{3}} \cdot a^{\frac{4}{3}} \cdot 2^{\frac{1}{3}} \cdot a^{-\frac{1}{3}} \nr
+  &= 2^1 \cdot a^1 \nr
+  &= 2a
+\end{align*}
+
+\paragraph{214 (2)}
+\begin{align*}
+  &\left(a^{\frac{1}{2}}+a^{-\frac{1}{2}}\right)^2 \nr
+  &= a^{2 \cdot \frac{1}{2}}+2 \cdot a^{\frac{1}{2}} \cdot a^{-\frac{1}{2}}+a^{-\frac{1}{2} \cdot 2} \nr
+  &= a+2+\frac{1}{a}
+\end{align*}
+
+\paragraph{214 (3)}
+\begin{align*}
+  &\frac{\sqrt[3]{a^2} \times \sqrt{a}}{\sqrt[6]{a^5}} \nr
+  &= a^{\frac{2}{3}} \times a^{\frac{1}{2}} \times a^{-\frac{5}{6}} \nr
+  &= a^{\frac{4+3-5}{6}} \nr
+  &= a^{\frac{1}{3}}
+\end{align*}
+
+\paragraph{214 (4)}
+\begin{align*}
+  &\left(\frac{\sqrt[4]{a}}{\sqrt[3]{a}}\right)^2 \times \sqrt[6]{a} \nr
+  &= a^{\frac{2}{4}} \times a^{-\frac{2}{3}} \times a^{\frac{1}{6}} \nr
+  &= a^{\frac{6-8+2}{12}} \nr
+  &= 1
+\end{align*}
+
+\paragraph{215 (1)}
+\begin{align*}
+  &y \text{ 方向に } +1
+\end{align*}
+
+\paragraph{215 (2)}
+\begin{align*}
+  y &= 3^x \ \to\ -y = 3^{-x} \nr
+  &\therefore \text{原点対称}
+\end{align*}
+
+\paragraph{216 (1)}
+\begin{align*}
+  4^x-7 \cdot 2^x-8 &= 0 \nr
+  \left(2^x-8\right)\left(2^x+1\right) &= 0 \nr
+  2^x &= 8,\ -1 \nr
+  x &= 3
+\end{align*}
+
+\paragraph{216 (2)}
+\begin{align*}
+  2\left(\frac{1}{4}\right)^x-9\left(\frac{1}{2}\right)^x+4 &= 0 \nr
+  2-9 \cdot 2^x+4\left(2^x\right)^2 &= 0 \nr
+  \left(4 \cdot 2^x-1\right)\left(2^x-2\right) &= 0 \nr
+  2^x &= \frac{1}{4},\ 2 \nr
+  x &= 1,\ -2
+\end{align*}
+
+\paragraph{217 (1)}
+\begin{align*}
+  3^{2x-1} &< \frac{1}{\sqrt[3]{81}} \nr
+  3^{2x-1} &< 3^{-\frac{4}{3}} \nr
+  &\text{底 } 3>1 \text{ なので} \nr
+  2x-1 &< -\frac{4}{3} \nr
+  2x &< -\frac{1}{3} \nr
+  x &< -\frac{1}{6}
+\end{align*}
+
+\paragraph{217 (2)}
+\begin{align*}
+  \left(\frac{1}{2}\right)^x &< \sqrt[3]{32} \nr
+  2^{-x} &< 2^{\frac{5}{3}} \nr
+  &\text{底 } 2>1 \text{ なので} \nr
+  -x &< \frac{5}{3} \nr
+  x &> -\frac{5}{3}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{218 (1)}
+\begin{align*}
+  \sqrt[5]{81} &= 3^{\frac{4}{5}} \nr
+  \frac{1}{\sqrt[3]{9}} &= 3^{-\frac{2}{3}} \nr
+  3 \cdot \sqrt[4]{3} &= 3^{\frac{5}{4}} \nr
+  1 &= 3^0 \nr
+  -\frac{2}{3} < 0 &< \frac{4}{5} < \frac{5}{4} \nr
+  &\text{底 } 3>1 \text{ なので} \nr
+  &\frac{1}{\sqrt[3]{9}} < 1 < \sqrt[5]{81} < 3 \cdot \sqrt[4]{3}
+\end{align*}
+
+\paragraph{218 (2)}
+\begin{align*}
+  \sqrt[5]{0.7} &= 0.7^{\frac{1}{5}} \nr
+  \frac{1}{0.49} &= 0.7^{-2} \nr
+  \frac{1}{\sqrt[4]{0.7}} &= 0.7^{-\frac{1}{4}} \nr
+  \left(\sqrt[3]{0.7}\right)^4 &= 0.7^{\frac{4}{3}} \nr
+  -2 < -\frac{1}{4} &< \frac{1}{5} < \frac{4}{3} \nr
+  &\text{底 } 0.7<1 \text{ なので} \nr
+  &\left(\sqrt[3]{0.7}\right)^4 < \sqrt[5]{0.7} \ret < \frac{1}{\sqrt[4]{0.7}} < \frac{1}{0.49}
+\end{align*}
+
+\paragraph{219 (1)}
+\begin{align*}
+  0.5^{2x+1} &> 0.125^{1-x} \nr
+  \left(\frac{1}{2}\right)^{2x+1} &> \left(\frac{1}{8}\right)^{1-x} \nr
+  2^{-(2x+1)} &> 2^{-3(1-x)} \nr
+  &\text{底 } 2>1 \text{ なので} \nr
+  -2x-1 &> -3+3x \nr
+  -5x &> -2 \nr
+  x &< \frac{2}{5}
+\end{align*}
+
+\paragraph{219 (2)}
+\begin{align*}
+  \sqrt[4]{a^{3x}} &> \frac{1}{a^{x+1}} \nr
+  a^{\frac{3}{4}x} &> a^{-(x+1)} \nr
+  \intertext{i) 底 $a>1$ のとき}
+  \frac{3}{4}x &> -x-1 \nr
+  \frac{7}{4}x &> -1 \nr
+  x &> -\frac{4}{7} \nr
+  \intertext{ii) 底 $0<a<1$ のとき}
+  \frac{3}{4}x &< -x-1 \nr
+  x &< -\frac{4}{7}
+\end{align*}
+
+\paragraph{220 (1)}
+\begin{align*}
+  2^{2x+3}-17 \cdot 2^x+2 &> 0 \nr
+  8 \cdot \left(2^x\right)^2-17 \cdot 2^x+2 &> 0 \nr
+  \left(8 \cdot 2^x-1\right)\left(2^x-2\right) &> 0 \nr
+  2^x < \frac{1}{8},\ 2 &< 2^x \nr
+  &\text{底 } 2>1 \text{ なので} \nr
+  x < -3,\ 1 &< x
+\end{align*}
+
+\paragraph{220 (2)}
+\begin{align*}
+  3^{2x}-8 \cdot 3^x-9 &< 0 \nr
+  \left(3^x-9\right)\left(3^x+1\right) &< 0 \nr
+  -1 < 3^x &< 9 \nr
+  &\text{底 } 3>1 \text{ なので} \nr
+  x &< 2
+\end{align*}
+
+\paragraph{221}
+\begin{align*}
+  3^x+3^{-x} &= 5 \nr
+  &\text{両辺3乗して} \nr
+  &3^{3x}+3 \cdot 3^{2x} \cdot 3^{-x} \ret +3 \cdot 3^x \cdot 3^{-2x}+3^{-3x} = 125 \nr
+  &27^x+27^{-x}+3\left(3^x+3^{-x}\right) = 125 \nr
+  &27^x+27^{-x}+15 = 125 \nr
+  &27^x+27^{-x} = 110
+\end{align*}
+
+\paragraph{222}
+\begin{align*}
+  &\frac{a^{4x}-a^{-4x}}{a^x-a^{-x}} \nr
+  &= \frac{\left(a^{2x}+a^{-2x}\right)\left(a^{2x}-a^{-2x}\right)}{a^x-a^{-x}} \nr
+  &= \frac{\left(a^{2x}+a^{-2x}\right)\left(a^x+a^{-x}\right)\left(a^x-a^{-x}\right)}{a^x-a^{-x}} \nr
+  &= \left(6+\frac{1}{6}\right)\left(\sqrt{6}+\frac{1}{\sqrt{6}}\right) \quad (\because a>0) \nr
+  &= \frac{37}{6} \cdot \frac{7}{\sqrt{6}} \nr
+  &= \frac{259}{36}\sqrt{6}
+\end{align*}
+
+\paragraph{223 (1)}
+\begin{align*}
+  y &= 9^x-6 \cdot 3^x+5 \quad (0 \leqq x \leqq 2) \nr
+  &= \left(3^x-3\right)^2-4 \nr
+  &1 \leqq 3^x \leqq 9 \text{ なので} \nr
+  &3^x=3 \text{ すなわち } x=1 \text{ で最小値 } -4 \nr
+  &3^x=9 \text{ すなわち } x=2 \text{ で最大値 } 32 \ret \text{をとる}
+\end{align*}
+
+\paragraph{223 (2)}
+\begin{align*}
+  y &= \left(3^x-3\right)^2-4 \quad (-1 \leqq x \leqq 0) \nr
+  &\frac{1}{3} \leqq 3^x \leqq 1 \text{ なので} \nr
+  &3^x=1 \text{ すなわち } x=0 \text{ で最小値 } 0 \nr
+  &3^x=\frac{1}{3} \text{ すなわち } x=-1 \text{ で} \ret \text{最大値 } \frac{64}{9}-4=\frac{28}{9} \text{ をとる}
+\end{align*}
+
+\paragraph{224 (1)}
+\begin{align*}
+  X^2 &= \left(2^x+2^{-x}\right)^2 \nr
+  &= 4^x+2+4^{-x} \nr
+  &\therefore 4^x+4^{-x} = X^2-2 \nr
+  f(x) &= \left(X^2-2\right)-2X+1 \nr
+  &= X^2-2X-1 \nr
+  &= (X-1)^2-2
+\end{align*}
+
+\paragraph{224 (2)}
+\begin{align*}
+  &2^x>0,\ 2^{-x}>0 \text{ なので} \ret \text{相加平均と相乗平均の関係より} \nr
+  X &\geqq 2\sqrt{2^x \cdot 2^{-x}} \nr
+  &= 2 \nr
+  &\text{等号成立は } 2^x = 2^{-x} \nr
+  &2^{2x} = 1 \nr
+  &\text{すなわち } x=0 \text{ のとき}
+\end{align*}
+
+\paragraph{224 (3)}
+\begin{align*}
+  f(x) &= (X-1)^2-2 \quad (X \geqq 2) \nr
+  &X=2 \text{ すなわち } x=0 \text{ で最小値 } -1 \ret \text{をとる}
+\end{align*}
+
+\end{document}

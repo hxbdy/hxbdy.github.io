@@ -1,0 +1,651 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{5章 三角関数}\\
+  \textbf{2　三角関数}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{285(1)}
+\begin{align*}
+  \quad 630^{\circ} &= 360^{\circ} + 270^{\circ}
+\end{align*}
+
+\paragraph{285(2)}
+\begin{align*}
+  \quad -310^{\circ} &= -360^{\circ} + 50^{\circ}
+\end{align*}
+
+\paragraph{285(3)}
+\begin{align*}
+  \quad 490^{\circ} &= 360^{\circ} + 130^{\circ}
+\end{align*}
+
+\paragraph{285(4)}
+\begin{align*}
+  \quad -1120^{\circ} &= -1080^{\circ} - 40^{\circ}
+\end{align*}
+
+\paragraph{285(5)}
+\begin{align*}
+  \quad 2000^{\circ} &= 1800^{\circ} + 200^{\circ}
+\end{align*}
+
+\paragraph{286(1)}
+\begin{align*}
+  \quad &\text{第3象限}
+\end{align*}
+
+\paragraph{286(2)}
+\begin{align*}
+  \quad 400^{\circ} &= 360^{\circ} + 40^{\circ} \quad \text{第1象限}
+\end{align*}
+
+\paragraph{286(3)}
+\begin{align*}
+  \quad -740^{\circ} &= -720^{\circ} - 20^{\circ} \quad \text{第4象限}
+\end{align*}
+
+\paragraph{286(4)}
+\begin{align*}
+  \quad 820^{\circ} &= 720^{\circ} + 100^{\circ} \quad \text{第2象限}
+\end{align*}
+
+\paragraph{286(5)}
+\begin{align*}
+  \quad -635^{\circ} &= -720^{\circ} + 85^{\circ} \quad \text{第1象限}
+\end{align*}
+
+\paragraph{287(1)}
+\begin{align*}
+   \sin 210^{\circ} &= -\frac{1}{2} \\
+\end{align*}
+
+\paragraph{287(2)}
+\begin{align*}
+  \cos 570^{\circ} &= \cos 210^{\circ} = -\frac{\sqrt{3}}{2} \\
+\end{align*}
+
+\paragraph{287(3)}
+\begin{align*}
+  \tan 390^{\circ} &= \tan 30^{\circ} = \frac{1}{\sqrt{3}} \\
+\end{align*}
+
+\paragraph{287(4)}
+\begin{align*}
+  \sin 630^{\circ} &= \sin 270^{\circ} = -1 \\
+\end{align*}
+
+\paragraph{287(5)}
+\begin{align*}
+  \cos \left(-225^{\circ}\right)=\cos 135^{\circ}=-\frac{1}{\sqrt{2}} \\
+\end{align*}
+
+\paragraph{287(6)}
+\begin{align*}
+  \tan \left(-480^{\circ}\right)=\tan \left(-120^{\circ}\right)=\sqrt{3} \\
+\end{align*}
+
+\paragraph{288 (1)}
+\begin{align*}
+  135^{\circ} &= \frac{3}{4} \pi
+\end{align*}
+
+\paragraph{288 (2)}
+\begin{align*}
+  36^{\circ} &= \frac{\pi}{5}
+\end{align*}
+
+\paragraph{288 (3)}
+\begin{align*}
+  -10^{\circ} &= -\frac{1}{18} \pi
+\end{align*}
+
+\paragraph{288 (4)}
+\begin{align*}
+  240^{\circ} &= \frac{4}{3} \pi
+\end{align*}
+
+\paragraph{288 (5)}
+\begin{align*}
+  -190^{\circ} &= -\frac{19}{18} \pi
+\end{align*}
+
+\paragraph{289 (1)}
+\begin{align*}
+  \frac{\pi}{3} &= 60^{\circ}
+\end{align*}
+
+\paragraph{289 (2)}
+\begin{align*}
+  \frac{5}{4} \pi &= 225^{\circ}
+\end{align*}
+
+\paragraph{289 (3)}
+\begin{align*}
+  -\frac{2}{5} \pi &= -72^{\circ}
+\end{align*}
+
+\paragraph{289 (4)}
+\begin{align*}
+  \frac{7}{3} \pi &= 420^{\circ}
+\end{align*}
+
+\paragraph{289 (5)}
+\begin{align*}
+  -\frac{\pi}{9} &= -20^{\circ}
+\end{align*}
+
+\paragraph{290 (1)}
+\begin{align*}
+  \sin \frac{5}{3} \pi &= -\frac{\sqrt{3}}{2}
+\end{align*}
+
+\paragraph{290 (2)}
+\begin{align*}
+  \cos \frac{5}{4} \pi &= -\frac{1}{\sqrt{2}}
+\end{align*}
+
+\paragraph{290 (3)}
+\begin{align*}
+  \tan \frac{\pi}{6} &= \frac{1}{\sqrt{3}}
+\end{align*}
+
+\paragraph{291 (1)}
+\begin{align*}
+  \text{弧の長さ： } & 8\pi \times \frac{\frac{\pi}{6}}{2\pi} = \frac{2}{3}\pi \nr
+  \text{面積： } & 16\pi \times \frac{\frac{\pi}{6}}{2\pi} = \frac{4}{3}\pi
+\end{align*}
+
+\paragraph{291 (2)}
+\begin{align*}
+  \intertext{中心角を $\theta$ とすると}
+  6\pi \times \frac{\theta}{2\pi} &= 2\pi \implies \theta = \frac{2}{3}\pi \nr
+  \text{面積： } & 9\pi \times \frac{\frac{2}{3}\pi}{2\pi} = 3\pi
+\end{align*}
+
+\paragraph{292 (1)}
+\begin{align*}
+  (\text{左辺}) &= \frac{\sin \theta}{\cos \theta} + \frac{\cos \theta}{\sin \theta} \nr
+  &= \frac{\sin^2 \theta + \cos^2 \theta}{\sin \theta \cos \theta} \nr
+  &= \frac{1}{\sin \theta \cos \theta} = (\text{右辺})
+\end{align*}
+
+\paragraph{292 (2)}
+\begin{align*}
+  (\text{左辺}) &= \frac{1}{1-\cos \theta} + \frac{1}{1+\cos \theta} \nr
+  &= \frac{(1+\cos \theta) + (1-\cos \theta)}{1-\cos^2 \theta} \nr
+  &= \frac{2}{\sin^2 \theta} = (\text{右辺})
+\end{align*}
+
+\paragraph{293 (1)}
+\begin{align*}
+  \intertext{$180^{\circ} < \theta < 270^{\circ}$ なので $\cos \theta < 0$}
+  \cos \theta &= -\sqrt{1 - \left( -\frac{4}{5} \right)^2} = -\frac{3}{5} \nr
+  \tan \theta &= \frac{\sin \theta}{\cos \theta} = \frac{4}{3}
+\end{align*}
+
+\paragraph{293 (2)}
+\begin{align*}
+  \intertext{$270^{\circ} < \theta < 360^{\circ}$ なので $\sin \theta < 0$}
+  \sin \theta &= -\sqrt{1 - \left( \frac{1}{3} \right)^2} = -\frac{2\sqrt{2}}{3} \nr
+  \tan \theta &= \frac{\sin \theta}{\cos \theta} = -2\sqrt{2}
+\end{align*}
+
+\paragraph{293 (3)}
+\begin{align*}
+  1 + \tan^2 \theta &= \frac{1}{\cos^2 \theta} \nr
+  1 + 9 &= \frac{1}{\cos^2 \theta} \implies \cos^2 \theta = \frac{1}{10} \nr
+  \intertext{$180^{\circ} < \theta < 270^{\circ}$ なので $\cos \theta < 0$}
+  \cos \theta &= -\frac{1}{\sqrt{10}} \nr
+  \sin \theta &= \tan \theta \cdot \cos \theta = -\frac{3}{\sqrt{10}}
+\end{align*}
+
+\paragraph{294 (1)}
+\begin{align*}
+  &\cos \theta \sin \left(\frac{\pi}{2}-\theta\right) + \sin \theta \cos \left(\frac{\pi}{2}-\theta\right) \nr
+  &= \cos \theta \cdot \cos \theta + \sin \theta \cdot \sin \theta \nr
+  &= \cos^2 \theta + \sin^2 \theta \nr
+  &= 1
+\end{align*}
+
+\paragraph{294 (2)}
+\begin{align*}
+  &\sin \left(\frac{\pi}{2}-\theta\right) - \sin (\pi+\theta) + \\
+  &\cos \left(\frac{\pi}{2}+\theta\right) + \cos (\pi-\theta) \nr
+  &= \cos \theta - (-\sin \theta) + (-\sin \theta) + (-\cos \theta) \nr
+  &= \cos \theta + \sin \theta - \sin \theta - \cos \theta \nr
+  &= 0
+\end{align*}
+
+\paragraph{294 (3)}
+\begin{align*}
+  &\tan (\pi+\theta) \sin \left(\frac{\pi}{2}+\theta\right) + \\
+  &\cos (\pi-\theta) \tan (\pi-\theta) \nr
+  &= \tan \theta \cdot \cos \theta + (-\cos \theta) \cdot (-\tan \theta) \nr
+  &= \sin \theta + \sin \theta \nr
+  &= 2 \sin \theta
+\end{align*}
+
+\paragraph{295 (1)}
+\begin{align*}
+  y &= \sin \left(x-\frac{\pi}{2}\right) \nr
+    &= -\cos x \nr
+  \text{周期：} & 2\pi
+\end{align*}
+
+\paragraph{295 (2)}
+\begin{align*}
+  y &= \cos \left(x+\frac{\pi}{4}\right) \nr
+  \text{周期：} & 2\pi
+\end{align*}
+
+\paragraph{296 (1)}
+\begin{align*}
+  y &= 2 \cos x \nr
+  \text{周期：} & 2\pi
+\end{align*}
+
+\paragraph{296 (2)}
+\begin{align*}
+  y &= -\frac{1}{2} \sin x \nr
+  \text{周期：} & 2\pi
+\end{align*}
+
+\paragraph{297 (1)}
+\begin{align*}
+  y &= \cos 2x \nr
+  \text{周期：} & \pi
+\end{align*}
+
+\paragraph{297 (2)}
+\begin{align*}
+  y &= \sin \frac{x}{3} \nr
+  \text{周期：} & 6\pi
+\end{align*}
+
+
+\paragraph{298 (1)}
+\begin{align*}
+  \sin x &= \frac{\sqrt{2}}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= \frac{\pi}{4}, \frac{3}{4}\pi
+\end{align*}
+
+\paragraph{298 (2)}
+\begin{align*}
+  \cos x &= \frac{1}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= \frac{\pi}{3}, \frac{5}{3}\pi
+\end{align*}
+
+\paragraph{298 (3)}
+\begin{align*}
+  \sin x &\geqq \frac{\sqrt{3}}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  \frac{\pi}{3} &\leqq x \leqq \frac{2}{3}\pi
+\end{align*}
+
+\paragraph{298 (4)}
+\begin{align*}
+  \cos x &< -\frac{1}{\sqrt{2}} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  \frac{3}{4}\pi &< x < \frac{5}{4}\pi
+\end{align*}
+
+\paragraph{299 (1)}
+\begin{align*}
+  \tan x &= 0 \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= 0, \pi
+\end{align*}
+
+\paragraph{299 (2)}
+\begin{align*}
+  \tan x &= -1 \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= \frac{3}{4}\pi, \frac{7}{4}\pi
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{300 (1)}
+\begin{align*}
+  40^{\circ} &= \frac{40}{180}\pi = \frac{2}{9}\pi
+\end{align*}
+
+\paragraph{300 (2)}
+\begin{align*}
+  50^{\circ} &= \frac{50}{180}\pi = \frac{5}{18}\pi
+\end{align*}
+
+\paragraph{300 (3)}
+\begin{align*}
+  -18^{\circ} &= -\frac{18}{180}\pi = -\frac{1}{10}\pi
+\end{align*}
+
+\paragraph{300 (4)}
+\begin{align*}
+  -210^{\circ} &= -\frac{210}{180}\pi = -\frac{7}{6}\pi
+\end{align*}
+
+\paragraph{301 (1)}
+\begin{align*}
+  -\frac{\pi}{4} &= -45^{\circ}
+\end{align*}
+
+\paragraph{301 (2)}
+\begin{align*}
+  \frac{2}{3}\pi &= 120^{\circ}
+\end{align*}
+
+\paragraph{301 (3)}
+\begin{align*}
+  -\frac{11}{6}\pi &= -330^{\circ}
+\end{align*}
+
+\paragraph{301 (4)}
+\begin{align*}
+  \frac{7}{5}\pi &= \frac{7}{5} \times 180^{\circ} = 252^{\circ}
+\end{align*}
+
+\paragraph{302 (1)}
+\begin{align*}
+  \sin (-90^{\circ}) &= -1
+\end{align*}
+
+\paragraph{302 (2)}
+\begin{align*}
+  \cos 225^{\circ} &= -\frac{1}{\sqrt{2}}
+\end{align*}
+
+\paragraph{302 (3)}
+\begin{align*}
+  \tan (-780^{\circ}) &= \tan (-60^{\circ}) = -\sqrt{3}
+\end{align*}
+
+\paragraph{302 (4)}
+\begin{align*}
+  \sin \left(-\frac{17}{3}\pi\right) &= \sin \frac{\pi}{3} = \frac{\sqrt{3}}{2}
+\end{align*}
+
+\paragraph{302 (5)}
+\begin{align*}
+  \cos \frac{17}{6}\pi &= \cos \frac{5}{6}\pi = -\frac{\sqrt{3}}{2}
+\end{align*}
+
+\paragraph{302 (6)}
+\begin{align*}
+  \tan \left(\frac{9}{4}\pi\right) &= \tan \left(\frac{\pi}{4}\right) = 1
+\end{align*}
+
+\paragraph{303}
+\begin{align*}
+  \text{弧の長さ： } & 10\pi \times \frac{\frac{\pi}{4}}{2\pi} = \frac{5}{4}\pi \nr
+  \text{面積： } & 25\pi \times \frac{\frac{\pi}{4}}{2\pi} = \frac{25}{8}\pi
+\end{align*}
+
+\paragraph{304}
+\begin{align*}
+  (\text{左辺}) &= \frac{\sin \theta \{ (1+\cos \theta) - (1-\cos \theta) \}}{(1-\cos \theta)(1+\cos \theta)} \nr
+  &= \frac{2 \sin \theta \cos \theta}{1-\cos^2 \theta} \nr
+  &= \frac{2 \sin \theta \cos \theta}{\sin^2 \theta} \nr
+  &= \frac{2}{\tan \theta} = (\text{右辺})
+\end{align*}
+
+\paragraph{305}
+\begin{align*}
+  \intertext{$180^{\circ} < \theta < 270^{\circ}$ なので $\cos \theta < 0$}
+  \cos \theta &= -\sqrt{1 - \left( -\frac{1}{4} \right)^2} \nr
+  &= -\frac{\sqrt{15}}{4} \nr
+  \tan \theta &= \frac{\sin \theta}{\cos \theta} = \frac{1}{\sqrt{15}}
+\end{align*}
+
+\paragraph{306 (1)}
+\begin{align*}
+  y &= \cos \left(x-\frac{\pi}{6}\right) \nr
+  \text{周期：} & 2\pi
+\end{align*}
+
+\paragraph{306 (2)}
+\begin{align*}
+  y &= 2 \sin 3x \nr
+  \text{周期：} & \frac{2}{3}\pi
+\end{align*}
+
+\paragraph{307 (1)}
+\begin{align*}
+  \sin x &= -\frac{\sqrt{2}}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= \frac{5}{4}\pi, \ \frac{7}{4}\pi
+\end{align*}
+
+\paragraph{307 (2)}
+\begin{align*}
+  \tan x &= -\sqrt{3} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= \frac{2}{3}\pi, \ \frac{5}{3}\pi
+\end{align*}
+
+\paragraph{307 (3)}
+\begin{align*}
+  2 \sin x - 1 &< 0 \nr
+  \sin x &< \frac{1}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  0 \leqq x &< \frac{\pi}{6}, \ \frac{5}{6}\pi < x < 2\pi
+\end{align*}
+
+\paragraph{307 (4)}
+\begin{align*}
+  \cos x &\leqq \frac{\sqrt{2}}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  \frac{\pi}{4} \leqq x &\leqq \frac{7}{4}\pi
+\end{align*}
+
+\paragraph{308}
+\begin{align*}
+  y &= \sin x \nr
+  \intertext{(1) $a$ の値を求める：}
+  a &= \sin \frac{5}{4}\pi = -\frac{1}{\sqrt{2}} \nr
+  \intertext{(2) $b$ の値を求める（$0 < b < \frac{5}{4}\pi$）：}
+  \frac{1}{2} &= \sin b \implies b = \frac{5}{6}\pi \nr
+  \intertext{(3) $c$ の値を求める（$-\pi < c < 0$）：}
+  -1 &= \sin c \implies c = -\frac{\pi}{2}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{309}
+\begin{align*}
+  &OA : OB = r_1 : r_2 \nr
+  &r_2 \cdot OA = r_1 \cdot (OA + l) \nr
+  &OA \cdot (r_2 - r_1) = r_1 l \nr
+  &OA = \frac{r_1}{r_2 - r_1} l, \quad OB = OA + l = \frac{r_2}{r_2 - r_1} l \nr
+  \intertext{側面の展開図のおうぎ形の中心角を $\theta$ とすると}
+  &2\pi r_1 = 2 OA \cdot \pi \cdot \frac{\theta}{2\pi} \nr
+  &\theta = \frac{r_1}{OA} \cdot 2\pi = \frac{2(r_2 - r_1)}{l} \pi \nr
+  &S = \pi \cdot OB^2 \cdot \frac{\theta}{2\pi} - \pi \cdot OA^2 \cdot \frac{\theta}{2\pi} \nr
+  &= \frac{\theta}{2} \left( \frac{r_2 l}{r_2 - r_1} \right)^2 - \frac{\theta}{2} \left( \frac{r_1 l}{r_2 - r_1} \right)^2 \nr
+  &= \frac{\pi(r_2 - r_1)}{l} \cdot \left( \frac{l}{r_2 - r_1} \right)^2 (r_2^2 - r_1^2) \nr
+  &= \frac{\pi l}{r_2 - r_1} \cdot (r_2 + r_1)(r_2 - r_1) \nr
+  &= \pi l (r_1 + r_2)
+\end{align*}
+
+\paragraph{310}
+\begin{align*}
+  \intertext{半径を $r$ とすると弧の長さは $12 - 2r \quad (0 < r < 6)$}
+  \intertext{中心角を $\theta$ とおくと}
+  &12 - 2r = r \theta \implies \theta = \frac{12 - 2r}{r} \nr
+  \intertext{面積 $S$ は}
+  &S = \frac{1}{2} r^2 \theta \nr
+  &= \frac{1}{2} r^2 \left( \frac{12 - 2r}{r} \right) \nr
+  &= 6r - r^2 \nr
+  &= -(r - 3)^2 + 9 \nr
+  \intertext{$r = 3$ で最大値 $9$ をとる}
+\end{align*}
+
+\paragraph{311}
+\begin{align*}
+  \intertext{解と係数の関係より}
+  &\begin{cases} \sin \theta + \cos \theta = \frac{2}{3} \\ \sin \theta \cos \theta = \frac{k}{3} \end{cases} \nr
+  \intertext{$(\sin \theta + \cos \theta)^2 = \frac{4}{9}$ より}
+  &1 + 2 \sin \theta \cos \theta = \frac{4}{9} \nr
+  &2 \cdot \frac{k}{3} = -\frac{5}{9} \nr
+  &k = -\frac{5}{6}
+\end{align*}
+
+\paragraph{312 (1)}
+\begin{align*}
+  y &= \sin \left( 2x - \frac{\pi}{2} \right) \nr
+    &= -\cos 2x \nr
+  \text{周期：} & \pi
+\end{align*}
+
+\paragraph{312 (2)}
+\begin{align*}
+  y &= \frac{1}{2} \cos \left\{ 3 \left( x - \frac{\pi}{12} \right) \right\} \nr
+  \intertext{$y = \frac{1}{2} \cos 3x$ のグラフを $x$ 軸方向に $\frac{\pi}{12}$ だけ平行移動したもの}
+  \text{周期：} & \frac{2}{3}\pi
+\end{align*}
+
+\paragraph{312 (3)}
+\begin{align*}
+  y &= -\tan \left\{ 2 \left( x - \frac{\pi}{4} \right) \right\} \nr
+  \intertext{$y = -\tan 2x$ のグラフを $x$ 軸方向に $\frac{\pi}{4}$ だけ平行移動したもの}
+  \text{周期：} & \frac{\pi}{2}
+\end{align*}
+
+\paragraph{313 (1)}
+\begin{align*}
+  2 \cos \left(x+\frac{\pi}{3}\right) &= \sqrt{3} \nr
+  \cos \left(x+\frac{\pi}{3}\right) &= \frac{\sqrt{3}}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より $\frac{\pi}{3} \leqq x+\frac{\pi}{3} < \frac{7}{3}\pi$ なので}
+  x+\frac{\pi}{3} &= \frac{11}{6}\pi, \ \frac{13}{6}\pi \nr
+  x &= \frac{3}{2}\pi, \ \frac{11}{6}\pi
+\end{align*}
+
+\paragraph{313 (2)}
+\begin{align*}
+  \sin 2x &= \frac{1}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より $0 \leqq 2x < 4\pi$ なので}
+  2x &= \frac{\pi}{6}, \ \frac{5}{6}\pi, \ \frac{13}{6}\pi, \ \frac{17}{6}\pi \nr
+  x &= \frac{\pi}{12}, \ \frac{5}{12}\pi, \ \frac{13}{12}\pi, \ \frac{17}{12}\pi
+\end{align*}
+
+\paragraph{313 (3)}
+\begin{align*}
+  2 \sin \left(2x - \frac{\pi}{6} \right) &= 1 \nr
+  \sin \left(2x - \frac{\pi}{6} \right) &= \frac{1}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より $-\frac{\pi}{6} \leqq 2x - \frac{\pi}{6} < \frac{23}{6}\pi$ なので}
+  2x - \frac{\pi}{6} &= \frac{\pi}{6}, \ \frac{5}{6}\pi, \ \frac{13}{6}\pi, \ \frac{17}{6}\pi \nr
+  2x &= \frac{\pi}{3}, \ \pi, \ \frac{7}{3}\pi, \ 3\pi \nr
+  x &= \frac{\pi}{6}, \ \frac{\pi}{2}, \ \frac{7}{6}\pi, \ \frac{3}{2}\pi
+\end{align*}
+
+\paragraph{314}
+\begin{align*}
+  \tan x &\leqq \sqrt{3} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  &0 \leqq x < \frac{\pi}{3}, \ \frac{\pi}{2} < x \leqq \frac{4}{3}\pi, \ \frac{3}{2}\pi < x < 2\pi
+\end{align*}
+
+\paragraph{315 (1)}
+\begin{align*}
+  2 \cos^2 x + \sin x - 1 &= 0 \nr
+  2(1 - \sin^2 x) + \sin x - 1 &= 0 \nr
+  2 \sin^2 x - \sin x - 1 &= 0 \nr
+  (2 \sin x + 1)(\sin x - 1) &= 0 \nr
+  \sin x &= -\frac{1}{2}, \ 1 \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= \frac{\pi}{2}, \ \frac{7}{6}\pi, \ \frac{11}{6}\pi
+\end{align*}
+
+\paragraph{315 (2)}
+\begin{align*}
+  2 \sin^2 x + 5 \cos x - 4 &< 0 \nr
+  2(1 - \cos^2 x) + 5 \cos x - 4 &< 0 \nr
+  2 \cos^2 x - 5 \cos x + 2 &> 0 \nr
+  (2 \cos x - 1)(\cos x - 2) &> 0 \nr
+  \cos x < \frac{1}{2}, \ 2 &< \cos x \nr
+  \intertext{$0 \leqq x < 2\pi$ かつ $-1 \leqq \cos x \leqq 1$ より}
+  \frac{\pi}{3} < x < \frac{5}{3}\pi
+\end{align*}
+
+\paragraph{316 (1)}
+\begin{align*}
+  y &= \sin^2 x - \sin x - 1 \nr
+  \intertext{$t = \sin x$ とおくと、$0 \leqq x < 2\pi$ より $-1 \leqq t \leqq 1$}
+  y &= t^2 - t - 1 \nr
+    &= \left( t - \frac{1}{2} \right)^2 - \frac{5}{4}
+\end{align*}
+
+\paragraph{316 (2)}
+\begin{align*}
+  \intertext{$-1 \leqq t \leqq 1$ において}
+  t &= -1 \text{ すなわち } x = \frac{3}{2}\pi \text{ で最大値 } 1 \nr
+  t &= \frac{1}{2} \text{ すなわち } x = \frac{\pi}{6}, \ \frac{5}{6}\pi \text{ で最小値 } -\frac{5}{4}
+\end{align*}
+
+\paragraph{317 (1)}
+\begin{align*}
+  &\begin{cases} 2 \sin x - 1 > 0 \nr 2 \cos x - \sqrt{2} \leqq 0 \end{cases} \nr
+  &\begin{cases} \sin x > \frac{1}{2} \nr \cos x \leqq \frac{1}{\sqrt{2}} \end{cases} \nr
+  &\begin{cases} \frac{\pi}{6} < x < \frac{5}{6} \pi \nr \frac{\pi}{4} \leqq x \leqq \frac{7}{4} \pi \end{cases} \nr
+  &\iff \frac{\pi}{4} < x < \frac{5}{6} \pi
+\end{align*}
+
+\paragraph{317 (2)}
+\begin{align*}
+  &\begin{cases} \tan x + 1 < 0 \nr 2 \cos x < 1 \end{cases} \nr
+  &\begin{cases} \tan x < -1 \nr \cos x < \frac{1}{2} \end{cases} \nr
+  &\begin{cases} \frac{\pi}{2} < x < \frac{3}{4} \pi, \ \frac{3}{2} \pi < x < \frac{7}{4} \pi \nr \frac{\pi}{3} < x < \frac{5}{3} \pi \end{cases} \nr
+  &\iff \frac{\pi}{2} < x < \frac{3}{4} \pi, \ \frac{3}{2} \pi < x < \frac{5}{3} \pi
+\end{align*}
+
+\end{document}

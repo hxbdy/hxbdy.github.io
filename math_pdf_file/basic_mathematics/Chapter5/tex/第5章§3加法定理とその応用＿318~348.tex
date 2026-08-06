@@ -1,0 +1,737 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{5章 三角関数}\\
+  \textbf{3 加法定理とその応用}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{318}
+\begin{align*}
+  \sin 105^\circ &= \sin (60^\circ + 45^\circ) \nr
+    &= \sin 60^\circ \cos 45^\circ + \sin 45^\circ \cos 60^\circ \nr
+    &= \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} \cdot \frac{1}{2} \nr
+    &= \frac{\sqrt{6} + \sqrt{2}}{4} \nr
+  \cos 105^\circ &= \cos (60^\circ + 45^\circ) \nr
+    &= \cos 60^\circ \cos 45^\circ - \sin 60^\circ \sin 45^\circ \nr
+    &= \frac{1}{2} \cdot \frac{\sqrt{2}}{2} - \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{2}}{2} \nr
+    &= \frac{\sqrt{2} - \sqrt{6}}{4} \nr
+  \tan 105^\circ &= \frac{\sin 105^\circ}{\cos 105^\circ} \nr
+    &= \frac{\sqrt{6} + \sqrt{2}}{\sqrt{2} - \sqrt{6}} \nr
+    &= -\frac{1}{4}(2 + 4\sqrt{3} + 6) \nr
+    &= -2 - \sqrt{3}
+\end{align*}
+
+\paragraph{319 (1)}
+\begin{align*}
+  \sin \left( \theta + \frac{\pi}{3} \right) &= \sin \theta \cos \frac{\pi}{3} + \sin \frac{\pi}{3} \cos \theta \nr
+    &= \frac{1}{2} \sin \theta + \frac{\sqrt{3}}{2} \cos \theta
+\end{align*}
+
+\paragraph{319 (2)}
+\begin{align*}
+  \cos \left( \theta + \frac{\pi}{4} \right) &= \cos \theta \cos \frac{\pi}{4} - \sin \theta \sin \frac{\pi}{4} \nr
+    &= \frac{\sqrt{2}}{2} \cos \theta - \frac{\sqrt{2}}{2} \sin \theta
+\end{align*}
+
+\paragraph{320 (1)}
+\begin{align*}
+  \intertext{$90^\circ < \alpha < 180^\circ$ より}
+  \cos \alpha &= -\sqrt{1 - \left( \frac{3}{4} \right)^2} = -\frac{\sqrt{7}}{4} \nr
+  \intertext{$270^\circ < \beta < 360^\circ$ より}
+  \sin \beta &= -\sqrt{1 - \left( \frac{1}{3} \right)^2} = -\frac{2\sqrt{2}}{3}
+\end{align*}
+
+\paragraph{320 (1)}
+\begin{align*}
+  \intertext{$90^\circ < \alpha < 180^\circ$ より}
+  \cos \alpha &= -\sqrt{1 - \left( \frac{3}{4} \right)^2} \nr
+  &= -\frac{\sqrt{7}}{4} \nr
+  \intertext{$270^\circ < \beta < 360^\circ$ より}
+  \sin \beta &= -\sqrt{1 - \left( \frac{1}{3} \right)^2} \nr
+  &= -\frac{2\sqrt{2}}{3} \nr
+  \intertext{加法定理により}
+  \sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \nr
+  &= \frac{3}{4} \cdot \frac{1}{3} + \left( -\frac{\sqrt{7}}{4} \right) \cdot \left( -\frac{2\sqrt{2}}{3} \right) \nr
+  &= \frac{1}{4} + \frac{2\sqrt{14}}{12} \nr
+  &= \frac{1}{4} + \frac{\sqrt{14}}{6} \nr
+\end{align*}
+
+\paragraph{320 (2)}
+\begin{align*}
+  \cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \nr
+  &= \left( -\frac{\sqrt{7}}{4} \right) \cdot \frac{1}{3} - \frac{3}{4} \cdot \left( -\frac{2\sqrt{2}}{3} \right) \nr
+  &= -\frac{\sqrt{7}}{12} + \frac{6\sqrt{2}}{12} \nr
+  &= \frac{6\sqrt{2} - \sqrt{7}}{12}
+\end{align*}
+
+\paragraph{321 (1)}
+\begin{align*}
+  \tan (\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \nr
+  &= \frac{-2 + \frac{1}{5}}{1 - (-2) \cdot \frac{1}{5}} \nr
+  &= \frac{-2 + \frac{1}{5}}{1 + \frac{2}{5}} \nr
+  &= \frac{-10 + 1}{5 + 2} \nr
+  &= -\frac{9}{7}
+\end{align*}
+
+\paragraph{321 (2)}
+\begin{align*}
+  \tan (\alpha+\beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \nr
+  &= \frac{\frac{3}{2} + 5}{1 - \frac{3}{2} \cdot 5} \nr
+  &= \frac{3 + 10}{2 - 15} \nr
+  &= -1 \nr
+  \intertext{$0 < \alpha < \frac{\pi}{2}, \ 0 < \beta < \frac{\pi}{2}$ より $0 < \alpha + \beta < \pi$ なので}
+  \alpha + \beta &= \frac{3}{4}\pi
+\end{align*}
+
+\paragraph{322}
+\begin{align*}
+  \intertext{$90^\circ < \alpha < 180^\circ, \ \sin \alpha = \frac{2}{3}$ より}
+  \cos \alpha &= -\sqrt{1 - \left(\frac{2}{3}\right)^2} = -\frac{\sqrt{5}}{3} \nr
+  \sin 2\alpha &= 2 \sin \alpha \cos \alpha \nr
+  &= 2 \cdot \frac{2}{3} \cdot \left(-\frac{\sqrt{5}}{3}\right) = -\frac{4\sqrt{5}}{9} \nr
+  \cos 2\alpha &= 1 - 2 \sin^2 \alpha \nr
+  &= 1 - 2 \cdot \frac{4}{9} = \frac{1}{9} \nr
+  \tan 2\alpha &= \frac{\sin 2\alpha}{\cos 2\alpha} \nr
+  &= -4\sqrt{5}
+\end{align*}
+
+\paragraph{323}
+\begin{align*}
+  \cos \frac{\pi}{12} &= \cos \left( \frac{\pi}{3} - \frac{\pi}{4} \right) \nr
+  &= \cos \frac{\pi}{3} \cos \frac{\pi}{4} + \sin \frac{\pi}{3} \sin \frac{\pi}{4} \nr
+  &= \frac{1}{2} \cdot \frac{\sqrt{2}}{2} + \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{2}}{2} \nr
+  &= \frac{\sqrt{2} + \sqrt{6}}{4}
+\end{align*}
+
+\paragraph{324}
+\begin{align*}
+  \sin^2 \frac{\alpha}{2} &= \frac{1 - \cos \alpha}{2} \nr
+  &= \frac{1 + \frac{4}{5}}{2} = \frac{9}{10} \nr
+  \intertext{$\frac{\pi}{2} < \frac{\alpha}{2} < \frac{3}{4}\pi$ より}
+  \sin \frac{\alpha}{2} &= \frac{3}{\sqrt{10}} \nr
+  \cos \frac{\alpha}{2} &= -\sqrt{1 - \left(\frac{3}{\sqrt{10}}\right)^2} = -\frac{1}{\sqrt{10}} \nr
+  \tan \frac{\alpha}{2} &= \frac{\sin \frac{\alpha}{2}}{\cos \frac{\alpha}{2}} = -3
+\end{align*}
+
+\paragraph{325 (1)}
+\begin{align*}
+  \cos 5\theta \sin 2\theta &= \frac{1}{2} \{ \sin (5\theta + 2\theta) - \sin (5\theta - 2\theta) \} \nr
+  &= \frac{1}{2} (\sin 7\theta - \sin 3\theta)
+\end{align*}
+
+\paragraph{325 (2)}
+\begin{align*}
+  \sin 3\theta \sin 2\theta &= -\frac{1}{2} \{ \cos (3\theta + 2\theta) - \cos (3\theta - 2\theta) \} \nr
+  &= -\frac{1}{2} (\cos 5\theta - \cos \theta)
+\end{align*}
+
+\paragraph{325 (3)}
+\begin{align*}
+  \cos 4\theta \cos \theta &= \frac{1}{2} \{ \cos (4\theta + \theta) + \cos (4\theta - \theta) \} \nr
+  &= \frac{1}{2} (\cos 5\theta + \cos 3\theta)
+\end{align*}
+
+\paragraph{325 (4)}
+\begin{align*}
+  \sin 3\theta \cos 7\theta &= \frac{1}{2} \{ \sin (3\theta + 7\theta) + \sin (3\theta - 7\theta) \} \nr
+  &= \frac{1}{2} (\sin 10\theta - \sin 4\theta)
+\end{align*}
+
+\paragraph{326 (1)}
+\begin{align*}
+  \sin 5\theta + \sin \theta &= 2 \sin \frac{5\theta + \theta}{2} \cos \frac{5\theta - \theta}{2} \nr
+  &= 2 \sin 3\theta \cos 2\theta
+\end{align*}
+
+\paragraph{326 (2)}
+\begin{align*}
+  \cos 6\theta + \cos 2\theta &= 2 \cos \frac{6\theta + 2\theta}{2} \sin \frac{6\theta - 2\theta}{2} \nr
+  &= 2 \cos 4\theta \sin 2\theta
+\end{align*}
+
+\paragraph{326 (3)}
+\begin{align*}
+  \cos \theta - \cos 5\theta &= -2 \sin \frac{\theta + 5\theta}{2} \sin \frac{\theta - 5\theta}{2} \nr
+  &= 2 \sin 3\theta \sin 2\theta
+\end{align*}
+
+\paragraph{326 (4)}
+\begin{align*}
+  \sin 2\theta - \sin 3\theta &= 2 \cos \frac{2\theta + 3\theta}{2} \sin \frac{2\theta - 3\theta}{2} \nr
+  &= -2 \cos \frac{5}{2}\theta \sin \frac{\theta}{2}
+\end{align*}
+
+\paragraph{327 (1)}
+\begin{align*}
+  y &= \frac{1}{2} \sin x + \frac{\sqrt{3}}{2} \cos x \nr
+    &= \sin \left( x + \frac{\pi}{3} \right)
+\end{align*}
+
+\paragraph{327 (2)}
+\begin{align*}
+  y &= 2 \sin x - 2 \cos x \nr
+    &= 2 (\sin x - \cos x) \nr
+    &= 2\sqrt{2} \sin \left( x - \frac{\pi}{4} \right)
+\end{align*}
+
+\paragraph{328}
+\begin{align*}
+  y &= \sqrt{3} \sin x + \cos x \nr
+    &= 2 \sin \left( x + \frac{\pi}{6} \right) \nr
+  \intertext{$\frac{\pi}{6} \leqq x + \frac{\pi}{6} < \frac{13}{6}\pi$ なので}
+  x + \frac{\pi}{6} &= \frac{\pi}{2} \text{ すなわち } x = \frac{\pi}{3} \text{ で最大値 } 2 \nr
+  x + \frac{\pi}{6} &= \frac{3}{2}\pi \text{ すなわち } x = \frac{4}{3}\pi \text{ で最小値 } -2
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{329 (1)}
+\begin{align*}
+  90^\circ < \alpha < 180^\circ より  \nr
+  \cos \alpha = -\sqrt{1 - \left(\frac{\sqrt{2}}{3}\right)^2} = -\frac{\sqrt{7}}{3} \nr
+  90^\circ < \beta < 180^\circ より  \nr
+  \sin \beta = \sqrt{1 - \left(-\frac{2}{5}\right)^2} = \frac{\sqrt{21}}{5} なので \nr
+  \sin (\alpha+\beta) = \sin \alpha \cos \beta + \sin \beta \cos \alpha \nr
+  = \frac{\sqrt{2}}{3} \cdot \left(-\frac{2}{5}\right) + \frac{\sqrt{21}}{5} \cdot \left(-\frac{\sqrt{7}}{3}\right) \nr
+  = -\frac{2\sqrt{2}}{15} - \frac{7\sqrt{3}}{15}
+\end{align*}
+
+\paragraph{329 (2)}
+\begin{align*}
+  \cos (\alpha-\beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta \nr
+  &= -\frac{\sqrt{7}}{3} \cdot \left(-\frac{2}{5}\right) + \frac{\sqrt{2}}{3} \cdot \left(\frac{\sqrt{21}}{5}\right) \nr
+  &= \frac{2\sqrt{7}}{15} + \frac{\sqrt{42}}{15}
+\end{align*}
+
+\paragraph{330}
+\begin{align*}
+  \tan (\alpha+\beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \nr
+  &= \frac{\frac{1}{4} - 3}{1 + \frac{1}{4} \cdot 3} \nr
+  &= \frac{1 - 12}{4 + 3} \nr
+  &= -\frac{11}{7}
+\end{align*}
+
+\paragraph{331 (1)}
+\begin{align*}
+  \sin 2\alpha &= 2 \sin \alpha \cos \alpha \nr
+  &= 2 \cdot \frac{4}{5} \cdot \frac{3}{5} \nr
+  &= \frac{24}{25} \nr
+  \cos 2\alpha &= 1 - 2 \sin^2 \alpha \nr
+  &= 1 - 2 \cdot \left( \frac{4}{5} \right)^2 \nr
+  &= 1 - \frac{32}{25} \nr
+  &= -\frac{7}{25} \nr
+  \tan 2\alpha &= \frac{\sin 2\alpha}{\cos 2\alpha} \nr
+  &= \frac{24}{25} \div \left( -\frac{7}{25} \right) \nr
+  &= -\frac{24}{7}
+\end{align*}
+
+\paragraph{332 (1)}
+\begin{align*}
+  \sin^2 \frac{\alpha}{2} &= \frac{1 - \cos \alpha}{2} \nr
+  &= \frac{1 - \frac{1}{4}}{2} \nr
+  &= \frac{3}{8} \nr
+  \intertext{$\frac{3}{4}\pi < \frac{\alpha}{2} < \pi$ より $\sin \frac{\alpha}{2} > 0$ なので}
+  \sin \frac{\alpha}{2} &= \sqrt{\frac{3}{8}} = \frac{\sqrt{3}}{2\sqrt{2}} = \frac{\sqrt{6}}{4}
+\end{align*}
+
+\paragraph{332 (2)}
+\begin{align*}
+  \cos \frac{\alpha}{2} &= -\sqrt{1 - \left( \frac{\sqrt{6}}{4} \right)^2} \nr
+  &= -\frac{\sqrt{10}}{4}
+\end{align*}
+
+\paragraph{332 (3)}
+\begin{align*}
+  \tan \frac{\alpha}{2} &= \frac{\sin \frac{\alpha}{2}}{\cos \frac{\alpha}{2}} \nr
+  &= -\frac{\sqrt{6}}{\sqrt{10}} = -\frac{\sqrt{15}}{5}
+\end{align*}
+
+\paragraph{333}
+\begin{align*}
+  (\text{左辺}) &= \cos^4 \theta - \sin^4 \theta \nr
+  &= (\cos^2 \theta + \sin^2 \theta)(\cos^2 \theta - \sin^2 \theta) \nr
+  &= 1 \cdot \cos 2\theta \nr
+  &= (\text{右辺})
+\end{align*}
+
+\paragraph{334 (1)}
+\begin{align*}
+  &2 \sin (\theta + 120^\circ) \cos (30^\circ - \theta) \nr
+  &= \sin \{(\theta + 120^\circ) + (30^\circ - \theta)\} +  \nr
+  &\sin \{(\theta + 120^\circ) - (30^\circ - \theta)\} \nr
+  &= \sin 150^\circ + \sin (2\theta + 90^\circ) \nr
+  &= \frac{1}{2} + \cos 2\theta
+\end{align*}
+
+\paragraph{334 (2)}
+\begin{align*}
+  &\cos \frac{2\theta + 3\pi}{4} \cos \frac{2\theta - 3\pi}{4} \nr
+  &= \frac{1}{2} \left\{ \cos \left( \frac{2\theta + 3\pi}{4} + \frac{2\theta - 3\pi}{4} \right) \right. \nr
+  &\quad \left. + \cos \left( \frac{2\theta + 3\pi}{4} - \frac{2\theta - 3\pi}{4} \right) \right\} \nr
+  &= \frac{1}{2} \left( \cos \frac{4\theta}{4} + \cos \frac{6\pi}{4} \right) \nr
+  &= \frac{1}{2} \left( \cos \theta + \cos \frac{3}{2}\pi \right) \nr
+  &= \frac{1}{2} (\cos \theta + 0) \nr
+  &= \frac{1}{2} \cos \theta
+\end{align*}
+
+\paragraph{335 (1)}
+\begin{align*}
+  &\sin 100^\circ + \sin 40^\circ \nr
+  &= 2 \sin \frac{100^\circ + 40^\circ}{2} \nr
+  &\quad \cdot \cos \frac{100^\circ - 40^\circ}{2} \nr
+  &= 2 \sin 70^\circ \cos 30^\circ \nr
+  &= 2 \sin 70^\circ \cdot \frac{\sqrt{3}}{2} \nr
+  &= \sqrt{3} \sin 70^\circ
+\end{align*}
+
+\paragraph{335 (2)}
+\begin{align*}
+  &\cos 100^\circ - \cos 20^\circ \nr
+  &= -2 \sin \frac{100^\circ + 20^\circ}{2} \nr
+  &\quad \cdot \sin \frac{100^\circ - 20^\circ}{2} \nr
+  &= -2 \sin 60^\circ \sin 40^\circ \nr
+  &= -2 \cdot \frac{\sqrt{3}}{2} \sin 40^\circ \nr
+  &= -\sqrt{3} \sin 40^\circ
+\end{align*}
+
+\paragraph{336}
+\begin{align*}
+  y &= 3 \sin x - \sqrt{3} \cos x \nr
+  &= 2\sqrt{3} \left( \frac{\sqrt{3}}{2} \sin x - \frac{1}{2} \cos x \right) \nr
+  &= 2\sqrt{3} \sin \left( x - \frac{\pi}{6} \right)
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{337 (1)}
+\begin{align*}
+  (\text{左辺}) &= \frac{1}{\tan \theta} - \frac{1 - \tan^2 \theta}{2 \tan \theta} \nr
+  &= \frac{2 - 1 + \tan^2 \theta}{2 \tan \theta} \nr
+  &= \frac{1 + \tan^2 \theta}{2 \tan \theta} \nr
+  &= \frac{1}{2 \tan \theta \cdot \cos^2 \theta} \nr
+  &= \frac{1}{2 \sin \theta \cos \theta} \nr
+  &= \frac{1}{\sin 2\theta} =  (\text{右辺})
+\end{align*}
+
+\paragraph{337 (2)}
+\begin{align*}
+  (\text{左辺}) &= \frac{1 + \sin 2x - \cos 2x}{1 + \sin 2x + \cos 2x} \nr
+  &= \frac{1 + 2 \sin x \cos x - (1 - 2 \sin^2 x)}{1 + 2 \sin x \cos x + (2 \cos^2 x - 1)} \nr
+  &= \frac{2 \sin x \cos x + 2 \sin^2 x}{2 \sin x \cos x + 2 \cos^2 x} \nr
+  &= \frac{2 \sin x (\cos x + \sin x)}{2 \cos x (\sin x + \cos x)} \nr
+  &= \tan x =  (\text{右辺})
+\end{align*}
+
+\paragraph{338 (1)}
+\begin{align*}
+  \cos 2x &= \sin x \nr
+  1 - 2 \sin^2 x &= \sin x \nr
+  2 \sin^2 x + \sin x - 1 &= 0 \nr
+  (2 \sin x - 1)(\sin x + 1) &= 0 \nr
+  \sin x &= \frac{1}{2}, \ -1 \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= \frac{\pi}{6}, \ \frac{5}{6}\pi, \ \frac{3}{2}\pi
+\end{align*}
+
+\paragraph{338 (2)}
+\begin{align*}
+  \sin 2x &\geqq \sqrt{3} \cos x \nr
+  2 \sin x \cos x &\geqq \sqrt{3} \cos x \nr
+  \cos x \left( \sin x - \frac{\sqrt{3}}{2} \right) &\geqq 0 \nr
+  \intertext{これを満たすのは、}
+  \text{(i) } &\begin{cases} \cos x \geqq 0 \nr \sin x \geqq \frac{\sqrt{3}}{2} \end{cases} \nr
+  &\text{または} \nr
+  \text{(ii) } &\begin{cases} \cos x \leqq 0 \nr \sin x \leqq \frac{\sqrt{3}}{2} \end{cases} \nr
+  \intertext{$0 \leqq x < 2\pi$ において、(i) は}
+  &\begin{cases} 0 \leqq x \leqq \frac{\pi}{2}, \ \frac{3}{2}\pi \leqq x < 2\pi \nr \frac{\pi}{3} \leqq x \leqq \frac{2}{3}\pi \end{cases} \nr
+  \intertext{または、(ii) は}
+  &\begin{cases} \frac{\pi}{2} \leqq x \leqq \frac{3}{2}\pi \nr 0 \leqq x \leqq \frac{\pi}{3}, \ \frac{2}{3}\pi \leqq x < 2\pi \end{cases} \nr
+  \intertext{したがって、}
+  \frac{\pi}{3} \leqq x \leqq \frac{\pi}{2},& \quad \frac{2}{3}\pi \leqq x \leqq \frac{3}{2}\pi
+\end{align*}
+
+\paragraph{338 (3)}
+\begin{align*}
+  \sin 3x &= \sin x \nr
+  \sin (2x + x) &= \sin x \nr
+  \sin 2x \cos x + \sin x \cos 2x &= \sin x \nr
+  2 \sin x \cos^2 x + \sin x (2 \cos^2 x - 1) &= \sin x \nr
+  \sin x (4 \cos^2 x - 2) &= 0 \nr
+  \sin x = 0 \quad \text{または} \quad \cos x &= \pm \frac{1}{\sqrt{2}} \nr
+  \intertext{$0 \leqq x < 2\pi$ より}
+  x &= 0, \ \pi, \ \frac{\pi}{4}, \ \frac{3}{4}\pi, \ \frac{5}{4}\pi, \ \frac{7}{4}\pi
+\end{align*}
+
+\paragraph{338 (4)}
+\begin{align*}
+  \sin x + \sin 3x &= \sin 2x + \sin 4x \nr
+  2 \sin 2x \cos x &= 2 \sin 3x \cos x \nr
+  \cos x (\sin 3x - \sin 2x) &= 0 \nr
+  2 \cos x \cos \frac{5x}{2} \sin \frac{x}{2} &= 0 \nr
+  \intertext{これを満たすのは}
+  \cos x = 0 \quad &\text{または} \nr
+  \cos \frac{5}{2}x = 0 \quad &\text{または} \nr
+  \sin \frac{x}{2} = 0 \nr
+  \intertext{$0 \leqq \frac{5}{2}x < 5\pi, \ 0 \leqq \frac{x}{2} < \pi$ より}
+  x &= \frac{\pi}{2}, \ \frac{3}{2}\pi \nr
+  &\text{または} \nr
+  \frac{5}{2}x &= \frac{\pi}{2}, \frac{3\pi}{2}, \frac{5\pi}{2}, \frac{7\pi}{2}, \frac{9\pi}{2} \nr
+  &\text{または} \nr
+  \frac{x}{2} &= 0 \nr
+  \intertext{したがって}
+  x = 0, \frac{\pi}{5}, \frac{\pi}{2}, \frac{3\pi}{5},& \ \pi, \frac{7\pi}{5}, \frac{3\pi}{2}, \frac{9\pi}{5}
+\end{align*}
+
+\paragraph{338 (5)}
+\begin{align*}
+  \cos x + \cos 2x + \cos 3x &= 0 \nr
+  \cos 2x + (\cos x + \cos 3x) &= 0 \nr
+  \cos 2x + 2 \cos 2x \cos x &= 0 \nr
+  \cos 2x (1 + 2 \cos x) &= 0 \nr
+  \intertext{これを満たすのは}
+  \cos 2x = 0 \quad &\text{または} \nr
+  \cos x = -\frac{1}{2} \nr
+  \intertext{$0 \leqq 2x < 4\pi$ より}
+  2x &= \frac{\pi}{2}, \ \frac{3}{2}\pi, \ \frac{5}{2}\pi, \ \frac{7}{2}\pi \nr
+  &\text{または} \nr
+  x &= \frac{2}{3}\pi, \ \frac{4}{3}\pi \nr
+  \intertext{したがって}
+  x = \frac{\pi}{4}, \frac{3}{4}\pi, \frac{5}{4}\pi,& \ \frac{7}{4}\pi, \frac{2}{3}\pi, \frac{4}{3}\pi
+\end{align*}
+
+\paragraph{339 (1)}
+\begin{align*}
+  y &= \sin^2 x \nr
+  &= \frac{1}{2}(1 - \cos 2x) \nr
+  &= \frac{1}{2} - \frac{1}{2} \cos 2x
+\end{align*}
+
+\paragraph{339 (2)}
+\begin{align*}
+  y &= \cos x + \cos \left( x - \frac{\pi}{3} \right) \nr
+  &= 2 \cos \frac{x + x - \frac{\pi}{3}}{2} \cos \frac{x - \left( x - \frac{\pi}{3} \right)}{2} \nr
+  &= 2 \cos \left( x - \frac{\pi}{6} \right) \cdot \cos \frac{\pi}{6} \nr
+  &= \sqrt{3} \cos \left( x - \frac{\pi}{6} \right)
+\end{align*}
+
+\paragraph{339 (3)}
+\begin{align*}
+  y &= 2 \sin x \cos \left( x + \frac{\pi}{6} \right) \nr
+  &= \sin \left( 2x + \frac{\pi}{6} \right) + \sin \left( -\frac{\pi}{6} \right) \nr
+  &= \sin \left\{ 2 \left( x + \frac{\pi}{12} \right) \right\} - \frac{1}{2}
+\end{align*}
+
+\paragraph{340 (1)}
+\begin{align*}
+  \intertext{$C = \pi - A - B$ なので}
+  &\sin 2A + \sin 2B \nr
+  &= 2 \sin (A + B) \cos (A - B) \nr
+  &= 2 \sin (\pi - C) \cos (A - B) \nr
+  &= 2 \sin C \cos (A - B) \nr
+  \intertext{提示された式を変形すると}
+  &\sin A \cos A + \sin B \cos B \nr
+  &= \sin A \cos B + \sin B \cos A \nr
+  &\sin A (\cos A - \cos B) \nr
+  &\quad - \sin B (\cos A - \cos B) = 0 \nr
+  &(\cos A - \cos B) (\sin A - \sin B) = 0 \nr
+  \intertext{これより}
+  &\cos A = \cos B \nr
+  &\text{または} \nr
+  &\sin A = \sin B \nr
+  \intertext{$0 < A < \pi, \ 0 < B < \pi$ より}
+  &A = B \nr
+  &\text{または} \nr
+  &A = \pi - B \nr
+  \intertext{$A = \pi - B$ のとき $A + B = \pi$ となり $C = 0$ となるため不適。}
+  \therefore A &= B \nr
+  \intertext{したがって、$CA = CB$ の二等辺三角形である。}
+\end{align*}
+
+\paragraph{340 (2)}
+\begin{align*}
+  &\cos 2A + \cos 2B \nr
+  &= 2 \cos (\pi - A - B) \nr
+  &\cos^2 A - \sin^2 A + \cos^2 B - \sin^2 B \nr
+  &= -2 \cos (A + B) \nr
+  &= -2 (\cos A \cos B - \sin A \sin B) \nr
+  &(\cos^2 A + 2 \cos A \cos B + \cos^2 B) \nr
+  &- (\sin^2 A + 2 \sin A \sin B + \sin^2 B) = 0 \nr
+  &(\cos A + \cos B)^2 - (\sin A + \sin B)^2 = 0 \nr
+  &(\cos A + \cos B + \sin A + \sin B) \nr
+  &\cdot (\cos A + \cos B - \sin A - \sin B) = 0 \nr
+  \intertext{合成公式を用いると}
+  &\left\{ \sqrt{2} \sin \left( A + \frac{\pi}{4} \right) + \sqrt{2} \sin \left( B + \frac{\pi}{4} \right) \right\} \nr
+  &\cdot \left\{ \sqrt{2} \sin \left( A - \frac{\pi}{4} \right) + \sqrt{2} \sin \left( B - \frac{\pi}{4} \right) \right\} = 0 \nr
+  \intertext{これより}
+  &\sin \left( A + \frac{\pi}{4} \right) = -\sin \left( B + \frac{\pi}{4} \right) \nr
+  &\text{または} \nr
+  &\sin \left( A - \frac{\pi}{4} \right) = -\sin \left( B - \frac{\pi}{4} \right) \nr
+  \intertext{$0 < A < \pi, \ 0 < B < \pi$ より}
+  &A + \frac{\pi}{4} = 2\pi - \left( B + \frac{\pi}{4} \right) \nr
+  &\text{または} \nr
+  &A - \frac{\pi}{4} = -\left( B - \frac{\pi}{4} \right) \nr
+  \intertext{整理すると}
+  &A + B = \frac{3}{2}\pi \nr
+  &\text{または} \nr
+  &A + B = \frac{\pi}{2} \nr
+  \intertext{$A + B = \frac{3}{2}\pi$ は不適。}
+  &A + B = \frac{\pi}{2} \nr
+  &\therefore C = 90^\circ \nr
+  \intertext{したがって、$C = 90^\circ$ の直角三角形である。}
+\end{align*}
+
+\paragraph{341}
+\begin{align*}
+  &\sin \alpha + \sin \beta + \sin \gamma \nr
+  &= 4 \cos \frac{\alpha}{2} \cos \frac{\beta}{2} \cos \frac{\gamma}{2} \nr
+  \intertext{$\gamma = \pi - \alpha - \beta$ を代入すると}
+  &\text{（左辺）} = \sin \alpha + \sin \beta \nr
+  &\quad + \sin (\pi - \alpha - \beta) \nr
+  &= \sin \alpha + \sin \beta + \sin (\alpha + \beta) \nr
+  \intertext{一方、}
+  &\text{（右辺）} = 4 \cos \frac{\alpha}{2} \cos \frac{\beta}{2} \nr
+  &\quad \cdot \cos \left( \frac{\pi}{2} - \frac{\alpha + \beta}{2} \right) \nr
+  &= 4 \cos \frac{\alpha}{2} \cos \frac{\beta}{2} \sin \frac{\alpha + \beta}{2} \nr
+  &= 4 \cos \frac{\alpha}{2} \cos \frac{\beta}{2} \nr
+  &\quad \cdot \left( \sin \frac{\alpha}{2} \cos \frac{\beta}{2} + \cos \frac{\alpha}{2} \sin \frac{\beta}{2} \right) \nr
+  &= 4 \sin \frac{\alpha}{2} \cos \frac{\alpha}{2} \cos^2 \frac{\beta}{2} \nr
+  &\quad + 4 \cos^2 \frac{\alpha}{2} \sin \frac{\beta}{2} \cos \frac{\beta}{2} \nr
+  &= 2 \sin \alpha \cdot \frac{1 + \cos \beta}{2} \nr
+  &\quad + 2 \sin \beta \cdot \frac{1 + \cos \alpha}{2} \nr
+  &= \sin \alpha (1 + \cos \beta) + \sin \beta (1 + \cos \alpha) \nr
+  &= \sin \alpha + \sin \alpha \cos \beta \nr
+  &\quad + \sin \beta + \sin \beta \cos \alpha \nr
+  &= \sin \alpha + \sin \beta + \sin (\alpha + \beta) \nr
+  \intertext{よって、（左辺）$=$（右辺）となり、等式は示された。}
+\end{align*}
+
+\paragraph{342 (1)}
+\begin{align*}
+  \text{（与式）} &= \sin 10^\circ \sin 50^\circ \sin 70^\circ \nr
+  &= \frac{1}{2} (\cos 40^\circ - \cos 60^\circ) \sin 70^\circ \nr
+  &= \frac{1}{2} \left( \cos 40^\circ - \frac{1}{2} \right) \sin 70^\circ \nr
+  &= \frac{1}{2} \sin 70^\circ \cos 40^\circ - \frac{1}{4} \sin 70^\circ \nr
+  &= \frac{1}{2} \cdot \frac{1}{2} (\sin 110^\circ + \sin 30^\circ) - \frac{1}{4} \sin 70^\circ \nr
+  &= \frac{1}{4} \sin (180^\circ - 70^\circ) + \frac{1}{4} \cdot \frac{1}{2} - \frac{1}{4} \sin 70^\circ \nr
+  &= \frac{1}{4} \sin 70^\circ + \frac{1}{8} - \frac{1}{4} \sin 70^\circ \nr
+  &= \frac{1}{8}
+\end{align*}
+
+\paragraph{342 (2)}
+\begin{align*}
+  &\sin 80^\circ - \sin 20^\circ - \sin 40^\circ \nr
+  &= 2 \cos 50^\circ \sin 30^\circ - \sin 40^\circ \nr
+  &= 2 \cos 50^\circ \cdot \frac{1}{2} - \sin 40^\circ \nr
+  &= \cos 50^\circ - \sin 40^\circ \nr
+  &= \cos (90^\circ - 40^\circ) - \sin 40^\circ \nr
+  &= \sin 40^\circ - \sin 40^\circ \nr
+  &= 0
+\end{align*}
+
+\paragraph{343}
+\begin{align*}
+  y &= 3 \sin^2 x + 2\sqrt{3} \sin x \cos x + \cos^2 x \nr
+  &= 1 + 2 \sin^2 x + \sqrt{3} \sin 2x \nr
+  &= 1 + (1 - \cos 2x) + \sqrt{3} \sin 2x \nr
+  &= \sqrt{3} \sin 2x - \cos 2x + 2 \nr
+  &= 2 \sin \left( 2x - \frac{\pi}{6} \right) + 2 \nr
+  \intertext{$0 \leqq x < 2\pi$ より $-\frac{\pi}{6} \leqq 2x - \frac{\pi}{6} < \frac{23}{6}\pi$ であるから}
+  2x - \frac{\pi}{6} &= \frac{\pi}{2}, \ \frac{5}{2}\pi \nr
+  \text{すなわち } x &= \frac{\pi}{3}, \ \frac{4}{3}\pi \text{ で最大値 4 をとる。} \nr
+  2x - \frac{\pi}{6} &= \frac{3}{2}\pi, \ \frac{7}{2}\pi \nr
+  \text{すなわち } x &= \frac{5}{6}\pi, \ \frac{11}{6}\pi \text{ で最小値 0 をとる。}
+\end{align*}
+
+\paragraph{344}
+\begin{align*}
+  f(x) &= a \sin x + b \cos x \nr
+  &= \sqrt{a^2 + b^2} \sin (x + \alpha) \nr
+  \intertext{$x = \frac{\pi}{3}$ で最大値 2、$x = \frac{4}{3}\pi$ で最小値 $-2$ をとるので}
+  \sqrt{a^2 + b^2} &= 2 \nr
+  \intertext{また、$\alpha$ の 1 つは}
+  \begin{cases} \frac{\pi}{3} + \alpha = \frac{\pi}{2} \nr \frac{4}{3}\pi + \alpha = \frac{3}{2}\pi \end{cases} \nr
+  \intertext{これを解いて}
+  \alpha &= \frac{\pi}{6} \nr
+  \intertext{よって}
+  f(x) &= 2 \sin \left( x + \frac{\pi}{6} \right) \nr
+  &= 2 \sin x \cos \frac{\pi}{6} + 2 \cos x \sin \frac{\pi}{6} \nr
+  &= \sqrt{3} \sin x + \cos x \nr
+  \therefore a &= \sqrt{3}, \ b = 1
+\end{align*}
+
+\paragraph{345 (1)}
+\begin{align*}
+  \sin x + \cos x &= \frac{1}{\sqrt{2}} \nr
+  \sqrt{2} \sin \left( x + \frac{\pi}{4} \right) &= \frac{1}{\sqrt{2}} \nr
+  \sin \left( x + \frac{\pi}{4} \right) &= \frac{1}{2} \nr
+  \intertext{$0 \leqq x < 2\pi$ より $\frac{\pi}{4} \leqq x + \frac{\pi}{4} < \frac{9}{4}\pi$ なので}
+  x + \frac{\pi}{4} &= \frac{5}{6}\pi, \ \frac{13}{6}\pi \nr
+  \therefore x &= \frac{7}{12}\pi, \ \frac{23}{12}\pi
+\end{align*}
+
+\paragraph{345 (2)}
+\begin{align*}
+  \sin x - \sqrt{3} \cos x + \sqrt{2} &= 0 \nr
+  2 \sin \left( x - \frac{\pi}{3} \right) &= -\sqrt{2} \nr
+  \sin \left( x - \frac{\pi}{3} \right) &= -\frac{1}{\sqrt{2}} \nr
+  \intertext{$0 \leqq x < 2\pi$ より $-\frac{\pi}{3} \leqq x - \frac{\pi}{3} < \frac{5}{3}\pi$ なので}
+  x - \frac{\pi}{3} &= -\frac{\pi}{4}, \ \frac{5}{4}\pi \nr
+  \therefore x &= \frac{\pi}{12}, \ \frac{19}{12}\pi
+\end{align*}
+
+\paragraph{346}
+\begin{align*}
+  y &= 2 \sin x + \cos \left( x + \frac{\pi}{6} \right) \nr
+  &= 2 \sin x + \cos x \cos \frac{\pi}{6} - \sin x \sin \frac{\pi}{6} \nr
+  &= 2 \sin x + \frac{\sqrt{3}}{2} \cos x - \frac{1}{2} \sin x \nr
+  &= \frac{3}{2} \sin x + \frac{\sqrt{3}}{2} \cos x \nr
+  &= \frac{\sqrt{3}}{2} (\sqrt{3} \sin x + \cos x) \nr
+  &= \frac{\sqrt{3}}{2} \cdot 2 \sin \left( x + \frac{\pi}{6} \right) \nr
+  &= \sqrt{3} \sin \left( x + \frac{\pi}{6} \right)
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{PLUS}\\
+\end{center}
+
+\paragraph{347 (1)}
+\begin{align*}
+  \sqrt{2} \cos x &= 1 \nr
+  \cos x &= \frac{1}{\sqrt{2}} \nr
+  x &= \frac{\pi}{4} + 2n\pi, \ \frac{7}{4}\pi + 2n\pi \quad (n \text{ は整数})
+\end{align*}
+
+\paragraph{347 (2)}
+\begin{align*}
+  \sqrt{3} \tan x &= 1 \nr
+  \tan x &= \frac{1}{\sqrt{3}} \nr
+  x &= \frac{\pi}{6} + n\pi \quad (n \text{ は整数})
+\end{align*}
+
+\paragraph{347 (3)}
+\begin{align*}
+  2 \cos^2 x &= \sin x + 1 \nr
+  2(1 - \sin^2 x) &= \sin x + 1 \nr
+  2\sin^2 x + \sin x - 1 &= 0 \nr
+  (2\sin x - 1)(\sin x + 1) &= 0 \nr
+  \sin x &= \frac{1}{2}, \ -1 \nr
+  \intertext{$n$ を整数として}
+  x &= \frac{\pi}{6} + 2n\pi, \ \frac{5}{6}\pi + 2n\pi, \nr
+  &\quad \frac{3}{2}\pi + 2n\pi
+\end{align*}
+
+\paragraph{347 (4)}
+\begin{align*}
+  \tan x &= \sqrt{2} \cos x \nr
+  \frac{\sin x}{\cos x} &= \sqrt{2} \cos x \nr
+  \sin x &= \sqrt{2} \cos^2 x \nr
+  \sin x &= \sqrt{2}(1 - \sin^2 x) \nr
+  \sqrt{2} \sin^2 x &+ \sin x - \sqrt{2} = 0 \nr
+  (\sqrt{2} \sin x &- 1)(\sin x + \sqrt{2}) = 0 \nr
+  \intertext{$\sin x + \sqrt{2} \neq 0$ より}
+  \sin x &= \frac{1}{\sqrt{2}} \nr
+  \intertext{$n$ を整数として}
+  x = \frac{\pi}{4} + 2n\pi, &\ \frac{3}{4}\pi + 2n\pi
+\end{align*}
+
+\paragraph{347 (5)}
+\begin{align*}
+  2 \cos \left(x - \frac{\pi}{3}\right) &= -1 \nr
+  \cos \left(x - \frac{\pi}{3}\right) &= -\frac{1}{2} \nr
+  \intertext{$n$ を整数として}
+  x - \frac{\pi}{3} &= \frac{2}{3}\pi + 2n\pi, \nr
+  &\quad \frac{4}{3}\pi + 2n\pi \nr
+  \intertext{これより}
+  x &= \pi + 2n\pi, \nr
+  &\quad \frac{5}{3}\pi + 2n\pi
+\end{align*}
+
+\paragraph{347 (6)}
+\begin{align*}
+  \sqrt{2} \sin x &\leqq 1 \nr
+  \sin x &\leqq \frac{1}{\sqrt{2}} \nr
+  -\frac{5}{4}\pi + 2n\pi &\leqq x \leqq \frac{\pi}{4} + 2n\pi \quad (n \text{ は整数})
+\end{align*}
+
+\paragraph{347 (7)}
+\begin{align*}
+  \tan x &\geqq 1 \nr
+  \frac{\pi}{4} + n\pi \leqq x &< \frac{\pi}{2} + n\pi \quad (n \text{ は整数})
+\end{align*}
+
+\paragraph{347 (8)}
+\begin{align*}
+  \sqrt{3} \sin x - \cos x &> 1 \nr
+  2 \sin \left( x - \frac{\pi}{6} \right) &> 1 \nr
+  \sin \left( x - \frac{\pi}{6} \right) &> \frac{1}{2} \nr
+  \intertext{$\frac{\pi}{6} + 2n\pi < x - \frac{\pi}{6} < \frac{5}{6}\pi + 2n\pi$ より}
+  \frac{\pi}{3} + 2n\pi < x &< \pi + 2n\pi \quad (n \text{ は整数})
+\end{align*}
+
+\paragraph{348}
+\begin{align*}
+  &\sin x + \sin 2x + \sin 3x + \sin 4x \nr
+  &= \frac{\sin 2x \sin \frac{5}{2}x}{\sin \frac{x}{2}} \nr
+  \intertext{両辺に $\sin \frac{x}{2}$ を掛けると}
+  &(左辺)=\sin \frac{x}{2} ( \sin x + \sin 2x + \sin 3x + \sin 4x ) \nr
+  &= \sin \frac{x}{2} \sin x + \sin \frac{x}{2} \sin 2x \nr
+  &\quad + \sin \frac{x}{2} \sin 3x + \sin \frac{x}{2} \sin 4x \nr
+  &= \frac{1}{2} \left( \cos \frac{x}{2} - \cos \frac{3}{2}x \right) \nr
+  &\quad + \frac{1}{2} \left( \cos \frac{3}{2}x - \cos \frac{5}{2}x \right) \nr
+  &\quad + \frac{1}{2} \left( \cos \frac{5}{2}x - \cos \frac{7}{2}x \right) \nr
+  &\quad + \frac{1}{2} \left( \cos \frac{7}{2}x - \cos \frac{9}{2}x \right) \nr
+  &= \frac{1}{2} \left( \cos \frac{x}{2} - \cos \frac{9}{2}x \right) \nr
+  &= \sin \frac{\frac{9}{2}x + \frac{x}{2}}{2} \sin \frac{\frac{9}{2}x - \frac{x}{2}}{2} \nr
+  &= \sin \frac{5}{2}x \sin 2x  = (右辺)\nr
+\end{align*}
+
+
+\end{document}

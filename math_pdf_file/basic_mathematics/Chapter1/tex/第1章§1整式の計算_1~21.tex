@@ -1,0 +1,430 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+\usepackage{polynom}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}
+\def\nr{\notag\\}
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{第1章 式の計算}\\
+  \textbf{1　整式}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{1 (1)}
+\begin{align*}
+  & 3 x^{2}-4 x+x^{2}-2+x+5 \\
+  &= 4 x^{2}-3 x+3
+\end{align*}
+
+\paragraph{1 (2)}
+\begin{align*}
+  & 2+2 x^{2}-7 x+x^{2}+2 x-3+4 x \\
+  &= 3 x^{2}-x-1
+\end{align*}
+
+\paragraph{2 (1)}
+\begin{align*}
+  A+B &= \left(2 x^{2}+5 x-3\right)+\left(3 x^{2}-3 x-3\right) \\
+  &= 5 x^{2}+2 x-6 \\
+  A-B &= \left(2 x^{2}+5 x-3\right)-\left(3 x^{2}-3 x-3\right) \\
+  &= -x^{2}+8 x
+\end{align*}
+
+\paragraph{2 (2)}
+\begin{align*}
+  A+B &= \left(3 x^{3}-2 x+1\right)+\left(2 x^{3}-x^{2}+5 x\right) \\
+  &= 5 x^{3}-x^{2}+3 x+1 \\
+  A-B &= \left(3 x^{3}-2 x+1\right)-\left(2 x^{3}-x^{2}+5 x\right) \\
+  &= x^{3}+x^{2}-7 x+1
+\end{align*}
+
+\paragraph{3 (1)}
+\begin{align*}
+  & 2 x^{2}-4 x y+3 y^{2}+3 x y+3 x^{2}-2 x-5 \\
+  &= 5 x^{2}-x y-2 x+3 y^{2}-5 \\
+  &= 5 x^{2}-(y+2) x+3 y^{2}-5
+\end{align*}
+
+\paragraph{3 (2)}
+\begin{align*}
+  & a^{3}-2 a^{2} x+a x^{2}+x^{3}-3 a x^{2}+a^{2} x \\
+  &= x^{3}-2 a x^{2}-a^{2} x+a^{3}
+\end{align*}
+
+\paragraph{4 (1)}
+\begin{align*}
+  A+B &= \left(2 x^{3}+4 a x^{2}-3 a^{3}\right)+ \\
+  & \left(3 a x^{2}-2 a^{2} x+2 a^{3}\right) \\
+  &= 2 x^{3}+7 a x^{2}-2 a^{2} x-a^{3} \\
+  A-B &= \left(2 x^{3}+4 a x^{2}-3 a^{3}\right)- \\
+  & \left(3 a x^{2}-2 a^{2} x+2 a^{3}\right) \\
+  &= 2 x^{3}+a x^{2}+2 a^{2} x-5 a^{3}
+\end{align*}
+
+\paragraph{4 (2)}
+\begin{align*}
+  A+B &= \left(x^{3}+2 x^{2} y+5 x y-y^{2}\right)+ \\
+  & \left(3 x^{2} y-x y+2\right) \\
+  &= x^{3}+5 x^{2} y+4 x y-y^{2}+2 \\
+  &= -y^{2}+\left(5 x^{2}+4 x\right) y+x^{3}+2\\
+  A-B &= (x^{3}+2 x^{2} y+5 x y-y^{2})-(3 x^{2} y-x y+2) \\
+  &= x^{3}-x^{2} y+6 x y-y^{2}-2 \\
+  &= -y^{2}-(x^{2}-6 x) y+x^{3}-2
+\end{align*}
+
+\paragraph{5 (1)}
+\begin{align*}
+  (-3 x)^{3} = -27 x^{3}
+\end{align*}
+
+\paragraph{5 (2)}
+\begin{align*}
+  (-a^{2})^{3} = -a^{6}
+\end{align*}
+
+\paragraph{5 (3)}
+\begin{align*}
+  (-a b^{3})^{2}(2 a^{2} b)^{3} &= a^{2} b^{6} \cdot 8 \cdot a^{6} \cdot b^{3} \\
+  &= 8 a^{8} b^{9}
+\end{align*}
+
+\paragraph{5 (4)}
+\begin{align*}
+  (x+4)(x^{2}+3 x-5)= x^{3}+7 x^{2}+7 x-20
+\end{align*}
+
+\paragraph{6 (1)}
+\begin{align*}
+  (x+2 y)^{2} = x^{2}+4 x y+4 y^{2}
+\end{align*}
+
+\paragraph{6 (2)}
+\begin{align*}
+  (3 a-b)^{2} = 9 a^{2}-6 a b+b^{2}
+\end{align*}
+
+\paragraph{6 (3)}
+\begin{align*}
+  (3 x+2 y)(3 x-7 y)= 9 x^{2}-49 y^{2}
+\end{align*}
+
+\paragraph{6 (4)}
+\begin{align*}
+  (x+3 a)(x-2 a)= x^{2}+a x-6 a^{2}
+\end{align*}
+
+\paragraph{6 (5)}
+\begin{align*}
+  (2 x+3)(x+4)= 2 x^{2}+11 x+12
+\end{align*}
+
+\paragraph{6 (6)}
+\begin{align*}
+  (3 x-2 y)(2 x+3 y)= 6 x^{2}+5 x y-6 y^{2}
+\end{align*}
+
+\paragraph{6 (7)}
+\begin{align*}
+  (2 a+b)^{3} = 8 a^{3}+12 a^{2} b+6 a b^{2}+b^{3}
+\end{align*}
+
+\paragraph{6 (8)}
+\begin{align*}
+  (3 x-2 y)^{3} = 27 x^{3}-54 x^{2} y+36 x y^{2}-8 y^{3}
+\end{align*}
+
+\paragraph{7 (1)}
+\begin{align*}
+  (x+y+1)^{2} = x^{2}+y^{2}+1+2xy+2x+2y
+\end{align*}
+
+\paragraph{7 (2)}
+\begin{align*}
+  (x-2y+3)^{2} = x^{2}+4y^{2}+9-4xy+6x-12y
+\end{align*}
+
+\paragraph{7 (3)}
+\begin{align*}
+  (a+2)(a^{2}-2a+4) = a^{3}+8
+\end{align*}
+
+\paragraph{7 (4)}
+\begin{align*}
+  (3x-1)(9x^{2}+3x+1) = 27x^{3}-1
+\end{align*}
+
+\paragraph{8 (1)}
+\begin{align*}
+  & (2x+y+3)(2x+y+5) \\
+  &= (2x+y)^{2}+8(2x+y)+15 \\
+  &= 4x^{2}+4xy+y^{2}+16x+8y+15
+\end{align*}
+
+\paragraph{8 (2)}
+\begin{align*}
+  &  (a^{2}+a-1)(a^{2}-a+1) \\
+  &= (a^{2})^{2}-(a-1)^{2} \\
+  &= a^{4}-(a^{2}-2a+1) \\
+  &= a^{4}-a^{2}+2a-1
+\end{align*}
+
+\paragraph{9 (1)}
+\begin{align*}
+  4a^{3}-9ab^{2} &= a(4a^{2}-9b^{2}) \\
+  &= a(2a+3b)(2a-3b)
+\end{align*}
+
+\paragraph{9 (2)}
+\begin{align*}
+  ab-b-ac+c &= a(b-c)-(b-c) \\
+  &= (b-c)(a-1)
+\end{align*}
+
+\paragraph{9 (3)}
+\begin{align*}
+  8a^{3}+27 = (2a+3)(4a^{2}-6a+9)
+\end{align*}
+
+\paragraph{9 (4)}
+\begin{align*}
+  x^{2}+2xy+y^{2}-z^{2} &= (x+y)^{2}-z^{2} \\
+  &= (x+y+z)(x+y-z)
+\end{align*}
+
+\paragraph{10 (1)}
+\begin{align*}
+  x^{2}-5 x+6 = (x-2)(x-3)
+\end{align*}
+
+\paragraph{10 (2)}
+\begin{align*}
+  x^{2}-7 x-30 = (x-10)(x+3)
+\end{align*}
+
+\paragraph{11 (1)}
+\begin{align*}
+  6 x^{2}+17 x+5 = (2 x+5)(3 x+1)
+\end{align*}
+
+\paragraph{11 (2)}
+\begin{align*}
+  3 x^{2}+4 x-4 = (3 x-2)(x+2)
+\end{align*}
+
+\paragraph{12 (1)}
+\begin{align*}
+  x^{4}-16 &= (x^{2}+4)(x^{2}-4) \\
+  &= (x^{2}+4)(x+2)(x-2)
+\end{align*}
+
+\paragraph{12 (2)}
+\begin{align*}
+  & (x-y)^{2}+2(x-y)-15 \\
+  &= \{(x-y)+5\}\{(x-y)-3\} \\
+  &= (x-y+5)(x-y-3)
+\end{align*}
+
+\paragraph{12 (3)}
+\begin{align*}
+  & x^{2}+2 x y+y^{2}-3 x-3 y+2 \\
+  &= x^{2}+(2 y-3) x+(y-1)(y-2) \\
+  &= \{x+(y-1)\}\{x+(y-2)\} \\
+  &= (x+y-1)(x+y-2)
+\end{align*}
+
+\paragraph{12 (4)}
+\begin{align*}
+  & 2 x^{2}+5 x y+3 y^{2}-3 x-5 y-2 \\
+  &= 2 x^{2}+(5 y-3) x+(3 y+1)(y-2) \\
+  &= \{2 x+(3 y+1)\}\{x+(y-2)\} \\
+  &= (2 x+3 y+1)(x+y-2)
+\end{align*}
+
+\paragraph{13 (1)}
+\begin{align*}
+  &\text{商 } x+5, \text{ 余り } 9 \\
+  &\begin{array}{r}
+    x + 5 \vspace{1pt} \\[-3pt]
+    x - 2 \ \overline{) \ x^2 + 3x - 1} \\
+    \underline{x^2 - 2x \phantom{-1}} \\
+    5x - 1 \\
+    \underline{5x - 10} \\
+    9
+  \end{array}
+\end{align*}
+
+\paragraph{13 (2)}
+\begin{align*}
+&\text{商 } 4x^2 - 13x + 16, \quad \text{余り } -16 \\
+  &\begin{array}{r}
+    4x^2 - 13x + 16 \vspace{1pt} \\[-3pt] % ここに商を記述
+    x + 1 \ \overline{) \ 4x^3 - 9x^2 + 3x \phantom{+00}} \\
+    \underline{4x^3 + 4x^2 \phantom{-000000}} \\
+    -13x^2 + 3x \phantom{00} \\
+    \underline{-13x^2 - 13x \phantom{00}} \\
+    16x \phantom{00} \\
+    \underline{16x + 16} \\
+    -16
+  \end{array}
+\end{align*}
+
+\paragraph{13 (3)}
+\begin{align*}
+&\text{商 } 2x + 1, \quad \text{余り } -9x + 3 \\
+  &\begin{array}{r}
+    2x + 1 \vspace{1pt} \\[-3pt]
+    x^2 + x + 2 \ \overline{) \ 2x^3 + 3x^2 - 4x + 5} \\
+    \underline{2x^3 + 2x^2 + 4x \phantom{+0}} \\
+    x^2 - 8x + 5 \\
+    \underline{x^2 + \phantom{0}x + 2} \\
+    -9x + 3
+  \end{array}
+\end{align*}
+
+\paragraph{14}
+\begin{align*}
+  &\text{ある整式を } A \text{ とすると} \nr
+  A &= (2x+3)(3x^2-1)+5 \nr
+  &= 6x^3+9x^2-2x-3+5 \nr
+  &= 6x^3+9x^2-2x+2
+\end{align*}
+
+\paragraph{15 (1)}
+\begin{align*}
+  &\text{最大公約数 } bc \nr
+  &\text{最小公倍数 } ab^2c^3d
+\end{align*}
+
+\paragraph{15 (2)}
+\begin{align*}
+  &\text{最大公約数 } x+2 \nr
+  &\text{最小公倍数 } (x+2)(x-1)(x-2)
+\end{align*}
+
+\paragraph{15 (3)}
+\begin{align*}
+  &\text{最大公約数 } x+1 \nr
+  &\text{最小公倍数 } (x+1)^2(x-1)(x^2-x+1)
+\end{align*}
+
+\paragraph{16 （1）}
+\begin{align*}
+  & 2 P(x)-Q(x) \\
+  & =2\left(x^{3}-x^{2}-5 x+2\right)- \\
+  & \left(2 x^{3}+6 x^{2}+3 x-1\right) \\
+  & =-8 x^{2}-13 x+5
+\end{align*}
+
+\paragraph{16 （2）}
+\begin{align*}
+P(2) & =8-4-5 \cdot 2+2 \\
+& =4-10+2 \\
+& =-4
+\end{align*}
+
+\paragraph{16 （3）}
+\begin{align*}
+Q(-a)=-2 a^{3}+6 a^{2}-3 a-1
+\end{align*}
+
+\paragraph{17 (1)}
+\begin{align*}
+  A(2) &= 8 - 10 + 3 \\
+       &= 1
+\end{align*}
+
+\paragraph{17 (2)}
+\begin{align*}
+  A(-3) &= -27 + 9 + 9 + 6 \\
+        &= -3
+\end{align*}
+
+\paragraph{18}
+\begin{align*}
+  \intertext{$x = -\frac{1}{2}$ を代入すると}
+  &2 \cdot \left( -\frac{1}{8} \right) - \frac{1}{4} - \frac{3}{2} + 5 \\
+  &= -\frac{1}{4} - \frac{1}{4} + \frac{7}{2} \\
+  &= -\frac{1}{2} + \frac{7}{2} \\
+  &= 3
+\end{align*}
+
+\paragraph{19}
+\begin{align*}
+  P(-1) &= -1 + 4 - 1 - 6 = -4 \\
+  P(-2) &= -8 + 16 - 2 - 6 = 0 \\
+  P(-3) &= -27 + 36 - 3 - 6 = 0 \\
+  \intertext{よって，$x+2, x+3$ で割り切れる}
+\end{align*}
+
+\paragraph{20}
+\begin{align*}
+  \intertext{$x = 1$ を代入した値が $0$ となるので}
+  2 + k + 3 - 10 &= 0 \\
+  k &= 5
+\end{align*}
+
+\paragraph{21 (1)}
+\begin{align*}
+  &x^3 - 7x + 6 \\
+  &= (x - 1)(x^2 + x - 6) \\
+  &= (x - 1)(x + 3)(x - 2)
+\end{align*}
+
+\paragraph{21 (2)}
+\begin{align*}
+  &x^3 + 4x^2 + 5x + 2 \\
+  &= (x + 1)(x^2 + 3x + 2) \\
+  &= (x + 1)^2(x + 2)
+\end{align*}
+
+\paragraph{21 (3)}
+\begin{align*}
+  &2x^3 + 3x^2 - 11x - 6 \\
+  &= (x - 2)(2x^2 + 7x + 3) \\
+  &= (x - 2)(2x + 1)(x + 3)
+\end{align*}
+
+\paragraph{21 (4)}
+\begin{align*}
+  &x^4 + 5x^3 + 5x^2 - 5x - 6 \\
+  &= (x - 1)(x^3 + 6x^2 + 11x + 6) \\
+  &= (x - 1)(x + 1)(x^2 + 5x + 6) \\
+  &= (x - 1)(x + 1)(x + 2)(x + 3)
+\end{align*}
+
+\end{document}

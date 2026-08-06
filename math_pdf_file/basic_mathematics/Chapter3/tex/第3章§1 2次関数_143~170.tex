@@ -1,0 +1,632 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+\raggedbottom%改ページで行間が間延びしないようにする．
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{3章 関数とグラフ}\\
+  \textbf{1　2次関数}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{143 (1)}
+\begin{align*}
+  f(x) &= 3x+1 \nr
+  f(2) &= 6+1 = 7 \nr
+  f(-2) &= -6+1 = -5 \nr
+  f(a+2) &= 3(a+2)+1 = 3a+7 \nr
+  f(a-2) &= 3(a-2)+1 = 3a-5
+\end{align*}
+
+\paragraph{144 (1)}
+\begin{align*}
+  y &= 2x+1 \quad (-1 \leqq x \leqq 2) \nr
+  \text{値域：} & -1 \leqq y \leqq 5
+\end{align*}
+
+\paragraph{144 (2)}
+\begin{align*}
+  y &= -2x+4 \quad (-1 \leqq x \leqq 1) \nr
+  \text{値域：} & 2 \leqq y \leqq 6
+\end{align*}
+
+\paragraph{145 (1)}
+\begin{align*}
+  y &= x^2-1 \nr
+  \text{軸：} & x=0 \nr
+  \text{頂点：} & (0,\ -1)
+\end{align*}
+
+\paragraph{145 (2)}
+\begin{align*}
+  y &= -(x-1)^2 \nr
+  \text{軸：} & x=1 \nr
+  \text{頂点：} & (1,\ 0)
+\end{align*}
+
+\paragraph{145 (3)}
+\begin{align*}
+  y &= 3(x+1)^2-2 \nr
+  \text{軸：} & x=-1 \nr
+  \text{頂点：} & (-1,\ -2)
+\end{align*}
+
+\paragraph{145 (4)}
+\begin{align*}
+  y &= -\frac{1}{2}(x-2)^2+2 \nr
+  \text{軸：} & x=2 \nr
+  \text{頂点：} & (2,\ 2)
+\end{align*}
+
+\paragraph{146 (1)}
+\begin{align*}
+  &x \to x-3 \text{ でおきかえて} \nr
+  y &= 2(x-3)^2
+\end{align*}
+
+\paragraph{146 (2)}
+\begin{align*}
+  &x \to x-1,\ y \to y-2 \text{ でおきかえて} \nr
+  y &= 2(x-1)^2+2
+\end{align*}
+
+\paragraph{146 (3)}
+\begin{align*}
+  y &= 2(x+2)^2-1
+\end{align*}
+
+\paragraph{147 (1)}
+\begin{align*}
+  y &= (x-1)^2 \nr
+  \text{軸：} & x=1 \nr
+  \text{頂点：} & (1,\ 0)
+\end{align*}
+
+\paragraph{147 (2)}
+\begin{align*}
+  y &= 2x^2-4x+3 \nr
+  &= 2(x-1)^2+1 \nr
+  \text{軸：} & x=1 \nr
+  \text{頂点：} & (1,\ 1)
+\end{align*}
+
+\paragraph{147 (3)}
+\begin{align*}
+  y &= -x^2+4x-3 \nr
+  &= -(x-2)^2+1 \nr
+  \text{軸：} & x=2 \nr
+  \text{頂点：} & (2,\ 1)
+\end{align*}
+
+\paragraph{147 (4)}
+\begin{align*}
+  y &= x^2-x-2 \nr
+  &= \left(x-\frac{1}{2}\right)^2-\frac{9}{4} \nr
+  \text{軸：} & x=\frac{1}{2} \nr
+  \text{頂点：} & \left(\frac{1}{2},\ -\frac{9}{4}\right)
+\end{align*}
+
+\paragraph{147 (5)}
+\begin{align*}
+  y &= -\frac{1}{2}x^2+x \nr
+  &= -\frac{1}{2}(x-1)^2+\frac{1}{2} \nr
+  \text{軸：} & x=1 \nr
+  \text{頂点：} & \left(1,\ \frac{1}{2}\right)
+\end{align*}
+
+\paragraph{147 (6)}
+\begin{align*}
+  y &= -2x^2-3x+2 \nr
+  &= -2\left(x+\frac{3}{4}\right)^2+\frac{25}{8} \nr
+  \text{軸：} & x=-\frac{3}{4} \nr
+  \text{頂点：} & \left(-\frac{3}{4},\ \frac{25}{8}\right)
+\end{align*}
+
+\paragraph{148 (1)}
+\begin{align*}
+  y &= a(x-3)^2+5 \nr
+  -4 &= a(-3)^2+5 \nr
+  a &= -1 \nr
+  y &= -(x-3)^2+5
+\end{align*}
+
+\paragraph{148 (2)}
+\begin{align*}
+  y &= ax^2+q \nr
+  &(-1,\ 1),\ (2,\ -5) \text{ を通るので} \nr
+  &\begin{cases} 1 = a+q \\ -5 = 4a+q \end{cases}
+  \text{より}
+  \begin{cases} a = -2 \\ q = 3 \end{cases} \nr
+  y &= -2x^2+3
+\end{align*}
+
+\paragraph{148 (3)}
+\begin{align*}
+  y &= a(x-2)^2+q \nr
+  &(0,\ 5),\ (3,\ 2) \text{ を通るので} \nr
+  &\begin{cases} 5 = 4a+q \\ 2 = a+q \end{cases}
+  \text{より}
+  \begin{cases} a = 1 \\ q = 1 \end{cases} \nr
+  y &= (x-2)^2+1
+\end{align*}
+
+\paragraph{149 (1)}
+\begin{align*}
+  &y = ax^2+bx+c \text{ とすると} \nr
+  &\begin{cases} 0 = a+b+c \\ 3 = c \\ -1 = 4a+2b+c \end{cases}
+  \text{より}
+  \begin{cases} a = 1 \\ b = -4 \\ c = 3 \end{cases} \nr
+  y &= x^2-4x+3 \nr
+  &= (x-2)^2-1 \nr
+  \text{軸：} & x=2 \nr
+  \text{頂点：} & (2,\ -1)
+\end{align*}
+
+\paragraph{149 (2)}
+\begin{align*}
+  &y = a(x-3)(x+2) \text{ とすると} \nr
+  6 &= a \times (-3) \times 2 \nr
+  a &= -1 \nr
+  y &= -(x-3)(x+2) \nr
+  &= -x^2+x+6 \nr
+  &= -\left(x-\frac{1}{2}\right)^2+\frac{25}{4} \nr
+  \text{軸：} & x=\frac{1}{2} \nr
+  \text{頂点：} & \left(\frac{1}{2},\ \frac{25}{4}\right)
+\end{align*}
+
+\paragraph{150 (1)}
+\begin{align*}
+  y &= x^2-4x+8 \nr
+  &= (x-2)^2+4 \nr
+  &x=2 \text{ で最小値 } 4 \text{、最大値なし}
+\end{align*}
+
+\paragraph{150 (2)}
+\begin{align*}
+  y &= -x^2+6x-1 \nr
+  &= -(x-3)^2+8 \nr
+  &x=3 \text{ で最大値 } 8 \text{、最小値なし}
+\end{align*}
+
+\paragraph{150 (3)}
+\begin{align*}
+  y &= \frac{1}{2}x^2-2x \nr
+  &= \frac{1}{2}(x-2)^2-2 \nr
+  &x=2 \text{ で最小値 } -2 \text{、最大値なし}
+\end{align*}
+
+\paragraph{150 (4)}
+\begin{align*}
+  y &= -3x^2+6x+2 \nr
+  &= -3(x-1)^2+5 \nr
+  &x=1 \text{ で最大値 } 5 \text{、最小値なし}
+\end{align*}
+
+\paragraph{151 (1)}
+\begin{align*}
+  y &= x^2-4x \nr
+  &= (x-2)^2-4 \quad (0 \leqq x \leqq 3) \nr
+  &x=2 \text{ で最小値 } -4,\ x=0 \text{ で最大値 } 0
+\end{align*}
+
+\paragraph{151 (2)}
+\begin{align*}
+  y &= x^2-6x+7 \nr
+  &= (x-3)^2-2 \quad (0 \leqq x \leqq 2) \nr
+  &x=2 \text{ で最小値 } -1,\ x=0 \text{ で最大値 } 7
+\end{align*}
+
+\paragraph{151 (3)}
+\begin{align*}
+  y &= -x^2+2x+2 \nr
+  &= -(x-1)^2+3 \quad (-1 \leqq x \leqq 1) \nr
+  &x=1 \text{ で最大値 } 3,\ x=-1 \text{ で最小値 } -1
+\end{align*}
+
+\paragraph{151 (4)}
+\begin{align*}
+  y &= 2x^2-8x+5 \nr
+  &= 2(x-2)^2-3 \quad (0 \leqq x \leqq 4) \nr
+  &x=2 \text{ で最小値 } -3,\ x=0,\ 4 \text{ で最大値 } 5
+\end{align*}
+
+\paragraph{151 (5)}
+\begin{align*}
+  y &= -\frac{x^2}{2}-x+3 \nr
+  &= -\frac{1}{2}(x+1)^2+\frac{7}{2} \quad (-2 \leqq x \leqq 2) \nr
+  &x=-1 \text{ で最大値 } \frac{7}{2},\ x=2 \text{ で最小値 } -1
+\end{align*}
+
+\paragraph{151 (6)}
+\begin{align*}
+  y &= 2(x-1)(x-2) \nr
+  &= 2x^2-6x+4 \nr
+  &= 2\left(x-\frac{3}{2}\right)^2-\frac{1}{2} \quad (0 \leqq x \leqq 2) \nr
+  &x=\frac{3}{2} \text{ で最小値 } -\frac{1}{2},\ x=0 \text{ で最大値 } 4
+\end{align*}
+
+\paragraph{152}
+\begin{align*}
+  &\text{高さは } 8-x \text{、面積を } S \text{ とすると} \nr
+  S &= \frac{1}{2}x(8-x) \nr
+  &= -\frac{1}{2}x^2+4x \nr
+  &= -\frac{1}{2}(x-4)^2+8 \quad (0 < x < 8) \nr
+  &x=4 \text{ で最大値 } 8 \text{ をとる}
+\end{align*}
+
+\paragraph{153 (1)}
+\begin{align*}
+  &2x^2+5x+1 = 0 \nr
+  x &= \frac{-5 \pm \sqrt{25-8}}{4} \nr
+  &= \frac{-5 \pm \sqrt{17}}{4} \nr
+  &\therefore \text{2点で交わる}
+\end{align*}
+
+\paragraph{153 (2)}
+\begin{align*}
+  &3x^2-7x+5 = 0 \text{ の判別式を } D \text{ とすると} \nr
+  D &= 49-4 \times 3 \times 5 \nr
+  &= -11 < 0 \nr
+  &\therefore \text{共有点なし}
+\end{align*}
+
+\paragraph{153 (3)}
+\begin{align*}
+  &\frac{1}{3}x^2-2x+3 = 0 \nr
+  &x^2-6x+9 = 0 \nr
+  &(x-3)^2 = 0 \nr
+  &x = 3 \nr
+  &\therefore \text{接する}
+\end{align*}
+
+\paragraph{154 (1)}
+\begin{align*}
+  &x^2+3x+k = 0 \text{ の判別式を } D \text{ とすると} \nr
+  D &= 9-4k > 0 \nr
+  k &< \frac{9}{4}
+\end{align*}
+
+\paragraph{154 (2)}
+\begin{align*}
+  &4x^2-2kx+9 = 0 \text{ の判別式を } D \text{ とすると} \nr
+  \frac{D}{4} &= k^2-4 \times 9 = 0 \nr
+  k^2 &= 36 \nr
+  k &= \pm 6
+\end{align*}
+
+\paragraph{154 (3)}
+\begin{align*}
+  &kx^2+x-1 = 0 \text{ の判別式を } D \text{ とすると} \nr
+  D &= 1+4k < 0 \nr
+  k &< -\frac{1}{4}
+\end{align*}
+
+\paragraph{155 (1)}
+\begin{align*}
+  x^2+4x+3 &\geqq 0 \nr
+  (x+3)(x+1) &\geqq 0 \nr
+  x \leqq -3,\ -1 &\leqq x
+\end{align*}
+
+\paragraph{155 (2)}
+\begin{align*}
+  x^2-2x-1 &< 0 \nr
+  1-\sqrt{2} < x &< 1+\sqrt{2}
+\end{align*}
+
+\paragraph{155 (3)}
+\begin{align*}
+  x^2-6x+9 &> 0 \nr
+  (x-3)^2 &> 0 \nr
+  x &\neq 3
+\end{align*}
+
+\paragraph{155 (4)}
+\begin{align*}
+  4x^2-12x+9 &< 0 \nr
+  (2x-3)^2 &< 0 \nr
+  &\text{解なし}
+\end{align*}
+
+\paragraph{155 (5)}
+\begin{align*}
+  -x^2+x-\frac{1}{4} &\leqq 0 \nr
+  4x^2-4x+1 &\geqq 0 \nr
+  (2x-1)^2 &\geqq 0 \nr
+  &\text{解はすべての実数}
+\end{align*}
+
+\paragraph{155 (6)}
+\begin{align*}
+  \frac{1}{2}x^2-4x+8 &\leqq 0 \nr
+  x^2-8x+16 &\leqq 0 \nr
+  (x-4)^2 &\leqq 0 \nr
+  x &= 4
+\end{align*}
+
+\paragraph{155 (7)}
+\begin{align*}
+  -4x^2+6x-3 &< 0 \nr
+  4x^2-6x+3 &> 0 \nr
+  4\left(x-\frac{3}{4}\right)^2-\frac{9}{4}+3 &> 0 \nr
+  4\left(x-\frac{3}{4}\right)^2+\frac{3}{4} &> 0 \nr
+  &\text{解はすべての実数}
+\end{align*}
+
+\paragraph{155 (8)}
+\begin{align*}
+  2x^2-4x+3 &\leqq 0 \nr
+  2(x-1)^2+1 &\leqq 0 \nr
+  &\text{解なし}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{156}
+\begin{align*}
+  y &= \frac{1}{2}(x+2)^2+1
+\end{align*}
+
+\paragraph{157}
+\begin{align*}
+  y &= x^2+3x \nr
+  &= \left(x+\frac{3}{2}\right)^2-\frac{9}{4} \nr
+  \text{軸：} & x=-\frac{3}{2} \nr
+  \text{頂点：} & \left(-\frac{3}{2},\ -\frac{9}{4}\right)
+\end{align*}
+
+\paragraph{158 (1)}
+\begin{align*}
+  &y = a(x-2)^2-5 \text{ とおける} \nr
+  7 &= a \times 4-5 \nr
+  a &= 3 \nr
+  y &= 3(x-2)^2-5
+\end{align*}
+
+\paragraph{158 (2)}
+\begin{align*}
+  &y = a(x+1)^2+q \text{ とおける} \nr
+  &\begin{cases} 1 = a+q \\ 7 = 4a+q \end{cases}
+  \text{より}
+  \begin{cases} a = 2 \\ q = -1 \end{cases} \nr
+  y &= 2(x+1)^2-1
+\end{align*}
+
+\paragraph{158 (3)}
+\begin{align*}
+  &y = ax^2+bx+c \text{ とすると} \nr
+  &\begin{cases} 0 = a+b+c \\ 1 = c \\ 3 = 4a+2b+c \end{cases}
+  \text{より}
+  \begin{cases} a = 2 \\ b = -3 \\ c = 1 \end{cases} \nr
+  y &= 2x^2-3x+1
+\end{align*}
+
+\paragraph{159 (1)}
+\begin{align*}
+  &x \to -x \text{ でおきかえて} \nr
+  y &= (-x)^2+2(-x)-3 \nr
+  &= x^2-2x-3
+\end{align*}
+
+\paragraph{159 (2)}
+\begin{align*}
+  &x \to -x,\ y \to -y \text{ でおきかえて} \nr
+  -y &= (-x)^2+2(-x)-3 \nr
+  y &= -x^2+2x+3
+\end{align*}
+
+\paragraph{160}
+\begin{align*}
+  y &= -x^2+6x+1 \nr
+  &= -(x-3)^2+10 \quad \text{頂点 } (3,\ 10) \nr
+  y &= -x^2-2x+3 \nr
+  &= -(x+1)^2+4 \quad \text{頂点 } (-1,\ 4) \nr
+  &\therefore x \text{ 方向に } 4,\ y \text{ 方向に } 6 \text{ 平行移動}
+\end{align*}
+
+\paragraph{161 (1)}
+\begin{align*}
+  y &= -x^2+4x+1 \nr
+  &= -(x-2)^2+5 \quad (-1 \leqq x \leqq 1) \nr
+  &x=-1 \text{ で最小値 } -4, \ret x=1 \text{ で最大値 } 4 \text{ をとる}
+\end{align*}
+
+\paragraph{161 (2)}
+\begin{align*}
+  y &= -(x-2)^2+5 \quad (1 \leqq x \leqq 3) \nr
+  &x=2 \text{ で最大値 } 5, \ret x=1,\ 3 \text{ で最小値 } 4 \text{ をとる}
+\end{align*}
+
+\paragraph{162}
+\begin{align*}
+  &x \text{ cm の幅で折り曲げるとする } (0 < x < 8) \nr
+  &\text{断面積を } S \text{ とすると} \nr
+  S &= x(16-2x) \nr
+  &= -2x^2+16x \nr
+  &= -2(x-4)^2+32 \nr
+  &x=4 \text{ で最大値 } 32 \text{ をとる} \nr
+  &\therefore 4 \text{ cm}
+\end{align*}
+
+\paragraph{163}
+\begin{align*}
+  &x^2-6x-k = 0 \text{ の判別式を } D \text{ とすると} \nr
+  \frac{D}{4} &= 9+k \nr
+  \intertext{(1)}
+  &D > 0 \text{ すなわち } 9+k > 0 \nr
+  &k > -9 \nr
+  \intertext{(2)}
+  &D = 0 \text{ すなわち } 9+k = 0 \nr
+  &k = -9 \nr
+  \intertext{(3)}
+  &D < 0 \text{ すなわち } 9+k < 0 \nr
+  &k < -9
+\end{align*}
+
+\paragraph{164 (1)}
+\begin{align*}
+  2x^2-3x-2 &\leqq 0 \nr
+  (2x+1)(x-2) &\leqq 0 \nr
+  -\frac{1}{2} \leqq x &\leqq 2
+\end{align*}
+
+\paragraph{164 (2)}
+\begin{align*}
+  x^2+8x+16 &\geqq 0 \nr
+  (x+4)^2 &\geqq 0 \nr
+  &\text{解はすべての実数}
+\end{align*}
+
+\paragraph{164 (3)}
+\begin{align*}
+  3x^2+6x+4 &< 0 \nr
+  3(x+1)^2+1 &< 0 \nr
+  &\text{解なし}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{165}
+\begin{align*}
+  &y = a(x-p)^2 \text{ とおける} \nr
+  &\begin{cases} 1 = a(-2-p)^2 \\ 9 = a(2-p)^2 \end{cases} \nr
+  &p=2 \text{ は解でないので、両辺わって} \nr
+  &\frac{1}{9} = \frac{(2+p)^2}{(2-p)^2} \nr
+  &(2-p)^2 = 9(2+p)^2 \nr
+  &p^2-4p+4 = 9p^2+36p+36 \nr
+  &8p^2+40p+32 = 0 \nr
+  &p^2+5p+4 = 0 \nr
+  &(p+1)(p+4) = 0 \nr
+  &p = -1,\ -4 \nr
+  &a = \frac{1}{(p+2)^2} \text{ より} \nr
+  &(a,\ p) = (1,\ -1), \ret \left(\frac{1}{4},\ -4\right) \nr
+  &y = (x+1)^2 \ret \text{または } y = \frac{1}{4}(x+4)^2
+\end{align*}
+
+\paragraph{166 (1)}
+\begin{align*}
+  &x^2+2(m+1)x+m = 0 \ret \text{の判別式を } D \text{ とすると} \nr
+  \frac{D}{4} &= (m+1)^2-m \nr
+  &= m^2+m+1 \nr
+  &= \left(m+\frac{1}{2}\right)^2+\frac{3}{4} > 0 \nr
+  &\therefore x \text{ 軸と2点で交わる}
+\end{align*}
+
+\paragraph{166 (2)}
+\begin{align*}
+  &\text{交点の } x \text{ 座標は} \ret x = -(m+1) \pm \sqrt{m^2+m+1} \nr
+  &\text{2交点間の距離は} \nr
+  &\left(-(m+1)+\sqrt{m^2+m+1}\right) \ret -\left(-(m+1)-\sqrt{m^2+m+1}\right) \nr
+  &= 2\sqrt{\left(m+\frac{1}{2}\right)^2+\frac{3}{4}} \nr
+  &m = -\frac{1}{2} \text{ のとき最小となる}
+\end{align*}
+
+\paragraph{167}
+\begin{align*}
+  f(x) &= x^2+2mx+1 \nr
+  &= (x+m)^2-m^2+1 \text{ とすると} \nr
+  &\text{題意をみたすための条件は} \nr
+  &\begin{cases}
+    f(-m) = -m^2+1 < 0 \\
+    f(0) = 1 > 0 \\
+    f(2) = 4+4m+1 > 0 \\
+    \text{軸 } 0 < -m < 2
+  \end{cases} \nr
+  &\Leftrightarrow
+  \begin{cases}
+    m < -1,\ 1 < m \\
+    \text{すべての実数} \\
+    -\dfrac{5}{4} < m \\
+    -2 < m < 0
+  \end{cases} \nr
+  &\Leftrightarrow -\frac{5}{4} < m < -1
+\end{align*}
+
+\paragraph{168}
+\begin{align*}
+  &y = 4-x \geqq 0 \nr
+  &x \geqq 0 \text{ とあわせて } 0 \leqq x \leqq 4 \nr
+  3x^2+2y^2 &= 3x^2+2(4-x)^2 \nr
+  &= 3x^2+32-16x+2x^2 \nr
+  &= 5x^2-16x+32 \nr
+  &= 5\left(x-\frac{8}{5}\right)^2-\frac{64}{5}+32 \nr
+  &= 5\left(x-\frac{8}{5}\right)^2+\frac{96}{5} \quad (0 \leqq x \leqq 4) \nr
+  &x=\frac{8}{5} \text{ で最小値 } \frac{96}{5} \text{ をとる。} \ret \text{このとき } y=\frac{12}{5} \nr
+  &x=4 \text{ で最大値 } 48 \text{ をとる。} \ret \text{このとき } y=0
+\end{align*}
+
+\paragraph{169}
+\begin{align*}
+  y &= x^2-2ax+a^2-2 \nr
+  &= (x-a)^2-2 \quad (0 \leqq x \leqq 2) \nr
+  \intertext{i) $a<0$ のとき}
+  &x=0 \text{ で最小値 } a^2-2 \text{ をとる} \nr
+  \intertext{ii) $0 \leqq a \leqq 2$ のとき}
+  &x=a \text{ で最小値 } -2 \text{ をとる} \nr
+  \intertext{iii) $2<a$ のとき}
+  &x=2 \text{ で最小値 } a^2-4a+2 \text{ をとる}
+\end{align*}
+
+\paragraph{170}
+\begin{align*}
+  &\text{長方形の縦を } 2y \text{、横を } 2x \text{ とすると} \nr
+  &x^2+y^2 = 3^2 \text{ が成り立つ} \nr
+  &\therefore y^2 = 9-x^2 \nr
+  &y^2 \geqq 0 \text{ なので } x^2 \leqq 9 \nr
+  &\therefore -3 \leqq x \leqq 3 \nr
+  &\text{面積 } S \text{ は} \nr
+  S &= 2x \cdot 2y \nr
+  &= 4xy \nr
+  &= 4x\sqrt{9-x^2} \nr
+  &= 4\sqrt{-x^4+9x^2} \nr
+  &= 4\sqrt{-\left(x^2-\frac{9}{2}\right)^2+\frac{81}{4}} \quad (0 \leqq x^2 \leqq 9) \nr
+  &x^2=\frac{9}{2} \text{ のとき面積が最大となる。} \nr
+  &\text{このとき } y^2 = \frac{9}{2} \nr
+  &x=y \text{ なので正方形}
+\end{align*}
+
+\end{document}

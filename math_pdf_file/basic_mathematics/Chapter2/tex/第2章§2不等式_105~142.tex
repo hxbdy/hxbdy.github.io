@@ -1,0 +1,676 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{2章 方程式と不等式}\\
+  \textbf{2 不等式}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{105 (1)}
+\begin{align*}
+  5x-1 &\geqq x+3 \nr
+  4x &\geqq 4 \nr
+  x &\geqq 1
+\end{align*}
+
+\paragraph{105 (2)}
+\begin{align*}
+  4x-3 &< 6x+5 \nr
+  -2x &< 8 \nr
+  x &> -4
+\end{align*}
+
+\paragraph{105 (3)}
+\begin{align*}
+  3(x+2) &\leqq 7-2x \nr
+  3x+6 &\leqq 7-2x \nr
+  5x &\leqq 1 \nr
+  x &\leqq \frac{1}{5}
+\end{align*}
+
+\paragraph{105 (4)}
+\begin{align*}
+  \frac{5x-1}{2} &> x+4 \nr
+  5x-1 &> 2x+8 \nr
+  3x &> 9 \nr
+  x &> 3
+\end{align*}
+
+\paragraph{106}
+\begin{align*}
+  &\text{バラで買うとみかん $40$ コで $1200$ 円なので} \nr
+  &\text{$1$ コは箱で買うと多く買うことができる} \nr
+  &\text{残り $x$ コみかんを買うとすると} \nr
+  &30x \leqq 1600-1150 \nr
+  &3x \leqq 45 \nr
+  &x \leqq 15 \nr
+  &\therefore \text{箱とあわせて $55$ コまで買える。}
+\end{align*}
+
+\paragraph{107 (1)}
+\begin{align*}
+  &\begin{cases} 3x+4 > x-2 \\ x+2 \geqq 4x-1 \end{cases} \nr
+  &\begin{cases} x > -3 \\ x \leqq 1 \end{cases} \nr
+  &\Leftrightarrow -3 < x \leqq 1
+\end{align*}
+
+\paragraph{107 (2)}
+\begin{align*}
+  &\begin{cases} 4(x-1) < 3x-1 \\ \frac{1}{2}x+1 < \frac{x+4}{3} \end{cases} \nr
+  &\begin{cases} 4x-4 < 3x-1 \\ 3x+6 < 2x+8 \end{cases} \nr
+  &\begin{cases} x < 3 \\ x < 2 \end{cases} \nr
+  &\Leftrightarrow x < 2
+\end{align*}
+
+\paragraph{108 (1)}
+\begin{align*}
+  x^2-4x+3 &< 0 \nr
+  (x-3)(x-1) &< 0 \nr
+  1 < x &< 3
+\end{align*}
+
+\paragraph{108 (2)}
+\begin{align*}
+  x^2-25 &\geqq 0 \nr
+  (x+5)(x-5) &\geqq 0 \nr
+  x \leqq -5,\ 5 &\leqq x
+\end{align*}
+
+\paragraph{108 (3)}
+\begin{align*}
+  3x^2+5x-2 &\leqq 0 \nr
+  (3x-1)(x+2) &\leqq 0 \nr
+  -2 \leqq x &\leqq \frac{1}{3}
+\end{align*}
+
+\paragraph{108 (4)}
+\begin{align*}
+  -4x^2+4x+3 &< 0 \nr
+  4x^2-4x-3 &> 0 \nr
+  (2x+1)(2x-3) &> 0 \nr
+  x < -\frac{1}{2},\ \frac{3}{2} &< x
+\end{align*}
+
+\paragraph{109 (1)}
+\begin{align*}
+  &(x+1)(x-2)(x-3) \leqq 0 \nr
+  &x \leqq -1,\ 2 \leqq x \leqq 3
+\end{align*}
+
+\paragraph{109 (2)}
+\begin{align*}
+  &x^3-3x^2-6x+8 > 0 \nr
+  &(x-1)(x^2-2x-8) > 0 \nr
+  &(x-1)(x-4)(x+2) > 0 \nr
+  &{-}2 < x < 1,\ 4 < x
+\end{align*}
+
+\paragraph{110}
+\begin{align*}
+  &(\text{左辺})-(\text{右辺}) \nr
+  &= a^2-4 \nr
+  &= (a+2)(a-2) \nr
+  &\geqq 0 \quad (\because a \leqq -2) \nr
+  &\text{等号成立は } a=-2 \text{ のとき}
+\end{align*}
+
+\paragraph{111}
+\begin{align*}
+  &(\text{左辺})-(\text{右辺}) \nr
+  &= a-c-(b-d) \nr
+  &= (a-b)+(d-c) \nr
+  &> 0 \quad (\because a>b,\ d>c)
+\end{align*}
+
+\paragraph{112}
+\begin{align*}
+  &(\text{左辺})-(\text{右辺}) \nr
+  &= x^2+4y^2-4xy \nr
+  &= (x-2y)^2 \nr
+  &\geqq 0 \nr
+  &\text{等号成立は } x=2y \text{ のとき}
+\end{align*}
+
+\paragraph{113 (1)}
+\begin{align*}
+  &(\text{左辺}) = (x-4)^2 \geqq 0 \nr
+  &\text{等号成立は } x=4 \text{ のとき}
+\end{align*}
+
+\paragraph{113 (2)}
+\begin{align*}
+  &(\text{左辺}) = (x+2)^2+1 > 0
+\end{align*}
+
+\paragraph{114 (1)}
+\begin{align*}
+  &\frac{a}{2}>0,\ \frac{1}{2a}>0 \text{ なので} \ret \text{相加平均と相乗平均の関係より} \nr
+  &(\text{左辺}) = \frac{a}{2}+\frac{1}{2a} \nr
+  &\geqq 2\sqrt{\frac{a}{2}\cdot\frac{1}{2a}} \nr
+  &= 1 = (\text{右辺}) \nr
+  &\text{等号成立は } \frac{a}{2}=\frac{1}{2a} \nr
+  &\text{すなわち } a=1 \text{ のとき}
+\end{align*}
+
+\paragraph{114 (2)}
+\begin{align*}
+  &\frac{b}{2a}>0,\ \frac{2a}{b}>0 \text{ なので} \ret \text{相加平均と相乗平均の関係より} \nr
+  &(\text{左辺}) \geqq 2\sqrt{\frac{b}{2a}\cdot\frac{2a}{b}} \nr
+  &= 2 \nr
+  &\text{等号成立は } \frac{b}{2a}=\frac{2a}{b} \nr
+  &b^2 = 4a^2 \nr
+  &b>0,\ a>0 \text{ なので } b=2a \text{ のとき}
+\end{align*}
+
+\paragraph{115}
+\begin{align*}
+  A &= \{x \mid 3 \leqq x\} \nr
+  \bar{A} &= \{1,\ 2\}
+\end{align*}
+
+\paragraph{116 (1)}
+\begin{align*}
+  &A = \{1,3,5,7,9\} \nr
+  &B = \{3,4,5,6,7,8\} \nr
+  &A \cap B = \{3,5,7\}
+\end{align*}
+
+\paragraph{116 (2)}
+\begin{align*}
+  &A \cup B = \{1,3,4,5,6,7,8,9\}
+\end{align*}
+
+\paragraph{116 (3)}
+\begin{align*}
+  &\overline{A \cap B} = \{1,2,4,6,8,9,10\}
+\end{align*}
+
+\paragraph{116 (4)}
+\begin{align*}
+  &\bar{A} \cup \bar{B} = \overline{A \cap B} \ret = \{1,2,4,6,8,9,10\}
+\end{align*}
+
+\paragraph{117}
+\begin{align*}
+  &(\text{左辺}) = \overline{(\bar{A} \cap \bar{B}) \cup \bar{C}} \nr
+  &= \overline{(\overline{A \cup B}) \cup \bar{C}} \nr
+  &= \overline{\overline{(A \cup B) \cap C}} \nr
+  &= (A \cup B) \cap C \nr
+  &= (\text{右辺})
+\end{align*}
+
+\paragraph{118 (1)}
+\begin{align*}
+  &\text{偽} \quad (x=-2)
+\end{align*}
+
+\paragraph{118 (2)}
+\begin{align*}
+  &x^2<1 \Leftrightarrow -1<x<1 \nr
+  &\Rightarrow x<1 \nr
+  &\text{真}
+\end{align*}
+
+\paragraph{119 (1)}
+\begin{align*}
+  &x^2=4 \Leftrightarrow x=\pm 2 \nr
+  &x=\pm 2 \Leftarrow x=2 \text{ より必要条件}
+\end{align*}
+
+\paragraph{119 (2)}
+\begin{align*}
+  &x^2+y^2=0 \Leftrightarrow x^2=y^2=0 \nr
+  &\Leftrightarrow x=y=0 \text{ より必要十分条件}
+\end{align*}
+
+\paragraph{119 (3)}
+\begin{align*}
+  &\text{$4$ の約数} \Rightarrow \text{$8$ の約数} \ret \text{より十分条件}
+\end{align*}
+
+\paragraph{119 (4)}
+\begin{align*}
+  &\text{二等辺三角形} \Leftarrow \text{正三角形} \ret \text{より必要条件}
+\end{align*}
+
+\paragraph{120}
+\begin{align*}
+  &p: n>3 \nr
+  &\bar{p}: n \leqq 3 \nr
+  &\bar{p} = \{1,2,3\}
+\end{align*}
+
+\paragraph{121 (1)}
+\begin{align*}
+  &x \neq -1 \text{ かつ } x \neq 1
+\end{align*}
+
+\paragraph{121 (2)}
+\begin{align*}
+  &x \leqq 0 \text{ または } y \leqq 0
+\end{align*}
+
+\paragraph{122 (1)}
+\begin{align*}
+  &\text{逆: } x=1 \Rightarrow (x-1)(x-2)=0 \nr
+  &\text{裏: } (x-1)(x-2) \neq 0 \Rightarrow x \neq 1 \nr
+  &\text{対偶: } x \neq 1 \ret \Rightarrow (x-1)(x-2) \neq 0
+\end{align*}
+
+\paragraph{122 (2)}
+\begin{align*}
+  &\text{逆: } x+y>0 \ret \Rightarrow x>0 \text{ かつ } y>0 \nr
+  &\text{裏: } x \leqq 0 \text{ または } y \leqq 0 \ret \Rightarrow x+y \leqq 0 \nr
+  &\text{対偶: } x+y \leqq 0 \ret \Rightarrow x \leqq 0 \text{ または } y \leqq 0
+\end{align*}
+
+\paragraph{123}
+\begin{align*}
+  &\text{対偶「} x \leqq 0 \text{ かつ } y \leqq 0 \ret \text{ならば } xy \geqq 0 \text{」を示す} \nr
+  &\begin{cases} x \leqq 0 \\ y \leqq 0 \end{cases} \text{ なので } xy \geqq 0 \nr
+  &\text{対偶が真なので、もとの命題も真}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{124 (1)}
+\begin{align*}
+  3x+4 &< 5x-8 \nr
+  -2x &< -12 \nr
+  x &> 6
+\end{align*}
+
+\paragraph{124 (2)}
+\begin{align*}
+  \frac{2x+1}{3} &\leqq \frac{1}{4}x+2 \nr
+  8x+4 &\leqq 3x+24 \nr
+  5x &\leqq 20 \nr
+  x &\leqq 4
+\end{align*}
+
+\paragraph{125}
+\begin{align*}
+  &\begin{cases} 4x-3 > x-5 \\ \frac{2}{3}x+\frac{1}{6} \leqq \frac{1}{2}x+1 \end{cases} \nr
+  &\begin{cases} 3x > -2 \\ 4x+1 \leqq 3x+6 \end{cases} \nr
+  &\begin{cases} x > -\frac{2}{3} \\ x \leqq 5 \end{cases} \nr
+  &\Leftrightarrow -\frac{2}{3} < x \leqq 5
+\end{align*}
+
+\paragraph{126 (1)}
+\begin{align*}
+  x^2+3x-4 &\leqq 0 \nr
+  (x+4)(x-1) &\leqq 0 \nr
+  -4 \leqq x &\leqq 1
+\end{align*}
+
+\paragraph{126 (2)}
+\begin{align*}
+  3x^2-8x+4 &> 0 \nr
+  (3x-2)(x-2) &> 0 \nr
+  x < \frac{2}{3},\ 2 &< x
+\end{align*}
+
+\paragraph{126 (3)}
+\begin{align*}
+  &x(x-1)(x-2) \geqq 0 \nr
+  &0 \leqq x \leqq 1,\ 2 \leqq x
+\end{align*}
+
+\paragraph{126 (4)}
+\begin{align*}
+  &2x^3-x^2-2x+1 < 0 \nr
+  &(x-1)(2x^2+x-1) < 0 \nr
+  &(x-1)(2x-1)(x+1) < 0 \nr
+  &x < -1,\ \frac{1}{2} < x < 1
+\end{align*}
+
+\paragraph{127}
+\begin{align*}
+  &\text{判別式を } D \text{ とすると} \nr
+  &D = (m+3)^2-4 \cdot 4m \nr
+  &= m^2-10m+9 \nr
+  &= (m-1)(m-9) > 0 \nr
+  &m<1,\ 9<m
+\end{align*}
+
+\paragraph{128}
+\begin{align*}
+  &a>b \nr
+  &ab>0 \text{ なので、両辺に } \frac{1}{ab} \text{ をかけて} \nr
+  &a \times \frac{1}{ab} > b \times \frac{1}{ab} \nr
+  &\frac{1}{b} > \frac{1}{a}
+\end{align*}
+
+\paragraph{129 (1)}
+\begin{align*}
+  &(\text{左辺})-(\text{右辺}) \nr
+  &= (x^2y^2+x^2+y^2+1) \ret -(x^2y^2+2xy+1) \nr
+  &= x^2+y^2-2xy \nr
+  &= (x-y)^2 \nr
+  &\geqq 0 \nr
+  &\text{等号成立は } x=y \text{ のとき}
+\end{align*}
+
+\paragraph{129 (2)}
+\begin{align*}
+  &(\text{左辺}) = x^2-2xy+2y^2 \nr
+  &= (x-y)^2+y^2 \nr
+  &\geqq 0 \nr
+  &\text{等号成立は } x-y=0 \text{ かつ } y=0 \nr
+  &\text{すなわち } x=y=0 \text{ のとき}
+\end{align*}
+
+\paragraph{130 (1)}
+\begin{align*}
+  &A \cap \bar{B} = \{4,6,10\}
+\end{align*}
+
+\paragraph{130 (2)}
+\begin{align*}
+  &\overline{A \cup B} = \{1,3,9\}
+\end{align*}
+
+\paragraph{131 (1)}
+\begin{align*}
+  &x=y=0 \Rightarrow xy=0 \text{ は真} \nr
+  &x=y=0 \Leftarrow xy=0 \text{ は偽} \ret (\text{反例 } x=1,\ y=0) \nr
+  &\text{よって十分条件}
+\end{align*}
+
+\paragraph{131 (2)}
+\begin{align*}
+  &x^2=0 \Leftrightarrow x=0 \nr
+  &\text{よって必要十分条件}
+\end{align*}
+
+\paragraph{131 (3)}
+\begin{align*}
+  &x^2-3x+2>0 \Leftrightarrow (x-1)(x-2)>0 \ret \Leftrightarrow x<1,\ 2<x \nr
+  &x<1,\ 2<x \Leftarrow x>2 \nr
+  &\text{よって必要条件}
+\end{align*}
+
+\paragraph{132}
+\begin{align*}
+  &\text{逆: } x>0 \text{ かつ } y>0 \Rightarrow xy>0 \ret \text{（真）} \nr
+  &\text{裏: } xy \leqq 0 \ret \Rightarrow x \leqq 0 \text{ または } y \leqq 0 \text{（真）} \nr
+  &\text{対偶: } x \leqq 0 \text{ または } y \leqq 0 \ret \Rightarrow xy \leqq 0 \text{（偽）} \ret \text{反例 } x=y=-1
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{133 (1)}
+\begin{align*}
+  &x-2 \leqq 4x+1 \leqq 2(x+3) \nr
+  &\begin{cases} x-2 \leqq 4x+1 \\ 4x+1 \leqq 2(x+3) \end{cases} \nr
+  &\begin{cases} -3x \leqq 3 \\ 2x \leqq 5 \end{cases} \nr
+  &\begin{cases} x \geqq -1 \\ x \leqq \frac{5}{2} \end{cases} \nr
+  &{-}1 \leqq x \leqq \frac{5}{2}
+\end{align*}
+
+\paragraph{133 (2)}
+\begin{align*}
+  &\begin{cases} x^2-9x+8 \leqq 0 \\ \frac{1}{2}x+3 < x \end{cases} \nr
+  &\begin{cases} (x-8)(x-1) \leqq 0 \\ -\frac{1}{2}x < -3 \end{cases} \nr
+  &\begin{cases} 1 \leqq x \leqq 8 \\ x > 6 \end{cases} \nr
+  &\Leftrightarrow 6 < x \leqq 8
+\end{align*}
+
+\paragraph{134 (1)}
+\begin{align*}
+  &A: x^2-4x-12 < 0 \nr
+  &(x-6)(x+2) < 0 \nr
+  &{-}2 < x < 6 \nr
+  &B: x^2+5x \leqq 0 \nr
+  &x(x+5) \leqq 0 \nr
+  &{-}5 \leqq x \leqq 0 \nr
+  &A \cap B = \{x \mid -2 < x \leqq 0\} \nr
+  &A \cup B = \{x \mid -5 \leqq x < 6\}
+\end{align*}
+
+\paragraph{135 (1)}
+\begin{align*}
+  &\frac{x-1}{x^2-x-2} > 0 \nr
+  &\Leftrightarrow \begin{cases} x-1 > 0 \\ (x-2)(x+1) > 0 \end{cases} \ret \text{または} \begin{cases} x-1 < 0 \\ (x-2)(x+1) < 0 \end{cases} \nr
+  &\Leftrightarrow \begin{cases} x > 1 \\ x < -1,\ 2 < x \end{cases} \ret \text{または} \begin{cases} x < 1 \\ -1 < x < 2 \end{cases} \nr
+  &\Leftrightarrow 2 < x \text{ または } -1 < x < 1
+\end{align*}
+
+\paragraph{135 (2)}
+\begin{align*}
+  &\frac{2}{x-1} > \frac{1}{x+1} \nr
+  &\text{両辺に } (x-1)^2(x+1)^2 \text{ をかけて} \nr
+  &2(x-1)(x+1)^2 > (x-1)^2(x+1) \nr
+  &(x-1)(x+1)\{2(x+1)-(x-1)\} > 0 \nr
+  &(x-1)(x+1)(x+3) > 0 \nr
+  &{-}3 < x < -1,\ 1 < x
+\end{align*}
+
+\paragraph{136 (1)}
+\begin{align*}
+  &\abs{x-7} > 5x+2 \nr
+  &\text{i) } x-7<0 \text{ すなわち } x<7 \text{ のとき} \nr
+  &{-}x+7 > 5x+2 \nr
+  &{-}6x > -5 \nr
+  &x < \frac{5}{6} \nr
+  &x<7 \text{ とあわせて } x < \frac{5}{6} \nr
+  &\text{ii) } x-7 \geqq 0 \text{ すなわち } x \geqq 7 \text{ のとき} \nr
+  &x-7 > 5x+2 \nr
+  &{-}4x > 9 \nr
+  &x < -\frac{9}{4} \nr
+  &x \geqq 7 \text{ をみたさない} \nr
+  &\text{i)ii) より } x < \frac{5}{6}
+\end{align*}
+
+\paragraph{136 (2)}
+\begin{align*}
+  &\abs{x-2}+\abs{x-3} > 5 \nr
+  &\text{i) } x<2 \text{ のとき} \nr
+  &{-}x+2-x+3 > 5 \nr
+  &{-}2x > 0 \nr
+  &x < 0 \nr
+  &x<2 \text{ とあわせて } x<0 \nr
+  &\text{ii) } 2 \leqq x < 3 \text{ のとき} \nr
+  &x-2-x+3 > 5 \nr
+  &1 > 5 \nr
+  &\text{解なし} \nr
+  &\text{iii) } 3 \leqq x \text{ のとき} \nr
+  &x-2+x-3 > 5 \nr
+  &2x > 10 \nr
+  &x > 5 \nr
+  &3 \leqq x \text{ とあわせて } x>5 \nr
+  &\text{i)〜iii) より } x<0,\ 5<x
+\end{align*}
+
+\paragraph{137 (1)}
+\begin{align*}
+  &(a^2+1)-(a-a^2) \nr
+  &= 2a^2-a+1 \nr
+  &= 2\left(a-\frac{1}{4}\right)^2+\frac{7}{8} \nr
+  &> 0 \nr
+  &\therefore a^2+1 > a-a^2
+\end{align*}
+
+\paragraph{137 (2)}
+\begin{align*}
+  &x^2+(a+1)x-a(a-1)(a^2+1) < 0 \nr
+  &\{x+(a^2+1)\}\{x-a(a-1)\} < 0 \nr
+  &\text{(1) より } -(a^2+1) < a(a-1) \text{ なので} \nr
+  &{-}(a^2+1) < x < a(a-1)
+\end{align*}
+
+\paragraph{138}
+\begin{align*}
+  &\text{解と係数の関係より、} \ret \text{$2$ 解を } \alpha,\ \beta \text{ とすると} \nr
+  &\begin{cases} \alpha+\beta = 3 \\ \alpha\beta = -(k+1)(k-2) \end{cases} \nr
+  &\text{「} \alpha<3 \text{ かつ } \beta<3 \text{」} \nr
+  &\Leftrightarrow \begin{cases} (\alpha-3)+(\beta-3) < 0 \\ (\alpha-3)(\beta-3) > 0 \end{cases} \nr
+  &\Leftrightarrow \begin{cases} \alpha+\beta-6 < 0 \\ \alpha\beta-3(\alpha+\beta)+9 > 0 \end{cases} \nr
+  &\Leftrightarrow \begin{cases} 3-6 < 0 \\ -(k+1)(k-2)-9+9 > 0 \end{cases} \nr
+  &\Leftrightarrow \begin{cases} \text{すべての $k$ について成り立つ} \\ (k+1)(k-2) < 0 \end{cases} \nr
+  &\Leftrightarrow -1 < k < 2
+\end{align*}
+
+\paragraph{139}
+\begin{align*}
+  &\text{縦と横の長さを } a,\ b \text{ とする} \nr
+  &\text{周の長さ } l=2a+2b \text{ は一定である} \nr
+  &\text{面積 } S=ab \nr
+  &a>0,\ b>0 \text{ なので} \ret \text{相加平均と相乗平均の関係より} \nr
+  &2\sqrt{ab} \leqq a+b = \frac{1}{2}l \nr
+  &\text{両辺正なので $2$ 乗して} \nr
+  &4ab \leqq \frac{1}{4}l^2 \nr
+  &ab \leqq \frac{1}{16}l^2 \nr
+  &\text{等号成立は } a=b \text{ のとき} \nr
+  &\therefore a=b \text{ すなわち正方形で} \ret \text{面積は最大となる}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{PLUS}\\
+\end{center}
+
+\paragraph{140 (1)}
+\begin{align*}
+  &\begin{cases} x^2-xy-6y^2=0 & \cdots \text{①} \\ x^2-2y^2=4 & \cdots \text{②} \end{cases} \nr
+  &\text{① より } (x-3y)(x+2y)=0 \nr
+  &x=3y,\ -2y \nr
+  &\text{i) } x=3y \text{ のとき} \nr
+  &\text{② に代入 } 9y^2-2y^2=4 \nr
+  &y^2 = \frac{4}{7} \nr
+  &y = \pm\frac{2}{\sqrt{7}},\quad x = \pm\frac{6}{\sqrt{7}} \nr
+  &\text{ii) } x=-2y \text{ のとき} \nr
+  &\text{② に代入 } 4y^2-2y^2=4 \nr
+  &y^2 = 2 \nr
+  &y = \pm\sqrt{2},\quad x = \mp 2\sqrt{2} \nr
+  &\text{i)ii) より} \ret (x,y) = \left(\pm\frac{6}{7}\sqrt{7},\ \pm\frac{2}{7}\sqrt{7}\right), \ret (\pm 2\sqrt{2},\ \mp\sqrt{2}) \quad \text{（複号同順）}
+\end{align*}
+
+\paragraph{140 (2)}
+\begin{align*}
+  &\begin{cases} 3x^2-5xy+2y^2=17 & \cdots \text{①} \\ x^2+4xy-5y^2=0 & \cdots \text{②} \end{cases} \nr
+  &\text{② より } (x+5y)(x-y)=0 \nr
+  &x=y,\ -5y \nr
+  &\text{i) } x=y \text{ のとき} \nr
+  &\text{① に代入 } 3y^2-5y^2+2y^2=17 \nr
+  &0=17 \nr
+  &\text{解なし} \nr
+  &\text{ii) } x=-5y \text{ のとき} \nr
+  &\text{① に代入 } 75y^2+25y^2+2y^2=17 \nr
+  &102y^2 = 17 \nr
+  &y^2 = \frac{1}{6} \nr
+  &y = \pm\frac{1}{\sqrt{6}},\quad x = \mp\frac{5}{\sqrt{6}} \nr
+  &\text{i)ii) より} \ret (x,y) = \left(\pm\frac{5}{\sqrt{6}},\ \mp\frac{1}{\sqrt{6}}\right) \ret \text{（複号同順）}
+\end{align*}
+
+\paragraph{140 (3)}
+\begin{align*}
+  &\begin{cases} x(x-y)=12 \\ x(x+y)=60 \end{cases} \nr
+  &\begin{cases} x^2-xy=12 & \cdots \text{①} \\ x^2+xy=60 & \cdots \text{②} \end{cases} \nr
+  &\text{①}+\text{②} \quad 2x^2=72 \nr
+  &x = \pm 6 \nr
+  &\text{i) } x=6 \text{ のとき } 36+6y=60 \nr
+  &y = 4 \nr
+  &\text{ii) } x=-6 \text{ のとき } 36-6y=60 \nr
+  &y = -4 \nr
+  &\text{i)ii) より } (x,y)=(\pm 6,\ \pm 4) \ret \text{（複号同順）}
+\end{align*}
+
+\paragraph{140 (4)}
+\begin{align*}
+  &\begin{cases} 2x^2-xy=12 & \cdots \text{①} \\ 2xy+y^2=16 & \cdots \text{②} \end{cases} \nr
+  &\text{①} \times 4-\text{②} \times 3 \nr
+  &8x^2-10xy-3y^2=0 \nr
+  &(4x+y)(2x-3y)=0 \nr
+  &x = -\frac{y}{4},\ \frac{3}{2}y \nr
+  &\text{② に代入} \nr
+  &\text{i) } x=-\frac{y}{4} \text{ のとき} \nr
+  &{-}\frac{y^2}{2}+y^2=16 \nr
+  &y^2 = 32 \nr
+  &y = \pm 4\sqrt{2},\quad x = \mp\sqrt{2} \nr
+  &\text{ii) } x=\frac{3}{2}y \text{ のとき} \nr
+  &3y^2+y^2=16 \nr
+  &y^2 = 4 \nr
+  &y = \pm 2,\quad x = \pm 3 \nr
+  &\text{i)ii) より} \ret (x,y) = (\mp\sqrt{2},\ \pm 4\sqrt{2}),\ (\pm 3,\ \pm 2) \ret \text{（複号同順）}
+\end{align*}
+
+\paragraph{141}
+\begin{align*}
+  &(\text{左辺})-(\text{右辺}) \nr
+  &= (a^2+b^2+c^2)(x^2+y^2+z^2) \ret -(ax+by+cz)^2 \nr
+  &= a^2x^2+a^2y^2+a^2z^2+b^2x^2 \ret +b^2y^2+b^2z^2+c^2x^2+c^2y^2+c^2z^2 \ret -(a^2x^2+b^2y^2+c^2z^2+2abxy \ret +2bcyz+2cazx) \nr
+  &= (a^2y^2-2abxy+b^2x^2) \ret +(b^2z^2-2bcyz+c^2y^2) \ret +(c^2x^2-2cazx+a^2z^2) \nr
+  &= (ay-bx)^2+(bz-cy)^2+(cx-az)^2 \nr
+  &\geqq 0 \nr
+  &\text{等号成立は } ay=bx \text{ かつ } bz=cy \ret \text{かつ } cx=az \text{ のとき}
+\end{align*}
+
+\paragraph{142}
+\begin{align*}
+  &\text{I]\ } \abs{\abs{a}-\abs{b}} \leqq \abs{a+b} \text{ を示す} \nr
+  &(\text{左辺}) \geqq 0,\ (\text{右辺}) \geqq 0 \text{ なので} \ret (\text{左辺})^2 \leqq (\text{右辺})^2 \text{ を示す} \nr
+  &(\text{右辺})^2-(\text{左辺})^2 \nr
+  &= (a+b)^2-(\abs{a}-\abs{b})^2 \nr
+  &= a^2+2ab+b^2-(a^2-2\abs{ab}+b^2) \nr
+  &= 2(ab+\abs{ab}) \nr
+  &\geqq 0 \nr
+  &\text{等号成立は } ab \leqq 0 \text{ のとき} \nr
+  &\text{II]\ } \abs{a+b} \leqq \abs{a}+\abs{b} \text{ を示す} \nr
+  &(\text{左辺}) \geqq 0,\ (\text{右辺}) \geqq 0 \text{ なので} \ret (\text{左辺})^2 \leqq (\text{右辺})^2 \text{ を示す} \nr
+  &(\text{右辺})^2-(\text{左辺})^2 \nr
+  &= (\abs{a}+\abs{b})^2-(a+b)^2 \nr
+  &= a^2+2\abs{ab}+b^2-(a^2+2ab+b^2) \nr
+  &= 2(\abs{ab}-ab) \nr
+  &\geqq 0 \nr
+  &\text{等号成立は } ab \geqq 0 \text{ のとき} \nr
+  &\text{I]II] より不等式は成り立つ}
+\end{align*}
+
+\end{document}

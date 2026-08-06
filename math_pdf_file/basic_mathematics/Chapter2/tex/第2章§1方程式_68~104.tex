@@ -1,0 +1,936 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{2章 方程式と不等式}\\
+  \textbf{1 方程式}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{68 (1)}
+\begin{align*}
+  x^2 - 3x - 4 &= 0 \nr
+  (x - 4)(x + 1) &= 0 \nr
+  x &= 4, \ -1
+\end{align*}
+
+\paragraph{68 (2)}
+\begin{align*}
+  x^2 + 3x &= 0 \nr
+  x(x + 3) &= 0 \nr
+  x &= 0, \ -3
+\end{align*}
+
+\paragraph{68 (3)}
+\begin{align*}
+  3x^2 - 7x + 2 &= 0 \nr
+  (3x - 1)(x - 2) &= 0 \nr
+  x &= \frac{1}{3}, \ 2
+\end{align*}
+
+\paragraph{68 (4)}
+\begin{align*}
+  8x^2 - 2x - 3 &= 0 \nr
+  (2x + 1)(4x - 3) &= 0 \nr
+  x &= -\frac{1}{2}, \ \frac{3}{4}
+\end{align*}
+
+\paragraph{69 (1)}
+\begin{align*}
+  x^2 + 7x + 8 &= 0 \nr
+  x &= \frac{-7 \pm \sqrt{49 - 32}}{2} \nr
+  &= \frac{-7 \pm \sqrt{17}}{2}
+\end{align*}
+
+\paragraph{69 (2)}
+\begin{align*}
+  3x^2 - 5x + 1 &= 0 \nr
+  x &= \frac{5 \pm \sqrt{25 - 12}}{6} \nr
+  &= \frac{5 \pm \sqrt{13}}{6}
+\end{align*}
+
+\paragraph{69 (3)}
+\begin{align*}
+  x^2 + 2x - 7 &= 0 \nr
+  x &= -1 \pm \sqrt{1 + 7} \nr
+  &= -1 \pm \sqrt{8} \nr
+  &= -1 \pm 2\sqrt{2}
+\end{align*}
+
+\paragraph{69 (4)}
+\begin{align*}
+  2x^2 - 2x - 3 &= 0 \nr
+  x &= \frac{1 \pm \sqrt{1 - 2(-3)}}{2} \nr
+  &= \frac{1 \pm \sqrt{1 + 6}}{2} \nr
+  &= \frac{1 \pm \sqrt{7}}{2}
+\end{align*}
+
+\paragraph{70 (1)}
+\begin{align*}
+  x^2 - 12x + 36 &= 0 \nr
+  (x - 6)^2 &= 0 \nr
+  x &= 6
+\end{align*}
+
+\paragraph{70 (2)}
+\begin{align*}
+  4x^2 + 20x + 25 &= 0 \nr
+  (2x + 5)^2 &= 0 \nr
+  x &= -\frac{5}{2}
+\end{align*}
+
+\paragraph{71 (1)}
+\begin{align*}
+  x^2 + 5x + 7 &= 0 \nr
+  x &= \frac{-5 \pm \sqrt{25 - 28}}{2} \nr
+  &= \frac{-5 \pm \sqrt{-3}}{2} \nr
+  &= \frac{-5 \pm \sqrt{3}i}{2}
+\end{align*}
+
+\paragraph{71 (2)}
+\begin{align*}
+  2x^2 + 3x + 2 &= 0 \nr
+  x &= \frac{-3 \pm \sqrt{9 - 16}}{4} \nr
+  &= \frac{-3 \pm \sqrt{-7}}{4} \nr
+  &= \frac{-3 \pm \sqrt{7}i}{4}
+\end{align*}
+
+\paragraph{71 (3)}
+\begin{align*}
+  x^2 + 4 &= 0 \nr
+  x^2 &= -4 \nr
+  x &= \pm 2i
+\end{align*}
+
+\paragraph{71 (4)}
+\begin{align*}
+  3x^2 - 2x + 4 &= 0 \nr
+  x &= \frac{1 \pm \sqrt{1 - 12}}{3} \nr
+  &= \frac{1 \pm \sqrt{-11}}{3} \nr
+  &= \frac{1 \pm \sqrt{11}i}{3}
+\end{align*}
+
+\paragraph{72 (1)}
+判別式を $D$ とすると
+\begin{align*}
+  x^2 - 3x + 6 &= 0 \nr
+  D &= (-3)^2 - 4 \cdot 1 \cdot 6 \nr
+  &= 9 - 24 \nr
+  &= -15 < 0
+\end{align*}
+よって、異なる2つの虚数解をもつ。
+
+\paragraph{72 (2)}
+判別式を $D$ とすると
+\begin{align*}
+  2x^2 - x - 5 &= 0 \nr
+  D &= (-1)^2 - 4 \cdot 2 \cdot (-5) \nr
+  &= 1 + 40 \nr
+  &= 41 > 0
+\end{align*}
+よって、異なる2つの実数解をもつ。
+
+\paragraph{72 (3)}
+判別式を $D$ とすると
+\begin{align*}
+  9x^2 + 6x + 1 &= 0 \nr
+  D/4 &= 3^2 - 9 \cdot 1 \nr
+  &= 9 - 9 = 0
+\end{align*}
+よって、重解をもつ。
+
+\paragraph{73 (1)}
+\begin{align*}
+D&=k^{2}-4(k+8)\nr
+&=k^{2}-4k-32\nr
+&=(k-8)(k+4)=0\nr
+k&=-4, 8\nr
+\intertext{$k=-4$ のとき}
+x^2-4x+4&=0\nr
+(x-2)^2&=0\nr
+x&=2\nr
+\intertext{$k=8$ のとき}
+x^2+8x+16&=0\nr
+(x+4)^2&=0\nr
+x&=-4
+\end{align*}
+
+\paragraph{73 (2)}
+判別式を $D$ とすると
+\begin{align*}
+  D &= (k + 3)^2 - 4 \cdot 4k \nr
+  &= k^2 + 6k + 9 - 16k \nr
+  &= k^2 - 10k + 9 \nr
+  &= (k - 1)(k - 9) = 0 \nr
+  k &= 1, \ 9
+\end{align*}
+$k = 1$ のとき
+\begin{align*}
+  4x^2 + 4x + 1 &= 0 \nr
+  (2x + 1)^2 &= 0 \nr
+  x &= -\frac{1}{2}
+\end{align*}
+$k = 9$ のとき
+\begin{align*}
+  4x^2 + 12x + 9 &= 0 \nr
+  (2x + 3)^2 &= 0 \nr
+  x &= -\frac{3}{2}
+\end{align*}
+
+\paragraph{74 (1)}
+\begin{align*}
+  \alpha + \beta = -4, \ \alpha \beta = \frac{1}{2} \nr
+  \alpha^2 \beta + \alpha \beta^2 &= \alpha \beta (\alpha + \beta) \\
+  &= \frac{1}{2} \times (-4) \\
+  &= -2
+\end{align*}
+
+\paragraph{74 (2)}
+\begin{align*}
+  \alpha^2 + \beta^2 &= (\alpha + \beta)^2 - 2\alpha \beta \nr
+  &= 16 - 1 \nr
+  &= 15 
+\end{align*}
+
+\paragraph{74 (3)}
+\begin{align*}
+  \frac{1}{\alpha} + \frac{1}{\beta} &= \frac{\alpha + \beta}{\alpha \beta} \nr
+  &= -4 \times 2 \nr
+  &= -8 
+\end{align*}
+
+\paragraph{75 (1)}
+$x^2 - 2x - 2 = 0$ とすると 
+\begin{align*}
+  x &= 1 \pm \sqrt{3} \nr
+  \therefore &(x - 1 - \sqrt{3})(x - 1 + \sqrt{3}) 
+\end{align*}
+
+\paragraph{75 (2)}
+$x^2 - 3x + 4 = 0$ とすると 
+\begin{align*}
+  x &= \frac{3 \pm \sqrt{9 - 16}}{2} \nr
+  &= \frac{3 \pm \sqrt{7}i}{2} \nr
+  \therefore &\left(x - \frac{3 + \sqrt{7}i}{2}\right)\left(x - \frac{3 - \sqrt{7}i}{2}\right) 
+\end{align*}
+
+\paragraph{75 (3)}
+$3x^2 + 2x + 1 = 0$ とすると 
+\begin{align*}
+  x &= \frac{-1 \pm \sqrt{1 - 3}}{3} \nr
+  &= \frac{-1 \pm \sqrt{2}i}{3} \nr
+  \therefore 3&\left(x - \frac{-1 + \sqrt{2}i}{3}\right)\left(x - \frac{-1 - \sqrt{2}i}{3}\right) 
+\end{align*}
+
+\paragraph{75 (4)}
+$4x^2 - 8x + 1 = 0$ とすると 
+\begin{align*}
+  x &= \frac{4 \pm \sqrt{16 - 4}}{4} \nr
+  &= \frac{4 \pm 2\sqrt{3}}{4} \nr
+  &= \frac{2 \pm \sqrt{3}}{2} \nr
+  \therefore 4&\left(x - \frac{2 + \sqrt{3}}{2}\right)\left(x - \frac{2 - \sqrt{3}}{2}\right) 
+\end{align*}
+
+\paragraph{76 (1)}
+\begin{align*}
+  x^4 - 7x^2 - 18 &= 0 \nr
+  (x^2 - 9)(x^2 + 2) &= 0 \nr
+  x &= \pm 3, \pm \sqrt{2}i 
+\end{align*}
+
+\paragraph{76 (2)}
+\begin{align*}
+  x^5 + 8x^3 - 9x &= 0 \nr
+  x(x^4 + 8x^2 - 9) &= 0 \nr
+  x(x^2 + 9)(x^2 - 1) &= 0 \nr
+  x &= 0, \pm 1, \pm 3i 
+\end{align*}
+
+\paragraph{77 (1)}
+\begin{align*}
+  x^3 + 4x^2 + 2x - 1 &= 0 \nr
+  (x + 1)(x^2 + 3x - 1) &= 0 \nr
+  x &= -1, \frac{-3 \pm \sqrt{13}}{2} 
+\end{align*}
+
+\paragraph{77 (2)}
+\begin{align*}
+  2x^3 - x^2 - 5x - 2 &= 0 \nr
+  (x - 2)(2x^2 + 3x + 1) &= 0 \nr
+  (x - 2)(2x + 1)(x + 1) &= 0 \nr
+  x &= 2, -\frac{1}{2}, -1 
+\end{align*}
+
+\paragraph{78 (1)}
+\begin{align*}
+  \begin{cases}
+    3x - y + z = 6 \cdots \text{①} \nr
+    5x - 4y + 2z = 7 \cdots \text{②} \nr
+    x + 3y - z = 8 \cdots \text{③}
+  \end{cases} 
+\end{align*}
+① + ③ より 
+\begin{align*}
+  4x + 2y &= 14 \cdots \text{④}
+\end{align*}
+② + ③ $\times 2$ より 
+\begin{align*}
+  7x + 2y &= 23 \cdots \text{⑤}
+\end{align*}
+④, ⑤ より 
+\begin{align*}
+  x = 3, \ y = 1
+\end{align*}
+① に代入して 
+\begin{align*}
+  9 - 1 + z &= 6 \nr
+  z &= -2 \nr
+  \therefore (x, y, z) &= (3, 1, -2) 
+\end{align*}
+
+\paragraph{78 (2)}
+\begin{align*}
+  \begin{cases}
+    x + 3y = 5 \cdots \text{①} \nr
+    2x + y + z = 1 \cdots \text{②} \nr
+    x + 2y + 3z = 6 \cdots \text{③}
+  \end{cases}
+\end{align*}
+② $\times 3 - $ ③ より \nr
+\begin{align*}
+  5x + y &= -3 \cdots \text{④}
+\end{align*}
+① + ④ $\times 3$ より \nr
+\begin{align*}
+  16x &= -4 \nr
+  \therefore x &= -1, \ y = 2  \nr
+\end{align*}
+② に代入して 
+\begin{align*}
+  -2 + 2 + z &= 1 \nr
+  z &= 1  \nr
+  \therefore (x, y, z) &= (-1, 2, 1) 
+\end{align*}
+
+\paragraph{79 (1)}
+\begin{align*}
+  \begin{cases}
+    2x + y = 1 \cdots \text{①} \nr
+    5x^2 - y^2 + y = 3 \cdots \text{②}
+  \end{cases}
+\end{align*}
+① より $y = 1 - 2x$ 
+これを ② に代入して 
+\begin{align*}
+  5x^2 - (1 - 2x)^2 &+ (1 - 2x) = 3 \nr
+  5x^2 - (1 - 4x + 4x^2) &+ 1 - 2x = 3 \nr
+  x^2 + 2x - 3 &= 0 \nr
+  (x + 3)(x - 1) &= 0 \nr
+  x &= -3, \ 1 
+\end{align*}
+$(x, y) = (-3, 7), (1, -1)$ 
+
+\paragraph{79 (2)}
+\begin{align*}
+  \begin{cases}
+    x - y = 4 \cdots \text{①} \nr
+    x^2 + xy + y^2 = 13 \cdots \text{②}
+  \end{cases}
+\end{align*}
+① より $x = 4 + y$ 
+これを ② に代入して 
+\begin{align*}
+  (4 + y)^2 + (4 + y)y + y^2 &= 13 \nr
+  (16 + 8y + y^2) + (4y + y^2) + y^2 &= 13 \nr
+  3y^2 + 12y + 3 &= 0 \nr
+  y^2 + 4y + 1 &= 0 \nr
+  y &= -2 \pm \sqrt{3} 
+\end{align*}
+$x = 4 + (-2 \pm \sqrt{3}) = 2 \pm \sqrt{3}$ より \nr
+$(x, y) = (2 \pm \sqrt{3}, -2 \pm \sqrt{3})$（複号同順） \nr
+
+\paragraph{80 (1)}
+\begin{align*}
+  |3x + 1| &= 2  \nr
+  3x + 1 &= \pm 2  \nr
+  3x &= 1, \ -3  \nr
+  x &= \frac{1}{3}, \ -1 
+\end{align*}
+
+\paragraph{80 (2)}
+\begin{align*}
+  |2x - 7| - 3 &= 0  \nr
+  2x - 7 &= \pm 3  \nr
+  2x &= 10, \ 4  \nr
+  x &= 5, \ 2 
+\end{align*}
+
+\paragraph{81 (1)}
+\begin{align*}
+  \frac{3}{x - 1} + \frac{4}{x - 2} &= \frac{2x + 5}{(x - 1)(x - 2)}  \nr
+  3(x - 2) + 4(x - 1) &= 2x + 5  \nr
+  7x - 10 &= 2x + 5  \nr
+  5x &= 15  \nr
+  x &= 3 
+\end{align*}
+
+\paragraph{81 (2)}
+\begin{align*}
+  \frac{x}{x - 3} + \frac{1}{x + 2} &= \frac{5x}{x^2 - x - 6}  \nr
+  x(x + 2) + x - 3 &= 5x  \nr
+  x^2 + 2x + x - 3 - 5x &= 0  \nr
+  x^2 - 2x - 3 &= 0  \nr
+  (x - 3)(x + 1) &= 0  \nr
+  x &= -1, \ 3  \nr
+  \intertext{$x \neq -2, 3$ より }
+  x &= -1 
+\end{align*}
+
+\paragraph{82 (1)}
+\begin{align*}
+  \sqrt{x - 1} &= x - 3  \nr
+  \intertext{定義域 $x \geqq 1$ かつ、(左辺) $\geqq 0$ より $x \geqq 3$ が必要である。 }
+  x - 1 &= (x - 3)^2  \nr
+  x - 1 &= x^2 - 6x + 9  \nr
+  x^2 - 7x + 10 &= 0  \nr
+  (x - 2)(x - 5) &= 0  \nr
+  x &= 2, \ 5  \nr
+  \intertext{$x \geqq 3$ より }
+  x &= 5 
+\end{align*}
+
+\paragraph{82 (2)}
+\begin{align*}
+  &\sqrt{10 - x^2} = x + 2 \nr
+  \intertext{定義域 $10 - x^2 \geqq 0$ より $-\sqrt{10} \leqq x \leqq \sqrt{10}$ である。また、(左辺) $\geqq 0$ より $x + 2 \geqq 0$ すなわち $x \geqq -2$ が必要である。このとき両辺を2乗して}
+  &10 - x^2 = (x + 2)^2 \nr
+  &10 - x^2 = x^2 + 4x + 4 \nr
+  &2x^2 + 4x - 6 = 0 \nr
+  &x^2 + 2x - 3 = 0 \nr
+  &(x + 3)(x - 1) = 0 \nr
+  &x = -3, \ 1 \nr
+  \intertext{条件を満たすのは}
+  &x = 1 \text{ （$x = -3$ は不適）}
+\end{align*}
+
+\paragraph{83 (1)}
+\begin{align*}
+  &3x^2 + ax + 1 = bx^2 + 5x + c \nr
+  \intertext{$x$ についての恒等式なので、係数を比較して}
+  &b = 3 \nr
+  &a = 5 \nr
+  &c = 1 \nr
+  &\therefore a = 5, \ b = 3, \ c = 1
+\end{align*}
+
+\paragraph{83 (2)}
+\begin{align*}
+  &ax^2 - 3 = 2x^2 + bx + c \nr
+  \intertext{$x$ についての恒等式なので、係数を比較して}
+  &a = 2 \nr
+  &b = 0 \nr
+  &c = -3 \nr
+  &\therefore a = 2, \ b = 0, \ c = -3
+\end{align*}
+
+\paragraph{84 (1)}
+\begin{align*}
+  &2x^2 + 3x + 6 \nr
+  &= a(x + 1)(x + 2) + b(x - 1) + c \nr
+  \intertext{右辺を展開すると}
+  &a(x^2 + 3x + 2) + bx - b + c \nr
+  &= ax^2 + (3a + b)x + 2a - b + c \nr
+  \intertext{$x$ についての恒等式なので}
+  &a = 2 \nr
+  &3a + b = 3 \nr
+  &2a - b + c = 6 \nr
+  \intertext{これを解いて}
+  &\therefore a = 2, \ b = -3, \ c = -1
+\end{align*}
+
+\paragraph{84 (2)}
+\begin{align*}
+  (\text{右辺}) &= x^3 + (b + c)x^2 + (bc + 2)x + 2c \nr
+  \intertext{$x$ についての恒等式なので、係数を比較して}
+  &b + c = 3 \cdots \text{①} \nr
+  &bc + 2 = 4 \cdots \text{②} \nr
+  &2c = a \cdots \text{③} \nr
+  \intertext{①より $b = 3 - c$。これを②に代入して}
+  &(3 - c)c + 2 = 4 \nr
+  &c^2 - 3c + 2 = 0 \nr
+  &(c - 2)(c - 1) = 0 \nr
+  &c = 1, 2 \nr
+  \therefore &(a, b, c) = (2, 2, 1), (4, 1, 2)
+\end{align*}
+
+\paragraph{85 (1)}
+\begin{align*}
+  \frac{1}{(x - 1)(x - 3)} &= \frac{a}{x - 1} + \frac{b}{x - 3} \nr
+  1 &= a(x - 3) + b(x - 1) \nr
+  1 &= (a + b)x - (3a + b) \nr
+  \intertext{$x$ についての恒等式なので}
+  &a + b = 0 \nr
+  &3a + b = -1 \nr
+  \therefore a &= -\frac{1}{2}, \ b = \frac{1}{2}
+\end{align*}
+
+\paragraph{85 (2)}
+\begin{align*}
+  \frac{8x + 1}{x^3 - 1} &= \frac{a}{x - 1} + \frac{bx + c}{x^2 + x + 1} \nr
+  8x + 1 &= a(x^2 + x + 1) + (bx + c)(x - 1) \nr
+  8x + 1 &= (a + b)x^2 + (a - b + c)x + a - c \nr
+  \intertext{$x$ についての恒等式なので}
+  &a + b = 0 \nr
+  &a - b + c = 8 \nr
+  &a - c = 1 \nr
+  \therefore a &= 3, \ b = -3, \ c = 2
+\end{align*}
+
+\paragraph{86}
+\begin{align*}
+(\text{左辺}) - (\text{右辺}) &= x^3 + y^3 - (x + y)^3 \nr
+&\quad + 3xy(x + y) \nr
+&= x^3 + y^3 \nr
+&\quad - (x^3 + 3x^2y + 3xy^2 + y^3) \nr
+&\quad + 3x^2y + 3xy^2 \nr
+&= 0 \nr
+&\text{よって等式は成り立つ}
+\end{align*}
+
+\paragraph{87}
+\begin{align*}
+  (\text{左辺}) - (\text{右辺}) &= a^2 + ac - b^2 - bc \nr
+  &= (a^2 - b^2) + c(a - b) \nr
+  &= (a + b)(a - b) + c(a - b) \nr
+  &= (a - b)(a + b + c) \nr
+  &= 0 \quad (\because a + b + c = 0)
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{88 (1)}
+\begin{align*}
+  &6x^2 + x - 12 = 0 \nr
+  &(3x - 4)(2x + 3) = 0 \nr
+  &x = \frac{4}{3}, \ -\frac{3}{2}
+\end{align*}
+
+\paragraph{88 (2)}
+\begin{align*}
+  &3x^2 + 4x + 2 = 0 \nr
+  &x = \frac{-2 \pm \sqrt{4 - 6}}{3} \nr
+  &x = \frac{-2 \pm \sqrt{2}i}{3}
+\end{align*}
+
+\paragraph{88 (3)}
+\begin{align*}
+  &x^2 - 2\sqrt{3}x + 3 = 0 \nr
+  &(x - \sqrt{3})^2 = 0 \nr
+  &x = \sqrt{3}
+\end{align*}
+
+\paragraph{88 (4)}
+\begin{align*}
+  &2x^2 = 7x - 4 \nr
+  &2x^2 - 7x + 4 = 0 \nr
+  &x = \frac{7 \pm \sqrt{49 - 32}}{4} \nr
+  &x = \frac{7 \pm \sqrt{17}}{4}
+\end{align*}
+
+\paragraph{88 (5)}
+\begin{align*}
+  &x^2 + 2x - \frac{5}{3} = 0 \nr
+  &3x^2 + 6x - 5 = 0 \nr
+  &x = \frac{-3 \pm \sqrt{9 + 15}}{3} \nr
+  &x = \frac{-3 \pm 2\sqrt{6}}{3}
+\end{align*}
+
+\paragraph{88 (6)}
+\begin{align*}
+  &\frac{1}{3}x^2 - \frac{1}{2}x + \frac{1}{4} = 0 \nr
+  &4x^2 - 6x + 3 = 0 \nr
+  &x = \frac{3 \pm \sqrt{9 - 12}}{4} \nr
+  &x = \frac{3 \pm \sqrt{3}i}{4}
+\end{align*}
+
+\paragraph{89 (1)}
+\begin{align*}
+  &x^4 - 10x^2 + 9 = 0 \nr
+  &(x^2 - 1)(x^2 - 9) = 0 \nr
+  &x^2 = 1, \ 9 \nr
+  &x = \pm 1, \pm 3
+\end{align*}
+
+\paragraph{89 (2)}
+\begin{align*}
+  &x^{3}-5x+2=0 \\
+  &(x-2)(x^{2}+2x-1)=0 \\
+  &x=2, \ -1 \pm \sqrt{2}
+\end{align*}
+
+\paragraph{89 (3)}
+\begin{align*}
+  &|4 x-3|=5 \\
+  &4 x-3=\pm 5 \\
+  &4 x=8, \ -2 \\
+  &x=2, \ -\frac{1}{2}
+\end{align*}
+
+\paragraph{89 (4)}
+\begin{align*}
+  &1-2 x=\sqrt{4-3 x} \\
+  &\text{条件 } x \leqq \frac{1}{2} \text{ のもとで両辺を2乗} \\
+  &(1-2 x)^{2}=4-3 x \\
+  &1-4 x+4 x^{2}=4-3 x \\
+  &4 x^{2}-x-3=0 \\
+  &(4 x+3)(x-1)=0 \\
+  &x=1, \ -\frac{3}{4} \\
+  &x \leqq \frac{1}{2} \text{ より } x=-\frac{3}{4}
+\end{align*}
+
+\paragraph{89 (5)}
+\begin{align*}
+  &\frac{3 x}{x+1}-\frac{2}{x+3}=\frac{6 x}{(x+1)(x+3)} \\
+  &3 x(x+3)-2(x+1)=6 x \\
+  &3 x^{2}+9 x-2 x-2-6 x=0 \\
+  &3 x^{2}+x-2=0 \\
+  &(3 x-2)(x+1)=0 \\
+  &x=-1, \frac{2}{3} \\
+  &\text{分母 } \neq 0 \text{ より } x \neq -1, -3 \\
+  &\therefore x=\frac{2}{3}
+\end{align*}
+
+\paragraph{90(1)}
+\begin{align*}
+  &\begin{cases} 2x-y+z=1 & \cdots (1) \\ 3x-2y-2z=3 & \cdots (2) \\ x+2y+3z=8 & \cdots (3) \end{cases} \\
+  &(1)\times 2 + (2) \text{ より} \\
+  &7x-4y=5 \quad \cdots (4) \\
+  &(1)\times 3 - (3) \text{ より} \\
+  &5x-5y=-5 \\
+  &x-y=-1 \quad \cdots (5) \\
+  &(4) - (5)\times 4 \text{ より} \\
+  &3x=9 \\
+  &x=3 \\
+  &(5) \text{ に代入して } y=4 \\
+  &(1) \text{ に代入して } z=-1 \\
+  &(x, y, z)=(3, 4, -1)
+\end{align*}
+
+\paragraph{90(2)}
+\begin{align*}
+  &\begin{cases} 3x+y=1 & \cdots (1) \\ 4x^{2}+xy+y^{2}=6 & \cdots (2) \end{cases} \\
+  &(1) \text{ より } y=1-3x \\
+  &(2) \text{ に代入して} \\
+  &4x^{2}+x(1-3x)+(1-3x)^{2}=6 \\
+  &4x^{2}+x-3x^{2}+1-6x+9x^{2}=6 \\
+  &10x^{2}-5x-5=0 \\
+  &2x^{2}-x-1=0 \\
+  &(2x+1)(x-1)=0 \\
+  &x=1, -\frac{1}{2} \\
+  &(x, y)=(1, -2), \left(-\frac{1}{2}, \frac{5}{2}\right)
+\end{align*}
+
+\paragraph{91}
+\begin{align*}
+  &x^{2}-(k+4)x+(2k+5)=0 \\
+  &\text{判別式を } D \text{ とすると} \\
+  &D=(k+4)^{2}-4(2k+5) \\
+  &=k^{2}+8k+16-8k-20 \\
+  &=k^{2}-4=0 \\
+  &k=\pm 2 \\
+  &k=2 \text{ のとき } x^{2}-6x+9=0 \\
+  &x=3 \\
+  &k=-2 \text{ のとき } x^{2}-2x+1=0 \\
+  &x=1
+\end{align*}
+
+\paragraph{92 (1)}
+\begin{align*}
+  &\text{解と係数の関係より} \\
+  &\alpha+\beta = \frac{2}{3}, \quad \alpha\beta = \frac{1}{3} \\
+  &\alpha^{2}+\beta^{2} \\
+  &= (\alpha+\beta)^{2}-2\alpha\beta \\
+  &= \left(\frac{2}{3}\right)^{2}-2\left(\frac{1}{3}\right) \\
+  &= \frac{4}{9}-\frac{6}{9} \\
+  &= -\frac{2}{9}
+\end{align*}
+
+\paragraph{92 (2)}
+\begin{align*}
+  &\alpha^{3}+\beta^{3} \\
+  &= (\alpha+\beta)^{3}-3\alpha\beta(\alpha+\beta) \\
+  &= \left(\frac{2}{3}\right)^{3}-3\left(\frac{1}{3}\right)\left(\frac{2}{3}\right) \\
+  &= \frac{8}{27}-\frac{18}{27} \\
+  &= -\frac{10}{27}
+\end{align*}
+
+\paragraph{93 (1)}
+\begin{align*}
+  &x^{2}-x+1=0 \quad \text{とする} \\
+  &x = \frac{1 \pm \sqrt{1-4}}{2} \\
+  &x = \frac{1 \pm \sqrt{3}i}{2} \\
+  &\therefore \left(x-\frac{1+\sqrt{3}i}{2}\right)\left(x-\frac{1-\sqrt{3}i}{2}\right)
+\end{align*}
+
+\paragraph{93 (2)}
+\begin{align*}
+  &3x^{2}+8x+3=0 \quad \text{とする} \\
+  &x = \frac{-4 \pm \sqrt{16-9}}{3} \\
+  &x = \frac{-4 \pm \sqrt{7}}{3} \\
+  &\therefore \left(x-\frac{-4+\sqrt{7}}{3}\right)\left(x-\frac{-4-\sqrt{7}}{3}\right)
+\end{align*}
+
+\paragraph{94 (1)}
+\begin{align*}
+  &(\text{右辺}) = b(x^{2}+2x+1)+c(x+1)+d \\
+  &= bx^{2}+(2b+c)x+(b+c+d) \\
+  &x \text{についての恒等式なので} \\
+  &\begin{cases} b=2 \\ 2b+c=3 \\ b+c=a \end{cases} \\
+  &\text{これを解いて} \\
+  &a=1, \ b=2, \ c=-1
+\end{align*}
+
+\paragraph{94 (2)}
+\begin{align*}
+  &\frac{3x-1}{(x+1)^{2}} = \frac{a}{x+1}+\frac{b}{(x+1)^{2}} \\
+  &3x-1 = a(x+1)+b \\
+  &3x-1 = ax+(a+b) \\
+  &\text{係数を比較して} \\
+  &\begin{cases} a=3 \\ a+b=-1 \end{cases} \\
+  &\therefore a=3, \ b=-4
+\end{align*}
+
+\paragraph{95}
+\begin{align*}
+  &(\text{左辺})-(\text{右辺}) \\
+  &= (x^{3}+1)(x^{2}+x+1) \\
+  &\quad -(x+1)(x^{4}+x^{2}+1) \\
+  &= (x^{5}+x^{4}+x^{3}+x^{2}+x+1) \\
+  &\quad -(x^{5}+x^{4}+x^{3}+x^{2}+x+1) \\
+  &= 0 \\
+  &\text{よって等式は成り立つ}
+\end{align*}
+
+\paragraph{96}
+\begin{align*}
+  &(\text{左辺})-(\text{右辺}) \\
+  &= (x+y)(y+z)(z+x)+xyz \\
+  &\quad -(x+y+z)(xy+yz+zx) \\
+  &= (x+y+z)(xy+yz+zx)-xyz+xyz \\
+  &\quad -(x+y+z)(xy+yz+zx) \\
+  &= 0 \\
+  &\text{よって等式は成り立つ}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{97 (1)}
+\begin{align*}
+  &\frac{x}{2}=\frac{y}{3}=\frac{z}{4}=k \quad \text{とおくと} \\
+  &x=2k, \ y=3k, \ z=4k \\
+  &x^{2}+y-3z+2=0 \quad \text{に代入して} \\
+  &(2k)^{2}+3k-3(4k)+2=0 \\
+  &4k^{2}-9k+2=0 \\
+  &(4k-1)(k-2)=0 \\
+  &k=\frac{1}{4}, \ 2 \\
+  &\therefore (x, y, z) = \left(\frac{1}{2}, \frac{3}{4}, 1\right), \ (4, 6, 8)
+\end{align*}
+
+\paragraph{97 (2)}
+\begin{align*}
+  &\begin{cases} x^{2}+y^{2}=16 & \cdots (1) \\ y=x^{2}-4 & \cdots (2) \end{cases} \\
+  &(2) \text{ より } x^{2}=y+4 \\
+  &(1) \text{ に代入して} \\
+  &(y+4)+y^{2}=16 \\
+  &y^{2}+y-12=0 \\
+  &(y+4)(y-3)=0 \\
+  &y=-4, \ 3 \\
+  &y=-4 \text{ のとき } x^{2}=0 \implies x=0 \\
+  &y=3 \text{ のとき } x^{2}=7 \implies x=\pm\sqrt{7} \\
+  &\therefore (x, y) = (0, -4), \ (\pm\sqrt{7}, 3)
+\end{align*}
+
+\paragraph{98 (1)}
+\begin{align*}
+  &x^{4}-6x^{2}+1=0 \\
+  &x^{2} = \frac{6 \pm \sqrt{36-4}}{2} \\
+  &x^{2} = 3 \pm 2\sqrt{2} \\
+  &x = \pm\sqrt{3 \pm 2\sqrt{2}} \\
+  &x = \pm(\sqrt{2} \pm 1) \\
+  &\therefore x = 1 \pm \sqrt{2}, \ -1 \pm \sqrt{2}
+\end{align*}
+
+\paragraph{98 (2)}
+\begin{align*}
+  x^4+x^2+1&=0 \nr
+  (x^4+2x^2+1)-x^2&=0 \nr
+  (x^2+1)^2-x^2&=0 \nr
+  (x^2+x+1)(x^2-x+1)&=0 \nr
+  x=\frac{-1\pm\sqrt{3}i}{2}, \ &\frac{1\pm\sqrt{3}i}{2}
+\end{align*}
+
+\paragraph{99 (1)}
+\begin{align*}
+  &\frac{3}{x^{2}-3x}-\frac{x+2}{x^{2}+x}-\frac{17x+1}{x^{2}-2x-3}=\frac{3x}{x+1} \\
+  &\frac{3}{x(x-3)}-\frac{x+2}{x(x+1)}-\frac{17x+1}{(x-3)(x+1)}=\frac{3x}{x+1} \\
+  &\text{両辺に } x(x+1)(x-3) \text{ を掛けて} \\
+  &3(x+1)-(x+2)(x-3)-x(17x+1)=3x^{2}(x-3) \\
+  &3x+3-(x^{2}-x-6)-(17x^{2}+x)=3x^{3}-9x^{2} \\
+  &3x^{3}+9x^{2}-3x-9=0 \\
+  &x^{3}+3x^{2}-x-3=0 \\
+  &x^{2}(x+3)-(x+3)=0 \\
+  &(x+3)(x^{2}-1)=0 \\
+  &x=-3, \ \pm 1 \\
+  &\text{分母 } \neq 0 \text{ より } x \neq 0, \ -1, \ 3 \\
+  &\therefore x=-3, \ 1
+\end{align*}
+
+\paragraph{99 (2)}
+\begin{align*}
+  &\sqrt{3x-5}+10=2x \\
+  &\sqrt{3x-5}=2x-10 \\
+  &\text{条件 } x > \frac{5}{3} \text{ かつ } x \geqq 5 \text{ より } x \geqq 5 \\
+  &\text{このとき両辺を2乗して} \\
+  &3x-5 = (2x-10)^{2} \\
+  &3x-5 = 4x^{2}-40x+100 \\
+  &4x^{2}-43x+105=0 \\
+  &(4x-15)(x-7)=0 \\
+  &x = \frac{15}{4}, \ 7 \\
+  &x \geqq 5 \text{ より } \\
+  &\therefore x = 7
+\end{align*}
+
+\paragraph{99 (3)}
+\begin{align*}
+  &\sqrt{x-1}+2=\sqrt{2x+5} \\
+  &\text{定義域は } x \geqq 1 \\
+  &\text{両辺正なので2乗して} \\
+  &x-1+4\sqrt{x-1}+4 = 2x+5 \\
+  &4\sqrt{x-1} = x+2 \\
+  &\text{さらに両辺を2乗して} \\
+  &16(x-1) = (x+2)^{2} \\
+  &16x-16 = x^{2}+4x+4 \\
+  &x^{2}-12x+20=0 \\
+  &(x-2)(x-10)=0 \\
+  &x=2, \ 10 \\
+  &\text{これらは } x \geqq 1 \text{ を満たす} \\
+  &\therefore x=2, \ 10
+\end{align*}
+
+\paragraph{100}
+\begin{align*}
+  &\text{静水時の船の速さを } x \text{ km/h とする } (x > 3) \\
+  &\frac{60}{x-3} = \frac{60}{x+3} + 5 \\
+  &\text{両辺に } (x-3)(x+3) \text{ を掛けて} \\
+  &60(x+3) = 60(x-3) + 5(x-3)(x+3) \\
+  &12(x+3) = 12(x-3) + (x^{2}-9) \\
+  &12x + 36 = 12x - 36 + x^{2} - 9 \\
+  &x^{2} - 81 = 0 \\
+  &x = \pm 9 \\
+  &x > 3 \text{ より } x = 9 \\
+  &\therefore 9 \text{ km/h}
+\end{align*}
+
+\paragraph{101}
+\begin{align*}
+  &\frac{x}{b-c} = \frac{y}{c-a} = \frac{z}{a-b} = k \text{ とおくと} \\
+  &x = k(b-c), \ y = k(c-a), \ z = k(a-b) \\
+  &(\text{左辺}) = (b+c)x + (c+a)y + (a+b)z \\
+  &= k(b+c)(b-c) + k(c+a)(c-a) \\
+  &\quad + k(a+b)(a-b) \\
+  &= k(b^{2}-c^{2} + c^{2}-a^{2} + a^{2}-b^{2}) \\
+  &= 0 \\
+  &\text{よって等式は成り立つ}
+\end{align*}
+
+\paragraph{102}
+\begin{align*}
+  & x=-1, 2 \text{ を代入すると} \\
+  &\begin{cases} 1+4a+b-a-24=0 \\ 16-32a+4 b+2a-24=0 \end{cases} \\
+  &\begin{cases} 3a+b=23 \\ -30a+4b=8 \end{cases} \\
+  &\text{これを解いて} \\
+  &a=2, \ b=17 \\
+  &\text{方程式は} \\
+  &x^{4}-8x^{3}+17x^{2}+2x-24=0 \\
+  &(x+1)(x-2)(x^{2}-7x+12)=0 \\
+  &(x+1)(x-2)(x-3)(x-4)=0 \\
+  &\text{よって、他の解は} \\
+  &x=3, \ 4
+\end{align*}
+
+\paragraph{103}
+\begin{align*}
+  &x^3+2x^2+ax+b \text{ を } x-1 \text{ で割ると} \\
+  &\text{商は } x^2+3x+a+3, \text{ 余りは } a+b+3 \\
+  &\text{割り切れるので } a+b+3=0 \\
+  &\therefore b=-a-3 \\
+  &\text{さらに商 } x^2+3x+a+3 \text{ が } x-1 \text{ で} \\
+  &\text{割り切れるので、その余りについて} \\
+  &1^2+3(1)+a+3 = a+7 = 0 \\
+  &\text{よって } a=-7 \\
+  &b=-(-7)-3=4
+\end{align*}
+
+\paragraph{104(1)}
+\begin{align*}
+  \begin{cases} \omega^{3}=1 \\ 1+\omega+\omega^{2}=0 \end{cases} \\
+  \text{が成り立つ} \\
+  \omega^{12} &= (\omega^3)^4 \\
+  &= 1^4 \\
+  &= 1
+\end{align*}
+
+\paragraph{104(2)}
+\begin{align*}
+  \omega^{8}+\omega^{4} &= (\omega^{3})^{2} \cdot \omega^{2} + \omega^{3} \cdot \omega \\
+  &= 1 \cdot \omega^{2}+1 \cdot \omega \\
+  &= \omega^{2}+\omega \\
+  &= -1
+\end{align*}
+
+\end{document}
