@@ -1,0 +1,707 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+\raggedbottom%改ページで行間が間延びしないようにする．
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{4章 指数関数と対数関数}\\
+  \textbf{2　対数関数}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{225 (1)}
+\begin{align*}
+  \log_{5}25 &= \log_{5}5^2 = 2
+\end{align*}
+
+\paragraph{225 (2)}
+\begin{align*}
+  \log_{3}\frac{1}{27} &= \log_{3}3^{-3} = -3
+\end{align*}
+
+\paragraph{225 (3)}
+\begin{align*}
+  \log_{0.1}0.001 &= \log_{0.1}(0.1)^3 = 3
+\end{align*}
+
+\paragraph{225 (4)}
+\begin{align*}
+  \log_{9}1 &= 0
+\end{align*}
+
+\paragraph{225 (5)}
+\begin{align*}
+  \log_{2}0.25 &= \log_{2}\frac{1}{4} = \log_{2}2^{-2} = -2
+\end{align*}
+
+\paragraph{225 (6)}
+\begin{align*}
+  \log_{2}\sqrt[5]{4} &= \log_{2}2^{\frac{2}{5}} = \frac{2}{5}
+\end{align*}
+
+\paragraph{226 (1)}
+\begin{align*}
+  \log_{2}64 &= \log_{2}2^6 = 6
+\end{align*}
+
+\paragraph{226 (2)}
+\begin{align*}
+  \log_{3}6+\log_{3}\frac{3}{2} &= \log_{3}9 = 2
+\end{align*}
+
+\paragraph{226 (3)}
+\begin{align*}
+  \log_{5}2-\log_{5}10 &= \log_{5}\frac{1}{5} = -1
+\end{align*}
+
+\paragraph{226 (4)}
+\begin{align*}
+  &\frac{1}{2}\log_{2}10+\log_{2}\frac{4}{\sqrt{5}} \nr
+  &= \log_{2}\left(\sqrt{10} \cdot \frac{4}{\sqrt{5}}\right) \nr
+  &= \log_{2}4\sqrt{2} \nr
+  &= \log_{2}\left(2^2 \cdot 2^{\frac{1}{2}}\right) \nr
+  &= \frac{5}{2}
+\end{align*}
+
+\paragraph{227}
+\begin{align*}
+  \LHS &= \log_{a}M^{-\frac{1}{n}} \nr
+  a^{\log_{a}M^{-\frac{1}{n}}} &= M^{-\frac{1}{n}} \nr
+  a^{-\frac{1}{n}\log_{a}M} &= \left(a^{\log_{a}M}\right)^{-\frac{1}{n}} = M^{-\frac{1}{n}} \nr
+  &\therefore \log_{a}M^{-\frac{1}{n}} = -\frac{1}{n}\log_{a}M
+\end{align*}
+
+\paragraph{228 (1)}
+\begin{align*}
+  \LHS &= \log_{a}\left(\frac{A}{B} \cdot \frac{B}{C} \cdot \frac{C}{A}\right) \nr
+  &= \log_{a}1 \nr
+  &= 0 \nr
+  &\therefore \text{成り立つ}
+\end{align*}
+
+\paragraph{228 (2)}
+\begin{align*}
+  &\log_{3}\sqrt{6}+\log_{3}\sqrt{10}-\log_{3}\sqrt{20} \nr
+  &= \log_{3}\frac{\sqrt{6} \cdot \sqrt{10}}{\sqrt{20}} \nr
+  &= \log_{3}\sqrt{3} \nr
+  &= \frac{1}{2}
+\end{align*}
+
+\paragraph{229}
+\begin{align*}
+  \log_{8}2 &= \frac{\log_{2}2}{\log_{2}8} \nr
+  &= \frac{1}{3}
+\end{align*}
+
+\paragraph{230}
+\begin{align*}
+  &\left(\log_{a}b\right)\left(\log_{b}c\right)\left(\log_{c}a\right) \nr
+  &= \log_{a}b \cdot \frac{\log_{a}c}{\log_{a}b} \cdot \frac{\log_{a}a}{\log_{a}c} \nr
+  &= 1
+\end{align*}
+
+\paragraph{231 (1)}
+\begin{align*}
+  &\left(\log_{2}27\right)\left(\log_{9}8\right) \nr
+  &= \left(\log_{2}3^3\right) \cdot \frac{\log_{2}2^3}{\log_{2}3^2} \nr
+  &= 3\log_{2}3 \cdot \frac{3}{2\log_{2}3} \nr
+  &= \frac{9}{2}
+\end{align*}
+
+\paragraph{231 (2)}
+\begin{align*}
+  &\left(\log_{3}125\right)\left(\log_{4}3\right)\left(\log_{5}32\right) \nr
+  &= \log_{3}5^3 \cdot \frac{1}{\log_{3}2^2} \cdot \frac{\log_{3}2^5}{\log_{3}5} \nr
+  &= 3\log_{3}5 \cdot \frac{1}{2\log_{3}2} \cdot \frac{5\log_{3}2}{\log_{3}5} \nr
+  &= \frac{15}{2}
+\end{align*}
+
+\paragraph{232 (1)}
+\begin{align*}
+  y &= \log_{3}x \nr
+  &(1,\ 0),\ (3,\ 1) \text{ を通る増加関数} \nr
+  &\text{漸近線 } x=0
+\end{align*}
+
+\paragraph{232 (2)}
+\begin{align*}
+  y &= \log_{\frac{1}{3}}x \nr
+  &(1,\ 0),\ (3,\ -1) \text{ を通る減少関数} \nr
+  &\text{漸近線 } x=0
+\end{align*}
+
+\paragraph{232 (3)}
+\begin{align*}
+  y &= \log_{4}(x+1) \nr
+  &y=\log_{4}x \text{ のグラフを } x \text{ 軸方向に } -1 \ret \text{平行移動したもの}
+\end{align*}
+
+\paragraph{232 (4)}
+\begin{align*}
+  y &= \log_{4}(-x) \nr
+  &y=\log_{4}x \text{ のグラフと } y \text{ 軸対称}
+\end{align*}
+
+\paragraph{233 (1)}
+\begin{align*}
+  y &= \log_{5}x \quad \left(\frac{1}{25} \leqq x < 5\sqrt[3]{5}\right) \nr
+  &5^{-2} \leqq x < 5^{\frac{4}{3}} \text{ なので} \nr
+  \text{値域：} & -2 \leqq y < \frac{4}{3}
+\end{align*}
+
+\paragraph{233 (2)}
+\begin{align*}
+  y &= \log_{\frac{1}{3}}x \quad \left(\frac{1}{9} < x < 1\right) \nr
+  &3^{-2} < x < 3^0 \text{ なので} \nr
+  \text{値域：} & 0 < y < 2
+\end{align*}
+
+\paragraph{234 (1)}
+\begin{align*}
+  &3\sqrt{2} = \sqrt{18} > 4 \nr
+  &0.9 < 4 < 3\sqrt{2} \nr
+  &\text{底 } 7>1 \text{ なので} \nr
+  &\log_{7}0.9 < \log_{7}4 < \log_{7}3\sqrt{2}
+\end{align*}
+
+\paragraph{234 (2)}
+\begin{align*}
+  &0.2 < \frac{1}{4} < \frac{3}{7} \nr
+  &\text{底 } \frac{1}{5}<1 \text{ なので} \nr
+  &\log_{\frac{1}{5}}\frac{3}{7} < \log_{\frac{1}{5}}\frac{1}{4} < \log_{\frac{1}{5}}0.2
+\end{align*}
+
+\paragraph{235 (1)}
+\begin{align*}
+  &\text{真数条件より } x-3>0 \text{ かつ } x-1>0 \nr
+  &\text{すなわち } x>3 \nr
+  &\log_{2}(x-3)+\log_{2}(x-1) = 3 \nr
+  &\log_{2}(x-3)(x-1) = 3 \nr
+  &x^2-4x+3 = 2^3 \nr
+  &x^2-4x-5 = 0 \nr
+  &(x-5)(x+1) = 0 \nr
+  &x = 5,\ -1 \nr
+  &x>3 \text{ なので } x=-1 \text{ は不適} \nr
+  &x = 5
+\end{align*}
+
+\paragraph{235 (2)}
+\begin{align*}
+  &\text{真数条件より } 4x-7>0 \text{ かつ } x+12>0 \nr
+  &\text{すなわち } x>\frac{7}{4} \nr
+  &\log_{3}(4x-7)-\log_{3}(x+12) = -1 \nr
+  &\log_{3}\frac{4x-7}{x+12} = -1 \nr
+  &\frac{4x-7}{x+12} = 3^{-1} \nr
+  &3(4x-7) = x+12 \nr
+  &11x = 33 \nr
+  &x = 3 \nr
+  &x>\frac{7}{4} \text{ をみたす}
+\end{align*}
+
+\paragraph{236 (1)}
+\begin{align*}
+  &\text{真数条件より } 3x+1>0 \ret \text{すなわち } x>-\frac{1}{3} \quad \text{㋐} \nr
+  &\text{底 } 2>1 \text{ なので } 3x+1 > 2^4 \nr
+  &x > 5 \nr
+  &\text{㋐とあわせて } x>5
+\end{align*}
+
+\paragraph{236 (2)}
+\begin{align*}
+  &\text{真数条件より } x-1>0 \ret \text{すなわち } x>1 \quad \text{㋐} \nr
+  &\text{底 } 3>1 \text{ なので } x-1 < 3^{-2} \nr
+  &x < \frac{10}{9} \nr
+  &\text{㋐とあわせて } 1<x<\frac{10}{9}
+\end{align*}
+
+\paragraph{237 (1)}
+\begin{align*}
+  \log_{10}8 &= 3\log_{10}2 \nr
+  &= 3 \times 0.301 \nr
+  &= 0.903
+\end{align*}
+
+\paragraph{237 (2)}
+\begin{align*}
+  \log_{10}18 &= \log_{10}2 \cdot 3^2 \nr
+  &= \log_{10}2+2\log_{10}3 \nr
+  &= 0.301+2 \times 0.4771 \nr
+  &= 0.301+0.9542 \nr
+  &= 1.2552
+\end{align*}
+
+\paragraph{237 (3)}
+\begin{align*}
+  \log_{2}27 &= 3\log_{2}3 \nr
+  &= 3 \cdot \frac{\log_{10}3}{\log_{10}2} \nr
+  &= 4.755
+\end{align*}
+
+\paragraph{238 (1)}
+\begin{align*}
+  &10^n \leqq 5^{20} \nr
+  &\text{底 } 10>1 \text{ なので } n \leqq 20\log_{10}5 \nr
+  &\quad \left(\log_{10}5 = \log_{10}\frac{10}{2} = 1-\log_{10}2\right) \nr
+  &n \leqq 20(1-\log_{10}2) \nr
+  &n \leqq 20(1-0.301) \nr
+  &n \leqq 20 \times 0.699 \nr
+  &n \leqq 13.98 \nr
+  &\therefore \text{最大の } n \text{ は } 13
+\end{align*}
+
+\paragraph{238 (2)}
+\begin{align*}
+  &10^{-n} \geqq 3^{-50} \nr
+  &\text{底 } 10>1 \text{ なので } -n \geqq -50\log_{10}3 \nr
+  &n \leqq 50 \times 0.4771 \nr
+  &n \leqq 23.855 \nr
+  &\therefore \text{最大の } n \text{ は } 23
+\end{align*}
+
+\paragraph{239}
+\begin{align*}
+  &\text{はじめの細菌は } n \text{ コあるとする} \ret (n: \text{自然数}) \nr
+  &x \text{ 時間後とすると} \nr
+  &n \times \left(\frac{3}{2}\right)^x \geqq 1000n \nr
+  &\left(\frac{3}{2}\right)^x \geqq 10^3 \nr
+  &\text{底 } 10 \text{ で対数とって} \nr
+  &x\log_{10}\frac{3}{2} \geqq 3 \nr
+  &x\left(\log_{10}3-\log_{10}2\right) \geqq 3 \nr
+  &x \times (0.4771-0.301) \geqq 3 \nr
+  &0.1761x \geqq 3 \nr
+  &x \geqq 17.0 \cdots \nr
+  &\therefore 18 \text{ 時間後}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{240 (1)}
+\begin{align*}
+  \log_{4}x &= 3 \nr
+  x &= 4^3 \nr
+  x &= 64
+\end{align*}
+
+\paragraph{240 (2)}
+\begin{align*}
+  \log_{x}9 &= 2 \nr
+  9 &= x^2 \nr
+  x &= 3 \quad (\because x>0)
+\end{align*}
+
+\paragraph{240 (3)}
+\begin{align*}
+  \log_{0.1}x &= -2 \nr
+  x &= 0.1^{-2} \nr
+  x &= 100
+\end{align*}
+
+\paragraph{240 (4)}
+\begin{align*}
+  \log_{x}\frac{1}{5} &= \frac{1}{3} \nr
+  \frac{1}{5} &= x^{\frac{1}{3}} \nr
+  x &= \frac{1}{125}
+\end{align*}
+
+\paragraph{241 (1)}
+\begin{align*}
+  &\log_{6}18+\log_{6}72 \nr
+  &= \log_{6}(6 \times 3 \times 36 \times 2) \nr
+  &= \log_{6}6^4 \nr
+  &= 4
+\end{align*}
+
+\paragraph{241 (2)}
+\begin{align*}
+  &\log_{2}432-3\log_{2}6 \nr
+  &= \log_{2}(6 \cdot 72)-\log_{2}6^3 \nr
+  &= \log_{2}\frac{2 \cdot 6^3}{6^3} \nr
+  &= 1
+\end{align*}
+
+\paragraph{241 (3)}
+\begin{align*}
+  &3\log_{2}\sqrt{12}+\log_{2}\frac{2}{3\sqrt{3}} \nr
+  &= \log_{2}\left(12^{\frac{3}{2}} \times 2 \times 3^{-\frac{3}{2}}\right) \nr
+  &= \log_{2}\left(2^3 \times 3^{\frac{3}{2}} \times 2 \times 3^{-\frac{3}{2}}\right) \nr
+  &= 4
+\end{align*}
+
+\paragraph{241 (4)}
+\begin{align*}
+  &\log_{5}\sqrt[3]{15}+\log_{5}\sqrt{5}-\log_{5}\sqrt[3]{3} \nr
+  &= \log_{5}\left(\frac{15^{\frac{1}{3}} \times 5^{\frac{1}{2}}}{3^{\frac{1}{3}}}\right) \nr
+  &= \log_{5}\left(5^{\frac{1}{3}} \times 5^{\frac{1}{2}}\right) \nr
+  &= \frac{5}{6}
+\end{align*}
+
+\paragraph{241 (5)}
+\begin{align*}
+  &\left(\log_{3}\frac{1}{4}\right) \cdot \left(\log_{2}3\right) \nr
+  &= \frac{-2}{\log_{2}3} \cdot \log_{2}3 \nr
+  &= -2
+\end{align*}
+
+\paragraph{241 (6)}
+\begin{align*}
+  &\left(\log_{\sqrt{2}}3\right) \cdot \left(\log_{9}8\right) \nr
+  &= \frac{\log_{2}3}{\log_{2}2^{\frac{1}{2}}} \cdot \frac{\log_{2}2^3}{\log_{2}3^2} \nr
+  &= \frac{1 \cdot 3}{\frac{1}{2} \cdot 2} \nr
+  &= 3
+\end{align*}
+
+\paragraph{242 (1)}
+\begin{align*}
+  &x \to x-1,\ y \to y-2 \text{ なので} \nr
+  &x \text{ 方向に } 1,\ y \text{ 方向に } 2 \text{ 平行移動}
+\end{align*}
+
+\paragraph{242 (2)}
+\begin{align*}
+  &x \to -x,\ y \to -y \text{ なので} \nr
+  &\text{原点対称}
+\end{align*}
+
+\paragraph{243 (1)}
+\begin{align*}
+  &\text{真数条件より } x-1>0 \text{ かつ } x-7>0 \nr
+  &\text{すなわち } x>7 \quad \text{㋐} \nr
+  &\log_{4}(x-1)+\log_{4}(x-7) = 2 \nr
+  &\log_{4}(x-1)(x-7) = 2 \nr
+  &x^2-8x+7 = 4^2 \nr
+  &x^2-8x-9 = 0 \nr
+  &(x-9)(x+1) = 0 \nr
+  &x = -1,\ 9 \nr
+  &\text{㋐をみたすのは } x=9
+\end{align*}
+
+\paragraph{243 (2)}
+\begin{align*}
+  &\text{真数条件より } x^2+6x-7>0 \ret \text{かつ } x-1>0 \nr
+  &\quad (x+7)(x-1)>0 \ \Rightarrow \ x<-7,\ 1<x \nr
+  &\text{すなわち } x>1 \quad \text{㋐} \nr
+  &\log_{5}(x^2+6x-7)-\log_{5}(x-1) = 2 \nr
+  &\log_{5}(x+7) = 2 \nr
+  &x+7 = 5^2 \nr
+  &x = 18 \nr
+  &\text{㋐をみたす}
+\end{align*}
+
+\paragraph{243 (3)}
+\begin{align*}
+  &\text{真数条件より } x+2>0 \text{ かつ } x>0 \nr
+  &\text{すなわち } x>0 \quad \text{㋐} \nr
+  &2\log_{6}(x+2)-\log_{6}x = 2\log_{6}3 \nr
+  &\log_{6}(x+2)^2 = \log_{6}3^2+\log_{6}x \nr
+  &x^2+4x+4 = 9x \nr
+  &x^2-5x+4 = 0 \nr
+  &(x-4)(x-1) = 0 \nr
+  &x = 1,\ 4 \nr
+  &\text{どちらも㋐をみたす}
+\end{align*}
+
+\paragraph{244 (1)}
+\begin{align*}
+  &\text{真数条件より } 3x-1>0 \ret \text{すなわち } x>\frac{1}{3} \quad \text{㋐} \nr
+  &\text{底 } 4>1 \text{ なので } 3x-1 < 4^{\frac{3}{2}} \nr
+  &3x-1 < 8 \nr
+  &x < 3 \nr
+  &\text{㋐とあわせて } \frac{1}{3}<x<3
+\end{align*}
+
+\paragraph{244 (2)}
+\begin{align*}
+  &\text{真数条件より } x+1>0 \ret \text{すなわち } x>-1 \quad \text{㋐} \nr
+  &\text{底 } \frac{1}{3}<1 \text{ なので } x+1 > \left(\frac{1}{3}\right)^{-2} \nr
+  &x+1 > 9 \nr
+  &x > 8 \nr
+  &\text{㋐とあわせて } x>8
+\end{align*}
+
+\paragraph{245 (1)}
+\begin{align*}
+  \log_{10}12 &= \log_{10}2^2 \cdot 3 \nr
+  &= 2\log_{10}2+\log_{10}3 \nr
+  &= 2a+b
+\end{align*}
+
+\paragraph{245 (2)}
+\begin{align*}
+  \log_{10}0.3 &= \log_{10}\frac{3}{10} \nr
+  &= \log_{10}3-1 \nr
+  &= b-1
+\end{align*}
+
+\paragraph{245 (3)}
+\begin{align*}
+  \log_{3}6 &= \frac{\log_{10}6}{\log_{10}3} \nr
+  &= \frac{\log_{10}2+\log_{10}3}{b} \nr
+  &= \frac{a+b}{b}
+\end{align*}
+
+\paragraph{245 (4)}
+\begin{align*}
+  \log_{8}15 &= \frac{\log_{10}3 \cdot 5}{\log_{10}2^3} \nr
+  &= \frac{\log_{10}3+\log_{10}\frac{10}{2}}{3a} \nr
+  &= \frac{b+(1-a)}{3a} \nr
+  &= \frac{b-a+1}{3a}
+\end{align*}
+
+\paragraph{246}
+\begin{align*}
+  0.1^n &\geqq \frac{1}{2^{100}} \nr
+  \left(\frac{1}{10}\right)^n &\geqq 2^{-100} \nr
+  &\text{底 } 10 \text{ で対数とって} \nr
+  -n &\geqq -100\log_{10}2 \nr
+  n &\leqq 30.1 \nr
+  &\therefore \text{最大の } n \text{ は } 30
+\end{align*}
+
+\paragraph{247}
+\begin{align*}
+  &\text{今 } n \text{ 人いるとして } x \text{ 年後に} \ret \text{人口が半分になるとする} \nr
+  &n \times (0.97)^x \leqq \frac{1}{2}n \nr
+  &\left(\frac{9.7}{10}\right)^x \leqq 2^{-1} \nr
+  &\text{底 } 10 \text{ で対数とって} \nr
+  &x\left(\log_{10}9.7-1\right) \leqq -\log_{10}2 \nr
+  &0.0132x \geqq 0.301 \nr
+  &x \geqq 22.8 \cdots \nr
+  &\therefore 23 \text{ 年後}
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{248 (1)}
+\begin{align*}
+  \left(\log_{3}x\right)^2+2\log_{3}x &= 8 \nr
+  \left(\log_{3}x+4\right)\left(\log_{3}x-2\right) &= 0 \nr
+  \log_{3}x &= -4,\ 2 \nr
+  x &= 3^{-4},\ 3^2 \nr
+  x &= \frac{1}{81},\ 9
+\end{align*}
+
+\paragraph{248 (2)}
+\begin{align*}
+  &\text{真数条件より } x+1>0 \text{ かつ } (x+2)^2>0 \nr
+  &\text{すなわち } x>-1 \quad \text{㋐} \nr
+  &\log_{\frac{1}{2}}(x+1) = 2+\log_{\frac{1}{2}}(x+2)^2 \nr
+  &\log_{\frac{1}{2}}(x+1) = \log_{\frac{1}{2}}\left\{\left(\frac{1}{2}\right)^2(x+2)^2\right\} \nr
+  &x+1 = \frac{1}{4}(x+2)^2 \nr
+  &4x+4 = x^2+4x+4 \nr
+  &x^2 = 0 \nr
+  &x = 0 \nr
+  &\text{㋐をみたす}
+\end{align*}
+
+\paragraph{249 (1)}
+\begin{align*}
+  &\text{真数条件より } 2x-1>0 \text{ かつ } 1-x>0 \nr
+  &\text{すなわち } \frac{1}{2}<x<1 \quad \text{㋐} \nr
+  &\text{底 } 0.1<1 \text{ なので } 2x-1 < 1-x \nr
+  &3x < 2 \nr
+  &x < \frac{2}{3} \nr
+  &\text{㋐とあわせて } \frac{1}{2}<x<\frac{2}{3}
+\end{align*}
+
+\paragraph{249 (2)}
+\begin{align*}
+  &\text{真数条件より } x>0 \text{ かつ } x+1>0 \nr
+  &\text{すなわち } x>0 \quad \text{㋐} \nr
+  &\log_{\frac{1}{2}}x > \log_{\frac{1}{2}}(x+1)+2 \nr
+  &\log_{\frac{1}{2}}x > \log_{\frac{1}{2}}\left\{(x+1) \times \left(\frac{1}{2}\right)^2\right\} \nr
+  &\text{底 } \frac{1}{2}<1 \text{ なので } x < \frac{1}{4}(x+1) \nr
+  &\frac{3}{4}x < \frac{1}{4} \nr
+  &x < \frac{1}{3} \nr
+  &\text{㋐とあわせて } 0<x<\frac{1}{3}
+\end{align*}
+
+\paragraph{249 (3)}
+\begin{align*}
+  &\text{真数条件より } x>0 \text{ かつ } x^3>0 \nr
+  &\text{すなわち } x>0 \quad \text{㋐} \nr
+  &\left(\log_{\frac{1}{2}}x\right)^2 > \log_{\frac{1}{2}}x^3 \nr
+  &\left(\log_{\frac{1}{2}}x\right)^2-3\log_{\frac{1}{2}}x > 0 \nr
+  &\left(\log_{\frac{1}{2}}x\right)\left(\log_{\frac{1}{2}}x-3\right) > 0 \nr
+  &\log_{\frac{1}{2}}x < 0,\ 3 < \log_{\frac{1}{2}}x \nr
+  &\text{底 } \frac{1}{2}<1 \text{ なので } x > \left(\frac{1}{2}\right)^0,\ \left(\frac{1}{2}\right)^3 > x \nr
+  &x < \frac{1}{8},\ 1 < x \nr
+  &\text{㋐とあわせて } 0<x<\frac{1}{8},\ 1<x
+\end{align*}
+
+\paragraph{250 (1)}
+\begin{align*}
+  &\left(\log_{2}x\right)\left(\log_{8}4x\right)-\frac{8}{3} = 0 \nr
+  &\left(\log_{2}x\right) \cdot \frac{\log_{2}4x}{3}-\frac{8}{3} = 0 \nr
+  &\left(\log_{2}x\right)\left(\log_{2}4+\log_{2}x\right)-8 = 0 \nr
+  &\left(\log_{2}x\right)^2+2\log_{2}x-8 = 0 \nr
+  &\left(\log_{2}x+4\right)\left(\log_{2}x-2\right) = 0 \nr
+  &\log_{2}x = -4,\ 2 \nr
+  &x = 2^{-4},\ 2^2 \nr
+  &x = \frac{1}{16},\ 4
+\end{align*}
+
+\paragraph{250 (2)}
+\begin{align*}
+  &\text{真数条件より } (x-1)^2>0 \ret \text{かつ } -3x+5>0 \nr
+  &\text{すなわち } x<1,\ 1<x<\frac{5}{3} \quad \text{㋐} \nr
+  &\log_{2}2(x-1)^2 = 3\log_{8}(-3x+5) \nr
+  &\log_{2}2(x-1)^2 = 3 \cdot \frac{\log_{2}(-3x+5)}{\log_{2}8} \nr
+  &\log_{2}2(x-1)^2 = \log_{2}(-3x+5) \nr
+  &2(x^2-2x+1) = -3x+5 \nr
+  &2x^2-x-3 = 0 \nr
+  &(2x-3)(x+1) = 0 \nr
+  &x = -1,\ \frac{3}{2} \nr
+  &\text{どちらも㋐をみたす}
+\end{align*}
+
+\paragraph{250 (3)}
+\begin{align*}
+  &x \text{ は底なので } 0<x<1,\ 1<x \quad \text{㋐} \nr
+  &\text{（真数条件もみたす）} \nr
+  &\log_{2}x+\log_{x}8 = 4 \nr
+  &\log_{2}x+\frac{3}{\log_{2}x} = 4 \nr
+  &\left(\log_{2}x\right)^2-4\log_{2}x+3 = 0 \nr
+  &\left(\log_{2}x-3\right)\left(\log_{2}x-1\right) = 0 \nr
+  &\log_{2}x = 1,\ 3 \nr
+  &x = 2,\ 8 \nr
+  &\text{どちらも㋐をみたす}
+\end{align*}
+
+\paragraph{250 (4)}
+\begin{align*}
+  &\text{真数条件より } 2-x>0 \text{ かつ } x+2>0 \nr
+  &\text{すなわち } -2<x<2 \quad \text{㋐} \nr
+  &\log_{\sqrt{2}}(2-x)-\log_{2}(x+2) = 2 \nr
+  &\frac{\log_{2}(2-x)}{\frac{1}{2}} = \log_{2}(x+2)+2 \nr
+  &\log_{2}(2-x)^2 = \log_{2}2^2(x+2) \nr
+  &x^2-4x+4 = 4x+8 \nr
+  &x^2-8x-4 = 0 \nr
+  &x = 4 \pm 2\sqrt{5} \nr
+  &\text{㋐をみたすのは } x = 4-2\sqrt{5}
+\end{align*}
+
+\paragraph{251 (1)}
+\begin{align*}
+  \log_{10}2^{40} &= 40\log_{10}2 \nr
+  &= 40 \times 0.301 \nr
+  &= 12.04 \nr
+  &10^{12} < 2^{40} < 10^{13} \nr
+  &\therefore 13 \text{ 桁}
+\end{align*}
+
+\paragraph{251 (2)}
+\begin{align*}
+  \log_{10}6^{100} &= 100\log_{10}6 \nr
+  &= 100\left(\log_{10}2+\log_{10}3\right) \nr
+  &= 100 \times 0.7781 \nr
+  &= 77.81 \nr
+  &10^{77} < 6^{100} < 10^{78} \nr
+  &\therefore 78 \text{ 桁}
+\end{align*}
+
+\paragraph{252 (1)}
+\begin{align*}
+  &2^n < 3^{14} < 2^{n+1} \nr
+  &\text{底 } 10 \text{ で対数とって} \nr
+  &n\log_{10}2 < 14\log_{10}3 < (n+1)\log_{10}2 \nr
+  &\begin{cases}
+    n < \dfrac{14 \times 0.4771}{0.301} \\
+    \dfrac{14 \times 0.4771}{0.301} < n+1
+  \end{cases} \nr
+  &\begin{cases} n < 22.1 \cdots \\ 21.1 \cdots < n \end{cases} \nr
+  &n = 22
+\end{align*}
+
+\paragraph{252 (2)}
+\begin{align*}
+  &10^{-5} < \left(\frac{7}{10}\right)^n < 10^{-4} \nr
+  &\text{底 } 10 \text{ で対数とって} \nr
+  &-5 < n\left(\log_{10}7-1\right) < -4 \nr
+  &-5 < n(0.8451-1) < -4 \nr
+  &-5 < -0.1549n < -4 \nr
+  &25.8 \cdots < n < 32.2 \cdots \nr
+  &n = 26 \sim 32 \quad (7 \text{ コ})
+\end{align*}
+
+\clearpage
+\begin{center}
+  \textbf{PLUS}\\
+\end{center}
+
+\paragraph{253}
+\begin{align*}
+  &\text{記憶できる情報量を } x \text{ とすると} \nr
+  x &= 2^{8 \times 2 \times 1024} \nr
+  \log_{10}x &= 16384\log_{10}2 \nr
+  &= 16384 \times 0.301 \nr
+  &= 4931.584 \nr
+  x &= 10^{4931.584}
+\end{align*}
+
+\paragraph{254}
+\begin{align*}
+  &1 \text{ 等星の明るさを } I_1 \text{、} \ret 6 \text{ 等星の明るさを } I_6 \text{ とすると} \nr
+  &\begin{cases}
+    1 = C-2.5\log_{10}I_1 \\
+    6 = C-2.5\log_{10}I_6
+  \end{cases} \nr
+  &\begin{cases}
+    \log_{10}I_1 = \dfrac{C-1}{2.5} \\
+    \log_{10}I_6 = \dfrac{C-6}{2.5}
+  \end{cases} \nr
+  &\begin{cases}
+    I_1 = 10^{\frac{C-1}{2.5}} \\
+    I_6 = 10^{\frac{C-6}{2.5}}
+  \end{cases} \nr
+  \frac{I_1}{I_6} &= 10^{\frac{C-1}{2.5}-\frac{C-6}{2.5}} \nr
+  &= 10^{\frac{5}{2.5}} \nr
+  &= 10^2 \nr
+  &= 100 \nr
+  &\therefore 100 \text{ 倍}
+\end{align*}
+
+\end{document}

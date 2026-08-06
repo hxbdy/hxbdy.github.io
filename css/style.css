@@ -543,6 +543,10 @@ th{
   text-align: center;
   font-weight: normal;
 }
+/*問題番号の範囲が「105~14/2」のように途中で折り返さないようにする*/
+.workbook{
+  white-space: nowrap;
+}
 tr a{
   color: #008080;
 }
@@ -599,19 +603,25 @@ tr{
     padding-right: 0;
   }
   .chapter{
-    width: 26%;
+    width: 20%;
   }
   .section{
-    width: 36%;
+    width: 29%;
   }
   .question{
-    width: 7%;
+    width: 5%;
   }
   .practice{
     width: 14%;
   }
   .workbook{
-    width: 16%;
+    width: 13%;
+  }
+  .pdf{
+    width: 9%;
+  }
+  .tex{
+    width: 9%;
   }
 }
 
@@ -640,19 +650,25 @@ tr{
     padding: 10px 8px;
   }
   .chapter{
-    width: 27%;
+    width: 22%;
   }
   .section{
-    width: 37%;
+    width: 27%;
   }
   .workbook{
-    width: 15%;
+    width: 13%;
   }
   .question{
-    width: 7%;
+    width: 6%;
   }
   .practice{
-    width: 14%;
+    width: 12%;
+  }
+  .pdf{
+    width: 10%;
+  }
+  .tex{
+    width: 10%;
   }
 }
 
@@ -681,18 +697,24 @@ tr{
     padding: 9px;
   }
   .chapter{
-    width: 25%;
+    width: 21%;
   }
   .section{
-    width: 35%;
+    width: 28%;
   }
   .workbook{
-    width: 15%;
+    width: 13%;
   }
   .question{
-    width: 7%;
+    width: 6%;
   }
   .practice{
-    width: 15%;
+    width: 14%;
+  }
+  .pdf{
+    width: 9%;
+  }
+  .tex{
+    width: 9%;
   }
 }

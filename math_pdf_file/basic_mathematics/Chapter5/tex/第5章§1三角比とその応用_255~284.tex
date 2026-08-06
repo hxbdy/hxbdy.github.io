@@ -1,0 +1,599 @@
+\documentclass[fleqn,a4j,dvipdfmx,uplatex,twocolumn]{jsarticle}
+% \documentclass[fleqn,a4j,disablejfam,dvipdfmx,uplatex,twocolumn]{jsarticle}
+\setlength{\columnseprule}{0.4pt}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage[usenames]{color}
+\usepackage[hiresbb]{graphicx}
+\usepackage{enumerate}
+\usepackage{prettyref}
+ \let\Ref\prettyref
+ \newrefformat{eq}{\textbf{(\ref{#1})}}
+ \newrefformat{sec}{第\ref{#1}節}
+ \newrefformat{tab}{\textbf{表\ref{#1}}}
+ \newrefformat{fig}{\textbf{図\ref{#1}}}
+
+ \renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\def\proof{\textbf{証明}　}
+\def\qed{{\rule{0.5zw}{1zh}}}
+\def\E{\mathrm{e}}
+\def\D{\mathrm {d}}
+\def\I{\mathrm {i}}
+\def\LHS{(\mathrm{LHS})}
+\def\RHS{(\mathrm{RHS})}
+\def\hc{\mathrm{h.c.}}
+\def\cc{\mathrm{c.c.}}
+\def\ret{\notag\\&\qquad}%align環境内で改行するとき用．改行直前の項の直後に記述する．
+\def\nr{\notag\\}%align環境内で次の式に行くために改行するとき用．改行直前の項の直後に記述する．
+\DeclareMathOperator{\Arg}{Arg}
+\def\for#1{\quad\mathrm{for\ \ }#1}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Tr}{Tr}
+\def\AAA{\mathaccent 23\mathrm{A}}
+\def\abs#1{{\left\rvert #1 \right\lvert}}
+
+
+\begin{document}
+\begin{flushleft}
+  新 基礎数学　改訂版，大日本図書
+\end{flushleft}
+\begin{center}
+  \textbf{5章 三角関数}\\
+  \textbf{1　三角比とその応用}\\
+  \textbf{BASIC}\\
+\end{center}
+
+\paragraph{255 (1)}
+\begin{align*}
+  \intertext{斜辺 $\sqrt{2^2+1^2}=\sqrt{5}$ より}
+  \sin \alpha=\frac{1}{\sqrt{5}}, \cos \alpha=\frac{2}{\sqrt{5}}, \tan \alpha=\frac{1}{2}
+\end{align*}
+
+\paragraph{255 (2)}
+\begin{align*}
+\intertext{$\sqrt{7-3}=2$ より}
+\sin \alpha=\frac{\sqrt{3}}{\sqrt{7}}, \cos \alpha=\frac{2}{\sqrt{7}}, \tan \alpha=\frac{\sqrt{3}}{2}
+\end{align*}
+
+\paragraph{255 (3)}
+\begin{align*}
+\intertext{$\sqrt{13^2-12^2}=5$ より}
+\sin \alpha=\frac{5}{13}, \cos \alpha=\frac{12}{13}, \tan \alpha=\frac{5}{12}
+\end{align*}
+
+\paragraph{256 (1)}
+\begin{align*}
+&\sin 60^{\circ} \cos 30^{\circ}-\cos 60^{\circ} \sin 30^{\circ} \\
+& =\frac{\sqrt{3}}{2} \cdot \frac{\sqrt{3}}{2}-\frac{1}{2} \cdot \frac{1}{2} \\
+& =\frac{3}{4}-\frac{1}{4} \\
+& =\frac{1}{2}
+\end{align*}
+
+\paragraph{256 (2)}
+\begin{align*}
+&\cos 30^{\circ} \cos 60^{\circ}+\sin 30^{\circ} \sin 60^{\circ} \\
+& =\frac{\sqrt{3}}{2} \cdot \frac{1}{2}+\frac{1}{2} \cdot \frac{\sqrt{3}}{2} \\
+& =\frac{\sqrt{3}}{2}
+\end{align*}
+
+\paragraph{256 (3)}
+\begin{align*}
+&\frac{\tan 60^{\circ}-\tan 45^{\circ}}{1+\tan 60^{\circ} \tan 45^{\circ}} \\
+& =\frac{\sqrt{3}-1}{1+\sqrt{3} \cdot 1} \\
+& =\frac{1}{2}(\sqrt{3}-1)^2 \\
+& =\frac{1}{2}(4-2 \sqrt{3}) \\
+& =2-\sqrt{3}
+\end{align*}
+
+\paragraph{257 (1)}
+\begin{align*}
+\sin 6^{\circ}=0.1045
+\end{align*}
+
+\paragraph{257 (2)}
+\begin{align*}
+\cos 33^{\circ}=0.8387
+\end{align*}
+
+\paragraph{257 (3)}
+\begin{align*}
+\tan 84^{\circ}=9.5144
+\end{align*}
+
+\paragraph{258}
+\begin{align*}
+& \text { 距離を } x\text { とする } \\
+& \tan 22^{\circ}=\frac{634}{x} \\
+& x=\frac{634}{6404} \\
+& =1569.3 \cdots \\
+1569 m
+\end{align*}
+
+\paragraph{259 (1)}
+\begin{align*}
+\sin 81^{\circ}=\cos \left(90^{\circ}-81^{\circ}\right)
+=\cos 9^{\circ}
+\end{align*}
+
+\paragraph{259 (2)}
+\begin{align*}
+\cos 56^{\circ} & =\sin \left(90^{\circ}-56^{\circ}\right) \\
+& =\sin 34^{\circ}
+\end{align*}
+
+\paragraph{259 (3)}
+\begin{align*}
+\tan 77^{\circ} & =\frac{1}{\tan \left(90^{\circ}-77^{\circ}\right)} \\
+& =\frac{1}{\tan 13^{\circ}}
+\end{align*}
+
+\paragraph{260 (1)}
+\begin{align*}
+& \sin 45^{\circ} \cos 135^{\circ}-\cos 45^{\circ} \sin 135^{\circ} \\
+= & \frac{1}{\sqrt{2}} \cdot\left(-\frac{1}{\sqrt{2}}\right)-\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} \\
+= & -1
+\end{align*}
+
+\paragraph{260 (2)}
+\begin{align*}
+\frac{\tan 45^{\circ}-\tan 150^{\circ}}{1+\tan 45^{\circ} \tan 150^{\circ}}
+& =\frac{1-\left(-\frac{1}{\sqrt{3}}\right)}{1+1 \cdot\left(-\frac{1}{\sqrt{3}}\right)} \\
+& =\frac{\sqrt{3}+1}{\sqrt{3}-1} \\
+& =\frac{1}{2}(\sqrt{3}+1)^2 \\
+& =2+\sqrt{3}
+\end{align*}
+
+\paragraph{260 (3)}
+\begin{align*}
+& \cos 120^{\circ} \cos 150^{\circ}+\tan 120^{\circ} \sin 150^{\circ} \\
+& +\sin 120^{\circ} \tan 135^{\circ} \\
+= & \left(-\frac{1}{2}\right) \cdot\left(-\frac{\sqrt{3}}{2}\right)+(-\sqrt{3}) \cdot \frac{1}{2}+\frac{\sqrt{3}}{2} \cdot(-1) \\
+= & \frac{\sqrt{3}}{4}-\frac{\sqrt{3}}{2}-\frac{\sqrt{3}}{2} \\
+= & -\frac{3}{4} \sqrt{3}
+\end{align*}
+
+\paragraph{261 (1)}
+\begin{align*}
+\sin 100^{\circ} & =\sin \left(180^{\circ}-80^{\circ}\right) \\
+& =\sin 80^{\circ} \\
+& =0.9848
+\end{align*}
+
+\paragraph{261 (2)}
+\begin{align*}
+\cos 176^{\circ} & =\cos \left(180^{\circ}-4^{\circ}\right) \\
+& =-\cos 4^{\circ} \\
+& =-0.9976
+\end{align*}
+
+\paragraph{261 (3)}
+\begin{align*}
+\tan 111^{\circ} & =\tan \left(180^{\circ}-69^{\circ}\right) \\
+& =-\tan 69^{\circ} \\
+& =-2.6051
+\end{align*}
+
+\paragraph{262 (1)}
+\begin{align*}
+\intertext{$0^{\circ}<\alpha<90^{\circ}$ より}
+\cos \alpha=\sqrt{1-\left(\frac{1}{4}\right)^2}
+& =\frac{\sqrt{15}}{4} \\
+\tan \alpha & =\frac{1}{\sqrt{15}}
+\end{align*}
+
+\paragraph{262 (2)}
+\begin{align*}
+\intertext{$90^{\circ}<\alpha<180^{\circ}$ より}
+\cos \alpha & =-\sqrt{1-\left(\frac{1}{4}\right)^2} \\
+& =-\frac{\sqrt{15}}{4} \\
+\tan \alpha & =-\frac{1}{\sqrt{15}}
+\end{align*}
+
+\paragraph{262 (3)}
+\begin{align*}
+\intertext{$90^{\circ}<\alpha<180^{\circ}+90^{\circ}$ より}
+ \quad \sin \alpha & =\sqrt{1-\left(-\frac{5}{6}\right)^2} \\
+& =\frac{\sqrt{11}}{6} \\
+\tan \alpha & =-\frac{\sqrt{11}}{5}
+\end{align*}
+
+\paragraph{263 (1)}
+\begin{align*}
+& 1+\tan ^2 \alpha=\frac{1}{\cos ^2 \alpha} \\
+& 1+\frac{1}{9}=\frac{1}{\cos ^2  \alpha} \\
+& \cos ^2 \alpha=\frac{9}{10} \\
+& \end{align*}
+\begin{align*}
+\intertext{$0^{\circ}<\alpha<90^{\circ}$ より}
+ \sin \cos \alpha & =\frac{3}{\sqrt{10}} \\
+\sin \alpha & =\tan \alpha \cdot \cos \alpha \\
+& =\frac{1}{3} \cdot \frac{3}{\sqrt{10}} \\
+& =\frac{1}{\sqrt{10}}
+\end{align*}
+
+\paragraph{263 (2)}
+\begin{align*}
+1+\tan ^2 \alpha=\frac{1}{\operatorname{cos}^2 \alpha} \\
+1+4 =\frac{1}{\operatorname{cos}^2 \alpha} \\
+\cos ^2 \alpha =\frac{1}{5} \\
+\intertext{$90^{\circ}<\alpha<180^{\circ}$ より}
+\cos \alpha=-\frac{1}{\sqrt{5}} & \\
+\sin \alpha =-2 \cdot\left(-\frac{1}{\sqrt{5}}\right) \\
+&=\frac{2}{\sqrt{5}}
+\end{align*}
+
+\paragraph{264 (1)}
+\begin{align*}
+正弦定理より
+\frac{a}{\sin 30^{\circ}} & =\frac{4}{\sin 45^{\circ}} \\
+a & =4 \cdot \sqrt{2} \cdot \frac{1}{2} \\
+& =2 \sqrt{2}
+\end{align*}
+
+\paragraph{264 (2)}
+\begin{align*}
+正弦定理より
+\frac{2}{\sin 45^{\circ}} & =\frac{\sqrt{3}}{\sin C} \\
+\sin C & =\sqrt{3} \cdot \frac{1}{2} \cdot \frac{1}{\sqrt{2}} \\
+& =\frac{\sqrt{6}}{4}
+\end{align*}
+
+\paragraph{264 (3)}
+\begin{align*}
+正弦定理より
+\frac{a}{\sin 45^{\circ}} & =\frac{5}{\sin 30^{\circ}} \\
+a & =5 \cdot 2 \cdot \frac{1}{\sqrt{2}} \\
+& =5 \sqrt{2}
+\end{align*}
+
+\paragraph{265}
+\begin{align*}
+正弦定理より 半径をrとすると
+2 r & =\frac{a}{\sin 60^{\circ}} \\
+r & =\frac{1}{2} \cdot a \cdot \frac{2}{\sqrt{3}} \\
+& =\frac{\sqrt{3}}{3} a
+\end{align*}
+
+\paragraph{266 (1)}
+\begin{align*}
+余弦定理より
+& a^2=3+16-2 \cdot 4 \cdot \sqrt{3} \cdot \cos 30^{\circ} \\
+& =19-8 \sqrt{3} \cdot \frac{\sqrt{3}}{2} \\
+& =7 \\
+a & =\sqrt{7}
+\end{align*}
+
+\paragraph{266 (2)}
+\begin{align*}
+余弦定理より
+b^2 & =6+3-2 \cdot \sqrt{6} \sqrt{3} \cdot \cos 135^{\circ} \\
+& =9+6 \\
+& =15 \\
+b & =\sqrt{15}
+\end{align*}
+
+\paragraph{266 (3)}
+\begin{align*}
+余弦定理より
+c^2 & =4+27-2 \cdot 2 \cdot 3 \sqrt{3} \cdot \cos 150^{\circ} \\
+& =31+18 \\
+& =49 \\
+c & =7
+\end{align*}
+
+\paragraph{267}
+\begin{align*}
+\cos A & =\frac{16+25-4}{2 \cdot 4 \cdot 5} \\
+& =\frac{37}{40} \\
+\cos B & =\frac{4+25-16}{2 \cdot 2 \cdot 5} \\
+& =\frac{13}{20} \\
+\cos C & =\frac{4+16-25}{2 \cdot 2 \cdot 4} \\
+& =-\frac{5}{16}
+\end{align*}
+
+\paragraph{268 (1)}
+\begin{align*}
+\triangle A B C & =\frac{1}{2} \cdot 5 \cdot 7 \cdot \sin 45^{\circ} \\
+& =\frac{35}{4} \sqrt{2}
+\end{align*}
+
+\paragraph{268 (2)}
+\begin{align*}
+\triangle A B C & =\frac{1}{2} \cdot 2 \cdot 3 \cdot \sin 150^{\circ} \\
+& =\frac{3}{2}
+\end{align*}
+
+\paragraph{269}
+\begin{align*}
+\triangle A B C & =\frac{1}{2} \cdot 7 \cdot c \cdot \sin 30^{\circ} \\
+& 9 =\frac{7}{2}c \cdot \frac{1}{2} \\
+& c = \frac{36}{7}
+\end{align*}
+
+\paragraph{270 (1)}
+\begin{align*}
+\cos C & =\frac{25+36-81}{2 \cdot 5 \cdot 6} \\
+& =\frac{-20}{2 \cdot 5 \cdot 6} \\
+& =-\frac{1}{3}
+\end{align*}
+
+\paragraph{270 (2)}
+\begin{align*}
+\intertext{$0^{\circ}<c<180^{\circ}$ より}
+ \quad \sin c=\sqrt{1-\left(-\frac{1}{3}\right)^2}=\frac{2 \sqrt{2}}{3}
+\end{align*}
+
+\paragraph{270 (3)}
+\begin{align*}
+S & =\frac{1}{2} \cdot 5 \cdot 6 \cdot \sin C \\
+& =15 \cdot \frac{2 \sqrt{2}}{3} \\
+& =10 \sqrt{2}
+\end{align*}
+
+\paragraph{271 (1)}
+\begin{align*}
+\cos A =\frac{41+64-25}{2 \cdot 7 \cdot 8}=\frac{11}{14}\\
+\intertext{$0^{\circ}<A<180^{\circ}$ より}
+ \quad \sin A=\sqrt{1-\left(\frac{11}{14}\right)^2}=\frac{\sqrt{75}}{14}=\frac{5 \sqrt{3}}{14} \\
+\triangle A B C =\frac{1}{2} \cdot 7 \cdot 8 \cdot \frac{5 \sqrt{3}}{14} \\
+=10 \sqrt{3}
+\end{align*}
+
+\paragraph{271 (2)}
+\begin{align*}
+\cos A  =\frac{9+16-4}{2 \cdot 3 \cdot 4} =\frac{7}{8} \\
+\intertext{$0^{\circ} < A  <180^{\circ}$  より}
+ \quad \text { sin } A=\sqrt{1-\left(\frac{7}{8}\right)^2}=\frac{\sqrt{15}}{8} \\
+\triangle A B C  =\frac{1}{2} \cdot 3 \cdot 4 \cdot \frac{\sqrt{15}}{8} \\
+=\frac{3}{4} \sqrt{15}
+\end{align*}
+
+\begin{center}
+  \textbf{CHECK}\\
+\end{center}
+
+\paragraph{272 (1)}
+\begin{align*}
+  \intertext{対辺 $\sqrt{3^2 - (\sqrt{2})^2} = \sqrt{7}$ より}
+  \sin \alpha = \frac{\sqrt{7}}{3}, \quad \cos \alpha = \frac{\sqrt{2}}{3}, \quad \tan \alpha = \frac{\sqrt{7}}{\sqrt{2}}
+\end{align*}
+
+\paragraph{272 (2)}
+\begin{align*}
+  \intertext{斜辺 $\sqrt{1^2 + (\sqrt{5})^2} = \sqrt{6}$ より}
+  \sin \alpha = \frac{\sqrt{5}}{\sqrt{6}}, \quad \cos \alpha = \frac{1}{\sqrt{6}}, \quad \tan \alpha = \sqrt{5}
+\end{align*}
+
+\paragraph{273 (1)}
+\begin{align*}
+  &\triangle ABD \text{において } \angle ABD = 150^{\circ} \text{ かつ } AB = DB \\
+  &DB \cos 30^{\circ} = \sqrt{3} \\
+  &DB = \sqrt{3} \cdot \frac{2}{\sqrt{3}} = 2 \\
+  &\therefore AB = 2
+\end{align*}
+
+\paragraph{273 (2)}
+\begin{align*}
+  \tan 15^{\circ} &= \frac{CD}{AB + BC} \\
+  &= \frac{1}{2 + \sqrt{3}} \\
+  &= 2 - \sqrt{3}
+\end{align*}
+
+\paragraph{274}
+\begin{align*}
+  BH &= 815 \sin 34^{\circ} \\
+     &= 815 \times 0.5592 \\
+     &= 455.748 \approx 455.7
+     &\therefore 456m
+\end{align*}
+
+\paragraph{275 (1)}
+\begin{align*}
+  &\sin 60^{\circ} \cos 30^{\circ} + \cos 120^{\circ} \sin 150^{\circ} + \sin 135^{\circ} \cos 180^{\circ} \\
+  &= \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{3}}{2} + \left( -\frac{1}{2} \right) \cdot \frac{1}{2} + \frac{1}{\sqrt{2}} \cdot (-1) \\
+  &= \frac{3}{4} - \frac{1}{4} - \frac{\sqrt{2}}{2} \\
+  &= \frac{1 - \sqrt{2}}{2}
+\end{align*}
+
+\paragraph{275 (2)}
+\begin{align*}
+  &\frac{\tan 30^{\circ} - \tan 135^{\circ} - \tan 180^{\circ}}{1 + \tan 120^{\circ} \cdot \tan 45^{\circ}} \\
+  &= \frac{\frac{1}{\sqrt{3}} - (-1) - 0}{1 + (-\sqrt{3}) \cdot 1} \\
+  &= \frac{1 + \sqrt{3}}{\sqrt{3}(1 - \sqrt{3})} \\
+  &= \frac{(1 + \sqrt{3})^2}{\sqrt{3}(1 - 3)} = \frac{4 + 2\sqrt{3}}{-2\sqrt{3}} \\
+  &= -\frac{2 + \sqrt{3}}{\sqrt{3}} = -\frac{2\sqrt{3} + 3}{3}
+\end{align*}
+
+\paragraph{276}
+\begin{align*}
+  \intertext{$90^{\circ} < \alpha < 180^{\circ}$ なので $\sin \alpha > 0$}
+  \sin \alpha &= \sqrt{1 - \left( -\frac{2}{5} \right)^2} \\
+              &= \frac{\sqrt{21}}{5} \\
+  \tan \alpha &= -\frac{\sqrt{21}}{2}
+\end{align*}
+
+\paragraph{277}
+\begin{align*}
+  1 + \tan^2 \alpha &= \frac{1}{\cos^2 \alpha} \\
+  1 + 9 &= \frac{1}{\cos^2 \alpha} \\
+  \cos^2 \alpha &= \frac{1}{10} \\
+  \intertext{$90^{\circ} < \alpha < 180^{\circ}$ なので $\cos \alpha < 0$}
+  \cos \alpha &= -\frac{1}{\sqrt{10}} \\
+  \sin \alpha &= \tan \alpha \cdot \cos \alpha \\
+              &= (-3) \cdot \left( -\frac{1}{\sqrt{10}} \right) \\
+              &= \frac{3}{\sqrt{10}}
+\end{align*}
+
+\paragraph{278 (1)}
+\begin{align*}
+  A &= 180^{\circ} - (105^{\circ} + 30^{\circ}) = 45^{\circ} \\
+  \intertext{正弦定理より}
+  2R &= \frac{\sqrt{6}}{\sin 45^{\circ}}, \quad c = 2R \sin 30^{\circ} \\
+  2R &= \sqrt{6} \cdot \sqrt{2} = 2\sqrt{3} \\
+  \therefore R &= \sqrt{3} \\
+  c &= 2\sqrt{3} \cdot \frac{1}{2} = \sqrt{3}
+\end{align*}
+
+\paragraph{278 (2)}
+\begin{align*}
+  \intertext{余弦定理より}
+  c^2 &= 3^2 + 5^2 - 2 \cdot 3 \cdot 5 \cdot \cos 120^{\circ} \\
+      &= 9 + 25 - 30 \cdot \left( -\frac{1}{2} \right) \\
+      &= 34 + 15 = 49 \\
+  \therefore c &= 7 \quad (c > 0) \\
+  \intertext{面積 $S$ は}
+  S &= \frac{1}{2} \cdot 3 \cdot 5 \cdot \sin 120^{\circ} \\
+    &= \frac{15}{2} \cdot \frac{\sqrt{3}}{2} = \frac{15\sqrt{3}}{4}
+\end{align*}
+
+\paragraph{278 (3)}
+\begin{align*}
+  \intertext{余弦定理より}
+  \cos B &= \frac{7^2 + 3^2 - 8^2}{2 \cdot 7 \cdot 3} \\
+         &= \frac{49 + 9 - 64}{42} = \frac{-6}{42} = -\frac{1}{7} \\
+  \intertext{$0^\circ < B < 180^\circ$ より $\sin B > 0$ なので}
+  \sin B &= \sqrt{1 - \left( -\frac{1}{7} \right)^2} = \sqrt{\frac{48}{49}} = \frac{4\sqrt{3}}{7} \\
+  \intertext{面積 $S$ は}
+  S &= \frac{1}{2} \cdot 7 \cdot 3 \cdot \frac{4\sqrt{3}}{7} \\
+    &= 6\sqrt{3}
+\end{align*}
+
+\begin{center}
+  \textbf{STEP UP}\\
+\end{center}
+
+\paragraph{279}
+\begin{align*}
+  &\begin{cases}
+    a = b \cos C + c \cos B \quad \dots \text{(1)} \\
+    b = c \cos A + a \cos C \quad \dots \text{(2)} \\
+    c = a \cos B + b \cos A \quad \dots \text{(3)}
+  \end{cases} \\
+  \intertext{(3) $\times c - $ (1) $\times a$ より}
+  &c^2 - a^2 = (ac \cos B + bc \cos A) \\
+  &- (ab \cos C + ac \cos B) \\
+  c^2 - a^2 &= bc \cos A - ab \cos C \quad \dots \text{(4)} \\
+  \intertext{(4) $+$ (2) $\times b$ より}
+  &(c^2 - a^2) + b^2 =\\
+  & (bc \cos A - ab \cos C) + \\
+  &(bc \cos A + ab \cos C) \\
+  b^2 + c^2 - a^2 &= 2bc \cos A \\
+  \therefore a^2 &= b^2 + c^2 - 2bc \cos A
+\end{align*}
+
+\paragraph{280 (1)}
+\begin{align*}
+  AH &= 10\sqrt{2} \times \frac{1}{2} = 5\sqrt{2} \\
+  \tan \angle OAH &= \frac{9}{5\sqrt{2}} = \frac{9\sqrt{2}}{10} \\
+  &\approx 1.2726 \dots \approx 1.27 \\
+  \therefore \angle OAH &\approx 52^{\circ}
+\end{align*}
+
+\paragraph{280 (2)}
+\begin{align*}
+  HM &= 5 \\
+  \tan \angle OMH &= \frac{9}{5} = 1.8 \\
+  \therefore \angle OMH &\approx 61^{\circ}
+\end{align*}
+
+\paragraph{280 (3)}
+\begin{align*}
+  &OB = \sqrt{9^2 + (5\sqrt{2})^2} \\
+  &= \sqrt{81 + 50} = \sqrt{131} \\
+  \intertext{余弦定理より}
+  \cos \angle BOC &= \frac{OB^2 + OC^2 - BC^2}{2 \cdot OB \cdot OC} \\
+  &= \frac{131 + 131 - 10^2}{2 \cdot 131} \\
+  &= \frac{162}{262} \approx 0.6183 \dots \\
+  \therefore \angle BOC &\approx 52^{\circ}
+\end{align*}
+
+\paragraph{281}
+\begin{align*}
+  &\text{正弦定理より, } 2R = \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} \\
+  &\therefore \sin A = \frac{a}{2R} \\
+  \intertext{これより, 面積 $S$ は}
+  S &= \frac{1}{2} bc \sin A \\
+    &= \frac{bc}{2} \cdot \frac{a}{2R} \\
+    &= \frac{abc}{4R} \quad \dots (\text{証明終})
+\end{align*}
+
+\begin{align*}
+  \intertext{また, $a = 2R \sin A, b = 2R \sin B, c = 2R \sin C$ を $S = \frac{abc}{4R}$ に代入すると}
+  S &= \frac{1}{4R} \cdot (2R \sin A) \cdot (2R \sin B) \cdot (2R \sin C) \\
+    &= 2R^2 \sin A \sin B \sin C \quad \dots (\text{証明終})
+\end{align*}
+
+\paragraph{282 (1)}
+\begin{align*}
+  \intertext{例題の結果（$S = \frac{1}{2}ab \sin C$ 等）を用いて}
+  S &= \frac{1}{2} \cdot 12 \cdot 14 \cdot \sin 60^{\circ} \\
+    &= 6 \cdot 14 \cdot \frac{\sqrt{3}}{2} \\
+    &= 42\sqrt{3}
+\end{align*}
+
+\paragraph{282 (2)}
+\begin{align*}
+  &\triangle ABD \text{ で余弦定理より} \\
+  \cos A &= \frac{4^2 + 9^2 - 7^2}{2 \cdot 4 \cdot 9} \\
+         &= \frac{16 + 81 - 49}{72} = \frac{48}{72} = \frac{2}{3} \\
+  \intertext{$0^{\circ} < A < 180^{\circ}$ より $\sin A > 0$ なので}
+  \sin A &= \sqrt{1 - \left( \frac{2}{3} \right)^2} = \frac{\sqrt{5}}{3} \\
+  \intertext{$\triangle CBD$ で余弦定理より}
+  \cos C &= \frac{8^2 + 3^2 - 7^2}{2 \cdot 8 \cdot 3} \\
+         &= \frac{64 + 9 - 49}{48} = \frac{24}{48} = \frac{1}{2} \\
+  \intertext{$0^{\circ} < C < 180^{\circ}$ より $\sin C > 0$ なので}
+  \sin C &= \sqrt{1 - \left( \frac{1}{2} \right)^2} = \frac{\sqrt{3}}{2} \\
+  \intertext{四角形 $ABCD$ の面積は}
+  S &= \triangle ABD + \triangle CBD \\
+    &= \frac{1}{2} \cdot 4 \cdot 9 \cdot \frac{\sqrt{5}}{3} + \frac{1}{2} \cdot 8 \cdot 3 \cdot \frac{\sqrt{3}}{2} \\
+    &= 6\sqrt{5} + 6\sqrt{3}
+\end{align*}
+
+\paragraph{283}
+\begin{align*}
+  &\text{正弦定理より外接円の半径を $R$ とすると} \\
+  &\sin B = \frac{b}{2R}, \quad \sin C = \frac{c}{2R} \\
+  \intertext{余弦定理より}
+  &\cos C = \frac{a^2 + b^2 - c^2}{2ab}, \\
+  &\quad \cos B = \frac{c^2 + a^2 - b^2}{2ca} \\
+  \intertext{これらを等式の左辺に代入すると}
+  (\text{左辺}) &= b \left( b - a \cos C \right) - c \left( c - a \cos B \right) \\
+  &= b \left( b - a \cdot \frac{a^2 + b^2 - c^2}{2ab} \right) \\
+  &- c \left( c - a \cdot \frac{c^2 + a^2 - b^2}{2ca} \right) \\
+  &= \frac{b}{2R} \cdot \frac{2b^2 - (a^2 + b^2 - c^2)}{2b} \\
+  &- \frac{c}{2R} \cdot \frac{2c^2 - (c^2 + a^2 - b^2)}{2c} \\
+  &= \frac{1}{4R} \left\{ (b^2 - a^2 + c^2) - (c^2 - a^2 + b^2) \right\} \\
+  &= 0 \\
+  &\text{よって等式は成り立つ．}
+\end{align*}
+
+\paragraph{284 (1)}
+\begin{align*}
+  \sin A &= 2 \cos B \sin C \\
+  \frac{a}{2R} &= 2 \cdot \frac{c^2 + a^2 - b^2}{2ca} \cdot \frac{c}{2R} \\
+  a &= \frac{c^2 + a^2 - b^2}{a} \\
+  a^2 &= c^2 + a^2 - b^2 \\
+  b^2 &= c^2 \\
+  \therefore b &= c \quad (b, c > 0) \\
+  &\text{よって, } AB = AC \text{ の二等辺三角形}
+\end{align*}
+
+\paragraph{284 (2)}
+\begin{align*}
+  \tan A : \tan B &= a : b \\
+  b \tan A &= a \tan B \\
+  b \cdot \frac{\sin A}{\cos A} &= a \cdot \frac{\sin B}{\cos B} \\
+  b \sin A \cos B &= a \sin B \cos A \\
+  b \cdot \frac{a}{2R} \cdot \frac{c^2 + a^2 - b^2}{2ca} &= a \cdot \frac{b}{2R} \cdot \frac{b^2 + c^2 - a^2}{2bc} \\
+  \frac{c^2 + a^2 - b^2}{c} &= \frac{b^2 + c^2 - a^2}{c} \\
+  c^2 + a^2 - b^2 &= b^2 + c^2 - a^2 \\
+  2a^2 &= 2b^2 \\
+  \therefore a &= b \quad (a, b > 0) \\
+  &\text{よって, } CA = CB\\
+  &\text{ の二等辺三角形}
+\end{align*}
+
+\end{document}

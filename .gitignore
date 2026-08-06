@@ -1,1 +1,4 @@
+# raw/ は PDF ビルド用のローカル作業場（スキャン画像・LaTeX 中間ファイル）。
+# 配信する .tex は math_pdf_file/*/*/tex/ へコピーしたものを追跡する。
 raw/
+.claude/

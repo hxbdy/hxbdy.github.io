@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="icon" href="./img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="とどろき英数塾, 高専生のページ, 改訂版, TeX">
+    <meta name="robots" content="noindex">
+    <title id="page-title">TeX表示｜とどろき英数塾</title>
+    <link rel="stylesheet" href="./css/sanitize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tex.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="とどろき英数塾｜TeX表示">
+    <meta property="og:description" content="解答例の TeX ソースをブラウザ上で表示します">
+    <meta property="og:image" content="./img/Thumbnail.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="とどろき英数塾｜改訂版ページ">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="./">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="./index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="./index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="./index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="./index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="./index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="./index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="./index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="./index.html#contact" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="./img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="./privacy.html" target="_self" rel="noopener noreferrer">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title" id="tex-title">TeX表示</div>
+                        <p class="tex-page__meta">
+                            <a href="./index.html">&laquo; 一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body" id="tex-body">
+                        <p class="tex-loading">読み込み中…</p>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        誤字・誤値等にお気づきの際は<a href="./index.html#contact">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/tex-viewer.js"></script>
+</body>
+</html>

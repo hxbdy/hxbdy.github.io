@@ -1,0 +1,157 @@
+/*------------------------------------------
+ *  TeX表示ページ（tex.html）
+ *------------------------------------------*/
+.tex-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+.tex-page {
+  background-color: white;
+  border: 1px solid black;
+  width: 92%;
+  max-width: 760px;
+  padding: 0 0 24px;
+}
+.tex-page__head .title {
+  margin-top: 0;
+}
+.tex-page__meta {
+  font-size: 13px;
+  text-align: center;
+  padding: 8px 12px 0;
+}
+.tex-page__meta a {
+  color: #008080;
+}
+.tex-page__body {
+  padding: 8px 24px 0;
+}
+.tex-page__note {
+  font-size: 12px;
+  color: #555;
+  border-top: 1px solid #ddd;
+  margin: 24px 24px 0;
+  padding-top: 12px;
+}
+.tex-page__note a {
+  color: #008080;
+}
+
+/* 数式が組み上がるまでは TeX ソースがちらつくので隠しておく */
+.tex-page__body .tex-math,
+.tex-page__body .tex-intertext,
+.tex-page__body .tex-text {
+  visibility: hidden;
+}
+.is-typeset .tex-page__body .tex-math,
+.is-typeset .tex-page__body .tex-intertext,
+.is-typeset .tex-page__body .tex-text {
+  visibility: visible;
+}
+
+/* 書名（\begin{flushleft}） */
+.tex-source-line {
+  font-size: 13px;
+  color: #555;
+  margin: 0 0 12px;
+}
+
+/* 章・節・BASIC などの見出し（\begin{center}） */
+.tex-heading {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 24px 0 8px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+
+/* 問題番号（\paragraph） */
+.tex-number {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 22px 0 2px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 数式ブロック（\begin{align*} など）
+   横に長い式はページ全体を広げず、このブロック内で横スクロールさせる。
+   overflow-y: hidden で下端が欠けないよう、余白は margin ではなく padding で取る。 */
+.tex-math {
+  margin: 0;
+  padding: 0.6em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* \intertext と本文（数式の displayIndent と左端を揃える） */
+.tex-intertext,
+.tex-text {
+  margin: 6px 0;
+  padding-left: 1em;
+  line-height: 1.8;
+}
+
+.tex-empty {
+  color: #999;
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+/* \clearpage */
+.tex-pagebreak {
+  border: 0;
+  border-top: 1px dashed #bbb;
+  margin: 32px 0;
+}
+
+.tex-loading {
+  text-align: center;
+  color: #777;
+  padding: 40px 0;
+}
+.tex-error-title {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 24px;
+}
+.tex-error-detail {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #555;
+  word-break: break-all;
+}
+
+/* 余白は .tex-math の padding で取るので mjx-container 側の margin は消す */
+.tex-page__body mjx-container[display="true"] {
+  margin: 0 !important;
+}
+
+/*スマートフォン向け*/
+@media only screen and (max-width: 480px) {
+  .tex-page {
+    width: 95%;
+  }
+  .tex-page__body {
+    padding: 8px 12px 0;
+  }
+  .tex-page__note {
+    margin: 20px 12px 0;
+  }
+  .tex-heading {
+    font-size: 14px;
+  }
+  .tex-number {
+    font-size: 13px;
+  }
+  .tex-intertext,
+  .tex-text {
+    font-size: 13px;
+  }
+  .tex-page__body mjx-container {
+    font-size: 90%;
+  }
+}
