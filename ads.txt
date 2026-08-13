@@ -1,5 +1,7 @@
-​# microad
-​microad.co.jp,22372,DIRECT
+# todoroki.fyi
+google.com,pub-9027360605421916,DIRECT,f08c47fec0942fa0
+# microad
+microad.co.jp,22372,DIRECT
 pubmatic.com,157492, RESELLER,5d62403b186f2ace
 rubiconproject.com, 23540, RESELLER, 0bfd66d529a55807
 pubmatic.com, 158212, RESELLER, 5d62403b186f2ace

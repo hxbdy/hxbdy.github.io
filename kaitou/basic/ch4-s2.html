@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <link rel="icon" href="../../img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>§2 対数関数　解答例｜4章 指数関数と対数関数｜とどろき英数塾</title>
+    <meta name="description" content="新 基礎数学 改訂版（大日本図書）問題集「4章 §2 対数関数」の途中式つき解答例。対数法則・底の変換公式・常用対数を扱います。">
+    <link rel="canonical" href="https://todoroki.fyi/kaitou/basic/ch4-s2.html">
+    <link rel="stylesheet" href="../../css/sanitize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tex.css">
+    <link rel="stylesheet" href="../../css/tex-page.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="§2 対数関数　解答例｜新 基礎数学 改訂版（大日本図書）">
+    <meta property="og:description" content="新 基礎数学 改訂版（大日本図書）問題集「4章 §2 対数関数」の途中式つき解答例。対数法則・底の変換公式・常用対数を扱います。">
+    <meta property="og:image" content="../../img/Thumbnail.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="とどろき英数塾">
+    <meta property="og:url" content="https://todoroki.fyi/kaitou/basic/ch4-s2.html">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="../../">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="../../index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="../../contact.html" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="../../about.html" target="_self">
+                        <span class="p-header__discord">運営者情報</span>
+                    </a>
+                    <br>
+                    <a href="../../privacy.html" target="_self">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title">§2 対数関数　解答例</div>
+                        <p class="tex-page__meta">
+                            新 基礎数学 改訂版（大日本図書）　4章 指数関数と対数関数
+                        </p>
+                        <p class="tex-page__links">
+                            問題集 225~254　／　<a href="../../math_pdf_file/basic_mathematics/Chapter4/pdf/%E7%AC%AC4%E7%AB%A0%C2%A72%E5%AF%BE%E6%95%B0%E9%96%A2%E6%95%B0_225~254.pdf" target="_blank" rel="noopener">PDF版を開く</a>　／　<a href="../../index.html#basic">一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body">
+                        <section class="tex-intro">
+                            <p class="tex-intro__ttl">この節について</p>
+                            <p>対数の定義と計算法則、対数関数のグラフ、対数方程式・不等式、常用対数の応用を扱う節です。\(a^p = M \iff p = \log_a M\) という定義の言い換えが出発点で、指数関数の節の内容がそのまま裏返しで効いてきます。</p>
+                            <p>計算の中心は対数法則 \(\log_a MN = \log_a M + \log_a N\)、\(\log_a M^k = k\log_a M\) と、底の変換公式 \(\log_a b = \dfrac{\log_c b}{\log_c a}\) です。底が混ざった式は、まず全部を同じ底にそろえてから整理すると見通しが良くなります。</p>
+                            <p>対数方程式で最も注意が要るのは真数条件です。\(\log_a f(x)\) が定義されるには \(f(x)>0\) が必要で、これを確認せずに解くと不適な解が混ざります。常用対数を使った桁数の問題では、\(\log_{10} 2\) と \(\log_{10} 3\) の近似値から目的の値を組み立てる形になります。</p>
+                        </section>
+<div class="tex-heading"><strong>4章 指数関数と対数関数</strong><br>
+  <strong>2　対数関数</strong><br>
+  <strong>BASIC</strong></div><h2 class="tex-number">225 (1)</h2><div class="tex-math">\begin{align*}
+\log_{5}25 &amp;= \log_{5}5^2 = 2
+\end{align*}</div><h2 class="tex-number">225 (2)</h2><div class="tex-math">\begin{align*}
+\log_{3}\frac{1}{27} &amp;= \log_{3}3^{-3} = -3
+\end{align*}</div><h2 class="tex-number">225 (3)</h2><div class="tex-math">\begin{align*}
+\log_{0.1}0.001 &amp;= \log_{0.1}(0.1)^3 = 3
+\end{align*}</div><h2 class="tex-number">225 (4)</h2><div class="tex-math">\begin{align*}
+\log_{9}1 &amp;= 0
+\end{align*}</div><h2 class="tex-number">225 (5)</h2><div class="tex-math">\begin{align*}
+\log_{2}0.25 &amp;= \log_{2}\frac{1}{4} = \log_{2}2^{-2} = -2
+\end{align*}</div><h2 class="tex-number">225 (6)</h2><div class="tex-math">\begin{align*}
+\log_{2}\sqrt[5]{4} &amp;= \log_{2}2^{\frac{2}{5}} = \frac{2}{5}
+\end{align*}</div><h2 class="tex-number">226 (1)</h2><div class="tex-math">\begin{align*}
+\log_{2}64 &amp;= \log_{2}2^6 = 6
+\end{align*}</div><h2 class="tex-number">226 (2)</h2><div class="tex-math">\begin{align*}
+\log_{3}6+\log_{3}\frac{3}{2} &amp;= \log_{3}9 = 2
+\end{align*}</div><h2 class="tex-number">226 (3)</h2><div class="tex-math">\begin{align*}
+\log_{5}2-\log_{5}10 &amp;= \log_{5}\frac{1}{5} = -1
+\end{align*}</div><h2 class="tex-number">226 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{1}{2}\log_{2}10+\log_{2}\frac{4}{\sqrt{5}} \nr
+  &amp;= \log_{2}\left(\sqrt{10} \cdot \frac{4}{\sqrt{5}}\right) \nr
+  &amp;= \log_{2}4\sqrt{2} \nr
+  &amp;= \log_{2}\left(2^2 \cdot 2^{\frac{1}{2}}\right) \nr
+  &amp;= \frac{5}{2}
+\end{align*}</div><h2 class="tex-number">227</h2><div class="tex-math">\begin{align*}
+\LHS &amp;= \log_{a}M^{-\frac{1}{n}} \nr
+  a^{\log_{a}M^{-\frac{1}{n}}} &amp;= M^{-\frac{1}{n}} \nr
+  a^{-\frac{1}{n}\log_{a}M} &amp;= \left(a^{\log_{a}M}\right)^{-\frac{1}{n}} = M^{-\frac{1}{n}} \nr
+  &amp;\therefore \log_{a}M^{-\frac{1}{n}} = -\frac{1}{n}\log_{a}M
+\end{align*}</div><h2 class="tex-number">228 (1)</h2><div class="tex-math">\begin{align*}
+\LHS &amp;= \log_{a}\left(\frac{A}{B} \cdot \frac{B}{C} \cdot \frac{C}{A}\right) \nr
+  &amp;= \log_{a}1 \nr
+  &amp;= 0 \nr
+  &amp;\therefore \text{成り立つ}
+\end{align*}</div><h2 class="tex-number">228 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\log_{3}\sqrt{6}+\log_{3}\sqrt{10}-\log_{3}\sqrt{20} \nr
+  &amp;= \log_{3}\frac{\sqrt{6} \cdot \sqrt{10}}{\sqrt{20}} \nr
+  &amp;= \log_{3}\sqrt{3} \nr
+  &amp;= \frac{1}{2}
+\end{align*}</div><h2 class="tex-number">229</h2><div class="tex-math">\begin{align*}
+\log_{8}2 &amp;= \frac{\log_{2}2}{\log_{2}8} \nr
+  &amp;= \frac{1}{3}
+\end{align*}</div><h2 class="tex-number">230</h2><div class="tex-math">\begin{align*}
+&amp;\left(\log_{a}b\right)\left(\log_{b}c\right)\left(\log_{c}a\right) \nr
+  &amp;= \log_{a}b \cdot \frac{\log_{a}c}{\log_{a}b} \cdot \frac{\log_{a}a}{\log_{a}c} \nr
+  &amp;= 1
+\end{align*}</div><h2 class="tex-number">231 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\left(\log_{2}27\right)\left(\log_{9}8\right) \nr
+  &amp;= \left(\log_{2}3^3\right) \cdot \frac{\log_{2}2^3}{\log_{2}3^2} \nr
+  &amp;= 3\log_{2}3 \cdot \frac{3}{2\log_{2}3} \nr
+  &amp;= \frac{9}{2}
+\end{align*}</div><h2 class="tex-number">231 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\left(\log_{3}125\right)\left(\log_{4}3\right)\left(\log_{5}32\right) \nr
+  &amp;= \log_{3}5^3 \cdot \frac{1}{\log_{3}2^2} \cdot \frac{\log_{3}2^5}{\log_{3}5} \nr
+  &amp;= 3\log_{3}5 \cdot \frac{1}{2\log_{3}2} \cdot \frac{5\log_{3}2}{\log_{3}5} \nr
+  &amp;= \frac{15}{2}
+\end{align*}</div><h2 class="tex-number">232 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= \log_{3}x \nr
+  &amp;(1,\ 0),\ (3,\ 1) \text{ を通る増加関数} \nr
+  &amp;\text{漸近線 } x=0
+\end{align*}</div><h2 class="tex-number">232 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= \log_{\frac{1}{3}}x \nr
+  &amp;(1,\ 0),\ (3,\ -1) \text{ を通る減少関数} \nr
+  &amp;\text{漸近線 } x=0
+\end{align*}</div><h2 class="tex-number">232 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= \log_{4}(x+1) \nr
+  &amp;y=\log_{4}x \text{ のグラフを } x \text{ 軸方向に } -1 \ret \text{平行移動したもの}
+\end{align*}</div><h2 class="tex-number">232 (4)</h2><div class="tex-math">\begin{align*}
+y &amp;= \log_{4}(-x) \nr
+  &amp;y=\log_{4}x \text{ のグラフと } y \text{ 軸対称}
+\end{align*}</div><h2 class="tex-number">233 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= \log_{5}x \quad \left(\frac{1}{25} \leqq x &lt; 5\sqrt[3]{5}\right) \nr
+  &amp;5^{-2} \leqq x &lt; 5^{\frac{4}{3}} \text{ なので} \nr
+  \text{値域：} &amp; -2 \leqq y &lt; \frac{4}{3}
+\end{align*}</div><h2 class="tex-number">233 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= \log_{\frac{1}{3}}x \quad \left(\frac{1}{9} &lt; x &lt; 1\right) \nr
+  &amp;3^{-2} &lt; x &lt; 3^0 \text{ なので} \nr
+  \text{値域：} &amp; 0 &lt; y &lt; 2
+\end{align*}</div><h2 class="tex-number">234 (1)</h2><div class="tex-math">\begin{align*}
+&amp;3\sqrt{2} = \sqrt{18} &gt; 4 \nr
+  &amp;0.9 &lt; 4 &lt; 3\sqrt{2} \nr
+  &amp;\text{底 } 7&gt;1 \text{ なので} \nr
+  &amp;\log_{7}0.9 &lt; \log_{7}4 &lt; \log_{7}3\sqrt{2}
+\end{align*}</div><h2 class="tex-number">234 (2)</h2><div class="tex-math">\begin{align*}
+&amp;0.2 &lt; \frac{1}{4} &lt; \frac{3}{7} \nr
+  &amp;\text{底 } \frac{1}{5}&lt;1 \text{ なので} \nr
+  &amp;\log_{\frac{1}{5}}\frac{3}{7} &lt; \log_{\frac{1}{5}}\frac{1}{4} &lt; \log_{\frac{1}{5}}0.2
+\end{align*}</div><h2 class="tex-number">235 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x-3&gt;0 \text{ かつ } x-1&gt;0 \nr
+  &amp;\text{すなわち } x&gt;3 \nr
+  &amp;\log_{2}(x-3)+\log_{2}(x-1) = 3 \nr
+  &amp;\log_{2}(x-3)(x-1) = 3 \nr
+  &amp;x^2-4x+3 = 2^3 \nr
+  &amp;x^2-4x-5 = 0 \nr
+  &amp;(x-5)(x+1) = 0 \nr
+  &amp;x = 5,\ -1 \nr
+  &amp;x&gt;3 \text{ なので } x=-1 \text{ は不適} \nr
+  &amp;x = 5
+\end{align*}</div><h2 class="tex-number">235 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } 4x-7&gt;0 \text{ かつ } x+12&gt;0 \nr
+  &amp;\text{すなわち } x&gt;\frac{7}{4} \nr
+  &amp;\log_{3}(4x-7)-\log_{3}(x+12) = -1 \nr
+  &amp;\log_{3}\frac{4x-7}{x+12} = -1 \nr
+  &amp;\frac{4x-7}{x+12} = 3^{-1} \nr
+  &amp;3(4x-7) = x+12 \nr
+  &amp;11x = 33 \nr
+  &amp;x = 3 \nr
+  &amp;x&gt;\frac{7}{4} \text{ をみたす}
+\end{align*}</div><h2 class="tex-number">236 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } 3x+1&gt;0 \ret \text{すなわち } x&gt;-\frac{1}{3} \quad \text{㋐} \nr
+  &amp;\text{底 } 2&gt;1 \text{ なので } 3x+1 &gt; 2^4 \nr
+  &amp;x &gt; 5 \nr
+  &amp;\text{㋐とあわせて } x&gt;5
+\end{align*}</div><h2 class="tex-number">236 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x-1&gt;0 \ret \text{すなわち } x&gt;1 \quad \text{㋐} \nr
+  &amp;\text{底 } 3&gt;1 \text{ なので } x-1 &lt; 3^{-2} \nr
+  &amp;x &lt; \frac{10}{9} \nr
+  &amp;\text{㋐とあわせて } 1&lt;x&lt;\frac{10}{9}
+\end{align*}</div><h2 class="tex-number">237 (1)</h2><div class="tex-math">\begin{align*}
+\log_{10}8 &amp;= 3\log_{10}2 \nr
+  &amp;= 3 \times 0.301 \nr
+  &amp;= 0.903
+\end{align*}</div><h2 class="tex-number">237 (2)</h2><div class="tex-math">\begin{align*}
+\log_{10}18 &amp;= \log_{10}2 \cdot 3^2 \nr
+  &amp;= \log_{10}2+2\log_{10}3 \nr
+  &amp;= 0.301+2 \times 0.4771 \nr
+  &amp;= 0.301+0.9542 \nr
+  &amp;= 1.2552
+\end{align*}</div><h2 class="tex-number">237 (3)</h2><div class="tex-math">\begin{align*}
+\log_{2}27 &amp;= 3\log_{2}3 \nr
+  &amp;= 3 \cdot \frac{\log_{10}3}{\log_{10}2} \nr
+  &amp;= 4.755
+\end{align*}</div><h2 class="tex-number">238 (1)</h2><div class="tex-math">\begin{align*}
+&amp;10^n \leqq 5^{20} \nr
+  &amp;\text{底 } 10&gt;1 \text{ なので } n \leqq 20\log_{10}5 \nr
+  &amp;\quad \left(\log_{10}5 = \log_{10}\frac{10}{2} = 1-\log_{10}2\right) \nr
+  &amp;n \leqq 20(1-\log_{10}2) \nr
+  &amp;n \leqq 20(1-0.301) \nr
+  &amp;n \leqq 20 \times 0.699 \nr
+  &amp;n \leqq 13.98 \nr
+  &amp;\therefore \text{最大の } n \text{ は } 13
+\end{align*}</div><h2 class="tex-number">238 (2)</h2><div class="tex-math">\begin{align*}
+&amp;10^{-n} \geqq 3^{-50} \nr
+  &amp;\text{底 } 10&gt;1 \text{ なので } -n \geqq -50\log_{10}3 \nr
+  &amp;n \leqq 50 \times 0.4771 \nr
+  &amp;n \leqq 23.855 \nr
+  &amp;\therefore \text{最大の } n \text{ は } 23
+\end{align*}</div><h2 class="tex-number">239</h2><div class="tex-math">\begin{align*}
+&amp;\text{はじめの細菌は } n \text{ コあるとする} \ret (n: \text{自然数}) \nr
+  &amp;x \text{ 時間後とすると} \nr
+  &amp;n \times \left(\frac{3}{2}\right)^x \geqq 1000n \nr
+  &amp;\left(\frac{3}{2}\right)^x \geqq 10^3 \nr
+  &amp;\text{底 } 10 \text{ で対数とって} \nr
+  &amp;x\log_{10}\frac{3}{2} \geqq 3 \nr
+  &amp;x\left(\log_{10}3-\log_{10}2\right) \geqq 3 \nr
+  &amp;x \times (0.4771-0.301) \geqq 3 \nr
+  &amp;0.1761x \geqq 3 \nr
+  &amp;x \geqq 17.0 \cdots \nr
+  &amp;\therefore 18 \text{ 時間後}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>CHECK</strong></div><h2 class="tex-number">240 (1)</h2><div class="tex-math">\begin{align*}
+\log_{4}x &amp;= 3 \nr
+  x &amp;= 4^3 \nr
+  x &amp;= 64
+\end{align*}</div><h2 class="tex-number">240 (2)</h2><div class="tex-math">\begin{align*}
+\log_{x}9 &amp;= 2 \nr
+  9 &amp;= x^2 \nr
+  x &amp;= 3 \quad (\because x&gt;0)
+\end{align*}</div><h2 class="tex-number">240 (3)</h2><div class="tex-math">\begin{align*}
+\log_{0.1}x &amp;= -2 \nr
+  x &amp;= 0.1^{-2} \nr
+  x &amp;= 100
+\end{align*}</div><h2 class="tex-number">240 (4)</h2><div class="tex-math">\begin{align*}
+\log_{x}\frac{1}{5} &amp;= \frac{1}{3} \nr
+  \frac{1}{5} &amp;= x^{\frac{1}{3}} \nr
+  x &amp;= \frac{1}{125}
+\end{align*}</div><h2 class="tex-number">241 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\log_{6}18+\log_{6}72 \nr
+  &amp;= \log_{6}(6 \times 3 \times 36 \times 2) \nr
+  &amp;= \log_{6}6^4 \nr
+  &amp;= 4
+\end{align*}</div><h2 class="tex-number">241 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\log_{2}432-3\log_{2}6 \nr
+  &amp;= \log_{2}(6 \cdot 72)-\log_{2}6^3 \nr
+  &amp;= \log_{2}\frac{2 \cdot 6^3}{6^3} \nr
+  &amp;= 1
+\end{align*}</div><h2 class="tex-number">241 (3)</h2><div class="tex-math">\begin{align*}
+&amp;3\log_{2}\sqrt{12}+\log_{2}\frac{2}{3\sqrt{3}} \nr
+  &amp;= \log_{2}\left(12^{\frac{3}{2}} \times 2 \times 3^{-\frac{3}{2}}\right) \nr
+  &amp;= \log_{2}\left(2^3 \times 3^{\frac{3}{2}} \times 2 \times 3^{-\frac{3}{2}}\right) \nr
+  &amp;= 4
+\end{align*}</div><h2 class="tex-number">241 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\log_{5}\sqrt[3]{15}+\log_{5}\sqrt{5}-\log_{5}\sqrt[3]{3} \nr
+  &amp;= \log_{5}\left(\frac{15^{\frac{1}{3}} \times 5^{\frac{1}{2}}}{3^{\frac{1}{3}}}\right) \nr
+  &amp;= \log_{5}\left(5^{\frac{1}{3}} \times 5^{\frac{1}{2}}\right) \nr
+  &amp;= \frac{5}{6}
+\end{align*}</div><h2 class="tex-number">241 (5)</h2><div class="tex-math">\begin{align*}
+&amp;\left(\log_{3}\frac{1}{4}\right) \cdot \left(\log_{2}3\right) \nr
+  &amp;= \frac{-2}{\log_{2}3} \cdot \log_{2}3 \nr
+  &amp;= -2
+\end{align*}</div><h2 class="tex-number">241 (6)</h2><div class="tex-math">\begin{align*}
+&amp;\left(\log_{\sqrt{2}}3\right) \cdot \left(\log_{9}8\right) \nr
+  &amp;= \frac{\log_{2}3}{\log_{2}2^{\frac{1}{2}}} \cdot \frac{\log_{2}2^3}{\log_{2}3^2} \nr
+  &amp;= \frac{1 \cdot 3}{\frac{1}{2} \cdot 2} \nr
+  &amp;= 3
+\end{align*}</div><h2 class="tex-number">242 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x \to x-1,\ y \to y-2 \text{ なので} \nr
+  &amp;x \text{ 方向に } 1,\ y \text{ 方向に } 2 \text{ 平行移動}
+\end{align*}</div><h2 class="tex-number">242 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x \to -x,\ y \to -y \text{ なので} \nr
+  &amp;\text{原点対称}
+\end{align*}</div><h2 class="tex-number">243 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x-1&gt;0 \text{ かつ } x-7&gt;0 \nr
+  &amp;\text{すなわち } x&gt;7 \quad \text{㋐} \nr
+  &amp;\log_{4}(x-1)+\log_{4}(x-7) = 2 \nr
+  &amp;\log_{4}(x-1)(x-7) = 2 \nr
+  &amp;x^2-8x+7 = 4^2 \nr
+  &amp;x^2-8x-9 = 0 \nr
+  &amp;(x-9)(x+1) = 0 \nr
+  &amp;x = -1,\ 9 \nr
+  &amp;\text{㋐をみたすのは } x=9
+\end{align*}</div><h2 class="tex-number">243 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x^2+6x-7&gt;0 \ret \text{かつ } x-1&gt;0 \nr
+  &amp;\quad (x+7)(x-1)&gt;0 \ \Rightarrow \ x&lt;-7,\ 1&lt;x \nr
+  &amp;\text{すなわち } x&gt;1 \quad \text{㋐} \nr
+  &amp;\log_{5}(x^2+6x-7)-\log_{5}(x-1) = 2 \nr
+  &amp;\log_{5}(x+7) = 2 \nr
+  &amp;x+7 = 5^2 \nr
+  &amp;x = 18 \nr
+  &amp;\text{㋐をみたす}
+\end{align*}</div><h2 class="tex-number">243 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x+2&gt;0 \text{ かつ } x&gt;0 \nr
+  &amp;\text{すなわち } x&gt;0 \quad \text{㋐} \nr
+  &amp;2\log_{6}(x+2)-\log_{6}x = 2\log_{6}3 \nr
+  &amp;\log_{6}(x+2)^2 = \log_{6}3^2+\log_{6}x \nr
+  &amp;x^2+4x+4 = 9x \nr
+  &amp;x^2-5x+4 = 0 \nr
+  &amp;(x-4)(x-1) = 0 \nr
+  &amp;x = 1,\ 4 \nr
+  &amp;\text{どちらも㋐をみたす}
+\end{align*}</div><h2 class="tex-number">244 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } 3x-1&gt;0 \ret \text{すなわち } x&gt;\frac{1}{3} \quad \text{㋐} \nr
+  &amp;\text{底 } 4&gt;1 \text{ なので } 3x-1 &lt; 4^{\frac{3}{2}} \nr
+  &amp;3x-1 &lt; 8 \nr
+  &amp;x &lt; 3 \nr
+  &amp;\text{㋐とあわせて } \frac{1}{3}&lt;x&lt;3
+\end{align*}</div><h2 class="tex-number">244 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x+1&gt;0 \ret \text{すなわち } x&gt;-1 \quad \text{㋐} \nr
+  &amp;\text{底 } \frac{1}{3}&lt;1 \text{ なので } x+1 &gt; \left(\frac{1}{3}\right)^{-2} \nr
+  &amp;x+1 &gt; 9 \nr
+  &amp;x &gt; 8 \nr
+  &amp;\text{㋐とあわせて } x&gt;8
+\end{align*}</div><h2 class="tex-number">245 (1)</h2><div class="tex-math">\begin{align*}
+\log_{10}12 &amp;= \log_{10}2^2 \cdot 3 \nr
+  &amp;= 2\log_{10}2+\log_{10}3 \nr
+  &amp;= 2a+b
+\end{align*}</div><h2 class="tex-number">245 (2)</h2><div class="tex-math">\begin{align*}
+\log_{10}0.3 &amp;= \log_{10}\frac{3}{10} \nr
+  &amp;= \log_{10}3-1 \nr
+  &amp;= b-1
+\end{align*}</div><h2 class="tex-number">245 (3)</h2><div class="tex-math">\begin{align*}
+\log_{3}6 &amp;= \frac{\log_{10}6}{\log_{10}3} \nr
+  &amp;= \frac{\log_{10}2+\log_{10}3}{b} \nr
+  &amp;= \frac{a+b}{b}
+\end{align*}</div><h2 class="tex-number">245 (4)</h2><div class="tex-math">\begin{align*}
+\log_{8}15 &amp;= \frac{\log_{10}3 \cdot 5}{\log_{10}2^3} \nr
+  &amp;= \frac{\log_{10}3+\log_{10}\frac{10}{2}}{3a} \nr
+  &amp;= \frac{b+(1-a)}{3a} \nr
+  &amp;= \frac{b-a+1}{3a}
+\end{align*}</div><h2 class="tex-number">246</h2><div class="tex-math">\begin{align*}
+0.1^n &amp;\geqq \frac{1}{2^{100}} \nr
+  \left(\frac{1}{10}\right)^n &amp;\geqq 2^{-100} \nr
+  &amp;\text{底 } 10 \text{ で対数とって} \nr
+  -n &amp;\geqq -100\log_{10}2 \nr
+  n &amp;\leqq 30.1 \nr
+  &amp;\therefore \text{最大の } n \text{ は } 30
+\end{align*}</div><h2 class="tex-number">247</h2><div class="tex-math">\begin{align*}
+&amp;\text{今 } n \text{ 人いるとして } x \text{ 年後に} \ret \text{人口が半分になるとする} \nr
+  &amp;n \times (0.97)^x \leqq \frac{1}{2}n \nr
+  &amp;\left(\frac{9.7}{10}\right)^x \leqq 2^{-1} \nr
+  &amp;\text{底 } 10 \text{ で対数とって} \nr
+  &amp;x\left(\log_{10}9.7-1\right) \leqq -\log_{10}2 \nr
+  &amp;0.0132x \geqq 0.301 \nr
+  &amp;x \geqq 22.8 \cdots \nr
+  &amp;\therefore 23 \text{ 年後}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>STEP UP</strong></div><h2 class="tex-number">248 (1)</h2><div class="tex-math">\begin{align*}
+\left(\log_{3}x\right)^2+2\log_{3}x &amp;= 8 \nr
+  \left(\log_{3}x+4\right)\left(\log_{3}x-2\right) &amp;= 0 \nr
+  \log_{3}x &amp;= -4,\ 2 \nr
+  x &amp;= 3^{-4},\ 3^2 \nr
+  x &amp;= \frac{1}{81},\ 9
+\end{align*}</div><h2 class="tex-number">248 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x+1&gt;0 \text{ かつ } (x+2)^2&gt;0 \nr
+  &amp;\text{すなわち } x&gt;-1 \quad \text{㋐} \nr
+  &amp;\log_{\frac{1}{2}}(x+1) = 2+\log_{\frac{1}{2}}(x+2)^2 \nr
+  &amp;\log_{\frac{1}{2}}(x+1) = \log_{\frac{1}{2}}\left\{\left(\frac{1}{2}\right)^2(x+2)^2\right\} \nr
+  &amp;x+1 = \frac{1}{4}(x+2)^2 \nr
+  &amp;4x+4 = x^2+4x+4 \nr
+  &amp;x^2 = 0 \nr
+  &amp;x = 0 \nr
+  &amp;\text{㋐をみたす}
+\end{align*}</div><h2 class="tex-number">249 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } 2x-1&gt;0 \text{ かつ } 1-x&gt;0 \nr
+  &amp;\text{すなわち } \frac{1}{2}&lt;x&lt;1 \quad \text{㋐} \nr
+  &amp;\text{底 } 0.1&lt;1 \text{ なので } 2x-1 &lt; 1-x \nr
+  &amp;3x &lt; 2 \nr
+  &amp;x &lt; \frac{2}{3} \nr
+  &amp;\text{㋐とあわせて } \frac{1}{2}&lt;x&lt;\frac{2}{3}
+\end{align*}</div><h2 class="tex-number">249 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x&gt;0 \text{ かつ } x+1&gt;0 \nr
+  &amp;\text{すなわち } x&gt;0 \quad \text{㋐} \nr
+  &amp;\log_{\frac{1}{2}}x &gt; \log_{\frac{1}{2}}(x+1)+2 \nr
+  &amp;\log_{\frac{1}{2}}x &gt; \log_{\frac{1}{2}}\left\{(x+1) \times \left(\frac{1}{2}\right)^2\right\} \nr
+  &amp;\text{底 } \frac{1}{2}&lt;1 \text{ なので } x &lt; \frac{1}{4}(x+1) \nr
+  &amp;\frac{3}{4}x &lt; \frac{1}{4} \nr
+  &amp;x &lt; \frac{1}{3} \nr
+  &amp;\text{㋐とあわせて } 0&lt;x&lt;\frac{1}{3}
+\end{align*}</div><h2 class="tex-number">249 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } x&gt;0 \text{ かつ } x^3&gt;0 \nr
+  &amp;\text{すなわち } x&gt;0 \quad \text{㋐} \nr
+  &amp;\left(\log_{\frac{1}{2}}x\right)^2 &gt; \log_{\frac{1}{2}}x^3 \nr
+  &amp;\left(\log_{\frac{1}{2}}x\right)^2-3\log_{\frac{1}{2}}x &gt; 0 \nr
+  &amp;\left(\log_{\frac{1}{2}}x\right)\left(\log_{\frac{1}{2}}x-3\right) &gt; 0 \nr
+  &amp;\log_{\frac{1}{2}}x &lt; 0,\ 3 &lt; \log_{\frac{1}{2}}x \nr
+  &amp;\text{底 } \frac{1}{2}&lt;1 \text{ なので } x &gt; \left(\frac{1}{2}\right)^0,\ \left(\frac{1}{2}\right)^3 &gt; x \nr
+  &amp;x &lt; \frac{1}{8},\ 1 &lt; x \nr
+  &amp;\text{㋐とあわせて } 0&lt;x&lt;\frac{1}{8},\ 1&lt;x
+\end{align*}</div><h2 class="tex-number">250 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\left(\log_{2}x\right)\left(\log_{8}4x\right)-\frac{8}{3} = 0 \nr
+  &amp;\left(\log_{2}x\right) \cdot \frac{\log_{2}4x}{3}-\frac{8}{3} = 0 \nr
+  &amp;\left(\log_{2}x\right)\left(\log_{2}4+\log_{2}x\right)-8 = 0 \nr
+  &amp;\left(\log_{2}x\right)^2+2\log_{2}x-8 = 0 \nr
+  &amp;\left(\log_{2}x+4\right)\left(\log_{2}x-2\right) = 0 \nr
+  &amp;\log_{2}x = -4,\ 2 \nr
+  &amp;x = 2^{-4},\ 2^2 \nr
+  &amp;x = \frac{1}{16},\ 4
+\end{align*}</div><h2 class="tex-number">250 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } (x-1)^2&gt;0 \ret \text{かつ } -3x+5&gt;0 \nr
+  &amp;\text{すなわち } x&lt;1,\ 1&lt;x&lt;\frac{5}{3} \quad \text{㋐} \nr
+  &amp;\log_{2}2(x-1)^2 = 3\log_{8}(-3x+5) \nr
+  &amp;\log_{2}2(x-1)^2 = 3 \cdot \frac{\log_{2}(-3x+5)}{\log_{2}8} \nr
+  &amp;\log_{2}2(x-1)^2 = \log_{2}(-3x+5) \nr
+  &amp;2(x^2-2x+1) = -3x+5 \nr
+  &amp;2x^2-x-3 = 0 \nr
+  &amp;(2x-3)(x+1) = 0 \nr
+  &amp;x = -1,\ \frac{3}{2} \nr
+  &amp;\text{どちらも㋐をみたす}
+\end{align*}</div><h2 class="tex-number">250 (3)</h2><div class="tex-math">\begin{align*}
+&amp;x \text{ は底なので } 0&lt;x&lt;1,\ 1&lt;x \quad \text{㋐} \nr
+  &amp;\text{（真数条件もみたす）} \nr
+  &amp;\log_{2}x+\log_{x}8 = 4 \nr
+  &amp;\log_{2}x+\frac{3}{\log_{2}x} = 4 \nr
+  &amp;\left(\log_{2}x\right)^2-4\log_{2}x+3 = 0 \nr
+  &amp;\left(\log_{2}x-3\right)\left(\log_{2}x-1\right) = 0 \nr
+  &amp;\log_{2}x = 1,\ 3 \nr
+  &amp;x = 2,\ 8 \nr
+  &amp;\text{どちらも㋐をみたす}
+\end{align*}</div><h2 class="tex-number">250 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\text{真数条件より } 2-x&gt;0 \text{ かつ } x+2&gt;0 \nr
+  &amp;\text{すなわち } -2&lt;x&lt;2 \quad \text{㋐} \nr
+  &amp;\log_{\sqrt{2}}(2-x)-\log_{2}(x+2) = 2 \nr
+  &amp;\frac{\log_{2}(2-x)}{\frac{1}{2}} = \log_{2}(x+2)+2 \nr
+  &amp;\log_{2}(2-x)^2 = \log_{2}2^2(x+2) \nr
+  &amp;x^2-4x+4 = 4x+8 \nr
+  &amp;x^2-8x-4 = 0 \nr
+  &amp;x = 4 \pm 2\sqrt{5} \nr
+  &amp;\text{㋐をみたすのは } x = 4-2\sqrt{5}
+\end{align*}</div><h2 class="tex-number">251 (1)</h2><div class="tex-math">\begin{align*}
+\log_{10}2^{40} &amp;= 40\log_{10}2 \nr
+  &amp;= 40 \times 0.301 \nr
+  &amp;= 12.04 \nr
+  &amp;10^{12} &lt; 2^{40} &lt; 10^{13} \nr
+  &amp;\therefore 13 \text{ 桁}
+\end{align*}</div><h2 class="tex-number">251 (2)</h2><div class="tex-math">\begin{align*}
+\log_{10}6^{100} &amp;= 100\log_{10}6 \nr
+  &amp;= 100\left(\log_{10}2+\log_{10}3\right) \nr
+  &amp;= 100 \times 0.7781 \nr
+  &amp;= 77.81 \nr
+  &amp;10^{77} &lt; 6^{100} &lt; 10^{78} \nr
+  &amp;\therefore 78 \text{ 桁}
+\end{align*}</div><h2 class="tex-number">252 (1)</h2><div class="tex-math">\begin{align*}
+&amp;2^n &lt; 3^{14} &lt; 2^{n+1} \nr
+  &amp;\text{底 } 10 \text{ で対数とって} \nr
+  &amp;n\log_{10}2 &lt; 14\log_{10}3 &lt; (n+1)\log_{10}2 \nr
+  &amp;\begin{cases}
+    n &lt; \dfrac{14 \times 0.4771}{0.301} \\
+    \dfrac{14 \times 0.4771}{0.301} &lt; n+1
+  \end{cases} \nr
+  &amp;\begin{cases} n &lt; 22.1 \cdots \\ 21.1 \cdots &lt; n \end{cases} \nr
+  &amp;n = 22
+\end{align*}</div><h2 class="tex-number">252 (2)</h2><div class="tex-math">\begin{align*}
+&amp;10^{-5} &lt; \left(\frac{7}{10}\right)^n &lt; 10^{-4} \nr
+  &amp;\text{底 } 10 \text{ で対数とって} \nr
+  &amp;-5 &lt; n\left(\log_{10}7-1\right) &lt; -4 \nr
+  &amp;-5 &lt; n(0.8451-1) &lt; -4 \nr
+  &amp;-5 &lt; -0.1549n &lt; -4 \nr
+  &amp;25.8 \cdots &lt; n &lt; 32.2 \cdots \nr
+  &amp;n = 26 \sim 32 \quad (7 \text{ コ})
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>PLUS</strong></div><h2 class="tex-number">253</h2><div class="tex-math">\begin{align*}
+&amp;\text{記憶できる情報量を } x \text{ とすると} \nr
+  x &amp;= 2^{8 \times 2 \times 1024} \nr
+  \log_{10}x &amp;= 16384\log_{10}2 \nr
+  &amp;= 16384 \times 0.301 \nr
+  &amp;= 4931.584 \nr
+  x &amp;= 10^{4931.584}
+\end{align*}</div><h2 class="tex-number">254</h2><div class="tex-math">\begin{align*}
+&amp;1 \text{ 等星の明るさを } I_1 \text{、} \ret 6 \text{ 等星の明るさを } I_6 \text{ とすると} \nr
+  &amp;\begin{cases}
+    1 = C-2.5\log_{10}I_1 \\
+    6 = C-2.5\log_{10}I_6
+  \end{cases} \nr
+  &amp;\begin{cases}
+    \log_{10}I_1 = \dfrac{C-1}{2.5} \\
+    \log_{10}I_6 = \dfrac{C-6}{2.5}
+  \end{cases} \nr
+  &amp;\begin{cases}
+    I_1 = 10^{\frac{C-1}{2.5}} \\
+    I_6 = 10^{\frac{C-6}{2.5}}
+  \end{cases} \nr
+  \frac{I_1}{I_6} &amp;= 10^{\frac{C-1}{2.5}-\frac{C-6}{2.5}} \nr
+  &amp;= 10^{\frac{5}{2.5}} \nr
+  &amp;= 10^2 \nr
+  &amp;= 100 \nr
+  &amp;\therefore 100 \text{ 倍}
+\end{align*}</div>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        ここに記す解法が最適なものとは限りません。途中式の丸写しはあなたのためになりません。学習の参考程度にご活用ください。<br>
+                        誤字・誤値等にお気づきの際は<a href="../../contact.html">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script>window.__TEX_MACROS = {"Re":"\\operatorname{Re}","Im":"\\operatorname{Im}","proof":"\\textbf{証明}　","qed":"{\\rule{0.5zw}{1zh}}","E":"\\mathrm{e}","D":"\\mathrm {d}","I":"\\mathrm {i}","LHS":"(\\mathrm{LHS})","RHS":"(\\mathrm{RHS})","hc":"\\mathrm{h.c.}","cc":"\\mathrm{c.c.}","ret":"\\notag\\\\&\\qquad","nr":"\\notag\\\\","Arg":"\\operatorname{Arg}","for":["\\quad\\mathrm{for\\ \\ }#1",1],"sgn":"\\operatorname{sgn}","Tr":"\\operatorname{Tr}","AAA":"\\mathaccent 23\\mathrm{A}","abs":["{\\left\\rvert #1 \\right\\lvert}",1]};</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/tex-page.js"></script>
+</body>
+</html>

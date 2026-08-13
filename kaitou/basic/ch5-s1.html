@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <link rel="icon" href="../../img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>§1 三角比とその応用　解答例｜5章 三角関数｜とどろき英数塾</title>
+    <meta name="description" content="新 基礎数学 改訂版（大日本図書）問題集「5章 §1 三角比とその応用」の途中式つき解答例。正弦定理・余弦定理・三角形の面積を扱います。">
+    <link rel="canonical" href="https://todoroki.fyi/kaitou/basic/ch5-s1.html">
+    <link rel="stylesheet" href="../../css/sanitize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tex.css">
+    <link rel="stylesheet" href="../../css/tex-page.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="§1 三角比とその応用　解答例｜新 基礎数学 改訂版（大日本図書）">
+    <meta property="og:description" content="新 基礎数学 改訂版（大日本図書）問題集「5章 §1 三角比とその応用」の途中式つき解答例。正弦定理・余弦定理・三角形の面積を扱います。">
+    <meta property="og:image" content="../../img/Thumbnail.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="とどろき英数塾">
+    <meta property="og:url" content="https://todoroki.fyi/kaitou/basic/ch5-s1.html">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="../../">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="../../index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="../../contact.html" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="../../about.html" target="_self">
+                        <span class="p-header__discord">運営者情報</span>
+                    </a>
+                    <br>
+                    <a href="../../privacy.html" target="_self">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title">§1 三角比とその応用　解答例</div>
+                        <p class="tex-page__meta">
+                            新 基礎数学 改訂版（大日本図書）　5章 三角関数
+                        </p>
+                        <p class="tex-page__links">
+                            問題集 255~284　／　<a href="../../math_pdf_file/basic_mathematics/Chapter5/pdf/%E7%AC%AC5%E7%AB%A0%C2%A71%E4%B8%89%E8%A7%92%E6%AF%94%E3%81%A8%E3%81%9D%E3%81%AE%E5%BF%9C%E7%94%A8_255~284.pdf" target="_blank" rel="noopener">PDF版を開く</a>　／　<a href="../../index.html#basic">一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body">
+                        <section class="tex-intro">
+                            <p class="tex-intro__ttl">この節について</p>
+                            <p>直角三角形による三角比の定義から、鈍角への拡張、正弦定理・余弦定理を使った三角形の計量までを扱う節です。相互関係 \(\sin^2\theta+\cos^2\theta=1\)、\(\tan\theta=\dfrac{\sin\theta}{\cos\theta}\) は以降のすべての節で使うので、ここで確実にしておきたいところです。</p>
+                            <p>三角形の問題では、与えられた条件によって使う定理が決まります。2辺とその間の角、または3辺が分かっているなら余弦定理 \(a^2=b^2+c^2-2bc\cos A\)、1辺とその両端以外の角が絡むなら正弦定理 \(\dfrac{a}{\sin A}=2R\) が対応します。面積は \(S=\dfrac{1}{2}bc\sin A\) が基本で、3辺が既知ならまず余弦定理で \(\cos A\) を出し、相互関係で \(\sin A\) に直す流れになります。</p>
+                            <p>以下の解答例では、どの定理を選んだかが分かるように式変形を追える形で記載しています。</p>
+                        </section>
+<div class="tex-heading"><strong>5章 三角関数</strong><br>
+  <strong>1　三角比とその応用</strong><br>
+  <strong>BASIC</strong></div><h2 class="tex-number">255 (1)</h2><p class="tex-intertext">斜辺 \(\sqrt{2^2+1^2}=\sqrt{5}\) より</p><div class="tex-math">\begin{align*}
+\sin \alpha=\frac{1}{\sqrt{5}}, \cos \alpha=\frac{2}{\sqrt{5}}, \tan \alpha=\frac{1}{2}
+\end{align*}</div><h2 class="tex-number">255 (2)</h2><p class="tex-intertext">\(\sqrt{7-3}=2\) より</p><div class="tex-math">\begin{align*}
+\sin \alpha=\frac{\sqrt{3}}{\sqrt{7}}, \cos \alpha=\frac{2}{\sqrt{7}}, \tan \alpha=\frac{\sqrt{3}}{2}
+\end{align*}</div><h2 class="tex-number">255 (3)</h2><p class="tex-intertext">\(\sqrt{13^2-12^2}=5\) より</p><div class="tex-math">\begin{align*}
+\sin \alpha=\frac{5}{13}, \cos \alpha=\frac{12}{13}, \tan \alpha=\frac{5}{12}
+\end{align*}</div><h2 class="tex-number">256 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\sin 60^{\circ} \cos 30^{\circ}-\cos 60^{\circ} \sin 30^{\circ} \\
+&amp; =\frac{\sqrt{3}}{2} \cdot \frac{\sqrt{3}}{2}-\frac{1}{2} \cdot \frac{1}{2} \\
+&amp; =\frac{3}{4}-\frac{1}{4} \\
+&amp; =\frac{1}{2}
+\end{align*}</div><h2 class="tex-number">256 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\cos 30^{\circ} \cos 60^{\circ}+\sin 30^{\circ} \sin 60^{\circ} \\
+&amp; =\frac{\sqrt{3}}{2} \cdot \frac{1}{2}+\frac{1}{2} \cdot \frac{\sqrt{3}}{2} \\
+&amp; =\frac{\sqrt{3}}{2}
+\end{align*}</div><h2 class="tex-number">256 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{\tan 60^{\circ}-\tan 45^{\circ}}{1+\tan 60^{\circ} \tan 45^{\circ}} \\
+&amp; =\frac{\sqrt{3}-1}{1+\sqrt{3} \cdot 1} \\
+&amp; =\frac{1}{2}(\sqrt{3}-1)^2 \\
+&amp; =\frac{1}{2}(4-2 \sqrt{3}) \\
+&amp; =2-\sqrt{3}
+\end{align*}</div><h2 class="tex-number">257 (1)</h2><div class="tex-math">\begin{align*}
+\sin 6^{\circ}=0.1045
+\end{align*}</div><h2 class="tex-number">257 (2)</h2><div class="tex-math">\begin{align*}
+\cos 33^{\circ}=0.8387
+\end{align*}</div><h2 class="tex-number">257 (3)</h2><div class="tex-math">\begin{align*}
+\tan 84^{\circ}=9.5144
+\end{align*}</div><h2 class="tex-number">258</h2><div class="tex-math">\begin{align*}
+&amp; \text { 距離を } x\text { とする } \\
+&amp; \tan 22^{\circ}=\frac{634}{x} \\
+&amp; x=\frac{634}{6404} \\
+&amp; =1569.3 \cdots \\
+1569 m
+\end{align*}</div><h2 class="tex-number">259 (1)</h2><div class="tex-math">\begin{align*}
+\sin 81^{\circ}=\cos \left(90^{\circ}-81^{\circ}\right)
+=\cos 9^{\circ}
+\end{align*}</div><h2 class="tex-number">259 (2)</h2><div class="tex-math">\begin{align*}
+\cos 56^{\circ} &amp; =\sin \left(90^{\circ}-56^{\circ}\right) \\
+&amp; =\sin 34^{\circ}
+\end{align*}</div><h2 class="tex-number">259 (3)</h2><div class="tex-math">\begin{align*}
+\tan 77^{\circ} &amp; =\frac{1}{\tan \left(90^{\circ}-77^{\circ}\right)} \\
+&amp; =\frac{1}{\tan 13^{\circ}}
+\end{align*}</div><h2 class="tex-number">260 (1)</h2><div class="tex-math">\begin{align*}
+&amp; \sin 45^{\circ} \cos 135^{\circ}-\cos 45^{\circ} \sin 135^{\circ} \\
+= &amp; \frac{1}{\sqrt{2}} \cdot\left(-\frac{1}{\sqrt{2}}\right)-\frac{1}{\sqrt{2}} \cdot \frac{1}{\sqrt{2}} \\
+= &amp; -1
+\end{align*}</div><h2 class="tex-number">260 (2)</h2><div class="tex-math">\begin{align*}
+\frac{\tan 45^{\circ}-\tan 150^{\circ}}{1+\tan 45^{\circ} \tan 150^{\circ}}
+&amp; =\frac{1-\left(-\frac{1}{\sqrt{3}}\right)}{1+1 \cdot\left(-\frac{1}{\sqrt{3}}\right)} \\
+&amp; =\frac{\sqrt{3}+1}{\sqrt{3}-1} \\
+&amp; =\frac{1}{2}(\sqrt{3}+1)^2 \\
+&amp; =2+\sqrt{3}
+\end{align*}</div><h2 class="tex-number">260 (3)</h2><div class="tex-math">\begin{align*}
+&amp; \cos 120^{\circ} \cos 150^{\circ}+\tan 120^{\circ} \sin 150^{\circ} \\
+&amp; +\sin 120^{\circ} \tan 135^{\circ} \\
+= &amp; \left(-\frac{1}{2}\right) \cdot\left(-\frac{\sqrt{3}}{2}\right)+(-\sqrt{3}) \cdot \frac{1}{2}+\frac{\sqrt{3}}{2} \cdot(-1) \\
+= &amp; \frac{\sqrt{3}}{4}-\frac{\sqrt{3}}{2}-\frac{\sqrt{3}}{2} \\
+= &amp; -\frac{3}{4} \sqrt{3}
+\end{align*}</div><h2 class="tex-number">261 (1)</h2><div class="tex-math">\begin{align*}
+\sin 100^{\circ} &amp; =\sin \left(180^{\circ}-80^{\circ}\right) \\
+&amp; =\sin 80^{\circ} \\
+&amp; =0.9848
+\end{align*}</div><h2 class="tex-number">261 (2)</h2><div class="tex-math">\begin{align*}
+\cos 176^{\circ} &amp; =\cos \left(180^{\circ}-4^{\circ}\right) \\
+&amp; =-\cos 4^{\circ} \\
+&amp; =-0.9976
+\end{align*}</div><h2 class="tex-number">261 (3)</h2><div class="tex-math">\begin{align*}
+\tan 111^{\circ} &amp; =\tan \left(180^{\circ}-69^{\circ}\right) \\
+&amp; =-\tan 69^{\circ} \\
+&amp; =-2.6051
+\end{align*}</div><h2 class="tex-number">262 (1)</h2><p class="tex-intertext">\(0^{\circ}&lt;\alpha&lt;90^{\circ}\) より</p><div class="tex-math">\begin{align*}
+\cos \alpha=\sqrt{1-\left(\frac{1}{4}\right)^2}
+&amp; =\frac{\sqrt{15}}{4} \\
+\tan \alpha &amp; =\frac{1}{\sqrt{15}}
+\end{align*}</div><h2 class="tex-number">262 (2)</h2><p class="tex-intertext">\(90^{\circ}&lt;\alpha&lt;180^{\circ}\) より</p><div class="tex-math">\begin{align*}
+\cos \alpha &amp; =-\sqrt{1-\left(\frac{1}{4}\right)^2} \\
+&amp; =-\frac{\sqrt{15}}{4} \\
+\tan \alpha &amp; =-\frac{1}{\sqrt{15}}
+\end{align*}</div><h2 class="tex-number">262 (3)</h2><p class="tex-intertext">\(90^{\circ}&lt;\alpha&lt;180^{\circ}+90^{\circ}\) より</p><div class="tex-math">\begin{align*}
+\quad \sin \alpha &amp; =\sqrt{1-\left(-\frac{5}{6}\right)^2} \\
+&amp; =\frac{\sqrt{11}}{6} \\
+\tan \alpha &amp; =-\frac{\sqrt{11}}{5}
+\end{align*}</div><h2 class="tex-number">263 (1)</h2><div class="tex-math">\begin{align*}
+&amp; 1+\tan ^2 \alpha=\frac{1}{\cos ^2 \alpha} \\
+&amp; 1+\frac{1}{9}=\frac{1}{\cos ^2  \alpha} \\
+&amp; \cos ^2 \alpha=\frac{9}{10} \\
+&amp;
+\end{align*}</div><p class="tex-intertext">\(0^{\circ}&lt;\alpha&lt;90^{\circ}\) より</p><div class="tex-math">\begin{align*}
+\sin \cos \alpha &amp; =\frac{3}{\sqrt{10}} \\
+\sin \alpha &amp; =\tan \alpha \cdot \cos \alpha \\
+&amp; =\frac{1}{3} \cdot \frac{3}{\sqrt{10}} \\
+&amp; =\frac{1}{\sqrt{10}}
+\end{align*}</div><h2 class="tex-number">263 (2)</h2><div class="tex-math">\begin{align*}
+1+\tan ^2 \alpha=\frac{1}{\operatorname{cos}^2 \alpha} \\
+1+4 =\frac{1}{\operatorname{cos}^2 \alpha} \\
+\cos ^2 \alpha =\frac{1}{5}
+\end{align*}</div><p class="tex-intertext">\(90^{\circ}&lt;\alpha&lt;180^{\circ}\) より</p><div class="tex-math">\begin{align*}
+\cos \alpha=-\frac{1}{\sqrt{5}} &amp; \\
+\sin \alpha =-2 \cdot\left(-\frac{1}{\sqrt{5}}\right) \\
+&amp;=\frac{2}{\sqrt{5}}
+\end{align*}</div><h2 class="tex-number">264 (1)</h2><div class="tex-math">\begin{align*}
+正弦定理より
+\frac{a}{\sin 30^{\circ}} &amp; =\frac{4}{\sin 45^{\circ}} \\
+a &amp; =4 \cdot \sqrt{2} \cdot \frac{1}{2} \\
+&amp; =2 \sqrt{2}
+\end{align*}</div><h2 class="tex-number">264 (2)</h2><div class="tex-math">\begin{align*}
+正弦定理より
+\frac{2}{\sin 45^{\circ}} &amp; =\frac{\sqrt{3}}{\sin C} \\
+\sin C &amp; =\sqrt{3} \cdot \frac{1}{2} \cdot \frac{1}{\sqrt{2}} \\
+&amp; =\frac{\sqrt{6}}{4}
+\end{align*}</div><h2 class="tex-number">264 (3)</h2><div class="tex-math">\begin{align*}
+正弦定理より
+\frac{a}{\sin 45^{\circ}} &amp; =\frac{5}{\sin 30^{\circ}} \\
+a &amp; =5 \cdot 2 \cdot \frac{1}{\sqrt{2}} \\
+&amp; =5 \sqrt{2}
+\end{align*}</div><h2 class="tex-number">265</h2><div class="tex-math">\begin{align*}
+正弦定理より 半径をrとすると
+2 r &amp; =\frac{a}{\sin 60^{\circ}} \\
+r &amp; =\frac{1}{2} \cdot a \cdot \frac{2}{\sqrt{3}} \\
+&amp; =\frac{\sqrt{3}}{3} a
+\end{align*}</div><h2 class="tex-number">266 (1)</h2><div class="tex-math">\begin{align*}
+余弦定理より
+&amp; a^2=3+16-2 \cdot 4 \cdot \sqrt{3} \cdot \cos 30^{\circ} \\
+&amp; =19-8 \sqrt{3} \cdot \frac{\sqrt{3}}{2} \\
+&amp; =7 \\
+a &amp; =\sqrt{7}
+\end{align*}</div><h2 class="tex-number">266 (2)</h2><div class="tex-math">\begin{align*}
+余弦定理より
+b^2 &amp; =6+3-2 \cdot \sqrt{6} \sqrt{3} \cdot \cos 135^{\circ} \\
+&amp; =9+6 \\
+&amp; =15 \\
+b &amp; =\sqrt{15}
+\end{align*}</div><h2 class="tex-number">266 (3)</h2><div class="tex-math">\begin{align*}
+余弦定理より
+c^2 &amp; =4+27-2 \cdot 2 \cdot 3 \sqrt{3} \cdot \cos 150^{\circ} \\
+&amp; =31+18 \\
+&amp; =49 \\
+c &amp; =7
+\end{align*}</div><h2 class="tex-number">267</h2><div class="tex-math">\begin{align*}
+\cos A &amp; =\frac{16+25-4}{2 \cdot 4 \cdot 5} \\
+&amp; =\frac{37}{40} \\
+\cos B &amp; =\frac{4+25-16}{2 \cdot 2 \cdot 5} \\
+&amp; =\frac{13}{20} \\
+\cos C &amp; =\frac{4+16-25}{2 \cdot 2 \cdot 4} \\
+&amp; =-\frac{5}{16}
+\end{align*}</div><h2 class="tex-number">268 (1)</h2><div class="tex-math">\begin{align*}
+\triangle A B C &amp; =\frac{1}{2} \cdot 5 \cdot 7 \cdot \sin 45^{\circ} \\
+&amp; =\frac{35}{4} \sqrt{2}
+\end{align*}</div><h2 class="tex-number">268 (2)</h2><div class="tex-math">\begin{align*}
+\triangle A B C &amp; =\frac{1}{2} \cdot 2 \cdot 3 \cdot \sin 150^{\circ} \\
+&amp; =\frac{3}{2}
+\end{align*}</div><h2 class="tex-number">269</h2><div class="tex-math">\begin{align*}
+\triangle A B C &amp; =\frac{1}{2} \cdot 7 \cdot c \cdot \sin 30^{\circ} \\
+&amp; 9 =\frac{7}{2}c \cdot \frac{1}{2} \\
+&amp; c = \frac{36}{7}
+\end{align*}</div><h2 class="tex-number">270 (1)</h2><div class="tex-math">\begin{align*}
+\cos C &amp; =\frac{25+36-81}{2 \cdot 5 \cdot 6} \\
+&amp; =\frac{-20}{2 \cdot 5 \cdot 6} \\
+&amp; =-\frac{1}{3}
+\end{align*}</div><h2 class="tex-number">270 (2)</h2><p class="tex-intertext">\(0^{\circ}&lt;c&lt;180^{\circ}\) より</p><div class="tex-math">\begin{align*}
+\quad \sin c=\sqrt{1-\left(-\frac{1}{3}\right)^2}=\frac{2 \sqrt{2}}{3}
+\end{align*}</div><h2 class="tex-number">270 (3)</h2><div class="tex-math">\begin{align*}
+S &amp; =\frac{1}{2} \cdot 5 \cdot 6 \cdot \sin C \\
+&amp; =15 \cdot \frac{2 \sqrt{2}}{3} \\
+&amp; =10 \sqrt{2}
+\end{align*}</div><h2 class="tex-number">271 (1)</h2><div class="tex-math">\begin{align*}
+\cos A =\frac{41+64-25}{2 \cdot 7 \cdot 8}=\frac{11}{14}
+\end{align*}</div><p class="tex-intertext">\(0^{\circ}&lt;A&lt;180^{\circ}\) より</p><div class="tex-math">\begin{align*}
+\quad \sin A=\sqrt{1-\left(\frac{11}{14}\right)^2}=\frac{\sqrt{75}}{14}=\frac{5 \sqrt{3}}{14} \\
+\triangle A B C =\frac{1}{2} \cdot 7 \cdot 8 \cdot \frac{5 \sqrt{3}}{14} \\
+=10 \sqrt{3}
+\end{align*}</div><h2 class="tex-number">271 (2)</h2><div class="tex-math">\begin{align*}
+\cos A  =\frac{9+16-4}{2 \cdot 3 \cdot 4} =\frac{7}{8}
+\end{align*}</div><p class="tex-intertext">\(0^{\circ} &lt; A  &lt;180^{\circ}\)  より</p><div class="tex-math">\begin{align*}
+\quad \text { sin } A=\sqrt{1-\left(\frac{7}{8}\right)^2}=\frac{\sqrt{15}}{8} \\
+\triangle A B C  =\frac{1}{2} \cdot 3 \cdot 4 \cdot \frac{\sqrt{15}}{8} \\
+=\frac{3}{4} \sqrt{15}
+\end{align*}</div><div class="tex-heading"><strong>CHECK</strong></div><h2 class="tex-number">272 (1)</h2><p class="tex-intertext">対辺 \(\sqrt{3^2 - (\sqrt{2})^2} = \sqrt{7}\) より</p><div class="tex-math">\begin{align*}
+\sin \alpha = \frac{\sqrt{7}}{3}, \quad \cos \alpha = \frac{\sqrt{2}}{3}, \quad \tan \alpha = \frac{\sqrt{7}}{\sqrt{2}}
+\end{align*}</div><h2 class="tex-number">272 (2)</h2><p class="tex-intertext">斜辺 \(\sqrt{1^2 + (\sqrt{5})^2} = \sqrt{6}\) より</p><div class="tex-math">\begin{align*}
+\sin \alpha = \frac{\sqrt{5}}{\sqrt{6}}, \quad \cos \alpha = \frac{1}{\sqrt{6}}, \quad \tan \alpha = \sqrt{5}
+\end{align*}</div><h2 class="tex-number">273 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\triangle ABD \text{において } \angle ABD = 150^{\circ} \text{ かつ } AB = DB \\
+  &amp;DB \cos 30^{\circ} = \sqrt{3} \\
+  &amp;DB = \sqrt{3} \cdot \frac{2}{\sqrt{3}} = 2 \\
+  &amp;\therefore AB = 2
+\end{align*}</div><h2 class="tex-number">273 (2)</h2><div class="tex-math">\begin{align*}
+\tan 15^{\circ} &amp;= \frac{CD}{AB + BC} \\
+  &amp;= \frac{1}{2 + \sqrt{3}} \\
+  &amp;= 2 - \sqrt{3}
+\end{align*}</div><h2 class="tex-number">274</h2><div class="tex-math">\begin{align*}
+BH &amp;= 815 \sin 34^{\circ} \\
+     &amp;= 815 \times 0.5592 \\
+     &amp;= 455.748 \approx 455.7
+     &amp;\therefore 456m
+\end{align*}</div><h2 class="tex-number">275 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\sin 60^{\circ} \cos 30^{\circ} + \cos 120^{\circ} \sin 150^{\circ} + \sin 135^{\circ} \cos 180^{\circ} \\
+  &amp;= \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{3}}{2} + \left( -\frac{1}{2} \right) \cdot \frac{1}{2} + \frac{1}{\sqrt{2}} \cdot (-1) \\
+  &amp;= \frac{3}{4} - \frac{1}{4} - \frac{\sqrt{2}}{2} \\
+  &amp;= \frac{1 - \sqrt{2}}{2}
+\end{align*}</div><h2 class="tex-number">275 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{\tan 30^{\circ} - \tan 135^{\circ} - \tan 180^{\circ}}{1 + \tan 120^{\circ} \cdot \tan 45^{\circ}} \\
+  &amp;= \frac{\frac{1}{\sqrt{3}} - (-1) - 0}{1 + (-\sqrt{3}) \cdot 1} \\
+  &amp;= \frac{1 + \sqrt{3}}{\sqrt{3}(1 - \sqrt{3})} \\
+  &amp;= \frac{(1 + \sqrt{3})^2}{\sqrt{3}(1 - 3)} = \frac{4 + 2\sqrt{3}}{-2\sqrt{3}} \\
+  &amp;= -\frac{2 + \sqrt{3}}{\sqrt{3}} = -\frac{2\sqrt{3} + 3}{3}
+\end{align*}</div><h2 class="tex-number">276</h2><p class="tex-intertext">\(90^{\circ} &lt; \alpha &lt; 180^{\circ}\) なので \(\sin \alpha &gt; 0\)</p><div class="tex-math">\begin{align*}
+\sin \alpha &amp;= \sqrt{1 - \left( -\frac{2}{5} \right)^2} \\
+              &amp;= \frac{\sqrt{21}}{5} \\
+  \tan \alpha &amp;= -\frac{\sqrt{21}}{2}
+\end{align*}</div><h2 class="tex-number">277</h2><div class="tex-math">\begin{align*}
+1 + \tan^2 \alpha &amp;= \frac{1}{\cos^2 \alpha} \\
+  1 + 9 &amp;= \frac{1}{\cos^2 \alpha} \\
+  \cos^2 \alpha &amp;= \frac{1}{10}
+\end{align*}</div><p class="tex-intertext">\(90^{\circ} &lt; \alpha &lt; 180^{\circ}\) なので \(\cos \alpha &lt; 0\)</p><div class="tex-math">\begin{align*}
+\cos \alpha &amp;= -\frac{1}{\sqrt{10}} \\
+  \sin \alpha &amp;= \tan \alpha \cdot \cos \alpha \\
+              &amp;= (-3) \cdot \left( -\frac{1}{\sqrt{10}} \right) \\
+              &amp;= \frac{3}{\sqrt{10}}
+\end{align*}</div><h2 class="tex-number">278 (1)</h2><div class="tex-math">\begin{align*}
+A &amp;= 180^{\circ} - (105^{\circ} + 30^{\circ}) = 45^{\circ}
+\end{align*}</div><p class="tex-intertext">正弦定理より</p><div class="tex-math">\begin{align*}
+2R &amp;= \frac{\sqrt{6}}{\sin 45^{\circ}}, \quad c = 2R \sin 30^{\circ} \\
+  2R &amp;= \sqrt{6} \cdot \sqrt{2} = 2\sqrt{3} \\
+  \therefore R &amp;= \sqrt{3} \\
+  c &amp;= 2\sqrt{3} \cdot \frac{1}{2} = \sqrt{3}
+\end{align*}</div><h2 class="tex-number">278 (2)</h2><p class="tex-intertext">余弦定理より</p><div class="tex-math">\begin{align*}
+c^2 &amp;= 3^2 + 5^2 - 2 \cdot 3 \cdot 5 \cdot \cos 120^{\circ} \\
+      &amp;= 9 + 25 - 30 \cdot \left( -\frac{1}{2} \right) \\
+      &amp;= 34 + 15 = 49 \\
+  \therefore c &amp;= 7 \quad (c &gt; 0)
+\end{align*}</div><p class="tex-intertext">面積 \(S\) は</p><div class="tex-math">\begin{align*}
+S &amp;= \frac{1}{2} \cdot 3 \cdot 5 \cdot \sin 120^{\circ} \\
+    &amp;= \frac{15}{2} \cdot \frac{\sqrt{3}}{2} = \frac{15\sqrt{3}}{4}
+\end{align*}</div><h2 class="tex-number">278 (3)</h2><p class="tex-intertext">余弦定理より</p><div class="tex-math">\begin{align*}
+\cos B &amp;= \frac{7^2 + 3^2 - 8^2}{2 \cdot 7 \cdot 3} \\
+         &amp;= \frac{49 + 9 - 64}{42} = \frac{-6}{42} = -\frac{1}{7}
+\end{align*}</div><p class="tex-intertext">\(0^\circ &lt; B &lt; 180^\circ\) より \(\sin B &gt; 0\) なので</p><div class="tex-math">\begin{align*}
+\sin B &amp;= \sqrt{1 - \left( -\frac{1}{7} \right)^2} = \sqrt{\frac{48}{49}} = \frac{4\sqrt{3}}{7}
+\end{align*}</div><p class="tex-intertext">面積 \(S\) は</p><div class="tex-math">\begin{align*}
+S &amp;= \frac{1}{2} \cdot 7 \cdot 3 \cdot \frac{4\sqrt{3}}{7} \\
+    &amp;= 6\sqrt{3}
+\end{align*}</div><div class="tex-heading"><strong>STEP UP</strong></div><h2 class="tex-number">279</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases}
+    a = b \cos C + c \cos B \quad \dots \text{(1)} \\
+    b = c \cos A + a \cos C \quad \dots \text{(2)} \\
+    c = a \cos B + b \cos A \quad \dots \text{(3)}
+  \end{cases}
+\end{align*}</div><p class="tex-intertext">(3) \(\times c - \) (1) \(\times a\) より</p><div class="tex-math">\begin{align*}
+&amp;c^2 - a^2 = (ac \cos B + bc \cos A) \\
+  &amp;- (ab \cos C + ac \cos B) \\
+  c^2 - a^2 &amp;= bc \cos A - ab \cos C \quad \dots \text{(4)}
+\end{align*}</div><p class="tex-intertext">(4) \(+\) (2) \(\times b\) より</p><div class="tex-math">\begin{align*}
+&amp;(c^2 - a^2) + b^2 =\\
+  &amp; (bc \cos A - ab \cos C) + \\
+  &amp;(bc \cos A + ab \cos C) \\
+  b^2 + c^2 - a^2 &amp;= 2bc \cos A \\
+  \therefore a^2 &amp;= b^2 + c^2 - 2bc \cos A
+\end{align*}</div><h2 class="tex-number">280 (1)</h2><div class="tex-math">\begin{align*}
+AH &amp;= 10\sqrt{2} \times \frac{1}{2} = 5\sqrt{2} \\
+  \tan \angle OAH &amp;= \frac{9}{5\sqrt{2}} = \frac{9\sqrt{2}}{10} \\
+  &amp;\approx 1.2726 \dots \approx 1.27 \\
+  \therefore \angle OAH &amp;\approx 52^{\circ}
+\end{align*}</div><h2 class="tex-number">280 (2)</h2><div class="tex-math">\begin{align*}
+HM &amp;= 5 \\
+  \tan \angle OMH &amp;= \frac{9}{5} = 1.8 \\
+  \therefore \angle OMH &amp;\approx 61^{\circ}
+\end{align*}</div><h2 class="tex-number">280 (3)</h2><div class="tex-math">\begin{align*}
+&amp;OB = \sqrt{9^2 + (5\sqrt{2})^2} \\
+  &amp;= \sqrt{81 + 50} = \sqrt{131}
+\end{align*}</div><p class="tex-intertext">余弦定理より</p><div class="tex-math">\begin{align*}
+\cos \angle BOC &amp;= \frac{OB^2 + OC^2 - BC^2}{2 \cdot OB \cdot OC} \\
+  &amp;= \frac{131 + 131 - 10^2}{2 \cdot 131} \\
+  &amp;= \frac{162}{262} \approx 0.6183 \dots \\
+  \therefore \angle BOC &amp;\approx 52^{\circ}
+\end{align*}</div><h2 class="tex-number">281</h2><div class="tex-math">\begin{align*}
+&amp;\text{正弦定理より, } 2R = \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} \\
+  &amp;\therefore \sin A = \frac{a}{2R}
+\end{align*}</div><p class="tex-intertext">これより, 面積 \(S\) は</p><div class="tex-math">\begin{align*}
+S &amp;= \frac{1}{2} bc \sin A \\
+    &amp;= \frac{bc}{2} \cdot \frac{a}{2R} \\
+    &amp;= \frac{abc}{4R} \quad \dots (\text{証明終})
+\end{align*}</div><p class="tex-intertext">また, \(a = 2R \sin A, b = 2R \sin B, c = 2R \sin C\) を \(S = \frac{abc}{4R}\) に代入すると</p><div class="tex-math">\begin{align*}
+S &amp;= \frac{1}{4R} \cdot (2R \sin A) \cdot (2R \sin B) \cdot (2R \sin C) \\
+    &amp;= 2R^2 \sin A \sin B \sin C \quad \dots (\text{証明終})
+\end{align*}</div><h2 class="tex-number">282 (1)</h2><p class="tex-intertext">例題の結果（\(S = \frac{1}{2}ab \sin C\) 等）を用いて</p><div class="tex-math">\begin{align*}
+S &amp;= \frac{1}{2} \cdot 12 \cdot 14 \cdot \sin 60^{\circ} \\
+    &amp;= 6 \cdot 14 \cdot \frac{\sqrt{3}}{2} \\
+    &amp;= 42\sqrt{3}
+\end{align*}</div><h2 class="tex-number">282 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\triangle ABD \text{ で余弦定理より} \\
+  \cos A &amp;= \frac{4^2 + 9^2 - 7^2}{2 \cdot 4 \cdot 9} \\
+         &amp;= \frac{16 + 81 - 49}{72} = \frac{48}{72} = \frac{2}{3}
+\end{align*}</div><p class="tex-intertext">\(0^{\circ} &lt; A &lt; 180^{\circ}\) より \(\sin A &gt; 0\) なので</p><div class="tex-math">\begin{align*}
+\sin A &amp;= \sqrt{1 - \left( \frac{2}{3} \right)^2} = \frac{\sqrt{5}}{3}
+\end{align*}</div><p class="tex-intertext">\(\triangle CBD\) で余弦定理より</p><div class="tex-math">\begin{align*}
+\cos C &amp;= \frac{8^2 + 3^2 - 7^2}{2 \cdot 8 \cdot 3} \\
+         &amp;= \frac{64 + 9 - 49}{48} = \frac{24}{48} = \frac{1}{2}
+\end{align*}</div><p class="tex-intertext">\(0^{\circ} &lt; C &lt; 180^{\circ}\) より \(\sin C &gt; 0\) なので</p><div class="tex-math">\begin{align*}
+\sin C &amp;= \sqrt{1 - \left( \frac{1}{2} \right)^2} = \frac{\sqrt{3}}{2}
+\end{align*}</div><p class="tex-intertext">四角形 \(ABCD\) の面積は</p><div class="tex-math">\begin{align*}
+S &amp;= \triangle ABD + \triangle CBD \\
+    &amp;= \frac{1}{2} \cdot 4 \cdot 9 \cdot \frac{\sqrt{5}}{3} + \frac{1}{2} \cdot 8 \cdot 3 \cdot \frac{\sqrt{3}}{2} \\
+    &amp;= 6\sqrt{5} + 6\sqrt{3}
+\end{align*}</div><h2 class="tex-number">283</h2><div class="tex-math">\begin{align*}
+&amp;\text{正弦定理より外接円の半径を $R$ とすると} \\
+  &amp;\sin B = \frac{b}{2R}, \quad \sin C = \frac{c}{2R}
+\end{align*}</div><p class="tex-intertext">余弦定理より</p><div class="tex-math">\begin{align*}
+&amp;\cos C = \frac{a^2 + b^2 - c^2}{2ab}, \\
+  &amp;\quad \cos B = \frac{c^2 + a^2 - b^2}{2ca}
+\end{align*}</div><p class="tex-intertext">これらを等式の左辺に代入すると</p><div class="tex-math">\begin{align*}
+(\text{左辺}) &amp;= b \left( b - a \cos C \right) - c \left( c - a \cos B \right) \\
+  &amp;= b \left( b - a \cdot \frac{a^2 + b^2 - c^2}{2ab} \right) \\
+  &amp;- c \left( c - a \cdot \frac{c^2 + a^2 - b^2}{2ca} \right) \\
+  &amp;= \frac{b}{2R} \cdot \frac{2b^2 - (a^2 + b^2 - c^2)}{2b} \\
+  &amp;- \frac{c}{2R} \cdot \frac{2c^2 - (c^2 + a^2 - b^2)}{2c} \\
+  &amp;= \frac{1}{4R} \left\{ (b^2 - a^2 + c^2) - (c^2 - a^2 + b^2) \right\} \\
+  &amp;= 0 \\
+  &amp;\text{よって等式は成り立つ．}
+\end{align*}</div><h2 class="tex-number">284 (1)</h2><div class="tex-math">\begin{align*}
+\sin A &amp;= 2 \cos B \sin C \\
+  \frac{a}{2R} &amp;= 2 \cdot \frac{c^2 + a^2 - b^2}{2ca} \cdot \frac{c}{2R} \\
+  a &amp;= \frac{c^2 + a^2 - b^2}{a} \\
+  a^2 &amp;= c^2 + a^2 - b^2 \\
+  b^2 &amp;= c^2 \\
+  \therefore b &amp;= c \quad (b, c &gt; 0) \\
+  &amp;\text{よって, } AB = AC \text{ の二等辺三角形}
+\end{align*}</div><h2 class="tex-number">284 (2)</h2><div class="tex-math">\begin{align*}
+\tan A : \tan B &amp;= a : b \\
+  b \tan A &amp;= a \tan B \\
+  b \cdot \frac{\sin A}{\cos A} &amp;= a \cdot \frac{\sin B}{\cos B} \\
+  b \sin A \cos B &amp;= a \sin B \cos A \\
+  b \cdot \frac{a}{2R} \cdot \frac{c^2 + a^2 - b^2}{2ca} &amp;= a \cdot \frac{b}{2R} \cdot \frac{b^2 + c^2 - a^2}{2bc} \\
+  \frac{c^2 + a^2 - b^2}{c} &amp;= \frac{b^2 + c^2 - a^2}{c} \\
+  c^2 + a^2 - b^2 &amp;= b^2 + c^2 - a^2 \\
+  2a^2 &amp;= 2b^2 \\
+  \therefore a &amp;= b \quad (a, b &gt; 0) \\
+  &amp;\text{よって, } CA = CB\\
+  &amp;\text{ の二等辺三角形}
+\end{align*}</div>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        ここに記す解法が最適なものとは限りません。途中式の丸写しはあなたのためになりません。学習の参考程度にご活用ください。<br>
+                        誤字・誤値等にお気づきの際は<a href="../../contact.html">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script>window.__TEX_MACROS = {"Re":"\\operatorname{Re}","Im":"\\operatorname{Im}","proof":"\\textbf{証明}　","qed":"{\\rule{0.5zw}{1zh}}","E":"\\mathrm{e}","D":"\\mathrm {d}","I":"\\mathrm {i}","LHS":"(\\mathrm{LHS})","RHS":"(\\mathrm{RHS})","hc":"\\mathrm{h.c.}","cc":"\\mathrm{c.c.}","ret":"\\notag\\\\&\\qquad","nr":"\\notag\\\\","Arg":"\\operatorname{Arg}","for":["\\quad\\mathrm{for\\ \\ }#1",1],"sgn":"\\operatorname{sgn}","Tr":"\\operatorname{Tr}","AAA":"\\mathaccent 23\\mathrm{A}","abs":["{\\left\\rvert #1 \\right\\lvert}",1]};</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/tex-page.js"></script>
+</body>
+</html>

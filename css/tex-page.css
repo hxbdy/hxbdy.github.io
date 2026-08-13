@@ -1,0 +1,58 @@
+/*------------------------------------------
+ *  生成済みの解答例ページ（kaitou/）
+ *  tex.css を読み込んだ後に読み込む差分。
+ *------------------------------------------*/
+
+/* tex.css は組版前のちらつきを抑えるため本文を隠しているが、
+   静的ページは JS を切っていても本文が読める必要があるので文章は常に表示する。
+   TeX ソースがそのまま出てしまう .tex-math だけは組版待ちのままにする。 */
+.tex-page__body .tex-intertext,
+.tex-page__body .tex-text {
+  visibility: visible;
+}
+
+/* JS が無効なら数式も TeX ソースのまま見せる（隠したままにはしない） */
+.no-js .tex-page__body .tex-math {
+  visibility: visible;
+}
+
+/* ページ冒頭の解説 */
+.tex-intro {
+  margin: 0 0 8px;
+  padding: 14px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.tex-intro p {
+  margin: 0 0 10px;
+}
+.tex-intro p:last-child {
+  margin-bottom: 0;
+}
+.tex-intro__ttl {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+/* 収録範囲・PDF版へのリンク */
+.tex-page__links {
+  font-size: 13px;
+  text-align: center;
+  padding: 4px 12px 0;
+}
+.tex-page__links a {
+  color: #008080;
+}
+
+/*スマートフォン向け*/
+@media only screen and (max-width: 480px) {
+  .tex-intro {
+    font-size: 13px;
+  }
+  .tex-intro__ttl {
+    font-size: 14px;
+  }
+}
