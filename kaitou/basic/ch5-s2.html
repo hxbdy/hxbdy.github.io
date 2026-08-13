@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <link rel="icon" href="../../img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>§2 三角関数　解答例｜5章 三角関数｜とどろき英数塾</title>
+    <meta name="description" content="新 基礎数学 改訂版（大日本図書）問題集「5章 §2 三角関数」の途中式つき解答例。一般角・弧度法・三角関数のグラフと周期を扱います。">
+    <link rel="canonical" href="https://todoroki.fyi/kaitou/basic/ch5-s2.html">
+    <link rel="stylesheet" href="../../css/sanitize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tex.css">
+    <link rel="stylesheet" href="../../css/tex-page.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="§2 三角関数　解答例｜新 基礎数学 改訂版（大日本図書）">
+    <meta property="og:description" content="新 基礎数学 改訂版（大日本図書）問題集「5章 §2 三角関数」の途中式つき解答例。一般角・弧度法・三角関数のグラフと周期を扱います。">
+    <meta property="og:image" content="../../img/Thumbnail.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="とどろき英数塾">
+    <meta property="og:url" content="https://todoroki.fyi/kaitou/basic/ch5-s2.html">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="../../">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="../../index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="../../contact.html" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="../../about.html" target="_self">
+                        <span class="p-header__discord">運営者情報</span>
+                    </a>
+                    <br>
+                    <a href="../../privacy.html" target="_self">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title">§2 三角関数　解答例</div>
+                        <p class="tex-page__meta">
+                            新 基礎数学 改訂版（大日本図書）　5章 三角関数
+                        </p>
+                        <p class="tex-page__links">
+                            問題集 285~317　／　<a href="../../math_pdf_file/basic_mathematics/Chapter5/pdf/%E7%AC%AC5%E7%AB%A0%C2%A72%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0_285~317.pdf" target="_blank" rel="noopener">PDF版を開く</a>　／　<a href="../../index.html#basic">一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body">
+                        <section class="tex-intro">
+                            <p class="tex-intro__ttl">この節について</p>
+                            <p>角の範囲を一般角へ広げ、弧度法、三角関数のグラフ、三角方程式・不等式を扱う節です。度数法と弧度法の対応（\(180^\circ = \pi\)）に慣れることが最初の関門で、以降の微分積分でも弧度法が前提になります。</p>
+                            <p>グラフの問題は \(y = a\sin(b\theta+c)+d\) の形で整理すると扱いやすくなります。振幅が \(|a|\)、周期が \(\dfrac{2\pi}{|b|}\)、\(c\) が横方向の平行移動、\(d\) が縦方向の平行移動に対応します。\(b\) で括ってから平行移動量を読む点を間違えやすいので注意が必要です。</p>
+                            <p>三角方程式・不等式は単位円を描いて考えるのが確実です。指定された範囲の中に解が何個あるかを円周上で数えてから式に落とすと、解の書き落としを防げます。</p>
+                        </section>
+<div class="tex-heading"><strong>5章 三角関数</strong><br>
+  <strong>2　三角関数</strong><br>
+  <strong>BASIC</strong></div><h2 class="tex-number">285(1)</h2><div class="tex-math">\begin{align*}
+\quad 630^{\circ} &amp;= 360^{\circ} + 270^{\circ}
+\end{align*}</div><h2 class="tex-number">285(2)</h2><div class="tex-math">\begin{align*}
+\quad -310^{\circ} &amp;= -360^{\circ} + 50^{\circ}
+\end{align*}</div><h2 class="tex-number">285(3)</h2><div class="tex-math">\begin{align*}
+\quad 490^{\circ} &amp;= 360^{\circ} + 130^{\circ}
+\end{align*}</div><h2 class="tex-number">285(4)</h2><div class="tex-math">\begin{align*}
+\quad -1120^{\circ} &amp;= -1080^{\circ} - 40^{\circ}
+\end{align*}</div><h2 class="tex-number">285(5)</h2><div class="tex-math">\begin{align*}
+\quad 2000^{\circ} &amp;= 1800^{\circ} + 200^{\circ}
+\end{align*}</div><h2 class="tex-number">286(1)</h2><div class="tex-math">\begin{align*}
+\quad &amp;\text{第3象限}
+\end{align*}</div><h2 class="tex-number">286(2)</h2><div class="tex-math">\begin{align*}
+\quad 400^{\circ} &amp;= 360^{\circ} + 40^{\circ} \quad \text{第1象限}
+\end{align*}</div><h2 class="tex-number">286(3)</h2><div class="tex-math">\begin{align*}
+\quad -740^{\circ} &amp;= -720^{\circ} - 20^{\circ} \quad \text{第4象限}
+\end{align*}</div><h2 class="tex-number">286(4)</h2><div class="tex-math">\begin{align*}
+\quad 820^{\circ} &amp;= 720^{\circ} + 100^{\circ} \quad \text{第2象限}
+\end{align*}</div><h2 class="tex-number">286(5)</h2><div class="tex-math">\begin{align*}
+\quad -635^{\circ} &amp;= -720^{\circ} + 85^{\circ} \quad \text{第1象限}
+\end{align*}</div><h2 class="tex-number">287(1)</h2><div class="tex-math">\begin{align*}
+\sin 210^{\circ} &amp;= -\frac{1}{2}
+\end{align*}</div><h2 class="tex-number">287(2)</h2><div class="tex-math">\begin{align*}
+\cos 570^{\circ} &amp;= \cos 210^{\circ} = -\frac{\sqrt{3}}{2}
+\end{align*}</div><h2 class="tex-number">287(3)</h2><div class="tex-math">\begin{align*}
+\tan 390^{\circ} &amp;= \tan 30^{\circ} = \frac{1}{\sqrt{3}}
+\end{align*}</div><h2 class="tex-number">287(4)</h2><div class="tex-math">\begin{align*}
+\sin 630^{\circ} &amp;= \sin 270^{\circ} = -1
+\end{align*}</div><h2 class="tex-number">287(5)</h2><div class="tex-math">\begin{align*}
+\cos \left(-225^{\circ}\right)=\cos 135^{\circ}=-\frac{1}{\sqrt{2}}
+\end{align*}</div><h2 class="tex-number">287(6)</h2><div class="tex-math">\begin{align*}
+\tan \left(-480^{\circ}\right)=\tan \left(-120^{\circ}\right)=\sqrt{3}
+\end{align*}</div><h2 class="tex-number">288 (1)</h2><div class="tex-math">\begin{align*}
+135^{\circ} &amp;= \frac{3}{4} \pi
+\end{align*}</div><h2 class="tex-number">288 (2)</h2><div class="tex-math">\begin{align*}
+36^{\circ} &amp;= \frac{\pi}{5}
+\end{align*}</div><h2 class="tex-number">288 (3)</h2><div class="tex-math">\begin{align*}
+-10^{\circ} &amp;= -\frac{1}{18} \pi
+\end{align*}</div><h2 class="tex-number">288 (4)</h2><div class="tex-math">\begin{align*}
+240^{\circ} &amp;= \frac{4}{3} \pi
+\end{align*}</div><h2 class="tex-number">288 (5)</h2><div class="tex-math">\begin{align*}
+-190^{\circ} &amp;= -\frac{19}{18} \pi
+\end{align*}</div><h2 class="tex-number">289 (1)</h2><div class="tex-math">\begin{align*}
+\frac{\pi}{3} &amp;= 60^{\circ}
+\end{align*}</div><h2 class="tex-number">289 (2)</h2><div class="tex-math">\begin{align*}
+\frac{5}{4} \pi &amp;= 225^{\circ}
+\end{align*}</div><h2 class="tex-number">289 (3)</h2><div class="tex-math">\begin{align*}
+-\frac{2}{5} \pi &amp;= -72^{\circ}
+\end{align*}</div><h2 class="tex-number">289 (4)</h2><div class="tex-math">\begin{align*}
+\frac{7}{3} \pi &amp;= 420^{\circ}
+\end{align*}</div><h2 class="tex-number">289 (5)</h2><div class="tex-math">\begin{align*}
+-\frac{\pi}{9} &amp;= -20^{\circ}
+\end{align*}</div><h2 class="tex-number">290 (1)</h2><div class="tex-math">\begin{align*}
+\sin \frac{5}{3} \pi &amp;= -\frac{\sqrt{3}}{2}
+\end{align*}</div><h2 class="tex-number">290 (2)</h2><div class="tex-math">\begin{align*}
+\cos \frac{5}{4} \pi &amp;= -\frac{1}{\sqrt{2}}
+\end{align*}</div><h2 class="tex-number">290 (3)</h2><div class="tex-math">\begin{align*}
+\tan \frac{\pi}{6} &amp;= \frac{1}{\sqrt{3}}
+\end{align*}</div><h2 class="tex-number">291 (1)</h2><div class="tex-math">\begin{align*}
+\text{弧の長さ： } &amp; 8\pi \times \frac{\frac{\pi}{6}}{2\pi} = \frac{2}{3}\pi \nr
+  \text{面積： } &amp; 16\pi \times \frac{\frac{\pi}{6}}{2\pi} = \frac{4}{3}\pi
+\end{align*}</div><h2 class="tex-number">291 (2)</h2><p class="tex-intertext">中心角を \(\theta\) とすると</p><div class="tex-math">\begin{align*}
+6\pi \times \frac{\theta}{2\pi} &amp;= 2\pi \implies \theta = \frac{2}{3}\pi \nr
+  \text{面積： } &amp; 9\pi \times \frac{\frac{2}{3}\pi}{2\pi} = 3\pi
+\end{align*}</div><h2 class="tex-number">292 (1)</h2><div class="tex-math">\begin{align*}
+(\text{左辺}) &amp;= \frac{\sin \theta}{\cos \theta} + \frac{\cos \theta}{\sin \theta} \nr
+  &amp;= \frac{\sin^2 \theta + \cos^2 \theta}{\sin \theta \cos \theta} \nr
+  &amp;= \frac{1}{\sin \theta \cos \theta} = (\text{右辺})
+\end{align*}</div><h2 class="tex-number">292 (2)</h2><div class="tex-math">\begin{align*}
+(\text{左辺}) &amp;= \frac{1}{1-\cos \theta} + \frac{1}{1+\cos \theta} \nr
+  &amp;= \frac{(1+\cos \theta) + (1-\cos \theta)}{1-\cos^2 \theta} \nr
+  &amp;= \frac{2}{\sin^2 \theta} = (\text{右辺})
+\end{align*}</div><h2 class="tex-number">293 (1)</h2><p class="tex-intertext">\(180^{\circ} &lt; \theta &lt; 270^{\circ}\) なので \(\cos \theta &lt; 0\)</p><div class="tex-math">\begin{align*}
+\cos \theta &amp;= -\sqrt{1 - \left( -\frac{4}{5} \right)^2} = -\frac{3}{5} \nr
+  \tan \theta &amp;= \frac{\sin \theta}{\cos \theta} = \frac{4}{3}
+\end{align*}</div><h2 class="tex-number">293 (2)</h2><p class="tex-intertext">\(270^{\circ} &lt; \theta &lt; 360^{\circ}\) なので \(\sin \theta &lt; 0\)</p><div class="tex-math">\begin{align*}
+\sin \theta &amp;= -\sqrt{1 - \left( \frac{1}{3} \right)^2} = -\frac{2\sqrt{2}}{3} \nr
+  \tan \theta &amp;= \frac{\sin \theta}{\cos \theta} = -2\sqrt{2}
+\end{align*}</div><h2 class="tex-number">293 (3)</h2><div class="tex-math">\begin{align*}
+1 + \tan^2 \theta &amp;= \frac{1}{\cos^2 \theta} \nr
+  1 + 9 &amp;= \frac{1}{\cos^2 \theta} \implies \cos^2 \theta = \frac{1}{10}
+\end{align*}</div><p class="tex-intertext">\(180^{\circ} &lt; \theta &lt; 270^{\circ}\) なので \(\cos \theta &lt; 0\)</p><div class="tex-math">\begin{align*}
+\cos \theta &amp;= -\frac{1}{\sqrt{10}} \nr
+  \sin \theta &amp;= \tan \theta \cdot \cos \theta = -\frac{3}{\sqrt{10}}
+\end{align*}</div><h2 class="tex-number">294 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\cos \theta \sin \left(\frac{\pi}{2}-\theta\right) + \sin \theta \cos \left(\frac{\pi}{2}-\theta\right) \nr
+  &amp;= \cos \theta \cdot \cos \theta + \sin \theta \cdot \sin \theta \nr
+  &amp;= \cos^2 \theta + \sin^2 \theta \nr
+  &amp;= 1
+\end{align*}</div><h2 class="tex-number">294 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\sin \left(\frac{\pi}{2}-\theta\right) - \sin (\pi+\theta) + \\
+  &amp;\cos \left(\frac{\pi}{2}+\theta\right) + \cos (\pi-\theta) \nr
+  &amp;= \cos \theta - (-\sin \theta) + (-\sin \theta) + (-\cos \theta) \nr
+  &amp;= \cos \theta + \sin \theta - \sin \theta - \cos \theta \nr
+  &amp;= 0
+\end{align*}</div><h2 class="tex-number">294 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\tan (\pi+\theta) \sin \left(\frac{\pi}{2}+\theta\right) + \\
+  &amp;\cos (\pi-\theta) \tan (\pi-\theta) \nr
+  &amp;= \tan \theta \cdot \cos \theta + (-\cos \theta) \cdot (-\tan \theta) \nr
+  &amp;= \sin \theta + \sin \theta \nr
+  &amp;= 2 \sin \theta
+\end{align*}</div><h2 class="tex-number">295 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= \sin \left(x-\frac{\pi}{2}\right) \nr
+    &amp;= -\cos x \nr
+  \text{周期：} &amp; 2\pi
+\end{align*}</div><h2 class="tex-number">295 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= \cos \left(x+\frac{\pi}{4}\right) \nr
+  \text{周期：} &amp; 2\pi
+\end{align*}</div><h2 class="tex-number">296 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= 2 \cos x \nr
+  \text{周期：} &amp; 2\pi
+\end{align*}</div><h2 class="tex-number">296 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= -\frac{1}{2} \sin x \nr
+  \text{周期：} &amp; 2\pi
+\end{align*}</div><h2 class="tex-number">297 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= \cos 2x \nr
+  \text{周期：} &amp; \pi
+\end{align*}</div><h2 class="tex-number">297 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= \sin \frac{x}{3} \nr
+  \text{周期：} &amp; 6\pi
+\end{align*}</div><h2 class="tex-number">298 (1)</h2><div class="tex-math">\begin{align*}
+\sin x &amp;= \frac{\sqrt{2}}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{\pi}{4}, \frac{3}{4}\pi
+\end{align*}</div><h2 class="tex-number">298 (2)</h2><div class="tex-math">\begin{align*}
+\cos x &amp;= \frac{1}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{\pi}{3}, \frac{5}{3}\pi
+\end{align*}</div><h2 class="tex-number">298 (3)</h2><div class="tex-math">\begin{align*}
+\sin x &amp;\geqq \frac{\sqrt{3}}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+\frac{\pi}{3} &amp;\leqq x \leqq \frac{2}{3}\pi
+\end{align*}</div><h2 class="tex-number">298 (4)</h2><div class="tex-math">\begin{align*}
+\cos x &amp;&lt; -\frac{1}{\sqrt{2}}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+\frac{3}{4}\pi &amp;&lt; x &lt; \frac{5}{4}\pi
+\end{align*}</div><h2 class="tex-number">299 (1)</h2><div class="tex-math">\begin{align*}
+\tan x &amp;= 0
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+x &amp;= 0, \pi
+\end{align*}</div><h2 class="tex-number">299 (2)</h2><div class="tex-math">\begin{align*}
+\tan x &amp;= -1
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{3}{4}\pi, \frac{7}{4}\pi
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>CHECK</strong></div><h2 class="tex-number">300 (1)</h2><div class="tex-math">\begin{align*}
+40^{\circ} &amp;= \frac{40}{180}\pi = \frac{2}{9}\pi
+\end{align*}</div><h2 class="tex-number">300 (2)</h2><div class="tex-math">\begin{align*}
+50^{\circ} &amp;= \frac{50}{180}\pi = \frac{5}{18}\pi
+\end{align*}</div><h2 class="tex-number">300 (3)</h2><div class="tex-math">\begin{align*}
+-18^{\circ} &amp;= -\frac{18}{180}\pi = -\frac{1}{10}\pi
+\end{align*}</div><h2 class="tex-number">300 (4)</h2><div class="tex-math">\begin{align*}
+-210^{\circ} &amp;= -\frac{210}{180}\pi = -\frac{7}{6}\pi
+\end{align*}</div><h2 class="tex-number">301 (1)</h2><div class="tex-math">\begin{align*}
+-\frac{\pi}{4} &amp;= -45^{\circ}
+\end{align*}</div><h2 class="tex-number">301 (2)</h2><div class="tex-math">\begin{align*}
+\frac{2}{3}\pi &amp;= 120^{\circ}
+\end{align*}</div><h2 class="tex-number">301 (3)</h2><div class="tex-math">\begin{align*}
+-\frac{11}{6}\pi &amp;= -330^{\circ}
+\end{align*}</div><h2 class="tex-number">301 (4)</h2><div class="tex-math">\begin{align*}
+\frac{7}{5}\pi &amp;= \frac{7}{5} \times 180^{\circ} = 252^{\circ}
+\end{align*}</div><h2 class="tex-number">302 (1)</h2><div class="tex-math">\begin{align*}
+\sin (-90^{\circ}) &amp;= -1
+\end{align*}</div><h2 class="tex-number">302 (2)</h2><div class="tex-math">\begin{align*}
+\cos 225^{\circ} &amp;= -\frac{1}{\sqrt{2}}
+\end{align*}</div><h2 class="tex-number">302 (3)</h2><div class="tex-math">\begin{align*}
+\tan (-780^{\circ}) &amp;= \tan (-60^{\circ}) = -\sqrt{3}
+\end{align*}</div><h2 class="tex-number">302 (4)</h2><div class="tex-math">\begin{align*}
+\sin \left(-\frac{17}{3}\pi\right) &amp;= \sin \frac{\pi}{3} = \frac{\sqrt{3}}{2}
+\end{align*}</div><h2 class="tex-number">302 (5)</h2><div class="tex-math">\begin{align*}
+\cos \frac{17}{6}\pi &amp;= \cos \frac{5}{6}\pi = -\frac{\sqrt{3}}{2}
+\end{align*}</div><h2 class="tex-number">302 (6)</h2><div class="tex-math">\begin{align*}
+\tan \left(\frac{9}{4}\pi\right) &amp;= \tan \left(\frac{\pi}{4}\right) = 1
+\end{align*}</div><h2 class="tex-number">303</h2><div class="tex-math">\begin{align*}
+\text{弧の長さ： } &amp; 10\pi \times \frac{\frac{\pi}{4}}{2\pi} = \frac{5}{4}\pi \nr
+  \text{面積： } &amp; 25\pi \times \frac{\frac{\pi}{4}}{2\pi} = \frac{25}{8}\pi
+\end{align*}</div><h2 class="tex-number">304</h2><div class="tex-math">\begin{align*}
+(\text{左辺}) &amp;= \frac{\sin \theta \{ (1+\cos \theta) - (1-\cos \theta) \}}{(1-\cos \theta)(1+\cos \theta)} \nr
+  &amp;= \frac{2 \sin \theta \cos \theta}{1-\cos^2 \theta} \nr
+  &amp;= \frac{2 \sin \theta \cos \theta}{\sin^2 \theta} \nr
+  &amp;= \frac{2}{\tan \theta} = (\text{右辺})
+\end{align*}</div><h2 class="tex-number">305</h2><p class="tex-intertext">\(180^{\circ} &lt; \theta &lt; 270^{\circ}\) なので \(\cos \theta &lt; 0\)</p><div class="tex-math">\begin{align*}
+\cos \theta &amp;= -\sqrt{1 - \left( -\frac{1}{4} \right)^2} \nr
+  &amp;= -\frac{\sqrt{15}}{4} \nr
+  \tan \theta &amp;= \frac{\sin \theta}{\cos \theta} = \frac{1}{\sqrt{15}}
+\end{align*}</div><h2 class="tex-number">306 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= \cos \left(x-\frac{\pi}{6}\right) \nr
+  \text{周期：} &amp; 2\pi
+\end{align*}</div><h2 class="tex-number">306 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= 2 \sin 3x \nr
+  \text{周期：} &amp; \frac{2}{3}\pi
+\end{align*}</div><h2 class="tex-number">307 (1)</h2><div class="tex-math">\begin{align*}
+\sin x &amp;= -\frac{\sqrt{2}}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{5}{4}\pi, \ \frac{7}{4}\pi
+\end{align*}</div><h2 class="tex-number">307 (2)</h2><div class="tex-math">\begin{align*}
+\tan x &amp;= -\sqrt{3}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{2}{3}\pi, \ \frac{5}{3}\pi
+\end{align*}</div><h2 class="tex-number">307 (3)</h2><div class="tex-math">\begin{align*}
+2 \sin x - 1 &amp;&lt; 0 \nr
+  \sin x &amp;&lt; \frac{1}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+0 \leqq x &amp;&lt; \frac{\pi}{6}, \ \frac{5}{6}\pi &lt; x &lt; 2\pi
+\end{align*}</div><h2 class="tex-number">307 (4)</h2><div class="tex-math">\begin{align*}
+\cos x &amp;\leqq \frac{\sqrt{2}}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+\frac{\pi}{4} \leqq x &amp;\leqq \frac{7}{4}\pi
+\end{align*}</div><h2 class="tex-number">308</h2><div class="tex-math">\begin{align*}
+y &amp;= \sin x
+\end{align*}</div><p class="tex-intertext">(1) \(a\) の値を求める：</p><div class="tex-math">\begin{align*}
+a &amp;= \sin \frac{5}{4}\pi = -\frac{1}{\sqrt{2}}
+\end{align*}</div><p class="tex-intertext">(2) \(b\) の値を求める（\(0 &lt; b &lt; \frac{5}{4}\pi\)）：</p><div class="tex-math">\begin{align*}
+\frac{1}{2} &amp;= \sin b \implies b = \frac{5}{6}\pi
+\end{align*}</div><p class="tex-intertext">(3) \(c\) の値を求める（\(-\pi &lt; c &lt; 0\)）：</p><div class="tex-math">\begin{align*}
+-1 &amp;= \sin c \implies c = -\frac{\pi}{2}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>STEP UP</strong></div><h2 class="tex-number">309</h2><div class="tex-math">\begin{align*}
+&amp;OA : OB = r_1 : r_2 \nr
+  &amp;r_2 \cdot OA = r_1 \cdot (OA + l) \nr
+  &amp;OA \cdot (r_2 - r_1) = r_1 l \nr
+  &amp;OA = \frac{r_1}{r_2 - r_1} l, \quad OB = OA + l = \frac{r_2}{r_2 - r_1} l
+\end{align*}</div><p class="tex-intertext">側面の展開図のおうぎ形の中心角を \(\theta\) とすると</p><div class="tex-math">\begin{align*}
+&amp;2\pi r_1 = 2 OA \cdot \pi \cdot \frac{\theta}{2\pi} \nr
+  &amp;\theta = \frac{r_1}{OA} \cdot 2\pi = \frac{2(r_2 - r_1)}{l} \pi \nr
+  &amp;S = \pi \cdot OB^2 \cdot \frac{\theta}{2\pi} - \pi \cdot OA^2 \cdot \frac{\theta}{2\pi} \nr
+  &amp;= \frac{\theta}{2} \left( \frac{r_2 l}{r_2 - r_1} \right)^2 - \frac{\theta}{2} \left( \frac{r_1 l}{r_2 - r_1} \right)^2 \nr
+  &amp;= \frac{\pi(r_2 - r_1)}{l} \cdot \left( \frac{l}{r_2 - r_1} \right)^2 (r_2^2 - r_1^2) \nr
+  &amp;= \frac{\pi l}{r_2 - r_1} \cdot (r_2 + r_1)(r_2 - r_1) \nr
+  &amp;= \pi l (r_1 + r_2)
+\end{align*}</div><h2 class="tex-number">310</h2><p class="tex-intertext">半径を \(r\) とすると弧の長さは \(12 - 2r \quad (0 &lt; r &lt; 6)\)</p><p class="tex-intertext">中心角を \(\theta\) とおくと</p><div class="tex-math">\begin{align*}
+&amp;12 - 2r = r \theta \implies \theta = \frac{12 - 2r}{r}
+\end{align*}</div><p class="tex-intertext">面積 \(S\) は</p><div class="tex-math">\begin{align*}
+&amp;S = \frac{1}{2} r^2 \theta \nr
+  &amp;= \frac{1}{2} r^2 \left( \frac{12 - 2r}{r} \right) \nr
+  &amp;= 6r - r^2 \nr
+  &amp;= -(r - 3)^2 + 9
+\end{align*}</div><p class="tex-intertext">\(r = 3\) で最大値 \(9\) をとる</p><h2 class="tex-number">311</h2><p class="tex-intertext">解と係数の関係より</p><div class="tex-math">\begin{align*}
+&amp;\begin{cases} \sin \theta + \cos \theta = \frac{2}{3} \\ \sin \theta \cos \theta = \frac{k}{3} \end{cases}
+\end{align*}</div><p class="tex-intertext">\((\sin \theta + \cos \theta)^2 = \frac{4}{9}\) より</p><div class="tex-math">\begin{align*}
+&amp;1 + 2 \sin \theta \cos \theta = \frac{4}{9} \nr
+  &amp;2 \cdot \frac{k}{3} = -\frac{5}{9} \nr
+  &amp;k = -\frac{5}{6}
+\end{align*}</div><h2 class="tex-number">312 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= \sin \left( 2x - \frac{\pi}{2} \right) \nr
+    &amp;= -\cos 2x \nr
+  \text{周期：} &amp; \pi
+\end{align*}</div><h2 class="tex-number">312 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= \frac{1}{2} \cos \left\{ 3 \left( x - \frac{\pi}{12} \right) \right\}
+\end{align*}</div><p class="tex-intertext">\(y = \frac{1}{2} \cos 3x\) のグラフを \(x\) 軸方向に \(\frac{\pi}{12}\) だけ平行移動したもの</p><div class="tex-math">\begin{align*}
+\text{周期：} &amp; \frac{2}{3}\pi
+\end{align*}</div><h2 class="tex-number">312 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= -\tan \left\{ 2 \left( x - \frac{\pi}{4} \right) \right\}
+\end{align*}</div><p class="tex-intertext">\(y = -\tan 2x\) のグラフを \(x\) 軸方向に \(\frac{\pi}{4}\) だけ平行移動したもの</p><div class="tex-math">\begin{align*}
+\text{周期：} &amp; \frac{\pi}{2}
+\end{align*}</div><h2 class="tex-number">313 (1)</h2><div class="tex-math">\begin{align*}
+2 \cos \left(x+\frac{\pi}{3}\right) &amp;= \sqrt{3} \nr
+  \cos \left(x+\frac{\pi}{3}\right) &amp;= \frac{\sqrt{3}}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より \(\frac{\pi}{3} \leqq x+\frac{\pi}{3} &lt; \frac{7}{3}\pi\) なので</p><div class="tex-math">\begin{align*}
+x+\frac{\pi}{3} &amp;= \frac{11}{6}\pi, \ \frac{13}{6}\pi \nr
+  x &amp;= \frac{3}{2}\pi, \ \frac{11}{6}\pi
+\end{align*}</div><h2 class="tex-number">313 (2)</h2><div class="tex-math">\begin{align*}
+\sin 2x &amp;= \frac{1}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より \(0 \leqq 2x &lt; 4\pi\) なので</p><div class="tex-math">\begin{align*}
+2x &amp;= \frac{\pi}{6}, \ \frac{5}{6}\pi, \ \frac{13}{6}\pi, \ \frac{17}{6}\pi \nr
+  x &amp;= \frac{\pi}{12}, \ \frac{5}{12}\pi, \ \frac{13}{12}\pi, \ \frac{17}{12}\pi
+\end{align*}</div><h2 class="tex-number">313 (3)</h2><div class="tex-math">\begin{align*}
+2 \sin \left(2x - \frac{\pi}{6} \right) &amp;= 1 \nr
+  \sin \left(2x - \frac{\pi}{6} \right) &amp;= \frac{1}{2}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より \(-\frac{\pi}{6} \leqq 2x - \frac{\pi}{6} &lt; \frac{23}{6}\pi\) なので</p><div class="tex-math">\begin{align*}
+2x - \frac{\pi}{6} &amp;= \frac{\pi}{6}, \ \frac{5}{6}\pi, \ \frac{13}{6}\pi, \ \frac{17}{6}\pi \nr
+  2x &amp;= \frac{\pi}{3}, \ \pi, \ \frac{7}{3}\pi, \ 3\pi \nr
+  x &amp;= \frac{\pi}{6}, \ \frac{\pi}{2}, \ \frac{7}{6}\pi, \ \frac{3}{2}\pi
+\end{align*}</div><h2 class="tex-number">314</h2><div class="tex-math">\begin{align*}
+\tan x &amp;\leqq \sqrt{3}
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+&amp;0 \leqq x &lt; \frac{\pi}{3}, \ \frac{\pi}{2} &lt; x \leqq \frac{4}{3}\pi, \ \frac{3}{2}\pi &lt; x &lt; 2\pi
+\end{align*}</div><h2 class="tex-number">315 (1)</h2><div class="tex-math">\begin{align*}
+2 \cos^2 x + \sin x - 1 &amp;= 0 \nr
+  2(1 - \sin^2 x) + \sin x - 1 &amp;= 0 \nr
+  2 \sin^2 x - \sin x - 1 &amp;= 0 \nr
+  (2 \sin x + 1)(\sin x - 1) &amp;= 0 \nr
+  \sin x &amp;= -\frac{1}{2}, \ 1
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) より</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{\pi}{2}, \ \frac{7}{6}\pi, \ \frac{11}{6}\pi
+\end{align*}</div><h2 class="tex-number">315 (2)</h2><div class="tex-math">\begin{align*}
+2 \sin^2 x + 5 \cos x - 4 &amp;&lt; 0 \nr
+  2(1 - \cos^2 x) + 5 \cos x - 4 &amp;&lt; 0 \nr
+  2 \cos^2 x - 5 \cos x + 2 &amp;&gt; 0 \nr
+  (2 \cos x - 1)(\cos x - 2) &amp;&gt; 0 \nr
+  \cos x &lt; \frac{1}{2}, \ 2 &amp;&lt; \cos x
+\end{align*}</div><p class="tex-intertext">\(0 \leqq x &lt; 2\pi\) かつ \(-1 \leqq \cos x \leqq 1\) より</p><div class="tex-math">\begin{align*}
+\frac{\pi}{3} &lt; x &lt; \frac{5}{3}\pi
+\end{align*}</div><h2 class="tex-number">316 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= \sin^2 x - \sin x - 1
+\end{align*}</div><p class="tex-intertext">\(t = \sin x\) とおくと、\(0 \leqq x &lt; 2\pi\) より \(-1 \leqq t \leqq 1\)</p><div class="tex-math">\begin{align*}
+y &amp;= t^2 - t - 1 \nr
+    &amp;= \left( t - \frac{1}{2} \right)^2 - \frac{5}{4}
+\end{align*}</div><h2 class="tex-number">316 (2)</h2><p class="tex-intertext">\(-1 \leqq t \leqq 1\) において</p><div class="tex-math">\begin{align*}
+t &amp;= -1 \text{ すなわち } x = \frac{3}{2}\pi \text{ で最大値 } 1 \nr
+  t &amp;= \frac{1}{2} \text{ すなわち } x = \frac{\pi}{6}, \ \frac{5}{6}\pi \text{ で最小値 } -\frac{5}{4}
+\end{align*}</div><h2 class="tex-number">317 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} 2 \sin x - 1 &gt; 0 \nr 2 \cos x - \sqrt{2} \leqq 0 \end{cases} \nr
+  &amp;\begin{cases} \sin x &gt; \frac{1}{2} \nr \cos x \leqq \frac{1}{\sqrt{2}} \end{cases} \nr
+  &amp;\begin{cases} \frac{\pi}{6} &lt; x &lt; \frac{5}{6} \pi \nr \frac{\pi}{4} \leqq x \leqq \frac{7}{4} \pi \end{cases} \nr
+  &amp;\iff \frac{\pi}{4} &lt; x &lt; \frac{5}{6} \pi
+\end{align*}</div><h2 class="tex-number">317 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} \tan x + 1 &lt; 0 \nr 2 \cos x &lt; 1 \end{cases} \nr
+  &amp;\begin{cases} \tan x &lt; -1 \nr \cos x &lt; \frac{1}{2} \end{cases} \nr
+  &amp;\begin{cases} \frac{\pi}{2} &lt; x &lt; \frac{3}{4} \pi, \ \frac{3}{2} \pi &lt; x &lt; \frac{7}{4} \pi \nr \frac{\pi}{3} &lt; x &lt; \frac{5}{3} \pi \end{cases} \nr
+  &amp;\iff \frac{\pi}{2} &lt; x &lt; \frac{3}{4} \pi, \ \frac{3}{2} \pi &lt; x &lt; \frac{5}{3} \pi
+\end{align*}</div>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        ここに記す解法が最適なものとは限りません。途中式の丸写しはあなたのためになりません。学習の参考程度にご活用ください。<br>
+                        誤字・誤値等にお気づきの際は<a href="../../contact.html">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script>window.__TEX_MACROS = {"Re":"\\operatorname{Re}","Im":"\\operatorname{Im}","proof":"\\textbf{証明}　","qed":"{\\rule{0.5zw}{1zh}}","E":"\\mathrm{e}","D":"\\mathrm {d}","I":"\\mathrm {i}","LHS":"(\\mathrm{LHS})","RHS":"(\\mathrm{RHS})","hc":"\\mathrm{h.c.}","cc":"\\mathrm{c.c.}","ret":"\\notag\\\\&\\qquad","nr":"\\notag\\\\","Arg":"\\operatorname{Arg}","for":["\\quad\\mathrm{for\\ \\ }#1",1],"sgn":"\\operatorname{sgn}","Tr":"\\operatorname{Tr}","AAA":"\\mathaccent 23\\mathrm{A}","abs":["{\\left\\rvert #1 \\right\\lvert}",1]};</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/tex-page.js"></script>
+</body>
+</html>

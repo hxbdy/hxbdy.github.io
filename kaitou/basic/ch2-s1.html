@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <link rel="icon" href="../../img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>§1 方程式　解答例｜2章 方程式と不等式｜とどろき英数塾</title>
+    <meta name="description" content="新 基礎数学 改訂版（大日本図書）問題集「2章 §1 方程式」の途中式つき解答例。解の公式・判別式・解と係数の関係を扱います。">
+    <link rel="canonical" href="https://todoroki.fyi/kaitou/basic/ch2-s1.html">
+    <link rel="stylesheet" href="../../css/sanitize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tex.css">
+    <link rel="stylesheet" href="../../css/tex-page.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="§1 方程式　解答例｜新 基礎数学 改訂版（大日本図書）">
+    <meta property="og:description" content="新 基礎数学 改訂版（大日本図書）問題集「2章 §1 方程式」の途中式つき解答例。解の公式・判別式・解と係数の関係を扱います。">
+    <meta property="og:image" content="../../img/Thumbnail.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="とどろき英数塾">
+    <meta property="og:url" content="https://todoroki.fyi/kaitou/basic/ch2-s1.html">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="../../">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="../../index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="../../contact.html" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="../../about.html" target="_self">
+                        <span class="p-header__discord">運営者情報</span>
+                    </a>
+                    <br>
+                    <a href="../../privacy.html" target="_self">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title">§1 方程式　解答例</div>
+                        <p class="tex-page__meta">
+                            新 基礎数学 改訂版（大日本図書）　2章 方程式と不等式
+                        </p>
+                        <p class="tex-page__links">
+                            問題集 68~104　／　<a href="../../math_pdf_file/basic_mathematics/Chapter2/pdf/%E7%AC%AC2%E7%AB%A0%C2%A71%E6%96%B9%E7%A8%8B%E5%BC%8F_68~104.pdf" target="_blank" rel="noopener">PDF版を開く</a>　／　<a href="../../index.html#basic">一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body">
+                        <section class="tex-intro">
+                            <p class="tex-intro__ttl">この節について</p>
+                            <p>2次方程式を中心に、高次方程式や連立方程式までを扱う節です。因数分解できる場合はそのまま、できない場合は解の公式 \(x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}\) を使う、という使い分けが基本になります。</p>
+                            <p>判別式 \(D = b^2-4ac\) は、解を求めずに解の個数と種類（実数解か虚数解か）だけを判定したいときに使います。「実数解をもつような \(k\) の範囲を求めよ」といった問題は、解そのものではなく \(D \geqq 0\) を解く問題に読み替えるのがポイントです。解と係数の関係 \(\alpha+\beta = -\dfrac{b}{a}\)、\(\alpha\beta = \dfrac{c}{a}\) も、2解を個別に求めずに対称式の値を出せるので計算量を大きく減らせます。</p>
+                            <p>高次方程式は因数定理で1つ解を見つけて次数を下げるのが定石です。以下の解答例では、その「代入して0になる値の探し方」も含めて途中式を残しています。</p>
+                        </section>
+<div class="tex-heading"><strong>2章 方程式と不等式</strong><br>
+  <strong>1 方程式</strong><br>
+  <strong>BASIC</strong></div><h2 class="tex-number">68 (1)</h2><div class="tex-math">\begin{align*}
+x^2 - 3x - 4 &amp;= 0 \nr
+  (x - 4)(x + 1) &amp;= 0 \nr
+  x &amp;= 4, \ -1
+\end{align*}</div><h2 class="tex-number">68 (2)</h2><div class="tex-math">\begin{align*}
+x^2 + 3x &amp;= 0 \nr
+  x(x + 3) &amp;= 0 \nr
+  x &amp;= 0, \ -3
+\end{align*}</div><h2 class="tex-number">68 (3)</h2><div class="tex-math">\begin{align*}
+3x^2 - 7x + 2 &amp;= 0 \nr
+  (3x - 1)(x - 2) &amp;= 0 \nr
+  x &amp;= \frac{1}{3}, \ 2
+\end{align*}</div><h2 class="tex-number">68 (4)</h2><div class="tex-math">\begin{align*}
+8x^2 - 2x - 3 &amp;= 0 \nr
+  (2x + 1)(4x - 3) &amp;= 0 \nr
+  x &amp;= -\frac{1}{2}, \ \frac{3}{4}
+\end{align*}</div><h2 class="tex-number">69 (1)</h2><div class="tex-math">\begin{align*}
+x^2 + 7x + 8 &amp;= 0 \nr
+  x &amp;= \frac{-7 \pm \sqrt{49 - 32}}{2} \nr
+  &amp;= \frac{-7 \pm \sqrt{17}}{2}
+\end{align*}</div><h2 class="tex-number">69 (2)</h2><div class="tex-math">\begin{align*}
+3x^2 - 5x + 1 &amp;= 0 \nr
+  x &amp;= \frac{5 \pm \sqrt{25 - 12}}{6} \nr
+  &amp;= \frac{5 \pm \sqrt{13}}{6}
+\end{align*}</div><h2 class="tex-number">69 (3)</h2><div class="tex-math">\begin{align*}
+x^2 + 2x - 7 &amp;= 0 \nr
+  x &amp;= -1 \pm \sqrt{1 + 7} \nr
+  &amp;= -1 \pm \sqrt{8} \nr
+  &amp;= -1 \pm 2\sqrt{2}
+\end{align*}</div><h2 class="tex-number">69 (4)</h2><div class="tex-math">\begin{align*}
+2x^2 - 2x - 3 &amp;= 0 \nr
+  x &amp;= \frac{1 \pm \sqrt{1 - 2(-3)}}{2} \nr
+  &amp;= \frac{1 \pm \sqrt{1 + 6}}{2} \nr
+  &amp;= \frac{1 \pm \sqrt{7}}{2}
+\end{align*}</div><h2 class="tex-number">70 (1)</h2><div class="tex-math">\begin{align*}
+x^2 - 12x + 36 &amp;= 0 \nr
+  (x - 6)^2 &amp;= 0 \nr
+  x &amp;= 6
+\end{align*}</div><h2 class="tex-number">70 (2)</h2><div class="tex-math">\begin{align*}
+4x^2 + 20x + 25 &amp;= 0 \nr
+  (2x + 5)^2 &amp;= 0 \nr
+  x &amp;= -\frac{5}{2}
+\end{align*}</div><h2 class="tex-number">71 (1)</h2><div class="tex-math">\begin{align*}
+x^2 + 5x + 7 &amp;= 0 \nr
+  x &amp;= \frac{-5 \pm \sqrt{25 - 28}}{2} \nr
+  &amp;= \frac{-5 \pm \sqrt{-3}}{2} \nr
+  &amp;= \frac{-5 \pm \sqrt{3}i}{2}
+\end{align*}</div><h2 class="tex-number">71 (2)</h2><div class="tex-math">\begin{align*}
+2x^2 + 3x + 2 &amp;= 0 \nr
+  x &amp;= \frac{-3 \pm \sqrt{9 - 16}}{4} \nr
+  &amp;= \frac{-3 \pm \sqrt{-7}}{4} \nr
+  &amp;= \frac{-3 \pm \sqrt{7}i}{4}
+\end{align*}</div><h2 class="tex-number">71 (3)</h2><div class="tex-math">\begin{align*}
+x^2 + 4 &amp;= 0 \nr
+  x^2 &amp;= -4 \nr
+  x &amp;= \pm 2i
+\end{align*}</div><h2 class="tex-number">71 (4)</h2><div class="tex-math">\begin{align*}
+3x^2 - 2x + 4 &amp;= 0 \nr
+  x &amp;= \frac{1 \pm \sqrt{1 - 12}}{3} \nr
+  &amp;= \frac{1 \pm \sqrt{-11}}{3} \nr
+  &amp;= \frac{1 \pm \sqrt{11}i}{3}
+\end{align*}</div><h2 class="tex-number">72 (1)</h2><p class="tex-text">判別式を \(D\) とすると</p><div class="tex-math">\begin{align*}
+x^2 - 3x + 6 &amp;= 0 \nr
+  D &amp;= (-3)^2 - 4 \cdot 1 \cdot 6 \nr
+  &amp;= 9 - 24 \nr
+  &amp;= -15 &lt; 0
+\end{align*}</div><p class="tex-text">よって、異なる2つの虚数解をもつ。</p><h2 class="tex-number">72 (2)</h2><p class="tex-text">判別式を \(D\) とすると</p><div class="tex-math">\begin{align*}
+2x^2 - x - 5 &amp;= 0 \nr
+  D &amp;= (-1)^2 - 4 \cdot 2 \cdot (-5) \nr
+  &amp;= 1 + 40 \nr
+  &amp;= 41 &gt; 0
+\end{align*}</div><p class="tex-text">よって、異なる2つの実数解をもつ。</p><h2 class="tex-number">72 (3)</h2><p class="tex-text">判別式を \(D\) とすると</p><div class="tex-math">\begin{align*}
+9x^2 + 6x + 1 &amp;= 0 \nr
+  D/4 &amp;= 3^2 - 9 \cdot 1 \nr
+  &amp;= 9 - 9 = 0
+\end{align*}</div><p class="tex-text">よって、重解をもつ。</p><h2 class="tex-number">73 (1)</h2><div class="tex-math">\begin{align*}
+D&amp;=k^{2}-4(k+8)\nr
+&amp;=k^{2}-4k-32\nr
+&amp;=(k-8)(k+4)=0\nr
+k&amp;=-4, 8
+\end{align*}</div><p class="tex-intertext">\(k=-4\) のとき</p><div class="tex-math">\begin{align*}
+x^2-4x+4&amp;=0\nr
+(x-2)^2&amp;=0\nr
+x&amp;=2
+\end{align*}</div><p class="tex-intertext">\(k=8\) のとき</p><div class="tex-math">\begin{align*}
+x^2+8x+16&amp;=0\nr
+(x+4)^2&amp;=0\nr
+x&amp;=-4
+\end{align*}</div><h2 class="tex-number">73 (2)</h2><p class="tex-text">判別式を \(D\) とすると</p><div class="tex-math">\begin{align*}
+D &amp;= (k + 3)^2 - 4 \cdot 4k \nr
+  &amp;= k^2 + 6k + 9 - 16k \nr
+  &amp;= k^2 - 10k + 9 \nr
+  &amp;= (k - 1)(k - 9) = 0 \nr
+  k &amp;= 1, \ 9
+\end{align*}</div><p class="tex-text">\(k = 1\) のとき</p><div class="tex-math">\begin{align*}
+4x^2 + 4x + 1 &amp;= 0 \nr
+  (2x + 1)^2 &amp;= 0 \nr
+  x &amp;= -\frac{1}{2}
+\end{align*}</div><p class="tex-text">\(k = 9\) のとき</p><div class="tex-math">\begin{align*}
+4x^2 + 12x + 9 &amp;= 0 \nr
+  (2x + 3)^2 &amp;= 0 \nr
+  x &amp;= -\frac{3}{2}
+\end{align*}</div><h2 class="tex-number">74 (1)</h2><div class="tex-math">\begin{align*}
+\alpha + \beta = -4, \ \alpha \beta = \frac{1}{2} \nr
+  \alpha^2 \beta + \alpha \beta^2 &amp;= \alpha \beta (\alpha + \beta) \\
+  &amp;= \frac{1}{2} \times (-4) \\
+  &amp;= -2
+\end{align*}</div><h2 class="tex-number">74 (2)</h2><div class="tex-math">\begin{align*}
+\alpha^2 + \beta^2 &amp;= (\alpha + \beta)^2 - 2\alpha \beta \nr
+  &amp;= 16 - 1 \nr
+  &amp;= 15
+\end{align*}</div><h2 class="tex-number">74 (3)</h2><div class="tex-math">\begin{align*}
+\frac{1}{\alpha} + \frac{1}{\beta} &amp;= \frac{\alpha + \beta}{\alpha \beta} \nr
+  &amp;= -4 \times 2 \nr
+  &amp;= -8
+\end{align*}</div><h2 class="tex-number">75 (1)</h2><p class="tex-text">\(x^2 - 2x - 2 = 0\) とすると</p><div class="tex-math">\begin{align*}
+x &amp;= 1 \pm \sqrt{3} \nr
+  \therefore &amp;(x - 1 - \sqrt{3})(x - 1 + \sqrt{3})
+\end{align*}</div><h2 class="tex-number">75 (2)</h2><p class="tex-text">\(x^2 - 3x + 4 = 0\) とすると</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{3 \pm \sqrt{9 - 16}}{2} \nr
+  &amp;= \frac{3 \pm \sqrt{7}i}{2} \nr
+  \therefore &amp;\left(x - \frac{3 + \sqrt{7}i}{2}\right)\left(x - \frac{3 - \sqrt{7}i}{2}\right)
+\end{align*}</div><h2 class="tex-number">75 (3)</h2><p class="tex-text">\(3x^2 + 2x + 1 = 0\) とすると</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{-1 \pm \sqrt{1 - 3}}{3} \nr
+  &amp;= \frac{-1 \pm \sqrt{2}i}{3} \nr
+  \therefore 3&amp;\left(x - \frac{-1 + \sqrt{2}i}{3}\right)\left(x - \frac{-1 - \sqrt{2}i}{3}\right)
+\end{align*}</div><h2 class="tex-number">75 (4)</h2><p class="tex-text">\(4x^2 - 8x + 1 = 0\) とすると</p><div class="tex-math">\begin{align*}
+x &amp;= \frac{4 \pm \sqrt{16 - 4}}{4} \nr
+  &amp;= \frac{4 \pm 2\sqrt{3}}{4} \nr
+  &amp;= \frac{2 \pm \sqrt{3}}{2} \nr
+  \therefore 4&amp;\left(x - \frac{2 + \sqrt{3}}{2}\right)\left(x - \frac{2 - \sqrt{3}}{2}\right)
+\end{align*}</div><h2 class="tex-number">76 (1)</h2><div class="tex-math">\begin{align*}
+x^4 - 7x^2 - 18 &amp;= 0 \nr
+  (x^2 - 9)(x^2 + 2) &amp;= 0 \nr
+  x &amp;= \pm 3, \pm \sqrt{2}i
+\end{align*}</div><h2 class="tex-number">76 (2)</h2><div class="tex-math">\begin{align*}
+x^5 + 8x^3 - 9x &amp;= 0 \nr
+  x(x^4 + 8x^2 - 9) &amp;= 0 \nr
+  x(x^2 + 9)(x^2 - 1) &amp;= 0 \nr
+  x &amp;= 0, \pm 1, \pm 3i
+\end{align*}</div><h2 class="tex-number">77 (1)</h2><div class="tex-math">\begin{align*}
+x^3 + 4x^2 + 2x - 1 &amp;= 0 \nr
+  (x + 1)(x^2 + 3x - 1) &amp;= 0 \nr
+  x &amp;= -1, \frac{-3 \pm \sqrt{13}}{2}
+\end{align*}</div><h2 class="tex-number">77 (2)</h2><div class="tex-math">\begin{align*}
+2x^3 - x^2 - 5x - 2 &amp;= 0 \nr
+  (x - 2)(2x^2 + 3x + 1) &amp;= 0 \nr
+  (x - 2)(2x + 1)(x + 1) &amp;= 0 \nr
+  x &amp;= 2, -\frac{1}{2}, -1
+\end{align*}</div><h2 class="tex-number">78 (1)</h2><div class="tex-math">\begin{align*}
+\begin{cases}
+    3x - y + z = 6 \cdots \text{①} \nr
+    5x - 4y + 2z = 7 \cdots \text{②} \nr
+    x + 3y - z = 8 \cdots \text{③}
+  \end{cases}
+\end{align*}</div><p class="tex-text">① + ③ より</p><div class="tex-math">\begin{align*}
+4x + 2y &amp;= 14 \cdots \text{④}
+\end{align*}</div><p class="tex-text">② + ③ \(\times 2\) より</p><div class="tex-math">\begin{align*}
+7x + 2y &amp;= 23 \cdots \text{⑤}
+\end{align*}</div><p class="tex-text">④, ⑤ より</p><div class="tex-math">\begin{align*}
+x = 3, \ y = 1
+\end{align*}</div><p class="tex-text">① に代入して</p><div class="tex-math">\begin{align*}
+9 - 1 + z &amp;= 6 \nr
+  z &amp;= -2 \nr
+  \therefore (x, y, z) &amp;= (3, 1, -2)
+\end{align*}</div><h2 class="tex-number">78 (2)</h2><div class="tex-math">\begin{align*}
+\begin{cases}
+    x + 3y = 5 \cdots \text{①} \nr
+    2x + y + z = 1 \cdots \text{②} \nr
+    x + 2y + 3z = 6 \cdots \text{③}
+  \end{cases}
+\end{align*}</div><p class="tex-text">② \(\times 3 - \) ③ より </p><div class="tex-math">\begin{align*}
+5x + y &amp;= -3 \cdots \text{④}
+\end{align*}</div><p class="tex-text">① + ④ \(\times 3\) より </p><div class="tex-math">\begin{align*}
+16x &amp;= -4 \nr
+  \therefore x &amp;= -1, \ y = 2
+\end{align*}</div><p class="tex-text">② に代入して</p><div class="tex-math">\begin{align*}
+-2 + 2 + z &amp;= 1 \nr
+  z &amp;= 1  \nr
+  \therefore (x, y, z) &amp;= (-1, 2, 1)
+\end{align*}</div><h2 class="tex-number">79 (1)</h2><div class="tex-math">\begin{align*}
+\begin{cases}
+    2x + y = 1 \cdots \text{①} \nr
+    5x^2 - y^2 + y = 3 \cdots \text{②}
+  \end{cases}
+\end{align*}</div><p class="tex-text">① より \(y = 1 - 2x\) 
+これを ② に代入して</p><div class="tex-math">\begin{align*}
+5x^2 - (1 - 2x)^2 &amp;+ (1 - 2x) = 3 \nr
+  5x^2 - (1 - 4x + 4x^2) &amp;+ 1 - 2x = 3 \nr
+  x^2 + 2x - 3 &amp;= 0 \nr
+  (x + 3)(x - 1) &amp;= 0 \nr
+  x &amp;= -3, \ 1
+\end{align*}</div><p class="tex-text">\((x, y) = (-3, 7), (1, -1)\)</p><h2 class="tex-number">79 (2)</h2><div class="tex-math">\begin{align*}
+\begin{cases}
+    x - y = 4 \cdots \text{①} \nr
+    x^2 + xy + y^2 = 13 \cdots \text{②}
+  \end{cases}
+\end{align*}</div><p class="tex-text">① より \(x = 4 + y\) 
+これを ② に代入して</p><div class="tex-math">\begin{align*}
+(4 + y)^2 + (4 + y)y + y^2 &amp;= 13 \nr
+  (16 + 8y + y^2) + (4y + y^2) + y^2 &amp;= 13 \nr
+  3y^2 + 12y + 3 &amp;= 0 \nr
+  y^2 + 4y + 1 &amp;= 0 \nr
+  y &amp;= -2 \pm \sqrt{3}
+\end{align*}</div><p class="tex-text">\(x = 4 + (-2 \pm \sqrt{3}) = 2 \pm \sqrt{3}\) より \((x, y) = (2 \pm \sqrt{3}, -2 \pm \sqrt{3})\)（複号同順） </p><h2 class="tex-number">80 (1)</h2><div class="tex-math">\begin{align*}
+|3x + 1| &amp;= 2  \nr
+  3x + 1 &amp;= \pm 2  \nr
+  3x &amp;= 1, \ -3  \nr
+  x &amp;= \frac{1}{3}, \ -1
+\end{align*}</div><h2 class="tex-number">80 (2)</h2><div class="tex-math">\begin{align*}
+|2x - 7| - 3 &amp;= 0  \nr
+  2x - 7 &amp;= \pm 3  \nr
+  2x &amp;= 10, \ 4  \nr
+  x &amp;= 5, \ 2
+\end{align*}</div><h2 class="tex-number">81 (1)</h2><div class="tex-math">\begin{align*}
+\frac{3}{x - 1} + \frac{4}{x - 2} &amp;= \frac{2x + 5}{(x - 1)(x - 2)}  \nr
+  3(x - 2) + 4(x - 1) &amp;= 2x + 5  \nr
+  7x - 10 &amp;= 2x + 5  \nr
+  5x &amp;= 15  \nr
+  x &amp;= 3
+\end{align*}</div><h2 class="tex-number">81 (2)</h2><div class="tex-math">\begin{align*}
+\frac{x}{x - 3} + \frac{1}{x + 2} &amp;= \frac{5x}{x^2 - x - 6}  \nr
+  x(x + 2) + x - 3 &amp;= 5x  \nr
+  x^2 + 2x + x - 3 - 5x &amp;= 0  \nr
+  x^2 - 2x - 3 &amp;= 0  \nr
+  (x - 3)(x + 1) &amp;= 0  \nr
+  x &amp;= -1, \ 3
+\end{align*}</div><p class="tex-intertext">\(x \neq -2, 3\) より</p><div class="tex-math">\begin{align*}
+x &amp;= -1
+\end{align*}</div><h2 class="tex-number">82 (1)</h2><div class="tex-math">\begin{align*}
+\sqrt{x - 1} &amp;= x - 3
+\end{align*}</div><p class="tex-intertext">定義域 \(x \geqq 1\) かつ、(左辺) \(\geqq 0\) より \(x \geqq 3\) が必要である。</p><div class="tex-math">\begin{align*}
+x - 1 &amp;= (x - 3)^2  \nr
+  x - 1 &amp;= x^2 - 6x + 9  \nr
+  x^2 - 7x + 10 &amp;= 0  \nr
+  (x - 2)(x - 5) &amp;= 0  \nr
+  x &amp;= 2, \ 5
+\end{align*}</div><p class="tex-intertext">\(x \geqq 3\) より</p><div class="tex-math">\begin{align*}
+x &amp;= 5
+\end{align*}</div><h2 class="tex-number">82 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\sqrt{10 - x^2} = x + 2
+\end{align*}</div><p class="tex-intertext">定義域 \(10 - x^2 \geqq 0\) より \(-\sqrt{10} \leqq x \leqq \sqrt{10}\) である。また、(左辺) \(\geqq 0\) より \(x + 2 \geqq 0\) すなわち \(x \geqq -2\) が必要である。このとき両辺を2乗して</p><div class="tex-math">\begin{align*}
+&amp;10 - x^2 = (x + 2)^2 \nr
+  &amp;10 - x^2 = x^2 + 4x + 4 \nr
+  &amp;2x^2 + 4x - 6 = 0 \nr
+  &amp;x^2 + 2x - 3 = 0 \nr
+  &amp;(x + 3)(x - 1) = 0 \nr
+  &amp;x = -3, \ 1
+\end{align*}</div><p class="tex-intertext">条件を満たすのは</p><div class="tex-math">\begin{align*}
+&amp;x = 1 \text{ （$x = -3$ は不適）}
+\end{align*}</div><h2 class="tex-number">83 (1)</h2><div class="tex-math">\begin{align*}
+&amp;3x^2 + ax + 1 = bx^2 + 5x + c
+\end{align*}</div><p class="tex-intertext">\(x\) についての恒等式なので、係数を比較して</p><div class="tex-math">\begin{align*}
+&amp;b = 3 \nr
+  &amp;a = 5 \nr
+  &amp;c = 1 \nr
+  &amp;\therefore a = 5, \ b = 3, \ c = 1
+\end{align*}</div><h2 class="tex-number">83 (2)</h2><div class="tex-math">\begin{align*}
+&amp;ax^2 - 3 = 2x^2 + bx + c
+\end{align*}</div><p class="tex-intertext">\(x\) についての恒等式なので、係数を比較して</p><div class="tex-math">\begin{align*}
+&amp;a = 2 \nr
+  &amp;b = 0 \nr
+  &amp;c = -3 \nr
+  &amp;\therefore a = 2, \ b = 0, \ c = -3
+\end{align*}</div><h2 class="tex-number">84 (1)</h2><div class="tex-math">\begin{align*}
+&amp;2x^2 + 3x + 6 \nr
+  &amp;= a(x + 1)(x + 2) + b(x - 1) + c
+\end{align*}</div><p class="tex-intertext">右辺を展開すると</p><div class="tex-math">\begin{align*}
+&amp;a(x^2 + 3x + 2) + bx - b + c \nr
+  &amp;= ax^2 + (3a + b)x + 2a - b + c
+\end{align*}</div><p class="tex-intertext">\(x\) についての恒等式なので</p><div class="tex-math">\begin{align*}
+&amp;a = 2 \nr
+  &amp;3a + b = 3 \nr
+  &amp;2a - b + c = 6
+\end{align*}</div><p class="tex-intertext">これを解いて</p><div class="tex-math">\begin{align*}
+&amp;\therefore a = 2, \ b = -3, \ c = -1
+\end{align*}</div><h2 class="tex-number">84 (2)</h2><div class="tex-math">\begin{align*}
+(\text{右辺}) &amp;= x^3 + (b + c)x^2 + (bc + 2)x + 2c
+\end{align*}</div><p class="tex-intertext">\(x\) についての恒等式なので、係数を比較して</p><div class="tex-math">\begin{align*}
+&amp;b + c = 3 \cdots \text{①} \nr
+  &amp;bc + 2 = 4 \cdots \text{②} \nr
+  &amp;2c = a \cdots \text{③}
+\end{align*}</div><p class="tex-intertext">①より \(b = 3 - c\)。これを②に代入して</p><div class="tex-math">\begin{align*}
+&amp;(3 - c)c + 2 = 4 \nr
+  &amp;c^2 - 3c + 2 = 0 \nr
+  &amp;(c - 2)(c - 1) = 0 \nr
+  &amp;c = 1, 2 \nr
+  \therefore &amp;(a, b, c) = (2, 2, 1), (4, 1, 2)
+\end{align*}</div><h2 class="tex-number">85 (1)</h2><div class="tex-math">\begin{align*}
+\frac{1}{(x - 1)(x - 3)} &amp;= \frac{a}{x - 1} + \frac{b}{x - 3} \nr
+  1 &amp;= a(x - 3) + b(x - 1) \nr
+  1 &amp;= (a + b)x - (3a + b)
+\end{align*}</div><p class="tex-intertext">\(x\) についての恒等式なので</p><div class="tex-math">\begin{align*}
+&amp;a + b = 0 \nr
+  &amp;3a + b = -1 \nr
+  \therefore a &amp;= -\frac{1}{2}, \ b = \frac{1}{2}
+\end{align*}</div><h2 class="tex-number">85 (2)</h2><div class="tex-math">\begin{align*}
+\frac{8x + 1}{x^3 - 1} &amp;= \frac{a}{x - 1} + \frac{bx + c}{x^2 + x + 1} \nr
+  8x + 1 &amp;= a(x^2 + x + 1) + (bx + c)(x - 1) \nr
+  8x + 1 &amp;= (a + b)x^2 + (a - b + c)x + a - c
+\end{align*}</div><p class="tex-intertext">\(x\) についての恒等式なので</p><div class="tex-math">\begin{align*}
+&amp;a + b = 0 \nr
+  &amp;a - b + c = 8 \nr
+  &amp;a - c = 1 \nr
+  \therefore a &amp;= 3, \ b = -3, \ c = 2
+\end{align*}</div><h2 class="tex-number">86</h2><div class="tex-math">\begin{align*}
+(\text{左辺}) - (\text{右辺}) &amp;= x^3 + y^3 - (x + y)^3 \nr
+&amp;\quad + 3xy(x + y) \nr
+&amp;= x^3 + y^3 \nr
+&amp;\quad - (x^3 + 3x^2y + 3xy^2 + y^3) \nr
+&amp;\quad + 3x^2y + 3xy^2 \nr
+&amp;= 0 \nr
+&amp;\text{よって等式は成り立つ}
+\end{align*}</div><h2 class="tex-number">87</h2><div class="tex-math">\begin{align*}
+(\text{左辺}) - (\text{右辺}) &amp;= a^2 + ac - b^2 - bc \nr
+  &amp;= (a^2 - b^2) + c(a - b) \nr
+  &amp;= (a + b)(a - b) + c(a - b) \nr
+  &amp;= (a - b)(a + b + c) \nr
+  &amp;= 0 \quad (\because a + b + c = 0)
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>CHECK</strong></div><h2 class="tex-number">88 (1)</h2><div class="tex-math">\begin{align*}
+&amp;6x^2 + x - 12 = 0 \nr
+  &amp;(3x - 4)(2x + 3) = 0 \nr
+  &amp;x = \frac{4}{3}, \ -\frac{3}{2}
+\end{align*}</div><h2 class="tex-number">88 (2)</h2><div class="tex-math">\begin{align*}
+&amp;3x^2 + 4x + 2 = 0 \nr
+  &amp;x = \frac{-2 \pm \sqrt{4 - 6}}{3} \nr
+  &amp;x = \frac{-2 \pm \sqrt{2}i}{3}
+\end{align*}</div><h2 class="tex-number">88 (3)</h2><div class="tex-math">\begin{align*}
+&amp;x^2 - 2\sqrt{3}x + 3 = 0 \nr
+  &amp;(x - \sqrt{3})^2 = 0 \nr
+  &amp;x = \sqrt{3}
+\end{align*}</div><h2 class="tex-number">88 (4)</h2><div class="tex-math">\begin{align*}
+&amp;2x^2 = 7x - 4 \nr
+  &amp;2x^2 - 7x + 4 = 0 \nr
+  &amp;x = \frac{7 \pm \sqrt{49 - 32}}{4} \nr
+  &amp;x = \frac{7 \pm \sqrt{17}}{4}
+\end{align*}</div><h2 class="tex-number">88 (5)</h2><div class="tex-math">\begin{align*}
+&amp;x^2 + 2x - \frac{5}{3} = 0 \nr
+  &amp;3x^2 + 6x - 5 = 0 \nr
+  &amp;x = \frac{-3 \pm \sqrt{9 + 15}}{3} \nr
+  &amp;x = \frac{-3 \pm 2\sqrt{6}}{3}
+\end{align*}</div><h2 class="tex-number">88 (6)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{1}{3}x^2 - \frac{1}{2}x + \frac{1}{4} = 0 \nr
+  &amp;4x^2 - 6x + 3 = 0 \nr
+  &amp;x = \frac{3 \pm \sqrt{9 - 12}}{4} \nr
+  &amp;x = \frac{3 \pm \sqrt{3}i}{4}
+\end{align*}</div><h2 class="tex-number">89 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x^4 - 10x^2 + 9 = 0 \nr
+  &amp;(x^2 - 1)(x^2 - 9) = 0 \nr
+  &amp;x^2 = 1, \ 9 \nr
+  &amp;x = \pm 1, \pm 3
+\end{align*}</div><h2 class="tex-number">89 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x^{3}-5x+2=0 \\
+  &amp;(x-2)(x^{2}+2x-1)=0 \\
+  &amp;x=2, \ -1 \pm \sqrt{2}
+\end{align*}</div><h2 class="tex-number">89 (3)</h2><div class="tex-math">\begin{align*}
+&amp;|4 x-3|=5 \\
+  &amp;4 x-3=\pm 5 \\
+  &amp;4 x=8, \ -2 \\
+  &amp;x=2, \ -\frac{1}{2}
+\end{align*}</div><h2 class="tex-number">89 (4)</h2><div class="tex-math">\begin{align*}
+&amp;1-2 x=\sqrt{4-3 x} \\
+  &amp;\text{条件 } x \leqq \frac{1}{2} \text{ のもとで両辺を2乗} \\
+  &amp;(1-2 x)^{2}=4-3 x \\
+  &amp;1-4 x+4 x^{2}=4-3 x \\
+  &amp;4 x^{2}-x-3=0 \\
+  &amp;(4 x+3)(x-1)=0 \\
+  &amp;x=1, \ -\frac{3}{4} \\
+  &amp;x \leqq \frac{1}{2} \text{ より } x=-\frac{3}{4}
+\end{align*}</div><h2 class="tex-number">89 (5)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{3 x}{x+1}-\frac{2}{x+3}=\frac{6 x}{(x+1)(x+3)} \\
+  &amp;3 x(x+3)-2(x+1)=6 x \\
+  &amp;3 x^{2}+9 x-2 x-2-6 x=0 \\
+  &amp;3 x^{2}+x-2=0 \\
+  &amp;(3 x-2)(x+1)=0 \\
+  &amp;x=-1, \frac{2}{3} \\
+  &amp;\text{分母 } \neq 0 \text{ より } x \neq -1, -3 \\
+  &amp;\therefore x=\frac{2}{3}
+\end{align*}</div><h2 class="tex-number">90(1)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} 2x-y+z=1 &amp; \cdots (1) \\ 3x-2y-2z=3 &amp; \cdots (2) \\ x+2y+3z=8 &amp; \cdots (3) \end{cases} \\
+  &amp;(1)\times 2 + (2) \text{ より} \\
+  &amp;7x-4y=5 \quad \cdots (4) \\
+  &amp;(1)\times 3 - (3) \text{ より} \\
+  &amp;5x-5y=-5 \\
+  &amp;x-y=-1 \quad \cdots (5) \\
+  &amp;(4) - (5)\times 4 \text{ より} \\
+  &amp;3x=9 \\
+  &amp;x=3 \\
+  &amp;(5) \text{ に代入して } y=4 \\
+  &amp;(1) \text{ に代入して } z=-1 \\
+  &amp;(x, y, z)=(3, 4, -1)
+\end{align*}</div><h2 class="tex-number">90(2)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} 3x+y=1 &amp; \cdots (1) \\ 4x^{2}+xy+y^{2}=6 &amp; \cdots (2) \end{cases} \\
+  &amp;(1) \text{ より } y=1-3x \\
+  &amp;(2) \text{ に代入して} \\
+  &amp;4x^{2}+x(1-3x)+(1-3x)^{2}=6 \\
+  &amp;4x^{2}+x-3x^{2}+1-6x+9x^{2}=6 \\
+  &amp;10x^{2}-5x-5=0 \\
+  &amp;2x^{2}-x-1=0 \\
+  &amp;(2x+1)(x-1)=0 \\
+  &amp;x=1, -\frac{1}{2} \\
+  &amp;(x, y)=(1, -2), \left(-\frac{1}{2}, \frac{5}{2}\right)
+\end{align*}</div><h2 class="tex-number">91</h2><div class="tex-math">\begin{align*}
+&amp;x^{2}-(k+4)x+(2k+5)=0 \\
+  &amp;\text{判別式を } D \text{ とすると} \\
+  &amp;D=(k+4)^{2}-4(2k+5) \\
+  &amp;=k^{2}+8k+16-8k-20 \\
+  &amp;=k^{2}-4=0 \\
+  &amp;k=\pm 2 \\
+  &amp;k=2 \text{ のとき } x^{2}-6x+9=0 \\
+  &amp;x=3 \\
+  &amp;k=-2 \text{ のとき } x^{2}-2x+1=0 \\
+  &amp;x=1
+\end{align*}</div><h2 class="tex-number">92 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{解と係数の関係より} \\
+  &amp;\alpha+\beta = \frac{2}{3}, \quad \alpha\beta = \frac{1}{3} \\
+  &amp;\alpha^{2}+\beta^{2} \\
+  &amp;= (\alpha+\beta)^{2}-2\alpha\beta \\
+  &amp;= \left(\frac{2}{3}\right)^{2}-2\left(\frac{1}{3}\right) \\
+  &amp;= \frac{4}{9}-\frac{6}{9} \\
+  &amp;= -\frac{2}{9}
+\end{align*}</div><h2 class="tex-number">92 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\alpha^{3}+\beta^{3} \\
+  &amp;= (\alpha+\beta)^{3}-3\alpha\beta(\alpha+\beta) \\
+  &amp;= \left(\frac{2}{3}\right)^{3}-3\left(\frac{1}{3}\right)\left(\frac{2}{3}\right) \\
+  &amp;= \frac{8}{27}-\frac{18}{27} \\
+  &amp;= -\frac{10}{27}
+\end{align*}</div><h2 class="tex-number">93 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x^{2}-x+1=0 \quad \text{とする} \\
+  &amp;x = \frac{1 \pm \sqrt{1-4}}{2} \\
+  &amp;x = \frac{1 \pm \sqrt{3}i}{2} \\
+  &amp;\therefore \left(x-\frac{1+\sqrt{3}i}{2}\right)\left(x-\frac{1-\sqrt{3}i}{2}\right)
+\end{align*}</div><h2 class="tex-number">93 (2)</h2><div class="tex-math">\begin{align*}
+&amp;3x^{2}+8x+3=0 \quad \text{とする} \\
+  &amp;x = \frac{-4 \pm \sqrt{16-9}}{3} \\
+  &amp;x = \frac{-4 \pm \sqrt{7}}{3} \\
+  &amp;\therefore \left(x-\frac{-4+\sqrt{7}}{3}\right)\left(x-\frac{-4-\sqrt{7}}{3}\right)
+\end{align*}</div><h2 class="tex-number">94 (1)</h2><div class="tex-math">\begin{align*}
+&amp;(\text{右辺}) = b(x^{2}+2x+1)+c(x+1)+d \\
+  &amp;= bx^{2}+(2b+c)x+(b+c+d) \\
+  &amp;x \text{についての恒等式なので} \\
+  &amp;\begin{cases} b=2 \\ 2b+c=3 \\ b+c=a \end{cases} \\
+  &amp;\text{これを解いて} \\
+  &amp;a=1, \ b=2, \ c=-1
+\end{align*}</div><h2 class="tex-number">94 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{3x-1}{(x+1)^{2}} = \frac{a}{x+1}+\frac{b}{(x+1)^{2}} \\
+  &amp;3x-1 = a(x+1)+b \\
+  &amp;3x-1 = ax+(a+b) \\
+  &amp;\text{係数を比較して} \\
+  &amp;\begin{cases} a=3 \\ a+b=-1 \end{cases} \\
+  &amp;\therefore a=3, \ b=-4
+\end{align*}</div><h2 class="tex-number">95</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺})-(\text{右辺}) \\
+  &amp;= (x^{3}+1)(x^{2}+x+1) \\
+  &amp;\quad -(x+1)(x^{4}+x^{2}+1) \\
+  &amp;= (x^{5}+x^{4}+x^{3}+x^{2}+x+1) \\
+  &amp;\quad -(x^{5}+x^{4}+x^{3}+x^{2}+x+1) \\
+  &amp;= 0 \\
+  &amp;\text{よって等式は成り立つ}
+\end{align*}</div><h2 class="tex-number">96</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺})-(\text{右辺}) \\
+  &amp;= (x+y)(y+z)(z+x)+xyz \\
+  &amp;\quad -(x+y+z)(xy+yz+zx) \\
+  &amp;= (x+y+z)(xy+yz+zx)-xyz+xyz \\
+  &amp;\quad -(x+y+z)(xy+yz+zx) \\
+  &amp;= 0 \\
+  &amp;\text{よって等式は成り立つ}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>STEP UP</strong></div><h2 class="tex-number">97 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{x}{2}=\frac{y}{3}=\frac{z}{4}=k \quad \text{とおくと} \\
+  &amp;x=2k, \ y=3k, \ z=4k \\
+  &amp;x^{2}+y-3z+2=0 \quad \text{に代入して} \\
+  &amp;(2k)^{2}+3k-3(4k)+2=0 \\
+  &amp;4k^{2}-9k+2=0 \\
+  &amp;(4k-1)(k-2)=0 \\
+  &amp;k=\frac{1}{4}, \ 2 \\
+  &amp;\therefore (x, y, z) = \left(\frac{1}{2}, \frac{3}{4}, 1\right), \ (4, 6, 8)
+\end{align*}</div><h2 class="tex-number">97 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} x^{2}+y^{2}=16 &amp; \cdots (1) \\ y=x^{2}-4 &amp; \cdots (2) \end{cases} \\
+  &amp;(2) \text{ より } x^{2}=y+4 \\
+  &amp;(1) \text{ に代入して} \\
+  &amp;(y+4)+y^{2}=16 \\
+  &amp;y^{2}+y-12=0 \\
+  &amp;(y+4)(y-3)=0 \\
+  &amp;y=-4, \ 3 \\
+  &amp;y=-4 \text{ のとき } x^{2}=0 \implies x=0 \\
+  &amp;y=3 \text{ のとき } x^{2}=7 \implies x=\pm\sqrt{7} \\
+  &amp;\therefore (x, y) = (0, -4), \ (\pm\sqrt{7}, 3)
+\end{align*}</div><h2 class="tex-number">98 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x^{4}-6x^{2}+1=0 \\
+  &amp;x^{2} = \frac{6 \pm \sqrt{36-4}}{2} \\
+  &amp;x^{2} = 3 \pm 2\sqrt{2} \\
+  &amp;x = \pm\sqrt{3 \pm 2\sqrt{2}} \\
+  &amp;x = \pm(\sqrt{2} \pm 1) \\
+  &amp;\therefore x = 1 \pm \sqrt{2}, \ -1 \pm \sqrt{2}
+\end{align*}</div><h2 class="tex-number">98 (2)</h2><div class="tex-math">\begin{align*}
+x^4+x^2+1&amp;=0 \nr
+  (x^4+2x^2+1)-x^2&amp;=0 \nr
+  (x^2+1)^2-x^2&amp;=0 \nr
+  (x^2+x+1)(x^2-x+1)&amp;=0 \nr
+  x=\frac{-1\pm\sqrt{3}i}{2}, \ &amp;\frac{1\pm\sqrt{3}i}{2}
+\end{align*}</div><h2 class="tex-number">99 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{3}{x^{2}-3x}-\frac{x+2}{x^{2}+x}-\frac{17x+1}{x^{2}-2x-3}=\frac{3x}{x+1} \\
+  &amp;\frac{3}{x(x-3)}-\frac{x+2}{x(x+1)}-\frac{17x+1}{(x-3)(x+1)}=\frac{3x}{x+1} \\
+  &amp;\text{両辺に } x(x+1)(x-3) \text{ を掛けて} \\
+  &amp;3(x+1)-(x+2)(x-3)-x(17x+1)=3x^{2}(x-3) \\
+  &amp;3x+3-(x^{2}-x-6)-(17x^{2}+x)=3x^{3}-9x^{2} \\
+  &amp;3x^{3}+9x^{2}-3x-9=0 \\
+  &amp;x^{3}+3x^{2}-x-3=0 \\
+  &amp;x^{2}(x+3)-(x+3)=0 \\
+  &amp;(x+3)(x^{2}-1)=0 \\
+  &amp;x=-3, \ \pm 1 \\
+  &amp;\text{分母 } \neq 0 \text{ より } x \neq 0, \ -1, \ 3 \\
+  &amp;\therefore x=-3, \ 1
+\end{align*}</div><h2 class="tex-number">99 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\sqrt{3x-5}+10=2x \\
+  &amp;\sqrt{3x-5}=2x-10 \\
+  &amp;\text{条件 } x &gt; \frac{5}{3} \text{ かつ } x \geqq 5 \text{ より } x \geqq 5 \\
+  &amp;\text{このとき両辺を2乗して} \\
+  &amp;3x-5 = (2x-10)^{2} \\
+  &amp;3x-5 = 4x^{2}-40x+100 \\
+  &amp;4x^{2}-43x+105=0 \\
+  &amp;(4x-15)(x-7)=0 \\
+  &amp;x = \frac{15}{4}, \ 7 \\
+  &amp;x \geqq 5 \text{ より } \\
+  &amp;\therefore x = 7
+\end{align*}</div><h2 class="tex-number">99 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\sqrt{x-1}+2=\sqrt{2x+5} \\
+  &amp;\text{定義域は } x \geqq 1 \\
+  &amp;\text{両辺正なので2乗して} \\
+  &amp;x-1+4\sqrt{x-1}+4 = 2x+5 \\
+  &amp;4\sqrt{x-1} = x+2 \\
+  &amp;\text{さらに両辺を2乗して} \\
+  &amp;16(x-1) = (x+2)^{2} \\
+  &amp;16x-16 = x^{2}+4x+4 \\
+  &amp;x^{2}-12x+20=0 \\
+  &amp;(x-2)(x-10)=0 \\
+  &amp;x=2, \ 10 \\
+  &amp;\text{これらは } x \geqq 1 \text{ を満たす} \\
+  &amp;\therefore x=2, \ 10
+\end{align*}</div><h2 class="tex-number">100</h2><div class="tex-math">\begin{align*}
+&amp;\text{静水時の船の速さを } x \text{ km/h とする } (x &gt; 3) \\
+  &amp;\frac{60}{x-3} = \frac{60}{x+3} + 5 \\
+  &amp;\text{両辺に } (x-3)(x+3) \text{ を掛けて} \\
+  &amp;60(x+3) = 60(x-3) + 5(x-3)(x+3) \\
+  &amp;12(x+3) = 12(x-3) + (x^{2}-9) \\
+  &amp;12x + 36 = 12x - 36 + x^{2} - 9 \\
+  &amp;x^{2} - 81 = 0 \\
+  &amp;x = \pm 9 \\
+  &amp;x &gt; 3 \text{ より } x = 9 \\
+  &amp;\therefore 9 \text{ km/h}
+\end{align*}</div><h2 class="tex-number">101</h2><div class="tex-math">\begin{align*}
+&amp;\frac{x}{b-c} = \frac{y}{c-a} = \frac{z}{a-b} = k \text{ とおくと} \\
+  &amp;x = k(b-c), \ y = k(c-a), \ z = k(a-b) \\
+  &amp;(\text{左辺}) = (b+c)x + (c+a)y + (a+b)z \\
+  &amp;= k(b+c)(b-c) + k(c+a)(c-a) \\
+  &amp;\quad + k(a+b)(a-b) \\
+  &amp;= k(b^{2}-c^{2} + c^{2}-a^{2} + a^{2}-b^{2}) \\
+  &amp;= 0 \\
+  &amp;\text{よって等式は成り立つ}
+\end{align*}</div><h2 class="tex-number">102</h2><div class="tex-math">\begin{align*}
+&amp; x=-1, 2 \text{ を代入すると} \\
+  &amp;\begin{cases} 1+4a+b-a-24=0 \\ 16-32a+4 b+2a-24=0 \end{cases} \\
+  &amp;\begin{cases} 3a+b=23 \\ -30a+4b=8 \end{cases} \\
+  &amp;\text{これを解いて} \\
+  &amp;a=2, \ b=17 \\
+  &amp;\text{方程式は} \\
+  &amp;x^{4}-8x^{3}+17x^{2}+2x-24=0 \\
+  &amp;(x+1)(x-2)(x^{2}-7x+12)=0 \\
+  &amp;(x+1)(x-2)(x-3)(x-4)=0 \\
+  &amp;\text{よって、他の解は} \\
+  &amp;x=3, \ 4
+\end{align*}</div><h2 class="tex-number">103</h2><div class="tex-math">\begin{align*}
+&amp;x^3+2x^2+ax+b \text{ を } x-1 \text{ で割ると} \\
+  &amp;\text{商は } x^2+3x+a+3, \text{ 余りは } a+b+3 \\
+  &amp;\text{割り切れるので } a+b+3=0 \\
+  &amp;\therefore b=-a-3 \\
+  &amp;\text{さらに商 } x^2+3x+a+3 \text{ が } x-1 \text{ で} \\
+  &amp;\text{割り切れるので、その余りについて} \\
+  &amp;1^2+3(1)+a+3 = a+7 = 0 \\
+  &amp;\text{よって } a=-7 \\
+  &amp;b=-(-7)-3=4
+\end{align*}</div><h2 class="tex-number">104(1)</h2><div class="tex-math">\begin{align*}
+\begin{cases} \omega^{3}=1 \\ 1+\omega+\omega^{2}=0 \end{cases} \\
+  \text{が成り立つ} \\
+  \omega^{12} &amp;= (\omega^3)^4 \\
+  &amp;= 1^4 \\
+  &amp;= 1
+\end{align*}</div><h2 class="tex-number">104(2)</h2><div class="tex-math">\begin{align*}
+\omega^{8}+\omega^{4} &amp;= (\omega^{3})^{2} \cdot \omega^{2} + \omega^{3} \cdot \omega \\
+  &amp;= 1 \cdot \omega^{2}+1 \cdot \omega \\
+  &amp;= \omega^{2}+\omega \\
+  &amp;= -1
+\end{align*}</div>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        ここに記す解法が最適なものとは限りません。途中式の丸写しはあなたのためになりません。学習の参考程度にご活用ください。<br>
+                        誤字・誤値等にお気づきの際は<a href="../../contact.html">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script>window.__TEX_MACROS = {"Re":"\\operatorname{Re}","Im":"\\operatorname{Im}","proof":"\\textbf{証明}　","qed":"{\\rule{0.5zw}{1zh}}","E":"\\mathrm{e}","D":"\\mathrm {d}","I":"\\mathrm {i}","LHS":"(\\mathrm{LHS})","RHS":"(\\mathrm{RHS})","hc":"\\mathrm{h.c.}","cc":"\\mathrm{c.c.}","ret":"\\notag\\\\&\\qquad","nr":"\\notag\\\\","Arg":"\\operatorname{Arg}","for":["\\quad\\mathrm{for\\ \\ }#1",1],"sgn":"\\operatorname{sgn}","Tr":"\\operatorname{Tr}","AAA":"\\mathaccent 23\\mathrm{A}","abs":["{\\left\\rvert #1 \\right\\lvert}",1]};</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/tex-page.js"></script>
+</body>
+</html>

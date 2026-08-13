@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# ページ生成用のスクリプト置き場（コンテンツではない）
+Disallow: /tools/
+
+Sitemap: https://todoroki.fyi/sitemap.xml

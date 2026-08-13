@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <link rel="icon" href="../../img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>§1 指数関数　解答例｜4章 指数関数と対数関数｜とどろき英数塾</title>
+    <meta name="description" content="新 基礎数学 改訂版（大日本図書）問題集「4章 §1 指数関数」の途中式つき解答例。累乗根・有理数の指数・指数方程式を扱います。">
+    <link rel="canonical" href="https://todoroki.fyi/kaitou/basic/ch4-s1.html">
+    <link rel="stylesheet" href="../../css/sanitize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tex.css">
+    <link rel="stylesheet" href="../../css/tex-page.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="§1 指数関数　解答例｜新 基礎数学 改訂版（大日本図書）">
+    <meta property="og:description" content="新 基礎数学 改訂版（大日本図書）問題集「4章 §1 指数関数」の途中式つき解答例。累乗根・有理数の指数・指数方程式を扱います。">
+    <meta property="og:image" content="../../img/Thumbnail.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="とどろき英数塾">
+    <meta property="og:url" content="https://todoroki.fyi/kaitou/basic/ch4-s1.html">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="../../">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="../../index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="../../contact.html" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="../../about.html" target="_self">
+                        <span class="p-header__discord">運営者情報</span>
+                    </a>
+                    <br>
+                    <a href="../../privacy.html" target="_self">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title">§1 指数関数　解答例</div>
+                        <p class="tex-page__meta">
+                            新 基礎数学 改訂版（大日本図書）　4章 指数関数と対数関数
+                        </p>
+                        <p class="tex-page__links">
+                            問題集 201~224　／　<a href="../../math_pdf_file/basic_mathematics/Chapter4/pdf/%E7%AC%AC4%E7%AB%A0%C2%A71%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0_201~224.pdf" target="_blank" rel="noopener">PDF版を開く</a>　／　<a href="../../index.html#basic">一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body">
+                        <section class="tex-intro">
+                            <p class="tex-intro__ttl">この節について</p>
+                            <p>指数の範囲を自然数から有理数・実数へ広げ、指数関数のグラフと指数方程式・不等式までを扱う節です。\(a^0=1\)、\(a^{-n}=\dfrac{1}{a^n}\)、\(a^{\frac{m}{n}}=\sqrt[n]{a^m}\) という拡張の定義を押さえると、累乗根の計算はすべて指数法則に統一して処理できます。</p>
+                            <p>指数方程式は、両辺を同じ底にそろえて \(a^{f(x)}=a^{g(x)} \iff f(x)=g(x)\) に持ち込むのが基本方針です。そろえられない場合は \(a^x = t\ (t>0)\) と置換して \(t\) の2次方程式に帰着させます。このとき \(t>0\) の条件を落とすと不適な解を拾ってしまうので注意が必要です。</p>
+                            <p>指数不等式では、底が1より大きいか小さいかで不等号の向きが変わります。以下の解答例では、その判断をしている箇所も途中式に残しています。</p>
+                        </section>
+<div class="tex-heading"><strong>4章 指数関数と対数関数</strong><br>
+  <strong>1　指数関数</strong><br>
+  <strong>BASIC</strong></div><h2 class="tex-number">201 (1)</h2><div class="tex-math">\begin{align*}
+\sqrt[3]{6}
+\end{align*}</div><h2 class="tex-number">201 (2)</h2><div class="tex-math">\begin{align*}
+\pm\sqrt[4]{10}
+\end{align*}</div><h2 class="tex-number">201 (3)</h2><div class="tex-math">\begin{align*}
+\sqrt[5]{-12}
+\end{align*}</div><h2 class="tex-number">202 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\sqrt{2} \times \sqrt{32} \nr
+  &amp;= \sqrt{2} \times 4\sqrt{2} \nr
+  &amp;= 8
+\end{align*}</div><h2 class="tex-number">202 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\left(\sqrt[5]{5}\right)^3\left(\sqrt[5]{25}\right) \nr
+  &amp;= 5^{\frac{3}{5}} \times 5^{\frac{2}{5}} \nr
+  &amp;= 5^1 \nr
+  &amp;= 5
+\end{align*}</div><h2 class="tex-number">202 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\sqrt[4]{27} \times \sqrt[4]{3} \nr
+  &amp;= 3^{\frac{3}{4}} \times 3^{\frac{1}{4}} \nr
+  &amp;= 3^1 \nr
+  &amp;= 3
+\end{align*}</div><h2 class="tex-number">202 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{\sqrt[3]{48}}{\sqrt[3]{6}} \nr
+  &amp;= 8^{\frac{1}{3}} \nr
+  &amp;= 2
+\end{align*}</div><h2 class="tex-number">203 (1)</h2><div class="tex-math">\begin{align*}
+&amp;3^8 \times \left(\frac{1}{9}\right)^3 \nr
+  &amp;= 3^8 \times 3^{-6} \nr
+  &amp;= 3^2 \nr
+  &amp;= 9
+\end{align*}</div><h2 class="tex-number">203 (2)</h2><div class="tex-math">\begin{align*}
+&amp;10^2 \times 5^{-3} \times \left(\frac{1}{4}\right)^{-1} \nr
+  &amp;= 2^2 \times 5^2 \times 5^{-3} \times 2^2 \nr
+  &amp;= 2^4 \times 5^{-1} \nr
+  &amp;= \frac{16}{5}
+\end{align*}</div><h2 class="tex-number">203 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\left(ab^3\right)^2 \times \left(a^{-1}b^2\right)^{-1} \nr
+  &amp;= a^2b^6 \times a^1b^{-2} \nr
+  &amp;= a^3b^4
+\end{align*}</div><h2 class="tex-number">203 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{\left(9ab^{-2}\right)^2}{\left(3a^{-2}b^2\right)^3} \nr
+  &amp;= 3^4a^2b^{-4} \times 3^{-3}a^6b^{-6} \nr
+  &amp;= 3a^8b^{-10} \nr
+  &amp;= \frac{3a^8}{b^{10}}
+\end{align*}</div><h2 class="tex-number">204 (1)</h2><div class="tex-math">\begin{align*}
+\sqrt{a^5} &amp;= a^{\frac{5}{2}}
+\end{align*}</div><h2 class="tex-number">204 (2)</h2><div class="tex-math">\begin{align*}
+\frac{1}{\sqrt[7]{a^3}} &amp;= a^{-\frac{3}{7}}
+\end{align*}</div><h2 class="tex-number">204 (3)</h2><div class="tex-math">\begin{align*}
+a^{\frac{2}{5}} &amp;= \sqrt[5]{a^2}
+\end{align*}</div><h2 class="tex-number">204 (4)</h2><div class="tex-math">\begin{align*}
+a^{-\frac{1}{2}} &amp;= \frac{1}{\sqrt{a}}
+\end{align*}</div><h2 class="tex-number">205 (1)</h2><div class="tex-math">\begin{align*}
+\left(a^{-\frac{1}{2}}\right)^{\frac{4}{3}} &amp;= a^{-\frac{2}{3}}
+\end{align*}</div><h2 class="tex-number">205 (2)</h2><div class="tex-math">\begin{align*}
+\frac{a^{\frac{1}{2}}}{a^{-\frac{1}{4}}} &amp;= a^{\frac{1}{2}} \times a^{\frac{1}{4}} \nr
+  &amp;= a^{\frac{3}{4}}
+\end{align*}</div><h2 class="tex-number">205 (3)</h2><div class="tex-math">\begin{align*}
+a^{1.2} \times a^{0.4} &amp;= a^{1.6} \nr
+  &amp;= a^{\frac{8}{5}}
+\end{align*}</div><h2 class="tex-number">206 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\sqrt[4]{a^2} \times \sqrt[5]{a^3} \nr
+  &amp;= a^{\frac{2}{4}} \times a^{\frac{3}{5}} \nr
+  &amp;= a^{\frac{5}{10}} \times a^{\frac{6}{10}} \nr
+  &amp;= a^{\frac{11}{10}}
+\end{align*}</div><h2 class="tex-number">206 (2)</h2><div class="tex-math">\begin{align*}
+\frac{a\sqrt[4]{a}}{\sqrt{a}} &amp;= a^1 \times a^{\frac{1}{4}} \times a^{-\frac{1}{2}} \nr
+  &amp;= a^{\frac{3}{4}}
+\end{align*}</div><h2 class="tex-number">206 (3)</h2><div class="tex-math">\begin{align*}
+\sqrt[3]{\sqrt[4]{a}} &amp;= \left(a^{\frac{1}{4}}\right)^{\frac{1}{3}} \nr
+  &amp;= a^{\frac{1}{12}}
+\end{align*}</div><h2 class="tex-number">207 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= 4^x \nr
+  &amp;(0,\ 1),\ (1,\ 4) \text{ を通る増加関数} \nr
+  &amp;\text{漸近線 } y=0
+\end{align*}</div><h2 class="tex-number">207 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= 4^{x-1} \nr
+  &amp;y=4^x \text{ のグラフを } x \text{ 軸方向に } 1 \ret \text{平行移動したもの}
+\end{align*}</div><h2 class="tex-number">207 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= \left(\frac{1}{4}\right)^x \nr
+  &amp;= 4^{-x} \nr
+  &amp;y=4^x \text{ のグラフと } y \text{ 軸対称}
+\end{align*}</div><h2 class="tex-number">208 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= -4^x \nr
+  &amp;y=4^x \text{ のグラフと } x \text{ 軸対称}
+\end{align*}</div><h2 class="tex-number">208 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= -4^{-x} \nr
+  &amp;y=4^x \text{ のグラフと原点対称}
+\end{align*}</div><h2 class="tex-number">209 (1)</h2><div class="tex-math">\begin{align*}
+2^{2x} &amp;= 2\sqrt[3]{2} \nr
+  2^{2x} &amp;= 2^{1+\frac{1}{3}} \nr
+  2x &amp;= \frac{4}{3} \nr
+  x &amp;= \frac{2}{3}
+\end{align*}</div><h2 class="tex-number">209 (2)</h2><div class="tex-math">\begin{align*}
+3^{-x+1} &amp;= \sqrt{243} \nr
+  3^{-x+1} &amp;= 3^{\frac{5}{2}} \nr
+  -x+1 &amp;= \frac{5}{2} \nr
+  x &amp;= -\frac{3}{2}
+\end{align*}</div><h2 class="tex-number">209 (3)</h2><div class="tex-math">\begin{align*}
+9^x-7 \cdot 3^x-18 &amp;= 0 \nr
+  \left(3^x\right)^2-7 \cdot 3^x-18 &amp;= 0 \nr
+  \left(3^x-9\right)\left(3^x+2\right) &amp;= 0 \nr
+  3^x &amp;= 9,\ -2 \nr
+  &amp;3^x = -2 \text{ は解なし} \nr
+  x &amp;= 2
+\end{align*}</div><h2 class="tex-number">210 (1)</h2><div class="tex-math">\begin{align*}
+8^x &amp;&gt; 16 \nr
+  2^{3x} &amp;&gt; 2^4 \nr
+  &amp;\text{底 } 2&gt;1 \text{ なので } 3x &gt; 4 \nr
+  x &amp;&gt; \frac{4}{3}
+\end{align*}</div><h2 class="tex-number">210 (2)</h2><div class="tex-math">\begin{align*}
+\left(\frac{1}{5}\right)^{x+3} &amp;&lt; \frac{1}{25} \nr
+  \left(\frac{1}{5}\right)^{x+3} &amp;&lt; \left(\frac{1}{5}\right)^2 \nr
+  &amp;\text{底 } \frac{1}{5}&lt;1 \text{ なので } x+3 &gt; 2 \nr
+  x &amp;&gt; -1
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>CHECK</strong></div><h2 class="tex-number">211 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\sqrt[3]{-8} \times \sqrt[5]{-243} \nr
+  &amp;= (-2) \times (-3) \nr
+  &amp;= 6
+\end{align*}</div><h2 class="tex-number">211 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\sqrt[4]{(-2)^4} \times \sqrt[3]{125} \nr
+  &amp;= 2 \times 5 \nr
+  &amp;= 10
+\end{align*}</div><h2 class="tex-number">211 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\left(\sqrt[3]{2}\right)^5 \times \sqrt[3]{54} \quad (54 = 2 \times 3^3) \nr
+  &amp;= 2^{\frac{5}{3}} \times 2^{\frac{1}{3}} \times 3^{\frac{3}{3}} \nr
+  &amp;= 2^2 \times 3 \nr
+  &amp;= 12
+\end{align*}</div><h2 class="tex-number">211 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{\sqrt[5]{24}}{\left(\sqrt[5]{18}\right)^3} \nr
+  &amp;= \left(\frac{24}{18^3}\right)^{\frac{1}{5}} \nr
+  &amp;= \left(\frac{2^3 \times 3}{2^3 \times 3^6}\right)^{\frac{1}{5}} \nr
+  &amp;= \frac{1}{3}
+\end{align*}</div><h2 class="tex-number">212 (1)</h2><div class="tex-math">\begin{align*}
+a^2\sqrt{a} &amp;= a^2 \times a^{\frac{1}{2}} = a^{\frac{5}{2}}
+\end{align*}</div><h2 class="tex-number">212 (2)</h2><div class="tex-math">\begin{align*}
+\sqrt{\sqrt[3]{a^2}} &amp;= \left(a^{\frac{2}{3}}\right)^{\frac{1}{2}} = a^{\frac{1}{3}}
+\end{align*}</div><h2 class="tex-number">212 (3)</h2><div class="tex-math">\begin{align*}
+\frac{1}{a^2\sqrt[4]{a^3}} &amp;= a^{-2} \times a^{-\frac{3}{4}} = a^{-\frac{11}{4}}
+\end{align*}</div><h2 class="tex-number">212 (4)</h2><div class="tex-math">\begin{align*}
+\frac{a^2}{\sqrt[10]{\sqrt[5]{a}}} &amp;= a^2 \times \left(a^{\frac{1}{5}}\right)^{-\frac{1}{10}} \nr
+  &amp;= a^2 \times a^{-\frac{1}{50}} = a^{\frac{99}{50}}
+\end{align*}</div><h2 class="tex-number">213 (1)</h2><div class="tex-math">\begin{align*}
+a^{\frac{1}{2}} \times a^{\frac{1}{3}} &amp;= a^{\frac{5}{6}} = \sqrt[6]{a^5}
+\end{align*}</div><h2 class="tex-number">213 (2)</h2><div class="tex-math">\begin{align*}
+\frac{a^{\frac{5}{4}}}{a^{\frac{3}{2}}} &amp;= a^{\frac{5}{4}} \times a^{-\frac{3}{2}} \nr
+  &amp;= a^{-\frac{1}{4}} = \frac{1}{\sqrt[4]{a}}
+\end{align*}</div><h2 class="tex-number">214 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\left(2a^2\right)^{\frac{2}{3}} \times \left(2a^{-1}\right)^{\frac{1}{3}} \nr
+  &amp;= 2^{\frac{2}{3}} \cdot a^{\frac{4}{3}} \cdot 2^{\frac{1}{3}} \cdot a^{-\frac{1}{3}} \nr
+  &amp;= 2^1 \cdot a^1 \nr
+  &amp;= 2a
+\end{align*}</div><h2 class="tex-number">214 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\left(a^{\frac{1}{2}}+a^{-\frac{1}{2}}\right)^2 \nr
+  &amp;= a^{2 \cdot \frac{1}{2}}+2 \cdot a^{\frac{1}{2}} \cdot a^{-\frac{1}{2}}+a^{-\frac{1}{2} \cdot 2} \nr
+  &amp;= a+2+\frac{1}{a}
+\end{align*}</div><h2 class="tex-number">214 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{\sqrt[3]{a^2} \times \sqrt{a}}{\sqrt[6]{a^5}} \nr
+  &amp;= a^{\frac{2}{3}} \times a^{\frac{1}{2}} \times a^{-\frac{5}{6}} \nr
+  &amp;= a^{\frac{4+3-5}{6}} \nr
+  &amp;= a^{\frac{1}{3}}
+\end{align*}</div><h2 class="tex-number">214 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\left(\frac{\sqrt[4]{a}}{\sqrt[3]{a}}\right)^2 \times \sqrt[6]{a} \nr
+  &amp;= a^{\frac{2}{4}} \times a^{-\frac{2}{3}} \times a^{\frac{1}{6}} \nr
+  &amp;= a^{\frac{6-8+2}{12}} \nr
+  &amp;= 1
+\end{align*}</div><h2 class="tex-number">215 (1)</h2><div class="tex-math">\begin{align*}
+&amp;y \text{ 方向に } +1
+\end{align*}</div><h2 class="tex-number">215 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= 3^x \ \to\ -y = 3^{-x} \nr
+  &amp;\therefore \text{原点対称}
+\end{align*}</div><h2 class="tex-number">216 (1)</h2><div class="tex-math">\begin{align*}
+4^x-7 \cdot 2^x-8 &amp;= 0 \nr
+  \left(2^x-8\right)\left(2^x+1\right) &amp;= 0 \nr
+  2^x &amp;= 8,\ -1 \nr
+  x &amp;= 3
+\end{align*}</div><h2 class="tex-number">216 (2)</h2><div class="tex-math">\begin{align*}
+2\left(\frac{1}{4}\right)^x-9\left(\frac{1}{2}\right)^x+4 &amp;= 0 \nr
+  2-9 \cdot 2^x+4\left(2^x\right)^2 &amp;= 0 \nr
+  \left(4 \cdot 2^x-1\right)\left(2^x-2\right) &amp;= 0 \nr
+  2^x &amp;= \frac{1}{4},\ 2 \nr
+  x &amp;= 1,\ -2
+\end{align*}</div><h2 class="tex-number">217 (1)</h2><div class="tex-math">\begin{align*}
+3^{2x-1} &amp;&lt; \frac{1}{\sqrt[3]{81}} \nr
+  3^{2x-1} &amp;&lt; 3^{-\frac{4}{3}} \nr
+  &amp;\text{底 } 3&gt;1 \text{ なので} \nr
+  2x-1 &amp;&lt; -\frac{4}{3} \nr
+  2x &amp;&lt; -\frac{1}{3} \nr
+  x &amp;&lt; -\frac{1}{6}
+\end{align*}</div><h2 class="tex-number">217 (2)</h2><div class="tex-math">\begin{align*}
+\left(\frac{1}{2}\right)^x &amp;&lt; \sqrt[3]{32} \nr
+  2^{-x} &amp;&lt; 2^{\frac{5}{3}} \nr
+  &amp;\text{底 } 2&gt;1 \text{ なので} \nr
+  -x &amp;&lt; \frac{5}{3} \nr
+  x &amp;&gt; -\frac{5}{3}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>STEP UP</strong></div><h2 class="tex-number">218 (1)</h2><div class="tex-math">\begin{align*}
+\sqrt[5]{81} &amp;= 3^{\frac{4}{5}} \nr
+  \frac{1}{\sqrt[3]{9}} &amp;= 3^{-\frac{2}{3}} \nr
+  3 \cdot \sqrt[4]{3} &amp;= 3^{\frac{5}{4}} \nr
+  1 &amp;= 3^0 \nr
+  -\frac{2}{3} &lt; 0 &amp;&lt; \frac{4}{5} &lt; \frac{5}{4} \nr
+  &amp;\text{底 } 3&gt;1 \text{ なので} \nr
+  &amp;\frac{1}{\sqrt[3]{9}} &lt; 1 &lt; \sqrt[5]{81} &lt; 3 \cdot \sqrt[4]{3}
+\end{align*}</div><h2 class="tex-number">218 (2)</h2><div class="tex-math">\begin{align*}
+\sqrt[5]{0.7} &amp;= 0.7^{\frac{1}{5}} \nr
+  \frac{1}{0.49} &amp;= 0.7^{-2} \nr
+  \frac{1}{\sqrt[4]{0.7}} &amp;= 0.7^{-\frac{1}{4}} \nr
+  \left(\sqrt[3]{0.7}\right)^4 &amp;= 0.7^{\frac{4}{3}} \nr
+  -2 &lt; -\frac{1}{4} &amp;&lt; \frac{1}{5} &lt; \frac{4}{3} \nr
+  &amp;\text{底 } 0.7&lt;1 \text{ なので} \nr
+  &amp;\left(\sqrt[3]{0.7}\right)^4 &lt; \sqrt[5]{0.7} \ret &lt; \frac{1}{\sqrt[4]{0.7}} &lt; \frac{1}{0.49}
+\end{align*}</div><h2 class="tex-number">219 (1)</h2><div class="tex-math">\begin{align*}
+0.5^{2x+1} &amp;&gt; 0.125^{1-x} \nr
+  \left(\frac{1}{2}\right)^{2x+1} &amp;&gt; \left(\frac{1}{8}\right)^{1-x} \nr
+  2^{-(2x+1)} &amp;&gt; 2^{-3(1-x)} \nr
+  &amp;\text{底 } 2&gt;1 \text{ なので} \nr
+  -2x-1 &amp;&gt; -3+3x \nr
+  -5x &amp;&gt; -2 \nr
+  x &amp;&lt; \frac{2}{5}
+\end{align*}</div><h2 class="tex-number">219 (2)</h2><div class="tex-math">\begin{align*}
+\sqrt[4]{a^{3x}} &amp;&gt; \frac{1}{a^{x+1}} \nr
+  a^{\frac{3}{4}x} &amp;&gt; a^{-(x+1)}
+\end{align*}</div><p class="tex-intertext">i) 底 \(a&gt;1\) のとき</p><div class="tex-math">\begin{align*}
+\frac{3}{4}x &amp;&gt; -x-1 \nr
+  \frac{7}{4}x &amp;&gt; -1 \nr
+  x &amp;&gt; -\frac{4}{7}
+\end{align*}</div><p class="tex-intertext">ii) 底 \(0&lt;a&lt;1\) のとき</p><div class="tex-math">\begin{align*}
+\frac{3}{4}x &amp;&lt; -x-1 \nr
+  x &amp;&lt; -\frac{4}{7}
+\end{align*}</div><h2 class="tex-number">220 (1)</h2><div class="tex-math">\begin{align*}
+2^{2x+3}-17 \cdot 2^x+2 &amp;&gt; 0 \nr
+  8 \cdot \left(2^x\right)^2-17 \cdot 2^x+2 &amp;&gt; 0 \nr
+  \left(8 \cdot 2^x-1\right)\left(2^x-2\right) &amp;&gt; 0 \nr
+  2^x &lt; \frac{1}{8},\ 2 &amp;&lt; 2^x \nr
+  &amp;\text{底 } 2&gt;1 \text{ なので} \nr
+  x &lt; -3,\ 1 &amp;&lt; x
+\end{align*}</div><h2 class="tex-number">220 (2)</h2><div class="tex-math">\begin{align*}
+3^{2x}-8 \cdot 3^x-9 &amp;&lt; 0 \nr
+  \left(3^x-9\right)\left(3^x+1\right) &amp;&lt; 0 \nr
+  -1 &lt; 3^x &amp;&lt; 9 \nr
+  &amp;\text{底 } 3&gt;1 \text{ なので} \nr
+  x &amp;&lt; 2
+\end{align*}</div><h2 class="tex-number">221</h2><div class="tex-math">\begin{align*}
+3^x+3^{-x} &amp;= 5 \nr
+  &amp;\text{両辺3乗して} \nr
+  &amp;3^{3x}+3 \cdot 3^{2x} \cdot 3^{-x} \ret +3 \cdot 3^x \cdot 3^{-2x}+3^{-3x} = 125 \nr
+  &amp;27^x+27^{-x}+3\left(3^x+3^{-x}\right) = 125 \nr
+  &amp;27^x+27^{-x}+15 = 125 \nr
+  &amp;27^x+27^{-x} = 110
+\end{align*}</div><h2 class="tex-number">222</h2><div class="tex-math">\begin{align*}
+&amp;\frac{a^{4x}-a^{-4x}}{a^x-a^{-x}} \nr
+  &amp;= \frac{\left(a^{2x}+a^{-2x}\right)\left(a^{2x}-a^{-2x}\right)}{a^x-a^{-x}} \nr
+  &amp;= \frac{\left(a^{2x}+a^{-2x}\right)\left(a^x+a^{-x}\right)\left(a^x-a^{-x}\right)}{a^x-a^{-x}} \nr
+  &amp;= \left(6+\frac{1}{6}\right)\left(\sqrt{6}+\frac{1}{\sqrt{6}}\right) \quad (\because a&gt;0) \nr
+  &amp;= \frac{37}{6} \cdot \frac{7}{\sqrt{6}} \nr
+  &amp;= \frac{259}{36}\sqrt{6}
+\end{align*}</div><h2 class="tex-number">223 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= 9^x-6 \cdot 3^x+5 \quad (0 \leqq x \leqq 2) \nr
+  &amp;= \left(3^x-3\right)^2-4 \nr
+  &amp;1 \leqq 3^x \leqq 9 \text{ なので} \nr
+  &amp;3^x=3 \text{ すなわち } x=1 \text{ で最小値 } -4 \nr
+  &amp;3^x=9 \text{ すなわち } x=2 \text{ で最大値 } 32 \ret \text{をとる}
+\end{align*}</div><h2 class="tex-number">223 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= \left(3^x-3\right)^2-4 \quad (-1 \leqq x \leqq 0) \nr
+  &amp;\frac{1}{3} \leqq 3^x \leqq 1 \text{ なので} \nr
+  &amp;3^x=1 \text{ すなわち } x=0 \text{ で最小値 } 0 \nr
+  &amp;3^x=\frac{1}{3} \text{ すなわち } x=-1 \text{ で} \ret \text{最大値 } \frac{64}{9}-4=\frac{28}{9} \text{ をとる}
+\end{align*}</div><h2 class="tex-number">224 (1)</h2><div class="tex-math">\begin{align*}
+X^2 &amp;= \left(2^x+2^{-x}\right)^2 \nr
+  &amp;= 4^x+2+4^{-x} \nr
+  &amp;\therefore 4^x+4^{-x} = X^2-2 \nr
+  f(x) &amp;= \left(X^2-2\right)-2X+1 \nr
+  &amp;= X^2-2X-1 \nr
+  &amp;= (X-1)^2-2
+\end{align*}</div><h2 class="tex-number">224 (2)</h2><div class="tex-math">\begin{align*}
+&amp;2^x&gt;0,\ 2^{-x}&gt;0 \text{ なので} \ret \text{相加平均と相乗平均の関係より} \nr
+  X &amp;\geqq 2\sqrt{2^x \cdot 2^{-x}} \nr
+  &amp;= 2 \nr
+  &amp;\text{等号成立は } 2^x = 2^{-x} \nr
+  &amp;2^{2x} = 1 \nr
+  &amp;\text{すなわち } x=0 \text{ のとき}
+\end{align*}</div><h2 class="tex-number">224 (3)</h2><div class="tex-math">\begin{align*}
+f(x) &amp;= (X-1)^2-2 \quad (X \geqq 2) \nr
+  &amp;X=2 \text{ すなわち } x=0 \text{ で最小値 } -1 \ret \text{をとる}
+\end{align*}</div>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        ここに記す解法が最適なものとは限りません。途中式の丸写しはあなたのためになりません。学習の参考程度にご活用ください。<br>
+                        誤字・誤値等にお気づきの際は<a href="../../contact.html">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script>window.__TEX_MACROS = {"Re":"\\operatorname{Re}","Im":"\\operatorname{Im}","proof":"\\textbf{証明}　","qed":"{\\rule{0.5zw}{1zh}}","E":"\\mathrm{e}","D":"\\mathrm {d}","I":"\\mathrm {i}","LHS":"(\\mathrm{LHS})","RHS":"(\\mathrm{RHS})","hc":"\\mathrm{h.c.}","cc":"\\mathrm{c.c.}","ret":"\\notag\\\\&\\qquad","nr":"\\notag\\\\","Arg":"\\operatorname{Arg}","for":["\\quad\\mathrm{for\\ \\ }#1",1],"sgn":"\\operatorname{sgn}","Tr":"\\operatorname{Tr}","AAA":"\\mathaccent 23\\mathrm{A}","abs":["{\\left\\rvert #1 \\right\\lvert}",1]};</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/tex-page.js"></script>
+</body>
+</html>

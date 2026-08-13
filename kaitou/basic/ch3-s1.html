@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <link rel="icon" href="../../img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>§1 2次関数　解答例｜3章 関数とグラフ｜とどろき英数塾</title>
+    <meta name="description" content="新 基礎数学 改訂版（大日本図書）問題集「3章 §1 2次関数」の途中式つき解答例。平方完成・頂点・最大最小を扱います。">
+    <link rel="canonical" href="https://todoroki.fyi/kaitou/basic/ch3-s1.html">
+    <link rel="stylesheet" href="../../css/sanitize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tex.css">
+    <link rel="stylesheet" href="../../css/tex-page.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="§1 2次関数　解答例｜新 基礎数学 改訂版（大日本図書）">
+    <meta property="og:description" content="新 基礎数学 改訂版（大日本図書）問題集「3章 §1 2次関数」の途中式つき解答例。平方完成・頂点・最大最小を扱います。">
+    <meta property="og:image" content="../../img/Thumbnail.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="とどろき英数塾">
+    <meta property="og:url" content="https://todoroki.fyi/kaitou/basic/ch3-s1.html">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="../../">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="../../index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="../../contact.html" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="../../about.html" target="_self">
+                        <span class="p-header__discord">運営者情報</span>
+                    </a>
+                    <br>
+                    <a href="../../privacy.html" target="_self">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title">§1 2次関数　解答例</div>
+                        <p class="tex-page__meta">
+                            新 基礎数学 改訂版（大日本図書）　3章 関数とグラフ
+                        </p>
+                        <p class="tex-page__links">
+                            問題集 143~170　／　<a href="../../math_pdf_file/basic_mathematics/Chapter3/pdf/%E7%AC%AC3%E7%AB%A0%C2%A71%202%E6%AC%A1%E9%96%A2%E6%95%B0_143~170.pdf" target="_blank" rel="noopener">PDF版を開く</a>　／　<a href="../../index.html#basic">一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body">
+                        <section class="tex-intro">
+                            <p class="tex-intro__ttl">この節について</p>
+                            <p>2次関数のグラフと最大最小を扱う節です。この節の計算はほぼすべて平方完成 \(y = a(x-p)^2+q\) から始まります。頂点 \((p,\ q)\)、軸 \(x=p\)、そして \(a\) の符号による凸の向きが決まれば、グラフの概形は一意に定まります。</p>
+                            <p>最大最小の問題では、定義域が制限されているかどうかで解き方が変わります。定義域全体なら頂点が答えになりますが、区間が指定されている場合は「軸が区間の左・中・右のどこにあるか」で場合分けが必要です。軸や区間に文字が含まれる問題は、この場合分けが答案の骨格になります。</p>
+                            <p>以下の解答例では、平方完成の途中の \(\left(\dfrac{b}{2a}\right)^2\) を足して引く操作を省略せずに書いています。</p>
+                        </section>
+<div class="tex-heading"><strong>3章 関数とグラフ</strong><br>
+  <strong>1　2次関数</strong><br>
+  <strong>BASIC</strong></div><h2 class="tex-number">143 (1)</h2><div class="tex-math">\begin{align*}
+f(x) &amp;= 3x+1 \nr
+  f(2) &amp;= 6+1 = 7 \nr
+  f(-2) &amp;= -6+1 = -5 \nr
+  f(a+2) &amp;= 3(a+2)+1 = 3a+7 \nr
+  f(a-2) &amp;= 3(a-2)+1 = 3a-5
+\end{align*}</div><h2 class="tex-number">144 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= 2x+1 \quad (-1 \leqq x \leqq 2) \nr
+  \text{値域：} &amp; -1 \leqq y \leqq 5
+\end{align*}</div><h2 class="tex-number">144 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= -2x+4 \quad (-1 \leqq x \leqq 1) \nr
+  \text{値域：} &amp; 2 \leqq y \leqq 6
+\end{align*}</div><h2 class="tex-number">145 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= x^2-1 \nr
+  \text{軸：} &amp; x=0 \nr
+  \text{頂点：} &amp; (0,\ -1)
+\end{align*}</div><h2 class="tex-number">145 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= -(x-1)^2 \nr
+  \text{軸：} &amp; x=1 \nr
+  \text{頂点：} &amp; (1,\ 0)
+\end{align*}</div><h2 class="tex-number">145 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= 3(x+1)^2-2 \nr
+  \text{軸：} &amp; x=-1 \nr
+  \text{頂点：} &amp; (-1,\ -2)
+\end{align*}</div><h2 class="tex-number">145 (4)</h2><div class="tex-math">\begin{align*}
+y &amp;= -\frac{1}{2}(x-2)^2+2 \nr
+  \text{軸：} &amp; x=2 \nr
+  \text{頂点：} &amp; (2,\ 2)
+\end{align*}</div><h2 class="tex-number">146 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x \to x-3 \text{ でおきかえて} \nr
+  y &amp;= 2(x-3)^2
+\end{align*}</div><h2 class="tex-number">146 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x \to x-1,\ y \to y-2 \text{ でおきかえて} \nr
+  y &amp;= 2(x-1)^2+2
+\end{align*}</div><h2 class="tex-number">146 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= 2(x+2)^2-1
+\end{align*}</div><h2 class="tex-number">147 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= (x-1)^2 \nr
+  \text{軸：} &amp; x=1 \nr
+  \text{頂点：} &amp; (1,\ 0)
+\end{align*}</div><h2 class="tex-number">147 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= 2x^2-4x+3 \nr
+  &amp;= 2(x-1)^2+1 \nr
+  \text{軸：} &amp; x=1 \nr
+  \text{頂点：} &amp; (1,\ 1)
+\end{align*}</div><h2 class="tex-number">147 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= -x^2+4x-3 \nr
+  &amp;= -(x-2)^2+1 \nr
+  \text{軸：} &amp; x=2 \nr
+  \text{頂点：} &amp; (2,\ 1)
+\end{align*}</div><h2 class="tex-number">147 (4)</h2><div class="tex-math">\begin{align*}
+y &amp;= x^2-x-2 \nr
+  &amp;= \left(x-\frac{1}{2}\right)^2-\frac{9}{4} \nr
+  \text{軸：} &amp; x=\frac{1}{2} \nr
+  \text{頂点：} &amp; \left(\frac{1}{2},\ -\frac{9}{4}\right)
+\end{align*}</div><h2 class="tex-number">147 (5)</h2><div class="tex-math">\begin{align*}
+y &amp;= -\frac{1}{2}x^2+x \nr
+  &amp;= -\frac{1}{2}(x-1)^2+\frac{1}{2} \nr
+  \text{軸：} &amp; x=1 \nr
+  \text{頂点：} &amp; \left(1,\ \frac{1}{2}\right)
+\end{align*}</div><h2 class="tex-number">147 (6)</h2><div class="tex-math">\begin{align*}
+y &amp;= -2x^2-3x+2 \nr
+  &amp;= -2\left(x+\frac{3}{4}\right)^2+\frac{25}{8} \nr
+  \text{軸：} &amp; x=-\frac{3}{4} \nr
+  \text{頂点：} &amp; \left(-\frac{3}{4},\ \frac{25}{8}\right)
+\end{align*}</div><h2 class="tex-number">148 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= a(x-3)^2+5 \nr
+  -4 &amp;= a(-3)^2+5 \nr
+  a &amp;= -1 \nr
+  y &amp;= -(x-3)^2+5
+\end{align*}</div><h2 class="tex-number">148 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= ax^2+q \nr
+  &amp;(-1,\ 1),\ (2,\ -5) \text{ を通るので} \nr
+  &amp;\begin{cases} 1 = a+q \\ -5 = 4a+q \end{cases}
+  \text{より}
+  \begin{cases} a = -2 \\ q = 3 \end{cases} \nr
+  y &amp;= -2x^2+3
+\end{align*}</div><h2 class="tex-number">148 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= a(x-2)^2+q \nr
+  &amp;(0,\ 5),\ (3,\ 2) \text{ を通るので} \nr
+  &amp;\begin{cases} 5 = 4a+q \\ 2 = a+q \end{cases}
+  \text{より}
+  \begin{cases} a = 1 \\ q = 1 \end{cases} \nr
+  y &amp;= (x-2)^2+1
+\end{align*}</div><h2 class="tex-number">149 (1)</h2><div class="tex-math">\begin{align*}
+&amp;y = ax^2+bx+c \text{ とすると} \nr
+  &amp;\begin{cases} 0 = a+b+c \\ 3 = c \\ -1 = 4a+2b+c \end{cases}
+  \text{より}
+  \begin{cases} a = 1 \\ b = -4 \\ c = 3 \end{cases} \nr
+  y &amp;= x^2-4x+3 \nr
+  &amp;= (x-2)^2-1 \nr
+  \text{軸：} &amp; x=2 \nr
+  \text{頂点：} &amp; (2,\ -1)
+\end{align*}</div><h2 class="tex-number">149 (2)</h2><div class="tex-math">\begin{align*}
+&amp;y = a(x-3)(x+2) \text{ とすると} \nr
+  6 &amp;= a \times (-3) \times 2 \nr
+  a &amp;= -1 \nr
+  y &amp;= -(x-3)(x+2) \nr
+  &amp;= -x^2+x+6 \nr
+  &amp;= -\left(x-\frac{1}{2}\right)^2+\frac{25}{4} \nr
+  \text{軸：} &amp; x=\frac{1}{2} \nr
+  \text{頂点：} &amp; \left(\frac{1}{2},\ \frac{25}{4}\right)
+\end{align*}</div><h2 class="tex-number">150 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= x^2-4x+8 \nr
+  &amp;= (x-2)^2+4 \nr
+  &amp;x=2 \text{ で最小値 } 4 \text{、最大値なし}
+\end{align*}</div><h2 class="tex-number">150 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= -x^2+6x-1 \nr
+  &amp;= -(x-3)^2+8 \nr
+  &amp;x=3 \text{ で最大値 } 8 \text{、最小値なし}
+\end{align*}</div><h2 class="tex-number">150 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= \frac{1}{2}x^2-2x \nr
+  &amp;= \frac{1}{2}(x-2)^2-2 \nr
+  &amp;x=2 \text{ で最小値 } -2 \text{、最大値なし}
+\end{align*}</div><h2 class="tex-number">150 (4)</h2><div class="tex-math">\begin{align*}
+y &amp;= -3x^2+6x+2 \nr
+  &amp;= -3(x-1)^2+5 \nr
+  &amp;x=1 \text{ で最大値 } 5 \text{、最小値なし}
+\end{align*}</div><h2 class="tex-number">151 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= x^2-4x \nr
+  &amp;= (x-2)^2-4 \quad (0 \leqq x \leqq 3) \nr
+  &amp;x=2 \text{ で最小値 } -4,\ x=0 \text{ で最大値 } 0
+\end{align*}</div><h2 class="tex-number">151 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= x^2-6x+7 \nr
+  &amp;= (x-3)^2-2 \quad (0 \leqq x \leqq 2) \nr
+  &amp;x=2 \text{ で最小値 } -1,\ x=0 \text{ で最大値 } 7
+\end{align*}</div><h2 class="tex-number">151 (3)</h2><div class="tex-math">\begin{align*}
+y &amp;= -x^2+2x+2 \nr
+  &amp;= -(x-1)^2+3 \quad (-1 \leqq x \leqq 1) \nr
+  &amp;x=1 \text{ で最大値 } 3,\ x=-1 \text{ で最小値 } -1
+\end{align*}</div><h2 class="tex-number">151 (4)</h2><div class="tex-math">\begin{align*}
+y &amp;= 2x^2-8x+5 \nr
+  &amp;= 2(x-2)^2-3 \quad (0 \leqq x \leqq 4) \nr
+  &amp;x=2 \text{ で最小値 } -3,\ x=0,\ 4 \text{ で最大値 } 5
+\end{align*}</div><h2 class="tex-number">151 (5)</h2><div class="tex-math">\begin{align*}
+y &amp;= -\frac{x^2}{2}-x+3 \nr
+  &amp;= -\frac{1}{2}(x+1)^2+\frac{7}{2} \quad (-2 \leqq x \leqq 2) \nr
+  &amp;x=-1 \text{ で最大値 } \frac{7}{2},\ x=2 \text{ で最小値 } -1
+\end{align*}</div><h2 class="tex-number">151 (6)</h2><div class="tex-math">\begin{align*}
+y &amp;= 2(x-1)(x-2) \nr
+  &amp;= 2x^2-6x+4 \nr
+  &amp;= 2\left(x-\frac{3}{2}\right)^2-\frac{1}{2} \quad (0 \leqq x \leqq 2) \nr
+  &amp;x=\frac{3}{2} \text{ で最小値 } -\frac{1}{2},\ x=0 \text{ で最大値 } 4
+\end{align*}</div><h2 class="tex-number">152</h2><div class="tex-math">\begin{align*}
+&amp;\text{高さは } 8-x \text{、面積を } S \text{ とすると} \nr
+  S &amp;= \frac{1}{2}x(8-x) \nr
+  &amp;= -\frac{1}{2}x^2+4x \nr
+  &amp;= -\frac{1}{2}(x-4)^2+8 \quad (0 &lt; x &lt; 8) \nr
+  &amp;x=4 \text{ で最大値 } 8 \text{ をとる}
+\end{align*}</div><h2 class="tex-number">153 (1)</h2><div class="tex-math">\begin{align*}
+&amp;2x^2+5x+1 = 0 \nr
+  x &amp;= \frac{-5 \pm \sqrt{25-8}}{4} \nr
+  &amp;= \frac{-5 \pm \sqrt{17}}{4} \nr
+  &amp;\therefore \text{2点で交わる}
+\end{align*}</div><h2 class="tex-number">153 (2)</h2><div class="tex-math">\begin{align*}
+&amp;3x^2-7x+5 = 0 \text{ の判別式を } D \text{ とすると} \nr
+  D &amp;= 49-4 \times 3 \times 5 \nr
+  &amp;= -11 &lt; 0 \nr
+  &amp;\therefore \text{共有点なし}
+\end{align*}</div><h2 class="tex-number">153 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{1}{3}x^2-2x+3 = 0 \nr
+  &amp;x^2-6x+9 = 0 \nr
+  &amp;(x-3)^2 = 0 \nr
+  &amp;x = 3 \nr
+  &amp;\therefore \text{接する}
+\end{align*}</div><h2 class="tex-number">154 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x^2+3x+k = 0 \text{ の判別式を } D \text{ とすると} \nr
+  D &amp;= 9-4k &gt; 0 \nr
+  k &amp;&lt; \frac{9}{4}
+\end{align*}</div><h2 class="tex-number">154 (2)</h2><div class="tex-math">\begin{align*}
+&amp;4x^2-2kx+9 = 0 \text{ の判別式を } D \text{ とすると} \nr
+  \frac{D}{4} &amp;= k^2-4 \times 9 = 0 \nr
+  k^2 &amp;= 36 \nr
+  k &amp;= \pm 6
+\end{align*}</div><h2 class="tex-number">154 (3)</h2><div class="tex-math">\begin{align*}
+&amp;kx^2+x-1 = 0 \text{ の判別式を } D \text{ とすると} \nr
+  D &amp;= 1+4k &lt; 0 \nr
+  k &amp;&lt; -\frac{1}{4}
+\end{align*}</div><h2 class="tex-number">155 (1)</h2><div class="tex-math">\begin{align*}
+x^2+4x+3 &amp;\geqq 0 \nr
+  (x+3)(x+1) &amp;\geqq 0 \nr
+  x \leqq -3,\ -1 &amp;\leqq x
+\end{align*}</div><h2 class="tex-number">155 (2)</h2><div class="tex-math">\begin{align*}
+x^2-2x-1 &amp;&lt; 0 \nr
+  1-\sqrt{2} &lt; x &amp;&lt; 1+\sqrt{2}
+\end{align*}</div><h2 class="tex-number">155 (3)</h2><div class="tex-math">\begin{align*}
+x^2-6x+9 &amp;&gt; 0 \nr
+  (x-3)^2 &amp;&gt; 0 \nr
+  x &amp;\neq 3
+\end{align*}</div><h2 class="tex-number">155 (4)</h2><div class="tex-math">\begin{align*}
+4x^2-12x+9 &amp;&lt; 0 \nr
+  (2x-3)^2 &amp;&lt; 0 \nr
+  &amp;\text{解なし}
+\end{align*}</div><h2 class="tex-number">155 (5)</h2><div class="tex-math">\begin{align*}
+-x^2+x-\frac{1}{4} &amp;\leqq 0 \nr
+  4x^2-4x+1 &amp;\geqq 0 \nr
+  (2x-1)^2 &amp;\geqq 0 \nr
+  &amp;\text{解はすべての実数}
+\end{align*}</div><h2 class="tex-number">155 (6)</h2><div class="tex-math">\begin{align*}
+\frac{1}{2}x^2-4x+8 &amp;\leqq 0 \nr
+  x^2-8x+16 &amp;\leqq 0 \nr
+  (x-4)^2 &amp;\leqq 0 \nr
+  x &amp;= 4
+\end{align*}</div><h2 class="tex-number">155 (7)</h2><div class="tex-math">\begin{align*}
+-4x^2+6x-3 &amp;&lt; 0 \nr
+  4x^2-6x+3 &amp;&gt; 0 \nr
+  4\left(x-\frac{3}{4}\right)^2-\frac{9}{4}+3 &amp;&gt; 0 \nr
+  4\left(x-\frac{3}{4}\right)^2+\frac{3}{4} &amp;&gt; 0 \nr
+  &amp;\text{解はすべての実数}
+\end{align*}</div><h2 class="tex-number">155 (8)</h2><div class="tex-math">\begin{align*}
+2x^2-4x+3 &amp;\leqq 0 \nr
+  2(x-1)^2+1 &amp;\leqq 0 \nr
+  &amp;\text{解なし}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>CHECK</strong></div><h2 class="tex-number">156</h2><div class="tex-math">\begin{align*}
+y &amp;= \frac{1}{2}(x+2)^2+1
+\end{align*}</div><h2 class="tex-number">157</h2><div class="tex-math">\begin{align*}
+y &amp;= x^2+3x \nr
+  &amp;= \left(x+\frac{3}{2}\right)^2-\frac{9}{4} \nr
+  \text{軸：} &amp; x=-\frac{3}{2} \nr
+  \text{頂点：} &amp; \left(-\frac{3}{2},\ -\frac{9}{4}\right)
+\end{align*}</div><h2 class="tex-number">158 (1)</h2><div class="tex-math">\begin{align*}
+&amp;y = a(x-2)^2-5 \text{ とおける} \nr
+  7 &amp;= a \times 4-5 \nr
+  a &amp;= 3 \nr
+  y &amp;= 3(x-2)^2-5
+\end{align*}</div><h2 class="tex-number">158 (2)</h2><div class="tex-math">\begin{align*}
+&amp;y = a(x+1)^2+q \text{ とおける} \nr
+  &amp;\begin{cases} 1 = a+q \\ 7 = 4a+q \end{cases}
+  \text{より}
+  \begin{cases} a = 2 \\ q = -1 \end{cases} \nr
+  y &amp;= 2(x+1)^2-1
+\end{align*}</div><h2 class="tex-number">158 (3)</h2><div class="tex-math">\begin{align*}
+&amp;y = ax^2+bx+c \text{ とすると} \nr
+  &amp;\begin{cases} 0 = a+b+c \\ 1 = c \\ 3 = 4a+2b+c \end{cases}
+  \text{より}
+  \begin{cases} a = 2 \\ b = -3 \\ c = 1 \end{cases} \nr
+  y &amp;= 2x^2-3x+1
+\end{align*}</div><h2 class="tex-number">159 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x \to -x \text{ でおきかえて} \nr
+  y &amp;= (-x)^2+2(-x)-3 \nr
+  &amp;= x^2-2x-3
+\end{align*}</div><h2 class="tex-number">159 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x \to -x,\ y \to -y \text{ でおきかえて} \nr
+  -y &amp;= (-x)^2+2(-x)-3 \nr
+  y &amp;= -x^2+2x+3
+\end{align*}</div><h2 class="tex-number">160</h2><div class="tex-math">\begin{align*}
+y &amp;= -x^2+6x+1 \nr
+  &amp;= -(x-3)^2+10 \quad \text{頂点 } (3,\ 10) \nr
+  y &amp;= -x^2-2x+3 \nr
+  &amp;= -(x+1)^2+4 \quad \text{頂点 } (-1,\ 4) \nr
+  &amp;\therefore x \text{ 方向に } 4,\ y \text{ 方向に } 6 \text{ 平行移動}
+\end{align*}</div><h2 class="tex-number">161 (1)</h2><div class="tex-math">\begin{align*}
+y &amp;= -x^2+4x+1 \nr
+  &amp;= -(x-2)^2+5 \quad (-1 \leqq x \leqq 1) \nr
+  &amp;x=-1 \text{ で最小値 } -4, \ret x=1 \text{ で最大値 } 4 \text{ をとる}
+\end{align*}</div><h2 class="tex-number">161 (2)</h2><div class="tex-math">\begin{align*}
+y &amp;= -(x-2)^2+5 \quad (1 \leqq x \leqq 3) \nr
+  &amp;x=2 \text{ で最大値 } 5, \ret x=1,\ 3 \text{ で最小値 } 4 \text{ をとる}
+\end{align*}</div><h2 class="tex-number">162</h2><div class="tex-math">\begin{align*}
+&amp;x \text{ cm の幅で折り曲げるとする } (0 &lt; x &lt; 8) \nr
+  &amp;\text{断面積を } S \text{ とすると} \nr
+  S &amp;= x(16-2x) \nr
+  &amp;= -2x^2+16x \nr
+  &amp;= -2(x-4)^2+32 \nr
+  &amp;x=4 \text{ で最大値 } 32 \text{ をとる} \nr
+  &amp;\therefore 4 \text{ cm}
+\end{align*}</div><h2 class="tex-number">163</h2><div class="tex-math">\begin{align*}
+&amp;x^2-6x-k = 0 \text{ の判別式を } D \text{ とすると} \nr
+  \frac{D}{4} &amp;= 9+k
+\end{align*}</div><p class="tex-intertext">(1)</p><div class="tex-math">\begin{align*}
+&amp;D &gt; 0 \text{ すなわち } 9+k &gt; 0 \nr
+  &amp;k &gt; -9
+\end{align*}</div><p class="tex-intertext">(2)</p><div class="tex-math">\begin{align*}
+&amp;D = 0 \text{ すなわち } 9+k = 0 \nr
+  &amp;k = -9
+\end{align*}</div><p class="tex-intertext">(3)</p><div class="tex-math">\begin{align*}
+&amp;D &lt; 0 \text{ すなわち } 9+k &lt; 0 \nr
+  &amp;k &lt; -9
+\end{align*}</div><h2 class="tex-number">164 (1)</h2><div class="tex-math">\begin{align*}
+2x^2-3x-2 &amp;\leqq 0 \nr
+  (2x+1)(x-2) &amp;\leqq 0 \nr
+  -\frac{1}{2} \leqq x &amp;\leqq 2
+\end{align*}</div><h2 class="tex-number">164 (2)</h2><div class="tex-math">\begin{align*}
+x^2+8x+16 &amp;\geqq 0 \nr
+  (x+4)^2 &amp;\geqq 0 \nr
+  &amp;\text{解はすべての実数}
+\end{align*}</div><h2 class="tex-number">164 (3)</h2><div class="tex-math">\begin{align*}
+3x^2+6x+4 &amp;&lt; 0 \nr
+  3(x+1)^2+1 &amp;&lt; 0 \nr
+  &amp;\text{解なし}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>STEP UP</strong></div><h2 class="tex-number">165</h2><div class="tex-math">\begin{align*}
+&amp;y = a(x-p)^2 \text{ とおける} \nr
+  &amp;\begin{cases} 1 = a(-2-p)^2 \\ 9 = a(2-p)^2 \end{cases} \nr
+  &amp;p=2 \text{ は解でないので、両辺わって} \nr
+  &amp;\frac{1}{9} = \frac{(2+p)^2}{(2-p)^2} \nr
+  &amp;(2-p)^2 = 9(2+p)^2 \nr
+  &amp;p^2-4p+4 = 9p^2+36p+36 \nr
+  &amp;8p^2+40p+32 = 0 \nr
+  &amp;p^2+5p+4 = 0 \nr
+  &amp;(p+1)(p+4) = 0 \nr
+  &amp;p = -1,\ -4 \nr
+  &amp;a = \frac{1}{(p+2)^2} \text{ より} \nr
+  &amp;(a,\ p) = (1,\ -1), \ret \left(\frac{1}{4},\ -4\right) \nr
+  &amp;y = (x+1)^2 \ret \text{または } y = \frac{1}{4}(x+4)^2
+\end{align*}</div><h2 class="tex-number">166 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x^2+2(m+1)x+m = 0 \ret \text{の判別式を } D \text{ とすると} \nr
+  \frac{D}{4} &amp;= (m+1)^2-m \nr
+  &amp;= m^2+m+1 \nr
+  &amp;= \left(m+\frac{1}{2}\right)^2+\frac{3}{4} &gt; 0 \nr
+  &amp;\therefore x \text{ 軸と2点で交わる}
+\end{align*}</div><h2 class="tex-number">166 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{交点の } x \text{ 座標は} \ret x = -(m+1) \pm \sqrt{m^2+m+1} \nr
+  &amp;\text{2交点間の距離は} \nr
+  &amp;\left(-(m+1)+\sqrt{m^2+m+1}\right) \ret -\left(-(m+1)-\sqrt{m^2+m+1}\right) \nr
+  &amp;= 2\sqrt{\left(m+\frac{1}{2}\right)^2+\frac{3}{4}} \nr
+  &amp;m = -\frac{1}{2} \text{ のとき最小となる}
+\end{align*}</div><h2 class="tex-number">167</h2><div class="tex-math">\begin{align*}
+f(x) &amp;= x^2+2mx+1 \nr
+  &amp;= (x+m)^2-m^2+1 \text{ とすると} \nr
+  &amp;\text{題意をみたすための条件は} \nr
+  &amp;\begin{cases}
+    f(-m) = -m^2+1 &lt; 0 \\
+    f(0) = 1 &gt; 0 \\
+    f(2) = 4+4m+1 &gt; 0 \\
+    \text{軸 } 0 &lt; -m &lt; 2
+  \end{cases} \nr
+  &amp;\Leftrightarrow
+  \begin{cases}
+    m &lt; -1,\ 1 &lt; m \\
+    \text{すべての実数} \\
+    -\dfrac{5}{4} &lt; m \\
+    -2 &lt; m &lt; 0
+  \end{cases} \nr
+  &amp;\Leftrightarrow -\frac{5}{4} &lt; m &lt; -1
+\end{align*}</div><h2 class="tex-number">168</h2><div class="tex-math">\begin{align*}
+&amp;y = 4-x \geqq 0 \nr
+  &amp;x \geqq 0 \text{ とあわせて } 0 \leqq x \leqq 4 \nr
+  3x^2+2y^2 &amp;= 3x^2+2(4-x)^2 \nr
+  &amp;= 3x^2+32-16x+2x^2 \nr
+  &amp;= 5x^2-16x+32 \nr
+  &amp;= 5\left(x-\frac{8}{5}\right)^2-\frac{64}{5}+32 \nr
+  &amp;= 5\left(x-\frac{8}{5}\right)^2+\frac{96}{5} \quad (0 \leqq x \leqq 4) \nr
+  &amp;x=\frac{8}{5} \text{ で最小値 } \frac{96}{5} \text{ をとる。} \ret \text{このとき } y=\frac{12}{5} \nr
+  &amp;x=4 \text{ で最大値 } 48 \text{ をとる。} \ret \text{このとき } y=0
+\end{align*}</div><h2 class="tex-number">169</h2><div class="tex-math">\begin{align*}
+y &amp;= x^2-2ax+a^2-2 \nr
+  &amp;= (x-a)^2-2 \quad (0 \leqq x \leqq 2)
+\end{align*}</div><p class="tex-intertext">i) \(a&lt;0\) のとき</p><div class="tex-math">\begin{align*}
+&amp;x=0 \text{ で最小値 } a^2-2 \text{ をとる}
+\end{align*}</div><p class="tex-intertext">ii) \(0 \leqq a \leqq 2\) のとき</p><div class="tex-math">\begin{align*}
+&amp;x=a \text{ で最小値 } -2 \text{ をとる}
+\end{align*}</div><p class="tex-intertext">iii) \(2&lt;a\) のとき</p><div class="tex-math">\begin{align*}
+&amp;x=2 \text{ で最小値 } a^2-4a+2 \text{ をとる}
+\end{align*}</div><h2 class="tex-number">170</h2><div class="tex-math">\begin{align*}
+&amp;\text{長方形の縦を } 2y \text{、横を } 2x \text{ とすると} \nr
+  &amp;x^2+y^2 = 3^2 \text{ が成り立つ} \nr
+  &amp;\therefore y^2 = 9-x^2 \nr
+  &amp;y^2 \geqq 0 \text{ なので } x^2 \leqq 9 \nr
+  &amp;\therefore -3 \leqq x \leqq 3 \nr
+  &amp;\text{面積 } S \text{ は} \nr
+  S &amp;= 2x \cdot 2y \nr
+  &amp;= 4xy \nr
+  &amp;= 4x\sqrt{9-x^2} \nr
+  &amp;= 4\sqrt{-x^4+9x^2} \nr
+  &amp;= 4\sqrt{-\left(x^2-\frac{9}{2}\right)^2+\frac{81}{4}} \quad (0 \leqq x^2 \leqq 9) \nr
+  &amp;x^2=\frac{9}{2} \text{ のとき面積が最大となる。} \nr
+  &amp;\text{このとき } y^2 = \frac{9}{2} \nr
+  &amp;x=y \text{ なので正方形}
+\end{align*}</div>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        ここに記す解法が最適なものとは限りません。途中式の丸写しはあなたのためになりません。学習の参考程度にご活用ください。<br>
+                        誤字・誤値等にお気づきの際は<a href="../../contact.html">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script>window.__TEX_MACROS = {"Re":"\\operatorname{Re}","Im":"\\operatorname{Im}","proof":"\\textbf{証明}　","qed":"{\\rule{0.5zw}{1zh}}","E":"\\mathrm{e}","D":"\\mathrm {d}","I":"\\mathrm {i}","LHS":"(\\mathrm{LHS})","RHS":"(\\mathrm{RHS})","hc":"\\mathrm{h.c.}","cc":"\\mathrm{c.c.}","ret":"\\notag\\\\&\\qquad","nr":"\\notag\\\\","Arg":"\\operatorname{Arg}","for":["\\quad\\mathrm{for\\ \\ }#1",1],"sgn":"\\operatorname{sgn}","Tr":"\\operatorname{Tr}","AAA":"\\mathaccent 23\\mathrm{A}","abs":["{\\left\\rvert #1 \\right\\lvert}",1]};</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/tex-page.js"></script>
+</body>
+</html>

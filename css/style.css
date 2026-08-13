@@ -125,6 +125,10 @@ input[type=checkbox] {
 .u-red{
   color: red;
 }
+/* 一覧表で未収録であることを示すダッシュ */
+.u-nodata {
+  color: #bbb;
+}
 
 /* 表示／非表示 切り替え */
 .u-pc-only {
@@ -557,6 +561,15 @@ tr a{
   margin-top: 25px;
   padding: 10px;
   text-align: center;
+}
+/* 各科目の収録状況 */
+.section-note{
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+  margin: 10px auto 16px;
+  padding: 0 12px;
+  max-width: 900px;
 }
 .table-container, .intro-container{
   display: flex;

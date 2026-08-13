@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <link rel="icon" href="../../img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>§1 整式の計算　解答例｜1章 数と式の計算｜とどろき英数塾</title>
+    <meta name="description" content="新 基礎数学 改訂版（大日本図書）問題集「1章 §1 整式の計算」の途中式つき解答例。指数法則・乗法公式・因数分解を扱います。">
+    <link rel="canonical" href="https://todoroki.fyi/kaitou/basic/ch1-s1.html">
+    <link rel="stylesheet" href="../../css/sanitize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tex.css">
+    <link rel="stylesheet" href="../../css/tex-page.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="§1 整式の計算　解答例｜新 基礎数学 改訂版（大日本図書）">
+    <meta property="og:description" content="新 基礎数学 改訂版（大日本図書）問題集「1章 §1 整式の計算」の途中式つき解答例。指数法則・乗法公式・因数分解を扱います。">
+    <meta property="og:image" content="../../img/Thumbnail.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="とどろき英数塾">
+    <meta property="og:url" content="https://todoroki.fyi/kaitou/basic/ch1-s1.html">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="../../">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="../../index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="../../contact.html" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="../../about.html" target="_self">
+                        <span class="p-header__discord">運営者情報</span>
+                    </a>
+                    <br>
+                    <a href="../../privacy.html" target="_self">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title">§1 整式の計算　解答例</div>
+                        <p class="tex-page__meta">
+                            新 基礎数学 改訂版（大日本図書）　1章 数と式の計算
+                        </p>
+                        <p class="tex-page__links">
+                            問題集 1~35 のうち 1~21 を収録　／　<a href="../../math_pdf_file/basic_mathematics/Chapter1/pdf/%E7%AC%AC1%E7%AB%A0%C2%A71%E6%95%B4%E5%BC%8F%E3%81%AE%E8%A8%88%E7%AE%97_1~35.pdf" target="_blank" rel="noopener">PDF版を開く</a>　／　<a href="../../index.html#basic">一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body">
+                        <section class="tex-intro">
+                            <p class="tex-intro__ttl">この節について</p>
+                            <p>整式の加減乗除と因数分解を扱う節です。単項式の次数と係数の確認から始まり、指数法則 \(a^m a^n = a^{m+n}\)、\((a^m)^n = a^{mn}\) を使った整式の展開、そして乗法公式の逆向きの利用である因数分解へ進みます。</p>
+                            <p>展開は公式を覚えていれば手が動きますが、因数分解は「どの公式に持ち込むか」を見抜く部分が難所です。まず共通因数をくくり出す、次に項数（2項なら和と差の積や立方の公式、3項なら\(x^2+(a+b)x+ab\) の形）で候補を絞る、という順で考えると迷いにくくなります。たすきがけが必要な場合は、定数項の約数の組を機械的に書き出して係数を合わせるのが確実です。</p>
+                            <p>以下は問題集の途中式です。答えだけでなく変形の各段階を残しているので、自分の計算のどこで詰まったかを照らし合わせる用途に向いています。</p>
+                        </section>
+<div class="tex-heading"><strong>第1章 式の計算</strong><br>
+  <strong>1　整式</strong><br>
+  <strong>BASIC</strong></div><h2 class="tex-number">1 (1)</h2><div class="tex-math">\begin{align*}
+&amp; 3 x^{2}-4 x+x^{2}-2+x+5 \\
+  &amp;= 4 x^{2}-3 x+3
+\end{align*}</div><h2 class="tex-number">1 (2)</h2><div class="tex-math">\begin{align*}
+&amp; 2+2 x^{2}-7 x+x^{2}+2 x-3+4 x \\
+  &amp;= 3 x^{2}-x-1
+\end{align*}</div><h2 class="tex-number">2 (1)</h2><div class="tex-math">\begin{align*}
+A+B &amp;= \left(2 x^{2}+5 x-3\right)+\left(3 x^{2}-3 x-3\right) \\
+  &amp;= 5 x^{2}+2 x-6 \\
+  A-B &amp;= \left(2 x^{2}+5 x-3\right)-\left(3 x^{2}-3 x-3\right) \\
+  &amp;= -x^{2}+8 x
+\end{align*}</div><h2 class="tex-number">2 (2)</h2><div class="tex-math">\begin{align*}
+A+B &amp;= \left(3 x^{3}-2 x+1\right)+\left(2 x^{3}-x^{2}+5 x\right) \\
+  &amp;= 5 x^{3}-x^{2}+3 x+1 \\
+  A-B &amp;= \left(3 x^{3}-2 x+1\right)-\left(2 x^{3}-x^{2}+5 x\right) \\
+  &amp;= x^{3}+x^{2}-7 x+1
+\end{align*}</div><h2 class="tex-number">3 (1)</h2><div class="tex-math">\begin{align*}
+&amp; 2 x^{2}-4 x y+3 y^{2}+3 x y+3 x^{2}-2 x-5 \\
+  &amp;= 5 x^{2}-x y-2 x+3 y^{2}-5 \\
+  &amp;= 5 x^{2}-(y+2) x+3 y^{2}-5
+\end{align*}</div><h2 class="tex-number">3 (2)</h2><div class="tex-math">\begin{align*}
+&amp; a^{3}-2 a^{2} x+a x^{2}+x^{3}-3 a x^{2}+a^{2} x \\
+  &amp;= x^{3}-2 a x^{2}-a^{2} x+a^{3}
+\end{align*}</div><h2 class="tex-number">4 (1)</h2><div class="tex-math">\begin{align*}
+A+B &amp;= \left(2 x^{3}+4 a x^{2}-3 a^{3}\right)+ \\
+  &amp; \left(3 a x^{2}-2 a^{2} x+2 a^{3}\right) \\
+  &amp;= 2 x^{3}+7 a x^{2}-2 a^{2} x-a^{3} \\
+  A-B &amp;= \left(2 x^{3}+4 a x^{2}-3 a^{3}\right)- \\
+  &amp; \left(3 a x^{2}-2 a^{2} x+2 a^{3}\right) \\
+  &amp;= 2 x^{3}+a x^{2}+2 a^{2} x-5 a^{3}
+\end{align*}</div><h2 class="tex-number">4 (2)</h2><div class="tex-math">\begin{align*}
+A+B &amp;= \left(x^{3}+2 x^{2} y+5 x y-y^{2}\right)+ \\
+  &amp; \left(3 x^{2} y-x y+2\right) \\
+  &amp;= x^{3}+5 x^{2} y+4 x y-y^{2}+2 \\
+  &amp;= -y^{2}+\left(5 x^{2}+4 x\right) y+x^{3}+2\\
+  A-B &amp;= (x^{3}+2 x^{2} y+5 x y-y^{2})-(3 x^{2} y-x y+2) \\
+  &amp;= x^{3}-x^{2} y+6 x y-y^{2}-2 \\
+  &amp;= -y^{2}-(x^{2}-6 x) y+x^{3}-2
+\end{align*}</div><h2 class="tex-number">5 (1)</h2><div class="tex-math">\begin{align*}
+(-3 x)^{3} = -27 x^{3}
+\end{align*}</div><h2 class="tex-number">5 (2)</h2><div class="tex-math">\begin{align*}
+(-a^{2})^{3} = -a^{6}
+\end{align*}</div><h2 class="tex-number">5 (3)</h2><div class="tex-math">\begin{align*}
+(-a b^{3})^{2}(2 a^{2} b)^{3} &amp;= a^{2} b^{6} \cdot 8 \cdot a^{6} \cdot b^{3} \\
+  &amp;= 8 a^{8} b^{9}
+\end{align*}</div><h2 class="tex-number">5 (4)</h2><div class="tex-math">\begin{align*}
+(x+4)(x^{2}+3 x-5)= x^{3}+7 x^{2}+7 x-20
+\end{align*}</div><h2 class="tex-number">6 (1)</h2><div class="tex-math">\begin{align*}
+(x+2 y)^{2} = x^{2}+4 x y+4 y^{2}
+\end{align*}</div><h2 class="tex-number">6 (2)</h2><div class="tex-math">\begin{align*}
+(3 a-b)^{2} = 9 a^{2}-6 a b+b^{2}
+\end{align*}</div><h2 class="tex-number">6 (3)</h2><div class="tex-math">\begin{align*}
+(3 x+2 y)(3 x-7 y)= 9 x^{2}-49 y^{2}
+\end{align*}</div><h2 class="tex-number">6 (4)</h2><div class="tex-math">\begin{align*}
+(x+3 a)(x-2 a)= x^{2}+a x-6 a^{2}
+\end{align*}</div><h2 class="tex-number">6 (5)</h2><div class="tex-math">\begin{align*}
+(2 x+3)(x+4)= 2 x^{2}+11 x+12
+\end{align*}</div><h2 class="tex-number">6 (6)</h2><div class="tex-math">\begin{align*}
+(3 x-2 y)(2 x+3 y)= 6 x^{2}+5 x y-6 y^{2}
+\end{align*}</div><h2 class="tex-number">6 (7)</h2><div class="tex-math">\begin{align*}
+(2 a+b)^{3} = 8 a^{3}+12 a^{2} b+6 a b^{2}+b^{3}
+\end{align*}</div><h2 class="tex-number">6 (8)</h2><div class="tex-math">\begin{align*}
+(3 x-2 y)^{3} = 27 x^{3}-54 x^{2} y+36 x y^{2}-8 y^{3}
+\end{align*}</div><h2 class="tex-number">7 (1)</h2><div class="tex-math">\begin{align*}
+(x+y+1)^{2} = x^{2}+y^{2}+1+2xy+2x+2y
+\end{align*}</div><h2 class="tex-number">7 (2)</h2><div class="tex-math">\begin{align*}
+(x-2y+3)^{2} = x^{2}+4y^{2}+9-4xy+6x-12y
+\end{align*}</div><h2 class="tex-number">7 (3)</h2><div class="tex-math">\begin{align*}
+(a+2)(a^{2}-2a+4) = a^{3}+8
+\end{align*}</div><h2 class="tex-number">7 (4)</h2><div class="tex-math">\begin{align*}
+(3x-1)(9x^{2}+3x+1) = 27x^{3}-1
+\end{align*}</div><h2 class="tex-number">8 (1)</h2><div class="tex-math">\begin{align*}
+&amp; (2x+y+3)(2x+y+5) \\
+  &amp;= (2x+y)^{2}+8(2x+y)+15 \\
+  &amp;= 4x^{2}+4xy+y^{2}+16x+8y+15
+\end{align*}</div><h2 class="tex-number">8 (2)</h2><div class="tex-math">\begin{align*}
+&amp;  (a^{2}+a-1)(a^{2}-a+1) \\
+  &amp;= (a^{2})^{2}-(a-1)^{2} \\
+  &amp;= a^{4}-(a^{2}-2a+1) \\
+  &amp;= a^{4}-a^{2}+2a-1
+\end{align*}</div><h2 class="tex-number">9 (1)</h2><div class="tex-math">\begin{align*}
+4a^{3}-9ab^{2} &amp;= a(4a^{2}-9b^{2}) \\
+  &amp;= a(2a+3b)(2a-3b)
+\end{align*}</div><h2 class="tex-number">9 (2)</h2><div class="tex-math">\begin{align*}
+ab-b-ac+c &amp;= a(b-c)-(b-c) \\
+  &amp;= (b-c)(a-1)
+\end{align*}</div><h2 class="tex-number">9 (3)</h2><div class="tex-math">\begin{align*}
+8a^{3}+27 = (2a+3)(4a^{2}-6a+9)
+\end{align*}</div><h2 class="tex-number">9 (4)</h2><div class="tex-math">\begin{align*}
+x^{2}+2xy+y^{2}-z^{2} &amp;= (x+y)^{2}-z^{2} \\
+  &amp;= (x+y+z)(x+y-z)
+\end{align*}</div><h2 class="tex-number">10 (1)</h2><div class="tex-math">\begin{align*}
+x^{2}-5 x+6 = (x-2)(x-3)
+\end{align*}</div><h2 class="tex-number">10 (2)</h2><div class="tex-math">\begin{align*}
+x^{2}-7 x-30 = (x-10)(x+3)
+\end{align*}</div><h2 class="tex-number">11 (1)</h2><div class="tex-math">\begin{align*}
+6 x^{2}+17 x+5 = (2 x+5)(3 x+1)
+\end{align*}</div><h2 class="tex-number">11 (2)</h2><div class="tex-math">\begin{align*}
+3 x^{2}+4 x-4 = (3 x-2)(x+2)
+\end{align*}</div><h2 class="tex-number">12 (1)</h2><div class="tex-math">\begin{align*}
+x^{4}-16 &amp;= (x^{2}+4)(x^{2}-4) \\
+  &amp;= (x^{2}+4)(x+2)(x-2)
+\end{align*}</div><h2 class="tex-number">12 (2)</h2><div class="tex-math">\begin{align*}
+&amp; (x-y)^{2}+2(x-y)-15 \\
+  &amp;= \{(x-y)+5\}\{(x-y)-3\} \\
+  &amp;= (x-y+5)(x-y-3)
+\end{align*}</div><h2 class="tex-number">12 (3)</h2><div class="tex-math">\begin{align*}
+&amp; x^{2}+2 x y+y^{2}-3 x-3 y+2 \\
+  &amp;= x^{2}+(2 y-3) x+(y-1)(y-2) \\
+  &amp;= \{x+(y-1)\}\{x+(y-2)\} \\
+  &amp;= (x+y-1)(x+y-2)
+\end{align*}</div><h2 class="tex-number">12 (4)</h2><div class="tex-math">\begin{align*}
+&amp; 2 x^{2}+5 x y+3 y^{2}-3 x-5 y-2 \\
+  &amp;= 2 x^{2}+(5 y-3) x+(3 y+1)(y-2) \\
+  &amp;= \{2 x+(3 y+1)\}\{x+(y-2)\} \\
+  &amp;= (2 x+3 y+1)(x+y-2)
+\end{align*}</div><h2 class="tex-number">13 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{商 } x+5, \text{ 余り } 9 \\
+  &amp;\begin{array}{r}
+    x + 5  \\[-3pt]
+    x - 2 \ \overline{) \ x^2 + 3x - 1} \\
+    \underline{x^2 - 2x \phantom{-1}} \\
+    5x - 1 \\
+    \underline{5x - 10} \\
+    9
+  \end{array}
+\end{align*}</div><h2 class="tex-number">13 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{商 } 4x^2 - 13x + 16, \quad \text{余り } -16 \\
+  &amp;\begin{array}{r}
+    4x^2 - 13x + 16  \\[-3pt] 
+    x + 1 \ \overline{) \ 4x^3 - 9x^2 + 3x \phantom{+00}} \\
+    \underline{4x^3 + 4x^2 \phantom{-000000}} \\
+    -13x^2 + 3x \phantom{00} \\
+    \underline{-13x^2 - 13x \phantom{00}} \\
+    16x \phantom{00} \\
+    \underline{16x + 16} \\
+    -16
+  \end{array}
+\end{align*}</div><h2 class="tex-number">13 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\text{商 } 2x + 1, \quad \text{余り } -9x + 3 \\
+  &amp;\begin{array}{r}
+    2x + 1  \\[-3pt]
+    x^2 + x + 2 \ \overline{) \ 2x^3 + 3x^2 - 4x + 5} \\
+    \underline{2x^3 + 2x^2 + 4x \phantom{+0}} \\
+    x^2 - 8x + 5 \\
+    \underline{x^2 + \phantom{0}x + 2} \\
+    -9x + 3
+  \end{array}
+\end{align*}</div><h2 class="tex-number">14</h2><div class="tex-math">\begin{align*}
+&amp;\text{ある整式を } A \text{ とすると} \nr
+  A &amp;= (2x+3)(3x^2-1)+5 \nr
+  &amp;= 6x^3+9x^2-2x-3+5 \nr
+  &amp;= 6x^3+9x^2-2x+2
+\end{align*}</div><h2 class="tex-number">15 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{最大公約数 } bc \nr
+  &amp;\text{最小公倍数 } ab^2c^3d
+\end{align*}</div><h2 class="tex-number">15 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{最大公約数 } x+2 \nr
+  &amp;\text{最小公倍数 } (x+2)(x-1)(x-2)
+\end{align*}</div><h2 class="tex-number">15 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\text{最大公約数 } x+1 \nr
+  &amp;\text{最小公倍数 } (x+1)^2(x-1)(x^2-x+1)
+\end{align*}</div><h2 class="tex-number">16 （1）</h2><div class="tex-math">\begin{align*}
+&amp; 2 P(x)-Q(x) \\
+  &amp; =2\left(x^{3}-x^{2}-5 x+2\right)- \\
+  &amp; \left(2 x^{3}+6 x^{2}+3 x-1\right) \\
+  &amp; =-8 x^{2}-13 x+5
+\end{align*}</div><h2 class="tex-number">16 （2）</h2><div class="tex-math">\begin{align*}
+P(2) &amp; =8-4-5 \cdot 2+2 \\
+&amp; =4-10+2 \\
+&amp; =-4
+\end{align*}</div><h2 class="tex-number">16 （3）</h2><div class="tex-math">\begin{align*}
+Q(-a)=-2 a^{3}+6 a^{2}-3 a-1
+\end{align*}</div><h2 class="tex-number">17 (1)</h2><div class="tex-math">\begin{align*}
+A(2) &amp;= 8 - 10 + 3 \\
+       &amp;= 1
+\end{align*}</div><h2 class="tex-number">17 (2)</h2><div class="tex-math">\begin{align*}
+A(-3) &amp;= -27 + 9 + 9 + 6 \\
+        &amp;= -3
+\end{align*}</div><h2 class="tex-number">18</h2><p class="tex-intertext">\(x = -\frac{1}{2}\) を代入すると</p><div class="tex-math">\begin{align*}
+&amp;2 \cdot \left( -\frac{1}{8} \right) - \frac{1}{4} - \frac{3}{2} + 5 \\
+  &amp;= -\frac{1}{4} - \frac{1}{4} + \frac{7}{2} \\
+  &amp;= -\frac{1}{2} + \frac{7}{2} \\
+  &amp;= 3
+\end{align*}</div><h2 class="tex-number">19</h2><div class="tex-math">\begin{align*}
+P(-1) &amp;= -1 + 4 - 1 - 6 = -4 \\
+  P(-2) &amp;= -8 + 16 - 2 - 6 = 0 \\
+  P(-3) &amp;= -27 + 36 - 3 - 6 = 0
+\end{align*}</div><p class="tex-intertext">よって，\(x+2, x+3\) で割り切れる</p><h2 class="tex-number">20</h2><p class="tex-intertext">\(x = 1\) を代入した値が \(0\) となるので</p><div class="tex-math">\begin{align*}
+2 + k + 3 - 10 &amp;= 0 \\
+  k &amp;= 5
+\end{align*}</div><h2 class="tex-number">21 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x^3 - 7x + 6 \\
+  &amp;= (x - 1)(x^2 + x - 6) \\
+  &amp;= (x - 1)(x + 3)(x - 2)
+\end{align*}</div><h2 class="tex-number">21 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x^3 + 4x^2 + 5x + 2 \\
+  &amp;= (x + 1)(x^2 + 3x + 2) \\
+  &amp;= (x + 1)^2(x + 2)
+\end{align*}</div><h2 class="tex-number">21 (3)</h2><div class="tex-math">\begin{align*}
+&amp;2x^3 + 3x^2 - 11x - 6 \\
+  &amp;= (x - 2)(2x^2 + 7x + 3) \\
+  &amp;= (x - 2)(2x + 1)(x + 3)
+\end{align*}</div><h2 class="tex-number">21 (4)</h2><div class="tex-math">\begin{align*}
+&amp;x^4 + 5x^3 + 5x^2 - 5x - 6 \\
+  &amp;= (x - 1)(x^3 + 6x^2 + 11x + 6) \\
+  &amp;= (x - 1)(x + 1)(x^2 + 5x + 6) \\
+  &amp;= (x - 1)(x + 1)(x + 2)(x + 3)
+\end{align*}</div>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        ここに記す解法が最適なものとは限りません。途中式の丸写しはあなたのためになりません。学習の参考程度にご活用ください。<br>
+                        誤字・誤値等にお気づきの際は<a href="../../contact.html">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script>window.__TEX_MACROS = {"Re":"\\operatorname{Re}","Im":"\\operatorname{Im}","proof":"\\textbf{証明}　","qed":"{\\rule{0.5zw}{1zh}}","E":"\\mathrm{e}","D":"\\mathrm {d}","I":"\\mathrm {i}","LHS":"(\\mathrm{LHS})","RHS":"(\\mathrm{RHS})","hc":"\\mathrm{h.c.}","cc":"\\mathrm{c.c.}","ret":"\\notag\\\\&\\qquad","nr":"\\notag\\\\","Arg":"\\operatorname{Arg}","for":["\\quad\\mathrm{for\\ \\ }#1",1],"sgn":"\\operatorname{sgn}","Tr":"\\operatorname{Tr}","AAA":"\\mathaccent 23\\mathrm{A}","abs":["{\\left\\rvert #1 \\right\\lvert}",1]};</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/tex-page.js"></script>
+</body>
+</html>

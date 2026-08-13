@@ -1,0 +1,132 @@
+/*------------------------------------------
+ *  文章ページ（about.html / contact.html / privacy.html）
+ *------------------------------------------*/
+.doc-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+.doc {
+  background-color: white;
+  border: 1px solid black;
+  width: 92%;
+  max-width: 760px;
+  padding: 0 0 28px;
+}
+.doc .title {
+  margin-top: 0;
+}
+.doc__inner {
+  padding: 8px 28px 0;
+}
+.doc__lead {
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 16px 0 24px;
+}
+
+.doc h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 28px 0 10px;
+  padding: 8px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+.doc h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 20px 0 6px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.doc p {
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 12px;
+}
+.doc ul {
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 12px;
+  padding-left: 1.4em;
+}
+.doc li {
+  list-style: disc;
+  margin-bottom: 4px;
+}
+.doc a {
+  color: #008080;
+}
+.doc__note {
+  font-size: 12px;
+  color: #555;
+  border-top: 1px solid #ddd;
+  margin: 28px 28px 0;
+  padding-top: 12px;
+  line-height: 1.8;
+}
+
+/* 定義リスト（運営者・更新履歴など） */
+.doc__dl {
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 12px;
+}
+.doc__dl dt {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.doc__dl dd {
+  margin: 0 0 0 1.2em;
+}
+
+/* 連絡先の窓口カード */
+.doc__contact {
+  border: 1px solid #ddd;
+  padding: 14px 16px;
+  margin: 0 0 14px;
+}
+.doc__contact-role {
+  font-size: 13px;
+  color: #555;
+  margin: 0 0 4px;
+}
+.doc__contact-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 6px;
+}
+.doc__form {
+  margin-top: 8px;
+}
+.doc__form iframe {
+  width: 100%;
+  max-width: 640px;
+  height: 900px;
+  border: 0;
+}
+
+/*スマートフォン向け*/
+@media only screen and (max-width: 480px) {
+  .doc {
+    width: 95%;
+  }
+  .doc__inner {
+    padding: 8px 14px 0;
+  }
+  .doc__note {
+    margin: 20px 14px 0;
+  }
+  .doc h2 {
+    font-size: 15px;
+  }
+  .doc p,
+  .doc ul,
+  .doc__dl {
+    font-size: 13px;
+  }
+  .doc__form iframe {
+    height: 1100px;
+  }
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <link rel="icon" href="../../img/Thumbnail.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>§2 不等式　解答例｜2章 方程式と不等式｜とどろき英数塾</title>
+    <meta name="description" content="新 基礎数学 改訂版（大日本図書）問題集「2章 §2 不等式」の途中式つき解答例。2次不等式・連立不等式・絶対値を含む不等式を扱います。">
+    <link rel="canonical" href="https://todoroki.fyi/kaitou/basic/ch2-s2.html">
+    <link rel="stylesheet" href="../../css/sanitize.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tex.css">
+    <link rel="stylesheet" href="../../css/tex-page.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="§2 不等式　解答例｜新 基礎数学 改訂版（大日本図書）">
+    <meta property="og:description" content="新 基礎数学 改訂版（大日本図書）問題集「2章 §2 不等式」の途中式つき解答例。2次不等式・連立不等式・絶対値を含む不等式を扱います。">
+    <meta property="og:image" content="../../img/Thumbnail.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="とどろき英数塾">
+    <meta property="og:url" content="https://todoroki.fyi/kaitou/basic/ch2-s2.html">
+</head>
+<body id="top" class="u-fixed-bg">
+    <div id="wrapper">
+        <header class="p-header">
+            <div class="l-inner p-header__inner">
+                <div class="p-header__logo">
+                    <a href="../../">
+                        <h1 class="p-header__ttl">とどろき英数塾</h1>
+                    </a>
+                </div>
+                <div class="p-header__menu-wrapper">
+                    <button type="button" id="js-hamburger" class="p-header__hamburger c-hamburger" aria-label="メニューを開閉する" aria-controls="global-nav" aria-expanded="false">
+                        <span class="c-hamburger__line"></span>
+                    </button>
+                    <nav id="global-nav" class="p-header__menu">
+                        <ul class="p-header__menu-list">
+                            <li class="p-header__menu-item u-bold"><a href="../../index_old.html" lang="ja">旧版へ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#basic" lang="ja">基礎数学</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#linear" lang="ja">線形代数</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ1" lang="ja">微分積分Ⅰ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#integ2" lang="ja">微分積分Ⅱ</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#probab" lang="ja">確率統計</a></li>
+                            <li class="p-header__menu-item"><a href="../../index.html#applied" lang="ja">応用数学</a></li>
+                            <li class="p-header__menu-item u-bold"><a href="../../contact.html" lang="ja">連絡先</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="p-header__sns">
+                    <a href="https://discord.com/invite/dCeU9BKnT7" target="_blank" rel="noopener noreferrer">
+                        <img src="../../img/discord-mark-black.svg" alt="" width="22" height="18">
+                        <span class="p-header__discord">高専生のDiscord</span>
+                    </a>
+                    <br>
+                    <a href="../../about.html" target="_self">
+                        <span class="p-header__discord">運営者情報</span>
+                    </a>
+                    <br>
+                    <a href="../../privacy.html" target="_self">
+                        <span class="p-header__discord">プライバシーポリシー</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="l-top-main">
+            <div class="header-white"></div>
+            <div class="tex-container">
+                <article class="tex-page">
+                    <div class="tex-page__head">
+                        <div class="title">§2 不等式　解答例</div>
+                        <p class="tex-page__meta">
+                            新 基礎数学 改訂版（大日本図書）　2章 方程式と不等式
+                        </p>
+                        <p class="tex-page__links">
+                            問題集 105~142　／　<a href="../../math_pdf_file/basic_mathematics/Chapter2/pdf/%E7%AC%AC2%E7%AB%A0%C2%A72%E4%B8%8D%E7%AD%89%E5%BC%8F_105~142.pdf" target="_blank" rel="noopener">PDF版を開く</a>　／　<a href="../../index.html#basic">一覧へもどる</a>
+                        </p>
+                    </div>
+                    <div class="tex-page__body">
+                        <section class="tex-intro">
+                            <p class="tex-intro__ttl">この節について</p>
+                            <p>1次不等式から2次不等式、連立不等式、絶対値を含む不等式までを扱う節です。不等式で最も事故が起きやすいのは、負の数を掛けたり割ったりしたときに不等号の向きが変わる点で、変形のたびに符号を確認する習慣が要ります。</p>
+                            <p>2次不等式は、対応する2次方程式の解を求めてグラフの概形を描き、「放物線が \(x\) 軸より上にある範囲か下にある範囲か」で読み取るのが確実です。\(a>0\) で \(D>0\) のとき、\((x-\alpha)(x-\beta)>0\) なら解は外側、\(<0\) なら内側になります。判別式が0以下の場合は「すべての実数」または「解なし」に分かれるので、ここも場合分けが必要です。</p>
+                            <p>絶対値を含む不等式は、\(|x|<a \iff -a<x<a\) の同値変形で外すか、中身の符号で場合分けするかの二通りがあります。以下の解答例では、どちらの方針で処理したかが追えるように途中式を残しています。</p>
+                        </section>
+<div class="tex-heading"><strong>2章 方程式と不等式</strong><br>
+  <strong>2 不等式</strong><br>
+  <strong>BASIC</strong></div><h2 class="tex-number">105 (1)</h2><div class="tex-math">\begin{align*}
+5x-1 &amp;\geqq x+3 \nr
+  4x &amp;\geqq 4 \nr
+  x &amp;\geqq 1
+\end{align*}</div><h2 class="tex-number">105 (2)</h2><div class="tex-math">\begin{align*}
+4x-3 &amp;&lt; 6x+5 \nr
+  -2x &amp;&lt; 8 \nr
+  x &amp;&gt; -4
+\end{align*}</div><h2 class="tex-number">105 (3)</h2><div class="tex-math">\begin{align*}
+3(x+2) &amp;\leqq 7-2x \nr
+  3x+6 &amp;\leqq 7-2x \nr
+  5x &amp;\leqq 1 \nr
+  x &amp;\leqq \frac{1}{5}
+\end{align*}</div><h2 class="tex-number">105 (4)</h2><div class="tex-math">\begin{align*}
+\frac{5x-1}{2} &amp;&gt; x+4 \nr
+  5x-1 &amp;&gt; 2x+8 \nr
+  3x &amp;&gt; 9 \nr
+  x &amp;&gt; 3
+\end{align*}</div><h2 class="tex-number">106</h2><div class="tex-math">\begin{align*}
+&amp;\text{バラで買うとみかん $40$ コで $1200$ 円なので} \nr
+  &amp;\text{$1$ コは箱で買うと多く買うことができる} \nr
+  &amp;\text{残り $x$ コみかんを買うとすると} \nr
+  &amp;30x \leqq 1600-1150 \nr
+  &amp;3x \leqq 45 \nr
+  &amp;x \leqq 15 \nr
+  &amp;\therefore \text{箱とあわせて $55$ コまで買える。}
+\end{align*}</div><h2 class="tex-number">107 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} 3x+4 &gt; x-2 \\ x+2 \geqq 4x-1 \end{cases} \nr
+  &amp;\begin{cases} x &gt; -3 \\ x \leqq 1 \end{cases} \nr
+  &amp;\Leftrightarrow -3 &lt; x \leqq 1
+\end{align*}</div><h2 class="tex-number">107 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} 4(x-1) &lt; 3x-1 \\ \frac{1}{2}x+1 &lt; \frac{x+4}{3} \end{cases} \nr
+  &amp;\begin{cases} 4x-4 &lt; 3x-1 \\ 3x+6 &lt; 2x+8 \end{cases} \nr
+  &amp;\begin{cases} x &lt; 3 \\ x &lt; 2 \end{cases} \nr
+  &amp;\Leftrightarrow x &lt; 2
+\end{align*}</div><h2 class="tex-number">108 (1)</h2><div class="tex-math">\begin{align*}
+x^2-4x+3 &amp;&lt; 0 \nr
+  (x-3)(x-1) &amp;&lt; 0 \nr
+  1 &lt; x &amp;&lt; 3
+\end{align*}</div><h2 class="tex-number">108 (2)</h2><div class="tex-math">\begin{align*}
+x^2-25 &amp;\geqq 0 \nr
+  (x+5)(x-5) &amp;\geqq 0 \nr
+  x \leqq -5,\ 5 &amp;\leqq x
+\end{align*}</div><h2 class="tex-number">108 (3)</h2><div class="tex-math">\begin{align*}
+3x^2+5x-2 &amp;\leqq 0 \nr
+  (3x-1)(x+2) &amp;\leqq 0 \nr
+  -2 \leqq x &amp;\leqq \frac{1}{3}
+\end{align*}</div><h2 class="tex-number">108 (4)</h2><div class="tex-math">\begin{align*}
+-4x^2+4x+3 &amp;&lt; 0 \nr
+  4x^2-4x-3 &amp;&gt; 0 \nr
+  (2x+1)(2x-3) &amp;&gt; 0 \nr
+  x &lt; -\frac{1}{2},\ \frac{3}{2} &amp;&lt; x
+\end{align*}</div><h2 class="tex-number">109 (1)</h2><div class="tex-math">\begin{align*}
+&amp;(x+1)(x-2)(x-3) \leqq 0 \nr
+  &amp;x \leqq -1,\ 2 \leqq x \leqq 3
+\end{align*}</div><h2 class="tex-number">109 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x^3-3x^2-6x+8 &gt; 0 \nr
+  &amp;(x-1)(x^2-2x-8) &gt; 0 \nr
+  &amp;(x-1)(x-4)(x+2) &gt; 0 \nr
+  &amp;{-}2 &lt; x &lt; 1,\ 4 &lt; x
+\end{align*}</div><h2 class="tex-number">110</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺})-(\text{右辺}) \nr
+  &amp;= a^2-4 \nr
+  &amp;= (a+2)(a-2) \nr
+  &amp;\geqq 0 \quad (\because a \leqq -2) \nr
+  &amp;\text{等号成立は } a=-2 \text{ のとき}
+\end{align*}</div><h2 class="tex-number">111</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺})-(\text{右辺}) \nr
+  &amp;= a-c-(b-d) \nr
+  &amp;= (a-b)+(d-c) \nr
+  &amp;&gt; 0 \quad (\because a&gt;b,\ d&gt;c)
+\end{align*}</div><h2 class="tex-number">112</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺})-(\text{右辺}) \nr
+  &amp;= x^2+4y^2-4xy \nr
+  &amp;= (x-2y)^2 \nr
+  &amp;\geqq 0 \nr
+  &amp;\text{等号成立は } x=2y \text{ のとき}
+\end{align*}</div><h2 class="tex-number">113 (1)</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺}) = (x-4)^2 \geqq 0 \nr
+  &amp;\text{等号成立は } x=4 \text{ のとき}
+\end{align*}</div><h2 class="tex-number">113 (2)</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺}) = (x+2)^2+1 &gt; 0
+\end{align*}</div><h2 class="tex-number">114 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{a}{2}&gt;0,\ \frac{1}{2a}&gt;0 \text{ なので} \ret \text{相加平均と相乗平均の関係より} \nr
+  &amp;(\text{左辺}) = \frac{a}{2}+\frac{1}{2a} \nr
+  &amp;\geqq 2\sqrt{\frac{a}{2}\cdot\frac{1}{2a}} \nr
+  &amp;= 1 = (\text{右辺}) \nr
+  &amp;\text{等号成立は } \frac{a}{2}=\frac{1}{2a} \nr
+  &amp;\text{すなわち } a=1 \text{ のとき}
+\end{align*}</div><h2 class="tex-number">114 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{b}{2a}&gt;0,\ \frac{2a}{b}&gt;0 \text{ なので} \ret \text{相加平均と相乗平均の関係より} \nr
+  &amp;(\text{左辺}) \geqq 2\sqrt{\frac{b}{2a}\cdot\frac{2a}{b}} \nr
+  &amp;= 2 \nr
+  &amp;\text{等号成立は } \frac{b}{2a}=\frac{2a}{b} \nr
+  &amp;b^2 = 4a^2 \nr
+  &amp;b&gt;0,\ a&gt;0 \text{ なので } b=2a \text{ のとき}
+\end{align*}</div><h2 class="tex-number">115</h2><div class="tex-math">\begin{align*}
+A &amp;= \{x \mid 3 \leqq x\} \nr
+  \bar{A} &amp;= \{1,\ 2\}
+\end{align*}</div><h2 class="tex-number">116 (1)</h2><div class="tex-math">\begin{align*}
+&amp;A = \{1,3,5,7,9\} \nr
+  &amp;B = \{3,4,5,6,7,8\} \nr
+  &amp;A \cap B = \{3,5,7\}
+\end{align*}</div><h2 class="tex-number">116 (2)</h2><div class="tex-math">\begin{align*}
+&amp;A \cup B = \{1,3,4,5,6,7,8,9\}
+\end{align*}</div><h2 class="tex-number">116 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\overline{A \cap B} = \{1,2,4,6,8,9,10\}
+\end{align*}</div><h2 class="tex-number">116 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\bar{A} \cup \bar{B} = \overline{A \cap B} \ret = \{1,2,4,6,8,9,10\}
+\end{align*}</div><h2 class="tex-number">117</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺}) = \overline{(\bar{A} \cap \bar{B}) \cup \bar{C}} \nr
+  &amp;= \overline{(\overline{A \cup B}) \cup \bar{C}} \nr
+  &amp;= \overline{\overline{(A \cup B) \cap C}} \nr
+  &amp;= (A \cup B) \cap C \nr
+  &amp;= (\text{右辺})
+\end{align*}</div><h2 class="tex-number">118 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{偽} \quad (x=-2)
+\end{align*}</div><h2 class="tex-number">118 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x^2&lt;1 \Leftrightarrow -1&lt;x&lt;1 \nr
+  &amp;\Rightarrow x&lt;1 \nr
+  &amp;\text{真}
+\end{align*}</div><h2 class="tex-number">119 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x^2=4 \Leftrightarrow x=\pm 2 \nr
+  &amp;x=\pm 2 \Leftarrow x=2 \text{ より必要条件}
+\end{align*}</div><h2 class="tex-number">119 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x^2+y^2=0 \Leftrightarrow x^2=y^2=0 \nr
+  &amp;\Leftrightarrow x=y=0 \text{ より必要十分条件}
+\end{align*}</div><h2 class="tex-number">119 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\text{$4$ の約数} \Rightarrow \text{$8$ の約数} \ret \text{より十分条件}
+\end{align*}</div><h2 class="tex-number">119 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\text{二等辺三角形} \Leftarrow \text{正三角形} \ret \text{より必要条件}
+\end{align*}</div><h2 class="tex-number">120</h2><div class="tex-math">\begin{align*}
+&amp;p: n&gt;3 \nr
+  &amp;\bar{p}: n \leqq 3 \nr
+  &amp;\bar{p} = \{1,2,3\}
+\end{align*}</div><h2 class="tex-number">121 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x \neq -1 \text{ かつ } x \neq 1
+\end{align*}</div><h2 class="tex-number">121 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x \leqq 0 \text{ または } y \leqq 0
+\end{align*}</div><h2 class="tex-number">122 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\text{逆: } x=1 \Rightarrow (x-1)(x-2)=0 \nr
+  &amp;\text{裏: } (x-1)(x-2) \neq 0 \Rightarrow x \neq 1 \nr
+  &amp;\text{対偶: } x \neq 1 \ret \Rightarrow (x-1)(x-2) \neq 0
+\end{align*}</div><h2 class="tex-number">122 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\text{逆: } x+y&gt;0 \ret \Rightarrow x&gt;0 \text{ かつ } y&gt;0 \nr
+  &amp;\text{裏: } x \leqq 0 \text{ または } y \leqq 0 \ret \Rightarrow x+y \leqq 0 \nr
+  &amp;\text{対偶: } x+y \leqq 0 \ret \Rightarrow x \leqq 0 \text{ または } y \leqq 0
+\end{align*}</div><h2 class="tex-number">123</h2><div class="tex-math">\begin{align*}
+&amp;\text{対偶「} x \leqq 0 \text{ かつ } y \leqq 0 \ret \text{ならば } xy \geqq 0 \text{」を示す} \nr
+  &amp;\begin{cases} x \leqq 0 \\ y \leqq 0 \end{cases} \text{ なので } xy \geqq 0 \nr
+  &amp;\text{対偶が真なので、もとの命題も真}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>CHECK</strong></div><h2 class="tex-number">124 (1)</h2><div class="tex-math">\begin{align*}
+3x+4 &amp;&lt; 5x-8 \nr
+  -2x &amp;&lt; -12 \nr
+  x &amp;&gt; 6
+\end{align*}</div><h2 class="tex-number">124 (2)</h2><div class="tex-math">\begin{align*}
+\frac{2x+1}{3} &amp;\leqq \frac{1}{4}x+2 \nr
+  8x+4 &amp;\leqq 3x+24 \nr
+  5x &amp;\leqq 20 \nr
+  x &amp;\leqq 4
+\end{align*}</div><h2 class="tex-number">125</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} 4x-3 &gt; x-5 \\ \frac{2}{3}x+\frac{1}{6} \leqq \frac{1}{2}x+1 \end{cases} \nr
+  &amp;\begin{cases} 3x &gt; -2 \\ 4x+1 \leqq 3x+6 \end{cases} \nr
+  &amp;\begin{cases} x &gt; -\frac{2}{3} \\ x \leqq 5 \end{cases} \nr
+  &amp;\Leftrightarrow -\frac{2}{3} &lt; x \leqq 5
+\end{align*}</div><h2 class="tex-number">126 (1)</h2><div class="tex-math">\begin{align*}
+x^2+3x-4 &amp;\leqq 0 \nr
+  (x+4)(x-1) &amp;\leqq 0 \nr
+  -4 \leqq x &amp;\leqq 1
+\end{align*}</div><h2 class="tex-number">126 (2)</h2><div class="tex-math">\begin{align*}
+3x^2-8x+4 &amp;&gt; 0 \nr
+  (3x-2)(x-2) &amp;&gt; 0 \nr
+  x &lt; \frac{2}{3},\ 2 &amp;&lt; x
+\end{align*}</div><h2 class="tex-number">126 (3)</h2><div class="tex-math">\begin{align*}
+&amp;x(x-1)(x-2) \geqq 0 \nr
+  &amp;0 \leqq x \leqq 1,\ 2 \leqq x
+\end{align*}</div><h2 class="tex-number">126 (4)</h2><div class="tex-math">\begin{align*}
+&amp;2x^3-x^2-2x+1 &lt; 0 \nr
+  &amp;(x-1)(2x^2+x-1) &lt; 0 \nr
+  &amp;(x-1)(2x-1)(x+1) &lt; 0 \nr
+  &amp;x &lt; -1,\ \frac{1}{2} &lt; x &lt; 1
+\end{align*}</div><h2 class="tex-number">127</h2><div class="tex-math">\begin{align*}
+&amp;\text{判別式を } D \text{ とすると} \nr
+  &amp;D = (m+3)^2-4 \cdot 4m \nr
+  &amp;= m^2-10m+9 \nr
+  &amp;= (m-1)(m-9) &gt; 0 \nr
+  &amp;m&lt;1,\ 9&lt;m
+\end{align*}</div><h2 class="tex-number">128</h2><div class="tex-math">\begin{align*}
+&amp;a&gt;b \nr
+  &amp;ab&gt;0 \text{ なので、両辺に } \frac{1}{ab} \text{ をかけて} \nr
+  &amp;a \times \frac{1}{ab} &gt; b \times \frac{1}{ab} \nr
+  &amp;\frac{1}{b} &gt; \frac{1}{a}
+\end{align*}</div><h2 class="tex-number">129 (1)</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺})-(\text{右辺}) \nr
+  &amp;= (x^2y^2+x^2+y^2+1) \ret -(x^2y^2+2xy+1) \nr
+  &amp;= x^2+y^2-2xy \nr
+  &amp;= (x-y)^2 \nr
+  &amp;\geqq 0 \nr
+  &amp;\text{等号成立は } x=y \text{ のとき}
+\end{align*}</div><h2 class="tex-number">129 (2)</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺}) = x^2-2xy+2y^2 \nr
+  &amp;= (x-y)^2+y^2 \nr
+  &amp;\geqq 0 \nr
+  &amp;\text{等号成立は } x-y=0 \text{ かつ } y=0 \nr
+  &amp;\text{すなわち } x=y=0 \text{ のとき}
+\end{align*}</div><h2 class="tex-number">130 (1)</h2><div class="tex-math">\begin{align*}
+&amp;A \cap \bar{B} = \{4,6,10\}
+\end{align*}</div><h2 class="tex-number">130 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\overline{A \cup B} = \{1,3,9\}
+\end{align*}</div><h2 class="tex-number">131 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x=y=0 \Rightarrow xy=0 \text{ は真} \nr
+  &amp;x=y=0 \Leftarrow xy=0 \text{ は偽} \ret (\text{反例 } x=1,\ y=0) \nr
+  &amp;\text{よって十分条件}
+\end{align*}</div><h2 class="tex-number">131 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x^2=0 \Leftrightarrow x=0 \nr
+  &amp;\text{よって必要十分条件}
+\end{align*}</div><h2 class="tex-number">131 (3)</h2><div class="tex-math">\begin{align*}
+&amp;x^2-3x+2&gt;0 \Leftrightarrow (x-1)(x-2)&gt;0 \ret \Leftrightarrow x&lt;1,\ 2&lt;x \nr
+  &amp;x&lt;1,\ 2&lt;x \Leftarrow x&gt;2 \nr
+  &amp;\text{よって必要条件}
+\end{align*}</div><h2 class="tex-number">132</h2><div class="tex-math">\begin{align*}
+&amp;\text{逆: } x&gt;0 \text{ かつ } y&gt;0 \Rightarrow xy&gt;0 \ret \text{（真）} \nr
+  &amp;\text{裏: } xy \leqq 0 \ret \Rightarrow x \leqq 0 \text{ または } y \leqq 0 \text{（真）} \nr
+  &amp;\text{対偶: } x \leqq 0 \text{ または } y \leqq 0 \ret \Rightarrow xy \leqq 0 \text{（偽）} \ret \text{反例 } x=y=-1
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>STEP UP</strong></div><h2 class="tex-number">133 (1)</h2><div class="tex-math">\begin{align*}
+&amp;x-2 \leqq 4x+1 \leqq 2(x+3) \nr
+  &amp;\begin{cases} x-2 \leqq 4x+1 \\ 4x+1 \leqq 2(x+3) \end{cases} \nr
+  &amp;\begin{cases} -3x \leqq 3 \\ 2x \leqq 5 \end{cases} \nr
+  &amp;\begin{cases} x \geqq -1 \\ x \leqq \frac{5}{2} \end{cases} \nr
+  &amp;{-}1 \leqq x \leqq \frac{5}{2}
+\end{align*}</div><h2 class="tex-number">133 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} x^2-9x+8 \leqq 0 \\ \frac{1}{2}x+3 &lt; x \end{cases} \nr
+  &amp;\begin{cases} (x-8)(x-1) \leqq 0 \\ -\frac{1}{2}x &lt; -3 \end{cases} \nr
+  &amp;\begin{cases} 1 \leqq x \leqq 8 \\ x &gt; 6 \end{cases} \nr
+  &amp;\Leftrightarrow 6 &lt; x \leqq 8
+\end{align*}</div><h2 class="tex-number">134 (1)</h2><div class="tex-math">\begin{align*}
+&amp;A: x^2-4x-12 &lt; 0 \nr
+  &amp;(x-6)(x+2) &lt; 0 \nr
+  &amp;{-}2 &lt; x &lt; 6 \nr
+  &amp;B: x^2+5x \leqq 0 \nr
+  &amp;x(x+5) \leqq 0 \nr
+  &amp;{-}5 \leqq x \leqq 0 \nr
+  &amp;A \cap B = \{x \mid -2 &lt; x \leqq 0\} \nr
+  &amp;A \cup B = \{x \mid -5 \leqq x &lt; 6\}
+\end{align*}</div><h2 class="tex-number">135 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{x-1}{x^2-x-2} &gt; 0 \nr
+  &amp;\Leftrightarrow \begin{cases} x-1 &gt; 0 \\ (x-2)(x+1) &gt; 0 \end{cases} \ret \text{または} \begin{cases} x-1 &lt; 0 \\ (x-2)(x+1) &lt; 0 \end{cases} \nr
+  &amp;\Leftrightarrow \begin{cases} x &gt; 1 \\ x &lt; -1,\ 2 &lt; x \end{cases} \ret \text{または} \begin{cases} x &lt; 1 \\ -1 &lt; x &lt; 2 \end{cases} \nr
+  &amp;\Leftrightarrow 2 &lt; x \text{ または } -1 &lt; x &lt; 1
+\end{align*}</div><h2 class="tex-number">135 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\frac{2}{x-1} &gt; \frac{1}{x+1} \nr
+  &amp;\text{両辺に } (x-1)^2(x+1)^2 \text{ をかけて} \nr
+  &amp;2(x-1)(x+1)^2 &gt; (x-1)^2(x+1) \nr
+  &amp;(x-1)(x+1)\{2(x+1)-(x-1)\} &gt; 0 \nr
+  &amp;(x-1)(x+1)(x+3) &gt; 0 \nr
+  &amp;{-}3 &lt; x &lt; -1,\ 1 &lt; x
+\end{align*}</div><h2 class="tex-number">136 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\abs{x-7} &gt; 5x+2 \nr
+  &amp;\text{i) } x-7&lt;0 \text{ すなわち } x&lt;7 \text{ のとき} \nr
+  &amp;{-}x+7 &gt; 5x+2 \nr
+  &amp;{-}6x &gt; -5 \nr
+  &amp;x &lt; \frac{5}{6} \nr
+  &amp;x&lt;7 \text{ とあわせて } x &lt; \frac{5}{6} \nr
+  &amp;\text{ii) } x-7 \geqq 0 \text{ すなわち } x \geqq 7 \text{ のとき} \nr
+  &amp;x-7 &gt; 5x+2 \nr
+  &amp;{-}4x &gt; 9 \nr
+  &amp;x &lt; -\frac{9}{4} \nr
+  &amp;x \geqq 7 \text{ をみたさない} \nr
+  &amp;\text{i)ii) より } x &lt; \frac{5}{6}
+\end{align*}</div><h2 class="tex-number">136 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\abs{x-2}+\abs{x-3} &gt; 5 \nr
+  &amp;\text{i) } x&lt;2 \text{ のとき} \nr
+  &amp;{-}x+2-x+3 &gt; 5 \nr
+  &amp;{-}2x &gt; 0 \nr
+  &amp;x &lt; 0 \nr
+  &amp;x&lt;2 \text{ とあわせて } x&lt;0 \nr
+  &amp;\text{ii) } 2 \leqq x &lt; 3 \text{ のとき} \nr
+  &amp;x-2-x+3 &gt; 5 \nr
+  &amp;1 &gt; 5 \nr
+  &amp;\text{解なし} \nr
+  &amp;\text{iii) } 3 \leqq x \text{ のとき} \nr
+  &amp;x-2+x-3 &gt; 5 \nr
+  &amp;2x &gt; 10 \nr
+  &amp;x &gt; 5 \nr
+  &amp;3 \leqq x \text{ とあわせて } x&gt;5 \nr
+  &amp;\text{i)〜iii) より } x&lt;0,\ 5&lt;x
+\end{align*}</div><h2 class="tex-number">137 (1)</h2><div class="tex-math">\begin{align*}
+&amp;(a^2+1)-(a-a^2) \nr
+  &amp;= 2a^2-a+1 \nr
+  &amp;= 2\left(a-\frac{1}{4}\right)^2+\frac{7}{8} \nr
+  &amp;&gt; 0 \nr
+  &amp;\therefore a^2+1 &gt; a-a^2
+\end{align*}</div><h2 class="tex-number">137 (2)</h2><div class="tex-math">\begin{align*}
+&amp;x^2+(a+1)x-a(a-1)(a^2+1) &lt; 0 \nr
+  &amp;\{x+(a^2+1)\}\{x-a(a-1)\} &lt; 0 \nr
+  &amp;\text{(1) より } -(a^2+1) &lt; a(a-1) \text{ なので} \nr
+  &amp;{-}(a^2+1) &lt; x &lt; a(a-1)
+\end{align*}</div><h2 class="tex-number">138</h2><div class="tex-math">\begin{align*}
+&amp;\text{解と係数の関係より、} \ret \text{$2$ 解を } \alpha,\ \beta \text{ とすると} \nr
+  &amp;\begin{cases} \alpha+\beta = 3 \\ \alpha\beta = -(k+1)(k-2) \end{cases} \nr
+  &amp;\text{「} \alpha&lt;3 \text{ かつ } \beta&lt;3 \text{」} \nr
+  &amp;\Leftrightarrow \begin{cases} (\alpha-3)+(\beta-3) &lt; 0 \\ (\alpha-3)(\beta-3) &gt; 0 \end{cases} \nr
+  &amp;\Leftrightarrow \begin{cases} \alpha+\beta-6 &lt; 0 \\ \alpha\beta-3(\alpha+\beta)+9 &gt; 0 \end{cases} \nr
+  &amp;\Leftrightarrow \begin{cases} 3-6 &lt; 0 \\ -(k+1)(k-2)-9+9 &gt; 0 \end{cases} \nr
+  &amp;\Leftrightarrow \begin{cases} \text{すべての $k$ について成り立つ} \\ (k+1)(k-2) &lt; 0 \end{cases} \nr
+  &amp;\Leftrightarrow -1 &lt; k &lt; 2
+\end{align*}</div><h2 class="tex-number">139</h2><div class="tex-math">\begin{align*}
+&amp;\text{縦と横の長さを } a,\ b \text{ とする} \nr
+  &amp;\text{周の長さ } l=2a+2b \text{ は一定である} \nr
+  &amp;\text{面積 } S=ab \nr
+  &amp;a&gt;0,\ b&gt;0 \text{ なので} \ret \text{相加平均と相乗平均の関係より} \nr
+  &amp;2\sqrt{ab} \leqq a+b = \frac{1}{2}l \nr
+  &amp;\text{両辺正なので $2$ 乗して} \nr
+  &amp;4ab \leqq \frac{1}{4}l^2 \nr
+  &amp;ab \leqq \frac{1}{16}l^2 \nr
+  &amp;\text{等号成立は } a=b \text{ のとき} \nr
+  &amp;\therefore a=b \text{ すなわち正方形で} \ret \text{面積は最大となる}
+\end{align*}</div><hr class="tex-pagebreak"><div class="tex-heading"><strong>PLUS</strong></div><h2 class="tex-number">140 (1)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} x^2-xy-6y^2=0 &amp; \cdots \text{①} \\ x^2-2y^2=4 &amp; \cdots \text{②} \end{cases} \nr
+  &amp;\text{① より } (x-3y)(x+2y)=0 \nr
+  &amp;x=3y,\ -2y \nr
+  &amp;\text{i) } x=3y \text{ のとき} \nr
+  &amp;\text{② に代入 } 9y^2-2y^2=4 \nr
+  &amp;y^2 = \frac{4}{7} \nr
+  &amp;y = \pm\frac{2}{\sqrt{7}},\quad x = \pm\frac{6}{\sqrt{7}} \nr
+  &amp;\text{ii) } x=-2y \text{ のとき} \nr
+  &amp;\text{② に代入 } 4y^2-2y^2=4 \nr
+  &amp;y^2 = 2 \nr
+  &amp;y = \pm\sqrt{2},\quad x = \mp 2\sqrt{2} \nr
+  &amp;\text{i)ii) より} \ret (x,y) = \left(\pm\frac{6}{7}\sqrt{7},\ \pm\frac{2}{7}\sqrt{7}\right), \ret (\pm 2\sqrt{2},\ \mp\sqrt{2}) \quad \text{（複号同順）}
+\end{align*}</div><h2 class="tex-number">140 (2)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} 3x^2-5xy+2y^2=17 &amp; \cdots \text{①} \\ x^2+4xy-5y^2=0 &amp; \cdots \text{②} \end{cases} \nr
+  &amp;\text{② より } (x+5y)(x-y)=0 \nr
+  &amp;x=y,\ -5y \nr
+  &amp;\text{i) } x=y \text{ のとき} \nr
+  &amp;\text{① に代入 } 3y^2-5y^2+2y^2=17 \nr
+  &amp;0=17 \nr
+  &amp;\text{解なし} \nr
+  &amp;\text{ii) } x=-5y \text{ のとき} \nr
+  &amp;\text{① に代入 } 75y^2+25y^2+2y^2=17 \nr
+  &amp;102y^2 = 17 \nr
+  &amp;y^2 = \frac{1}{6} \nr
+  &amp;y = \pm\frac{1}{\sqrt{6}},\quad x = \mp\frac{5}{\sqrt{6}} \nr
+  &amp;\text{i)ii) より} \ret (x,y) = \left(\pm\frac{5}{\sqrt{6}},\ \mp\frac{1}{\sqrt{6}}\right) \ret \text{（複号同順）}
+\end{align*}</div><h2 class="tex-number">140 (3)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} x(x-y)=12 \\ x(x+y)=60 \end{cases} \nr
+  &amp;\begin{cases} x^2-xy=12 &amp; \cdots \text{①} \\ x^2+xy=60 &amp; \cdots \text{②} \end{cases} \nr
+  &amp;\text{①}+\text{②} \quad 2x^2=72 \nr
+  &amp;x = \pm 6 \nr
+  &amp;\text{i) } x=6 \text{ のとき } 36+6y=60 \nr
+  &amp;y = 4 \nr
+  &amp;\text{ii) } x=-6 \text{ のとき } 36-6y=60 \nr
+  &amp;y = -4 \nr
+  &amp;\text{i)ii) より } (x,y)=(\pm 6,\ \pm 4) \ret \text{（複号同順）}
+\end{align*}</div><h2 class="tex-number">140 (4)</h2><div class="tex-math">\begin{align*}
+&amp;\begin{cases} 2x^2-xy=12 &amp; \cdots \text{①} \\ 2xy+y^2=16 &amp; \cdots \text{②} \end{cases} \nr
+  &amp;\text{①} \times 4-\text{②} \times 3 \nr
+  &amp;8x^2-10xy-3y^2=0 \nr
+  &amp;(4x+y)(2x-3y)=0 \nr
+  &amp;x = -\frac{y}{4},\ \frac{3}{2}y \nr
+  &amp;\text{② に代入} \nr
+  &amp;\text{i) } x=-\frac{y}{4} \text{ のとき} \nr
+  &amp;{-}\frac{y^2}{2}+y^2=16 \nr
+  &amp;y^2 = 32 \nr
+  &amp;y = \pm 4\sqrt{2},\quad x = \mp\sqrt{2} \nr
+  &amp;\text{ii) } x=\frac{3}{2}y \text{ のとき} \nr
+  &amp;3y^2+y^2=16 \nr
+  &amp;y^2 = 4 \nr
+  &amp;y = \pm 2,\quad x = \pm 3 \nr
+  &amp;\text{i)ii) より} \ret (x,y) = (\mp\sqrt{2},\ \pm 4\sqrt{2}),\ (\pm 3,\ \pm 2) \ret \text{（複号同順）}
+\end{align*}</div><h2 class="tex-number">141</h2><div class="tex-math">\begin{align*}
+&amp;(\text{左辺})-(\text{右辺}) \nr
+  &amp;= (a^2+b^2+c^2)(x^2+y^2+z^2) \ret -(ax+by+cz)^2 \nr
+  &amp;= a^2x^2+a^2y^2+a^2z^2+b^2x^2 \ret +b^2y^2+b^2z^2+c^2x^2+c^2y^2+c^2z^2 \ret -(a^2x^2+b^2y^2+c^2z^2+2abxy \ret +2bcyz+2cazx) \nr
+  &amp;= (a^2y^2-2abxy+b^2x^2) \ret +(b^2z^2-2bcyz+c^2y^2) \ret +(c^2x^2-2cazx+a^2z^2) \nr
+  &amp;= (ay-bx)^2+(bz-cy)^2+(cx-az)^2 \nr
+  &amp;\geqq 0 \nr
+  &amp;\text{等号成立は } ay=bx \text{ かつ } bz=cy \ret \text{かつ } cx=az \text{ のとき}
+\end{align*}</div><h2 class="tex-number">142</h2><div class="tex-math">\begin{align*}
+&amp;\text{I]\ } \abs{\abs{a}-\abs{b}} \leqq \abs{a+b} \text{ を示す} \nr
+  &amp;(\text{左辺}) \geqq 0,\ (\text{右辺}) \geqq 0 \text{ なので} \ret (\text{左辺})^2 \leqq (\text{右辺})^2 \text{ を示す} \nr
+  &amp;(\text{右辺})^2-(\text{左辺})^2 \nr
+  &amp;= (a+b)^2-(\abs{a}-\abs{b})^2 \nr
+  &amp;= a^2+2ab+b^2-(a^2-2\abs{ab}+b^2) \nr
+  &amp;= 2(ab+\abs{ab}) \nr
+  &amp;\geqq 0 \nr
+  &amp;\text{等号成立は } ab \leqq 0 \text{ のとき} \nr
+  &amp;\text{II]\ } \abs{a+b} \leqq \abs{a}+\abs{b} \text{ を示す} \nr
+  &amp;(\text{左辺}) \geqq 0,\ (\text{右辺}) \geqq 0 \text{ なので} \ret (\text{左辺})^2 \leqq (\text{右辺})^2 \text{ を示す} \nr
+  &amp;(\text{右辺})^2-(\text{左辺})^2 \nr
+  &amp;= (\abs{a}+\abs{b})^2-(a+b)^2 \nr
+  &amp;= a^2+2\abs{ab}+b^2-(a^2+2ab+b^2) \nr
+  &amp;= 2(\abs{ab}-ab) \nr
+  &amp;\geqq 0 \nr
+  &amp;\text{等号成立は } ab \geqq 0 \text{ のとき} \nr
+  &amp;\text{I]II] より不等式は成り立つ}
+\end{align*}</div>
+                    </div>
+                    <p class="tex-page__note">
+                        ブラウザ上での描画のため、PDF版とは体裁が異なる場合があります。<br>
+                        ここに記す解法が最適なものとは限りません。途中式の丸写しはあなたのためになりません。学習の参考程度にご活用ください。<br>
+                        誤字・誤値等にお気づきの際は<a href="../../contact.html">連絡先</a>までご連絡ください。
+                    </p>
+                </article>
+            </div>
+        </main>
+    </div><!-- /#wrapper -->
+    <script>window.__TEX_MACROS = {"Re":"\\operatorname{Re}","Im":"\\operatorname{Im}","proof":"\\textbf{証明}　","qed":"{\\rule{0.5zw}{1zh}}","E":"\\mathrm{e}","D":"\\mathrm {d}","I":"\\mathrm {i}","LHS":"(\\mathrm{LHS})","RHS":"(\\mathrm{RHS})","hc":"\\mathrm{h.c.}","cc":"\\mathrm{c.c.}","ret":"\\notag\\\\&\\qquad","nr":"\\notag\\\\","Arg":"\\operatorname{Arg}","for":["\\quad\\mathrm{for\\ \\ }#1",1],"sgn":"\\operatorname{sgn}","Tr":"\\operatorname{Tr}","AAA":"\\mathaccent 23\\mathrm{A}","abs":["{\\left\\rvert #1 \\right\\lvert}",1]};</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/tex-page.js"></script>
+</body>
+</html>
